@@ -16,6 +16,9 @@
       <nav class="tabs" role="tablist">
         <button role="tab" id="tab-suche" aria-selected="true" aria-controls="view-suche">Suche</button>
         <button role="tab" id="tab-aenderungen" aria-selected="false" aria-controls="view-aenderungen">Änderungen <span id="changes-badge" class="count"></span></button>
+        <a class="download" href="data/sepa-zv-vz_gesamt.csv" download>
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 1v9m0 0L4.5 6.5M8 10l3.5-3.5M2 12v2h12v-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          CSV<span class="download-label">&nbsp;herunterladen</span></a>
       </nav>
     </div>
   </header>
@@ -30,8 +33,7 @@
         <label><span class="sr">Bundesland</span><select id="f-land"><option value="">Alle Bundesländer</option></select></label>
         <label><span class="sr">Sektor</span><select id="f-sektor"><option value="">Alle Sektoren</option></select></label>
       </div>
-      <p class="result-info"><span id="result-count"></span>
-        <a id="csv-link" href="data/sepa-zv-vz_gesamt.csv" download>Gesamte Liste als CSV</a></p>
+      <p class="result-info"><span id="result-count"></span></p>
       <div class="table-wrap">
         <table class="list">
           <thead>
@@ -55,8 +57,13 @@
   </dialog>
 
   <footer class="wrap foot">
-    Daten: © <a href="https://www.oenb.at/Statistik/Klassifikationen/SEPA-Zahlungsverkehrs-Verzeichnis.html">Oesterreichische Nationalbank</a>,
-    es gelten deren <a href="https://www.oenb.at/Service/Impressum-und-Haftung.html">Nutzungsbedingungen</a>. Angaben ohne Gewähr.
+    <p class="foot-links">
+      Ein Projekt von <strong>Alexander Wendel</strong>
+      · <a href="https://github.com/alexanderwendel8/bic-verzeichnis#readme">README</a>
+      · <a href="data/sepa-zv-vz_gesamt.csv" download>CSV herunterladen</a>
+    </p>
+    <p>Daten: © <a href="https://www.oenb.at/Statistik/Klassifikationen/SEPA-Zahlungsverkehrs-Verzeichnis.html">Oesterreichische Nationalbank</a>,
+    es gelten deren <a href="https://www.oenb.at/Service/Impressum-und-Haftung.html">Nutzungsbedingungen</a>. Angaben ohne Gewähr.</p>
   </footer>
 
   <script src="app.js"></script>
