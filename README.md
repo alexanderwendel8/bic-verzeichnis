@@ -3,6 +3,8 @@
 Lädt täglich das [SEPA-Zahlungsverkehrs-Verzeichnis](https://www.oenb.at/Statistik/Klassifikationen/SEPA-Zahlungsverkehrs-Verzeichnis.html)
 der Oesterreichischen Nationalbank (Bankleitzahl, BIC/SWIFT-Code, LEI, Adresse …) und protokolliert Änderungen.
 
+**Weboberfläche:** https://alexanderwendel8.github.io/bic-verzeichnis/
+
 | Pfad | Inhalt |
 |---|---|
 | `update_bic.py` | Skript: Download, Vergleich, Ablage (nur Python-Standardbibliothek) |
@@ -30,14 +32,14 @@ Danach folgt der Eintrag (bei `entfernt` der letzte bekannte Stand). Schlüssel 
 Bundesland und Sektor, Detailansicht mit Link zu GLEIF und einer Übersicht aller Änderungen.
 
 Der Workflow `.github/workflows/bic-pages.yml` stellt Seite und Daten zusammen und veröffentlicht sie
-auf GitHub Pages – nach jedem täglichen Update und bei jeder Änderung unter `bic/` auf `main`.
+auf GitHub Pages – nach jedem täglichen Update und bei jeder Änderung an `web/`, `data/` oder `changes/` auf `main`.
 
 **Einmalig einrichten:** Repository → Settings → Pages → „Build and deployment“ → Source: **GitHub Actions**.
 
 Lokal ansehen:
 
 ```sh
-mkdir -p /tmp/site && cp bic/web/* /tmp/site/ && cp -r bic/data bic/changes /tmp/site/
+mkdir -p /tmp/site && cp web/* /tmp/site/ && cp -r data changes /tmp/site/
 python3 -m http.server -d /tmp/site 8000   # dann http://localhost:8000
 ```
 
@@ -47,8 +49,8 @@ Automatisch täglich über GitHub Actions (`.github/workflows/bic-update.yml`), 
 „Actions → BIC-Verzeichnis aktualisieren → Run workflow“ oder lokal:
 
 ```sh
-python3 bic/update_bic.py              # herunterladen und vergleichen
-python3 bic/update_bic.py --input x.csv  # lokale OeNB-Datei verwenden
+python3 update_bic.py              # herunterladen und vergleichen
+python3 update_bic.py --input x.csv  # lokale OeNB-Datei verwenden
 ```
 
 Liefert die OeNB deutlich weniger Einträge als bisher (unter 80 %), bricht das Skript ab, statt

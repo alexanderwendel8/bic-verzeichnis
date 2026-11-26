@@ -8,7 +8,7 @@ on:
   # bei Änderungen an Oberfläche oder Daten auf main
   push:
     branches: [main]
-    paths: ["bic/**", ".github/workflows/bic-pages.yml"]
+    paths: ["web/**", "data/**", "changes/**", ".github/workflows/bic-pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -35,9 +35,9 @@ jobs:
       - name: Seite zusammenstellen
         run: |
           mkdir -p _site/changes
-          cp bic/web/* _site/
-          cp -r bic/data _site/
-          cp bic/changes/* _site/changes/ 2>/dev/null || true
+          cp web/* _site/
+          cp -r data _site/
+          cp changes/* _site/changes/ 2>/dev/null || true
           [ -f _site/changes/index.json ] || echo "[]" > _site/changes/index.json
           echo "{\"geprueft\": \"$(TZ=Europe/Vienna date +%Y-%m-%d)\"}" > _site/build.json
           touch _site/.nojekyll
