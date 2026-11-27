@@ -1,0 +1,1119 @@
+﻿Bankleitzahl;BIC;Bankenname;Art;Hauptsitz-IID;QR-IID gehört zu;Straße;Hausnummer;PLZ;Ort;Sitzland;SIC-IID;SIC;euroSIC;SIC-Kundenzahlungen CHF;Instant Payments CHF;LSV+/BDD CHF;LSV+/BDD EUR
+100;SNBZCHZZXXX;Schweizerische Nationalbank;Hauptsitz;100;;Börsenstrasse;15;8022;Zürich;CH;001008;ja;ja;ja;ja;ja;nein
+110;SNBZCHZZXXX;Schweizerische Nationalbank;Filiale;100;;Bundesplatz;1;3003;Bern;CH;001100;ja;ja;ja;ja;ja;nein
+115;SNBZCHZZXXX;Schweizerische Nationalbank;Filiale;100;;Bundesverw. / Bundesplatz;1;3003;Bern;CH;001158;ja;ja;ja;ja;ja;nein
+193;SECGDEFFXXX;SECB Swiss Euro Clearing Bank;Hauptsitz;193;;Nibelungenplatz;3;60318;Frankfurt am Main;DE;001933;nein;ja;nein;nein;nein;nein
+202;UBSWCHZH86N;UBS Switzerland AG;Filiale;230;;Poststrasse;10;8610;Uster 1;CH;002020;ja;ja;ja;ja;ja;ja
+203;UBSWCHZH93A;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;26;9320;Arbon;CH;002031;ja;ja;ja;ja;ja;ja
+204;UBSWCHZH70E;UBS Switzerland AG;Filiale;230;;Poststrasse;198;7050;Arosa;CH;002046;ja;ja;ja;ja;ja;ja
+206;UBSWCHZH80V;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;002062;ja;ja;ja;ja;ja;ja
+207;UBSWCHZH81M;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;39;8180;Bülach;CH;002078;ja;ja;ja;ja;ja;ja
+208;UBSWCHZH70A;UBS Switzerland AG;Filiale;230;;Poststrasse;1;7002;Chur;CH;002083;ja;ja;ja;ja;ja;ja
+209;UBSWCHZH72D;UBS Switzerland AG;Filiale;230;;Promenade;48;7270;Davos Platz 1;CH;002099;ja;ja;ja;ja;ja;ja
+210;UBSWCHZH52A;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;11;5201;Brugg AG;CH;002106;ja;ja;ja;ja;ja;ja
+211;UBSWCHZH31A;UBS Switzerland AG;Filiale;230;;Hauptstrasse;44;3186;Düdingen;CH;002114;ja;ja;ja;ja;ja;ja
+213;UBSWCHZH94N;UBS Switzerland AG;Filiale;230;;Rorschacherstrasse;1;9450;Altstätten SG;CH;002138;ja;ja;ja;ja;ja;ja
+214;UBSWCHZH88A;UBS Switzerland AG;Filiale;230;;Zugerstrasse;22;8810;Horgen 1;CH;002143;ja;ja;ja;ja;ja;ja
+215;UBSWCHZH12C;UBS Switzerland AG;Filiale;230;;Rue du Rhône;8;1211;Genève 2;CH;002159;ja;ja;ja;ja;ja;ja
+216;UBSWCHZH88B;UBS Switzerland AG;Filiale;230;;Bahnhofplatz;3;8853;Lachen SZ;CH;002167;ja;ja;ja;ja;ja;ja
+217;UBSWCHZH82P;UBS Switzerland AG;Filiale;230;;Hauptstrasse;37;8280;Kreuzlingen 1;CH;002175;ja;ja;ja;ja;ja;ja
+219;UBSWCHZH85B;UBS Switzerland AG;Filiale;230;;Rathausstrasse;11;8570;Weinfelden;CH;002191;ja;ja;ja;ja;ja;ja
+220;UBSWCHZH94P;UBS Switzerland AG;Filiale;230;;St. Gallerstrasse;5;9471;Buchs SG 1;CH;002209;ja;ja;ja;ja;ja;ja
+221;UBSWCHZH75A;UBS Switzerland AG;Filiale;230;;Plazza Mauritius/Via Maistra;14;7500;St. Moritz 1;CH;002217;ja;ja;ja;ja;ja;ja
+222;UBSWCHZH83B;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;25;8304;Wallisellen;CH;002225;ja;ja;ja;ja;ja;ja
+223;UBSWCHZH89D;UBS Switzerland AG;Filiale;230;;Bahnhofplatz;13;8953;Dietikon 1;CH;002230;ja;ja;ja;ja;ja;ja
+225;UBSWCHZH80G;UBS Switzerland AG;Filiale;230;;Bellevue / Theaterstrasse;20;8098;Zürich;CH;002256;ja;ja;ja;ja;ja;ja
+226;UBSWCHZH29A;UBS Switzerland AG;Filiale;230;;Rue du Jura;11;2900;Porrentruy 1;CH;002264;ja;ja;ja;ja;ja;ja
+227;UBSWCHZH36A;UBS Switzerland AG;Filiale;230;;Bälliz;1;3601;Thun;CH;002272;ja;ja;ja;ja;ja;ja
+228;UBSWCHZH12T;UBS Switzerland AG;Filiale;230;;Centre La Combe/R. de la Môrache;6;1260;Nyon 1;CH;002288;ja;ja;ja;ja;ja;ja
+230;UBSWCHZH80A;UBS Switzerland AG;Hauptsitz;230;;Bahnhofstrasse;45;8098;Zürich;CH;002301;ja;ja;ja;ja;ja;ja
+231;UBSWCHZH50A;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;61;5001;Aarau;CH;002316;ja;ja;ja;ja;ja;ja
+232;UBSWCHZH54A;UBS Switzerland AG;Filiale;230;;Badstrasse;12;5401;Baden;CH;002324;ja;ja;ja;ja;ja;ja
+233;UBSWCHZH40A;UBS Switzerland AG;Filiale;230;;Aeschenplatz;6;4002;Basel;CH;002332;ja;ja;ja;ja;ja;ja
+234;UBSWCHZH65A;UBS Switzerland AG;Filiale;230;;Largo Elvezia;2;6501;Bellinzona;CH;002348;ja;ja;ja;ja;ja;ja
+235;UBSWCHZH30A;UBS Switzerland AG;Filiale;230;;Bubenbergplatz;3;3000;Bern 94;CH;002353;ja;ja;ja;ja;ja;ja
+236;UBSWCHZH68B;UBS Switzerland AG;Filiale;230;;Piazza Col. C. Bernasconi;5;6830;Chiasso 1;CH;002369;ja;ja;ja;ja;ja;ja
+238;UBSWCHZH87C;UBS Switzerland AG;Filiale;230;;Dorfstrasse;94;8706;Meilen;CH;002385;ja;ja;ja;ja;ja;ja
+239;UBSWCHZH85A;UBS Switzerland AG;Filiale;230;;Zürcherstrasse;144;8501;Frauenfeld;CH;002390;ja;ja;ja;ja;ja;ja
+240;UBSWCHZH12A;UBS Switzerland AG;Filiale;230;;Rue du Rhône;8;1211;Genève 2;CH;002404;ja;ja;ja;ja;ja;ja
+241;UBSWCHZH38A;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;20;3800;Interlaken;CH;002412;ja;ja;ja;ja;ja;ja
+242;UBSWCHZH23A;UBS Switzerland AG;Filiale;230;;Avenue Léopold-Robert;16;2300;Chaux-de-Fonds, La;CH;002428;ja;ja;ja;ja;ja;ja
+243;UBSWCHZH10A;UBS Switzerland AG;Filiale;230;;Place St-François;16;1002;Lausanne;CH;002433;ja;ja;ja;ja;ja;ja
+244;UBSWCHZH96C;UBS Switzerland AG;Filiale;230;;Hauptgasse;8;9620;Lichtensteig;CH;002449;ja;ja;ja;ja;ja;ja
+245;UBSWCHZH44A;UBS Switzerland AG;Filiale;230;;Rheinstrasse;12;4410;Liestal;CH;002457;ja;ja;ja;ja;ja;ja
+246;UBSWCHZH66A;UBS Switzerland AG;Filiale;230;;Piazza Grande;1;6601;Locarno 1;CH;002465;ja;ja;ja;ja;ja;ja
+247;UBSWCHZH69A;UBS Switzerland AG;Filiale;230;;Piazzetta della Posta;;6901;Lugano;CH;002470;ja;ja;ja;ja;ja;ja
+248;UBSWCHZH60A;UBS Switzerland AG;Filiale;230;;Bahnhofplatz;2;6002;Luzern;CH;002481;ja;ja;ja;ja;ja;ja
+249;UBSWCHZH18D;UBS Switzerland AG;Filiale;230;;Avenue du Casino;41;1820;Montreux 1;CH;002496;ja;ja;ja;ja;ja;ja
+250;UBSWCHZH86M;UBS Switzerland AG;Filiale;230;;Rathausstrasse;8;8640;Rapperswil SG;CH;002508;ja;ja;ja;ja;ja;ja
+251;UBSWCHZH80H;UBS Switzerland AG;Filiale;230;;Römerhofplatz;5;8032;Zürich;CH;002513;ja;ja;ja;ja;ja;ja
+252;UBSWCHZH94A;UBS Switzerland AG;Filiale;230;;Hauptstrasse;78;9401;Rorschach;CH;002529;ja;ja;ja;ja;ja;ja
+253;UBSWCHZH86P;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;5;8630;Rüti ZH;CH;002537;ja;ja;ja;ja;ja;ja
+254;UBSWCHZH90A;UBS Switzerland AG;Filiale;230;;Am Bahnhofplatz;;9001;St. Gallen;CH;002545;ja;ja;ja;ja;ja;ja
+255;UBSWCHZH18A;UBS Switzerland AG;Filiale;230;;Rue de Lausanne;6;1800;Vevey 1;CH;002550;ja;ja;ja;ja;ja;ja
+256;UBSWCHZH95A;UBS Switzerland AG;Filiale;230;;Obere Bahnhofstrasse;36;9501;Wil SG 1;CH;002561;ja;ja;ja;ja;ja;ja
+257;UBSWCHZH84A;UBS Switzerland AG;Filiale;230;;Stadthausstrasse;18;8401;Winterthur;CH;002576;ja;ja;ja;ja;ja;ja
+258;UBSWCHZH56B;UBS Switzerland AG;Filiale;230;;Zentralstrasse;55;5610;Wohlen AG 1;CH;002584;ja;ja;ja;ja;ja;ja
+259;UBSWCHZH87B;UBS Switzerland AG;Filiale;230;;Bergstrasse;17;8702;Zollikon;CH;002592;ja;ja;ja;ja;ja;ja
+260;UBSWCHZH17A;UBS Switzerland AG;Filiale;230;;Rue Saint-Pierre;1;1701;Fribourg;CH;002600;ja;ja;ja;ja;ja;ja
+261;UBSWCHZH46A;UBS Switzerland AG;Filiale;230;;Froburgstrasse;17;4600;Olten;CH;002611;ja;ja;ja;ja;ja;ja
+262;UBSWCHZH45A;UBS Switzerland AG;Filiale;230;;Amthausplatz;1;4502;Solothurn;CH;002626;ja;ja;ja;ja;ja;ja
+263;UBSWCHZH39A;UBS Switzerland AG;Filiale;230;;Sebastiansplatz;4;3900;Brig/Brigue;CH;002634;ja;ja;ja;ja;ja;ja
+264;UBSWCHZH19B;UBS Switzerland AG;Filiale;230;;Avenue de la Gare;2;1920;Martigny 1;CH;002642;ja;ja;ja;ja;ja;ja
+265;UBSWCHZH19E;UBS Switzerland AG;Filiale;230;;Avenue de la Gare;36;1951;Sion/Sitten;CH;002658;ja;ja;ja;ja;ja;ja
+266;UBSWCHZH16C;UBS Switzerland AG;Filiale;230;;Avenue de la Gare;12;1630;Bulle;CH;002663;ja;ja;ja;ja;ja;ja
+267;UBSWCHZH80K;UBS Switzerland AG;Filiale;230;;Albisriederplatz;8;8098;Zürich;CH;002679;ja;ja;ja;ja;ja;ja
+268;UBSWCHZH39L;UBS Switzerland AG;Filiale;230;;Avenue Général-Guisan;1;3960;Sierre/Siders;CH;002687;ja;ja;ja;ja;ja;ja
+269;UBSWCHZH80M;UBS Switzerland AG;Filiale;230;;Oerlikon / Schaffhauserstrasse;339;8050;Zürich;CH;002695;ja;ja;ja;ja;ja;ja
+270;UBSWCHZH80N;UBS Switzerland AG;Filiale;230;;Wiedikon / Birmensdorferstrasse;123;8098;Zürich;CH;002705;ja;ja;ja;ja;ja;ja
+271;UBSWCHZH80A;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;002710;ja;ja;ja;ja;ja;ja
+272;UBSWCHZH25A;UBS Switzerland AG;Filiale;230;;Nidaugasse;49;2501;Biel/Bienne;CH;002721;ja;ja;ja;ja;ja;ja
+273;UBSWCHZH63A;UBS Switzerland AG;Filiale;230;;Baarerstrasse;14a;6301;Zug;CH;002736;ja;ja;ja;ja;ja;ja
+274;UBSWCHZH80Q;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;002744;ja;ja;ja;ja;ja;ja
+275;UBSWCHZH80R;UBS Switzerland AG;Filiale;230;;Höngg / Limmattalstrasse;180;8049;Zürich;CH;002752;ja;ja;ja;ja;ja;ja
+276;UBSWCHZH89E;UBS Switzerland AG;Filiale;230;;Bahnhofplatz;10;8910;Affoltern am Albis;CH;002768;ja;ja;ja;ja;ja;ja
+277;UBSWCHZH18L;UBS Switzerland AG;Filiale;230;;Rue du Coppet;14;1870;Monthey 2;CH;002773;ja;ja;ja;ja;ja;ja
+278;UBSWCHZH83A;UBS Switzerland AG;Filiale;230;;Schaffhauserstrasse;128;8302;Kloten;CH;002789;ja;ja;ja;ja;ja;ja
+279;UBSWCHZH12B;UBS Switzerland AG;Filiale;230;;Rue du Rhône;8;1211;Genève 2;CH;002797;ja;ja;ja;ja;ja;ja
+283;UBSWCHZH81H;UBS Switzerland AG;Filiale;230;;Schaffhauserstrasse;59;8152;Glattbrugg;CH;002839;ja;ja;ja;ja;ja;ja
+284;UBSWCHZH87D;UBS Switzerland AG;Filiale;230;;Burgstrasse;1;8750;Glarus;CH;002847;ja;ja;ja;ja;ja;ja
+285;UBSWCHZH80P;UBS Switzerland AG;Filiale;230;;Altstetten / Badenerstrasse;678;8048;Zürich;CH;002855;ja;ja;ja;ja;ja;ja
+286;UBSWCHZH80A;UBS Switzerland AG;Filiale;230;;UBS GCU Zürich AG;;8098;Zürich;CH;002860;ja;ja;ja;ja;ja;ja
+287;UBSWCHZH82A;UBS Switzerland AG;Filiale;230;;Schwertstrasse;2;8201;Schaffhausen;CH;002871;ja;ja;ja;ja;ja;ja
+288;UBSWCHZH60G;UBS Switzerland AG;Filiale;230;;Sonnenplatz;;6021;Emmenbrücke 1;CH;002886;ja;ja;ja;ja;ja;ja
+290;UBSWCHZH20A;UBS Switzerland AG;Filiale;230;;Place Pury;5;2001;Neuchâtel;CH;002903;ja;ja;ja;ja;ja;ja
+291;UBSWCHZH81A;UBS Switzerland AG;Filiale;230;;Zentrum;;8105;Regensdorf 1;CH;002919;ja;ja;ja;ja;ja;ja
+292;UBSWCHZH40M;UBS Switzerland AG;Filiale;230;;Aeschenvorstadt;1;4002;Basel;CH;002927;ja;ja;ja;ja;ja;ja
+293;UBSWCHZH88C;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;47;8803;Rüschlikon;CH;002935;ja;ja;ja;ja;ja;ja
+294;UBSWCHZH39G;UBS Switzerland AG;Filiale;230;;Bahnhofplatz;14;3930;Visp/Viège;CH;002940;ja;ja;ja;ja;ja;ja
+295;UBSWCHZH94F;UBS Switzerland AG;Filiale;230;;Bahnhofplatz;4;9430;St. Margrethen SG;CH;002951;ja;ja;ja;ja;ja;ja
+296;UBSWCHZH86Q;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;156;8620;Wetzikon ZH 2;CH;002966;ja;ja;ja;ja;ja;ja
+297;UBSWCHZH14A;UBS Switzerland AG;Filiale;230;;Rue de Neuchâtel;1;1401;Yverdon-les-Bains;CH;002974;ja;ja;ja;ja;ja;ja
+298;UBSWCHZH80A;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;002982;ja;ja;ja;ja;ja;ja
+303;UBSWCHZHW03;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;003030;ja;ja;ja;ja;ja;ja
+304;UBSWCHZHW04;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;003041;ja;ja;ja;ja;ja;ja
+305;UBSWCHZHW05;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;003056;ja;ja;ja;ja;ja;ja
+306;UBSWCHZHW06;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;003064;ja;ja;ja;ja;ja;ja
+308;UBSWCHZHW08;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;003088;ja;ja;ja;ja;ja;ja
+315;UBSBCHZZXXX;UBS AG;Hauptsitz;315;;Bahnhofstrasse;45;8098;Zürich;CH;003153;ja;ja;ja;ja;nein;ja
+700;ZKBKCHZZ80A;Zürcher Kantonalbank;Hauptsitz;700;;Postfach;;8010;Zürich;CH;007005;ja;ja;ja;ja;ja;ja
+702;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Wiedikon (ex. Enge);;8036;Zürich;CH;007021;ja;ja;ja;nein;ja;ja
+703;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;(Limmatquai);;8010;Zürich;CH;007036;ja;ja;ja;nein;ja;ja
+704;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8712;Stäfa;CH;007044;ja;ja;ja;nein;ja;ja
+705;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8604;Volketswil;CH;007052;ja;ja;ja;nein;ja;ja
+706;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8953;Dietikon 1;CH;007068;ja;ja;ja;nein;ja;ja
+708;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Affoltern;;8046;Zürich;CH;007089;ja;ja;ja;nein;ja;ja
+709;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8902;Urdorf;CH;007097;ja;ja;ja;nein;ja;ja
+710;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8126;Zumikon;CH;007102;ja;ja;ja;nein;ja;ja
+711;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Altstetten;;8048;Zürich;CH;007118;ja;ja;ja;nein;ja;ja
+712;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;(Aussersihl);;8036;Zürich;CH;007123;ja;ja;ja;nein;ja;ja
+713;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Neumünster;;8032;Zürich;CH;007139;ja;ja;ja;nein;ja;ja
+714;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Unterstrass;;8042;Zürich;CH;007147;ja;ja;ja;nein;ja;ja
+715;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Wiedikon;;8036;Zürich;CH;007155;ja;ja;ja;nein;ja;ja
+716;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Prime Tower, Hardstrasse;201;8005;Zürich;CH;007160;ja;ja;ja;nein;ja;ja
+717;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Wollishofen;;8038;Zürich;CH;007171;ja;ja;ja;nein;ja;ja
+718;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Schwamendingen;;8051;Zürich;CH;007186;ja;ja;ja;nein;ja;ja
+719;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Seebach;;8052;Zürich;CH;007194;ja;ja;ja;nein;ja;ja
+720;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Albisrieden;;8047;Zürich;CH;007203;ja;ja;ja;nein;ja;ja
+721;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8910;Affoltern am Albis;CH;007219;ja;ja;ja;nein;ja;ja
+722;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8450;Andelfingen;CH;007227;ja;ja;ja;nein;ja;ja
+723;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8494;Bauma;CH;007235;ja;ja;ja;nein;ja;ja
+724;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8180;Bülach;CH;007240;ja;ja;ja;nein;ja;ja
+725;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8157;Dielsdorf;CH;007251;ja;ja;ja;nein;ja;ja
+726;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8810;Horgen 1;CH;007266;ja;ja;ja;nein;ja;ja
+727;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8706;Meilen;CH;007274;ja;ja;ja;nein;ja;ja
+728;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Oerlikon;;8050;Zürich;CH;007282;ja;ja;ja;nein;ja;ja
+729;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8630;Rüti ZH;CH;007298;ja;ja;ja;nein;ja;ja
+730;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8610;Uster 1;CH;007307;ja;ja;ja;nein;ja;ja
+731;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8636;Wald ZH;CH;007315;ja;ja;ja;nein;ja;ja
+732;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8401;Winterthur;CH;007320;ja;ja;ja;nein;ja;ja
+733;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8307;Effretikon;CH;007331;ja;ja;ja;nein;ja;ja
+734;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Witikon;;8053;Zürich;CH;007346;ja;ja;ja;nein;ja;ja
+735;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8132;Egg b. Zürich;CH;007354;ja;ja;ja;nein;ja;ja
+736;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Höngg;;8049;Zürich;CH;007362;ja;ja;ja;nein;ja;ja
+737;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Klusplatz;;8032;Zürich;CH;007378;ja;ja;ja;nein;ja;ja
+738;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8152;Glattbrugg;CH;007383;ja;ja;ja;nein;ja;ja
+739;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach 17;;8634;Hombrechtikon;CH;007399;ja;ja;ja;nein;ja;ja
+740;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8600;Dübendorf 1;CH;007406;ja;ja;ja;nein;ja;ja
+741;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8193;Eglisau;CH;007414;ja;ja;ja;nein;ja;ja
+742;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8320;Fehraltorf;CH;007422;ja;ja;ja;nein;ja;ja
+743;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8245;Feuerthalen;CH;007438;ja;ja;ja;nein;ja;ja
+744;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8302;Kloten;CH;007443;ja;ja;ja;nein;ja;ja
+745;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8700;Küsnacht ZH;CH;007459;ja;ja;ja;nein;ja;ja
+746;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8708;Männedorf;CH;007467;ja;ja;ja;nein;ja;ja
+747;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8805;Richterswil;CH;007475;ja;ja;ja;nein;ja;ja
+748;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8952;Schlieren;CH;007480;ja;ja;ja;nein;ja;ja
+749;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8800;Thalwil;CH;007491;ja;ja;ja;nein;ja;ja
+750;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8488;Turbenthal;CH;007509;ja;ja;ja;nein;ja;ja
+751;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8304;Wallisellen;CH;007517;ja;ja;ja;nein;ja;ja
+752;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8330;Pfäffikon ZH;CH;007525;ja;ja;ja;nein;ja;ja
+753;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Oberwinterthur;;8404;Winterthur;CH;007530;ja;ja;ja;nein;ja;ja
+754;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8340;Hinwil;CH;007541;ja;ja;ja;nein;ja;ja
+755;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8622;Wetzikon ZH 2;CH;007556;ja;ja;ja;nein;ja;ja
+756;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8105;Regensdorf 1;CH;007564;ja;ja;ja;nein;ja;ja
+757;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8820;Wädenswil;CH;007572;ja;ja;ja;nein;ja;ja
+758;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8134;Adliswil 1;CH;007588;ja;ja;ja;nein;ja;ja
+759;ZKBKCHZZ80A;Zürcher Kantonalbank;Filiale;700;;Postfach;;8303;Bassersdorf;CH;007593;ja;ja;ja;nein;ja;ja
+761;KBAGCH22XXX;Aargauische Kantonalbank;Hauptsitz;761;;Bahnhofplatz;1;5001;Aarau;CH;007616;ja;ja;ja;ja;ja;ja
+763;AIKACH22XXX;Appenzeller Kantonalbank;Hauptsitz;763;;Postfach;;9050;Appenzell;CH;007632;ja;ja;ja;ja;ja;ja
+764;BSCTCH22XXX;Banca dello Stato del Cantone Ticino;Hauptsitz;764;;Viale H. Guisan;5;6501;Bellinzona;CH;007648;ja;ja;ja;ja;ja;ja
+765;BCVSCH2LXXX;Banque Cantonale du Valais;Hauptsitz;765;;Place des Cèdres;8;1951;Sion/Sitten;CH;007653;ja;ja;ja;ja;ja;ja
+766;BCNNCH22XXX;Banque Cantonale Neuchâteloise;Hauptsitz;766;;Case postale 275;;2001;Neuchâtel;CH;007669;ja;ja;ja;ja;ja;ja
+767;BCVLCH2LXXX;Banque Cantonale Vaudoise;Hauptsitz;767;;St-François;;1001;Lausanne;CH;007677;ja;ja;ja;ja;ja;ja
+768;BEFRCH22XXX;Banque Cantonale de Fribourg;Hauptsitz;768;;Bd de Pérolles;1;1701;Fribourg;CH;007685;ja;ja;ja;ja;ja;ja
+769;BLKBCH22XXX;Basellandschaftliche Kantonalbank;Hauptsitz;769;;Postfach;;4410;Liestal;CH;007690;ja;ja;ja;ja;ja;ja
+770;BKBBCHBBXXX;Basler Kantonalbank;Hauptsitz;770;;Aeschenvorstadt;41;4051;Basel;CH;007704;ja;ja;ja;ja;ja;ja
+773;GLKBCH22XXX;Glarner Kantonalbank;Hauptsitz;773;;Postfach 365;;8750;Glarus;CH;007733;ja;ja;ja;ja;ja;ja
+774;GRKBCH2270A;Graubündner Kantonalbank;Hauptsitz;774;;Postfach;;7001;Chur;CH;007749;ja;ja;ja;ja;ja;ja
+777;KBSZCH22XXX;Schwyzer Kantonalbank;Hauptsitz;777;;Bahnhofstrasse;3;6431;Schwyz;CH;007770;ja;ja;ja;ja;ja;ja
+778;LUKBCH2260A;Luzerner Kantonalbank AG;Hauptsitz;778;;Pilatusstrasse;12;6002;Luzern;CH;007781;ja;ja;ja;ja;ja;ja
+779;NIKACH22XXX;Nidwaldner Kantonalbank;Hauptsitz;779;;Stansstaderstrasse;54;6371;Stans;CH;007796;ja;ja;ja;ja;ja;ja
+780;OBWKCH22XXX;Obwaldner Kantonalbank;Hauptsitz;780;;Im Feld;2;6060;Sarnen;CH;007808;ja;ja;ja;ja;ja;ja
+781;KBSGCH22XXX;St. Galler Kantonalbank AG;Hauptsitz;781;;Postfach;;9001;St. Gallen;CH;007813;ja;ja;ja;ja;ja;ja
+782;SHKBCH2SXXX;Schaffhauser Kantonalbank;Hauptsitz;782;;Vorstadt;53;8201;Schaffhausen;CH;007829;ja;ja;ja;ja;ja;ja
+784;KBTGCH22XXX;Thurgauer Kantonalbank;Hauptsitz;784;;Postfach;;8570;Weinfelden;CH;007845;ja;ja;ja;ja;ja;ja
+785;URKNCH22XXX;Urner Kantonalbank;Hauptsitz;785;;Bahnhofplatz;1;6460;Altdorf;CH;007850;ja;ja;ja;ja;ja;ja
+787;KBZGCH22XXX;Zuger Kantonalbank;Hauptsitz;787;;Postfach;;6301;Zug;CH;007876;ja;ja;ja;ja;ja;ja
+788;BCGECHGGXXX;Banque Cantonale de Genève;Hauptsitz;788;;Case postale 2251;;1211;Genève 2;CH;007884;ja;ja;ja;ja;ja;ja
+789;BCJUCH22XXX;Banque Cantonale du Jura SA;Hauptsitz;789;;Case postale 278;;2900;Porrentruy 2;CH;007892;ja;ja;ja;ja;ja;nein
+790;KBBECH22XXX;Berner Kantonalbank AG;Hauptsitz;790;;Bundesplatz;8;3001;Bern;CH;007900;ja;ja;ja;ja;ja;nein
+1007;SNBZCHZZDX2;Schweizerische Nationalbank Transit wCBDC;Hauptsitz;1007;;Börsenstrasse;15;8022;Zürich;CH;010075;ja;nein;nein;nein;nein;nein
+6180;RBABCH22180;Crédit Mutuel de la Vallée SA;Hauptsitz;6180;;Grande Rue;22;1347;Sentier, Le;CH;061805;ja;ja;ja;ja;ja;ja
+6182;RBABCH22182;Caisse d'Epargne de Cossonay société coopérative;Hauptsitz;6182;;Rue du Temple;2;1304;Cossonay-Ville;CH;061821;ja;ja;ja;ja;ja;ja
+6186;RBABCH22186;Sparkasse Sense;Hauptsitz;6186;;Mariahilfstrasse;4;1712;Tafers/Tavel;CH;061868;ja;ja;ja;ja;ja;ja
+6240;RBABCH22240;Caisse d'Epargne Courtelary SA;Hauptsitz;6240;;Grand-Rue;45;2608;Courtelary;CH;062408;ja;ja;ja;ja;ja;ja
+6300;VABECH22XXX;Valiant Bank AG;Hauptsitz;6300;;Bundesplatz;4;3001;Bern;CH;063000;ja;ja;ja;ja;ja;ja
+6313;RBABCH22313;Bernerland Bank AG;Hauptsitz;6313;;Kirchgasse;2;3454;Sumiswald;CH;063136;ja;ja;ja;ja;ja;ja
+6336;RBABCH22CLI;Clientis AG;Hauptsitz;6336;;Gurtengasse;6;3000;Bern 7;CH;063366;ja;ja;ja;ja;nein;nein
+6342;RBABCH22342;SB Saanen Bank AG;Hauptsitz;6342;;Bahnhofstrasse;2;3792;Saanen;CH;063420;ja;ja;ja;ja;ja;ja
+6363;RBABCH22363;Bank SLM AG;Hauptsitz;6363;;Dorfplatz;5;3110;Münsingen;CH;063630;ja;ja;ja;ja;ja;ja
+6374;RBABCH22374;Spar+Leihkasse Riggisberg AG;Hauptsitz;6374;;Grabenstrasse;7;3132;Riggisberg;CH;063748;ja;ja;ja;ja;ja;ja
+6382;RBABCH22382;Burgerliche Ersparniskasse Bern Genossenschaft;Hauptsitz;6382;;Bärenplatz;8;3001;Bern;CH;063828;ja;ja;ja;ja;ja;ja
+6387;RBABCH22387;Ersparniskasse Affoltern i. E. AG;Hauptsitz;6387;;Postfach;;3462;Weier im Emmental;CH;063870;ja;ja;ja;ja;ja;ja
+6395;RBABCH22XXX;Entris Banking AG;Hauptsitz;6395;;Mattenstrasse;8;3073;Gümligen;CH;063950;ja;ja;ja;ja;ja;nein
+6428;RBABCH22428;Clientis Sparkasse Oftringen Genossenschaft;Hauptsitz;6428;;Baslerstrasse;1;4665;Oftringen;CH;064289;ja;ja;ja;ja;ja;ja
+6434;RBABCH22434;Clientis Bank im Thal AG;Hauptsitz;6434;;Goldgasse;11;4710;Balsthal;CH;064347;ja;ja;ja;ja;ja;ja
+6450;RBABCH22450;Bank Oberaargau AG;Hauptsitz;6450;;Stadthausstrasse;1;4950;Huttwil;CH;064507;ja;ja;ja;ja;ja;ja
+6575;RBABCH22575;Clientis Bank Aareland AG;Hauptsitz;6575;;Hauptstrasse;10;5024;Küttigen;CH;065752;ja;ja;ja;ja;ja;ja
+6588;RBABCH22588;Bank Leerau Genossenschaft;Hauptsitz;6588;;Dorfstrasse;476;5054;Kirchleerau;CH;065886;ja;ja;ja;ja;ja;ja
+6633;RBABCH22633;Sparkasse Schwyz AG;Hauptsitz;6633;;Herrengasse;23;6431;Schwyz;CH;066337;ja;ja;ja;ja;ja;ja
+6670;RBABCH22670;Clientis Entlebucher Bank AG;Hauptsitz;6670;;Hauptstrasse;32;6170;Schüpfheim;CH;066703;ja;ja;ja;ja;ja;ja
+6807;RBABCH22807;GRB Glarner Regionalbank Genossenschaft;Hauptsitz;6807;;Bahnhofstrasse;25;8762;Schwanden;CH;068071;ja;ja;ja;ja;ja;ja
+6808;BSZHCHZZXXX;Sparhafen Bank AG;Hauptsitz;6808;;Fraumünsterstrasse;21;8001;Zürich;CH;068086;ja;ja;ja;ja;ja;ja
+6814;RBABCH22814;Sparcassa 1816 Genossenschaft;Hauptsitz;6814;;Zugerstrasse;18;8820;Wädenswil;CH;068140;ja;ja;ja;ja;ja;ja
+6824;RBABCH22824;BANK ZIMMERBERG AG;Hauptsitz;6824;;Dorfplatz;1;8810;Horgen 1;CH;068246;ja;ja;ja;ja;ja;ja
+6828;RBABCH22828;acrevis Bank AG (ex Regiobank Männedorf);Hauptsitz;6828;;Bahnhofstrasse;14;8708;Männedorf;CH;068283;ja;ja;ja;ja;ja;ja
+6830;RBABCH22830;Lienhardt & Partner Privatbank Zürich AG;Hauptsitz;6830;;Rämistrasse;23;8024;Zürich;CH;068306;ja;ja;ja;ja;ja;ja
+6835;RBABCH22835;Ersparniskasse Schaffhausen AG;Hauptsitz;6835;;Münsterplatz;34;8201;Schaffhausen;CH;068359;ja;ja;ja;ja;ja;ja
+6850;RBABCH22850;Bank Avera Genossenschaft;Hauptsitz;6850;;Spitalstrasse;2;8620;Wetzikon ZH;CH;068501;ja;ja;ja;ja;ja;ja
+6858;RBABCH22858;BS Bank Schaffhausen AG;Hauptsitz;6858;;Klettgauerplatz;3;8213;Neunkirch;CH;068585;ja;ja;ja;ja;ja;ja
+6866;RBABCH22866;Spar- und Leihkasse Thayngen AG;Hauptsitz;6866;;Bahnhofstrasse;32;8240;Thayngen;CH;068665;ja;ja;ja;ja;ja;ja
+6875;RBABCH22875;Leihkasse Stammheim AG;Hauptsitz;6875;;Hauptstrasse;6;8477;Oberstammheim;CH;068750;ja;ja;ja;ja;ja;ja
+6877;RBABCH22877;Zürcher Landbank AG;Hauptsitz;6877;;Lindenplatz;3;8353;Elgg;CH;068776;ja;ja;ja;ja;ja;ja
+6888;RBABCH22888;Bank BSU Genossenschaft;Hauptsitz;6888;;Bankstrasse;21;8610;Uster 1;CH;068887;ja;ja;ja;ja;ja;ja
+6900;ACRGCH22XXX;acrevis Bank AG;Hauptsitz;6900;;Marktplatz;1;9004;St. Gallen;CH;069001;ja;ja;ja;ja;ja;ja
+6920;ARBHCH22XXX;Alpha RHEINTAL Bank AG;Hauptsitz;6920;;Bahnhofstrasse;2;9435;Heerbrugg;CH;069208;ja;ja;ja;ja;ja;ja
+6935;RBABCH22935;Clientis Bank Oberuzwil AG;Hauptsitz;6935;;Wiesentalstrasse;7;9242;Oberuzwil;CH;069358;ja;ja;ja;ja;ja;ja
+6955;RBABCH22955;Clientis Bank Toggenburg AG;Hauptsitz;6955;;Harfengrund;2;9533;Kirchberg SG;CH;069555;ja;ja;ja;ja;ja;ja
+6964;RBABCH22964;Bank in Zuzwil;Hauptsitz;6964;;Mitteldorfstrasse;48;9524;Zuzwil SG;CH;069640;ja;ja;ja;ja;ja;ja
+6977;RBABCH22977;Clientis Bank Thur Genossenschaft;Hauptsitz;6977;;Kappler Strasse;21;9642;Ebnat-Kappel;CH;069778;ja;ja;ja;ja;ja;ja
+6980;RBABCH22980;Biene Bank im Rheintal Genossenschaft;Hauptsitz;6980;;Rorschacherstrasse;9;9450;Altstätten SG;CH;069806;ja;ja;ja;ja;ja;ja
+8235;BSCHCHGGXXX;Banco Santander International SA;Hauptsitz;8235;;Case postale 1256;;1211;Genève 1;CH;082359;ja;nein;ja;nein;nein;nein
+8236;FSUICHGGXXX;Nexent Bank (Suisse) SA;Hauptsitz;8236;;Rue du Rhône;80;1204;Genève;CH;082367;ja;ja;ja;ja;nein;nein
+8238;IVESCHZZXXX;Investec Bank (Switzerland) AG;Hauptsitz;8238;;Bahnhofstrasse;75;8001;Zürich;CH;082380;ja;ja;nein;nein;nein;nein
+8243;AGRICHGXXXX;Crédit Agricole next Bank (Suisse) SA;Hauptsitz;8243;;Esplanade de Pont-Rouge;4-6;1212;Grand-Lancy;CH;082430;ja;ja;ja;ja;ja;nein
+8245;ANPRCH22XXX;Banque Richelieu (Schweiz) AG;Hauptsitz;8245;;Bellerivestrasse;17;8008;Zürich;CH;082456;ja;ja;ja;ja;nein;nein
+8248;FVLBCHZZXXX;Van Lanschot Kempen (Schweiz) AG;Hauptsitz;8248;;Mittelstrasse;10;8034;Zürich;CH;082488;ja;ja;ja;ja;ja;ja
+8252;POSOCH22XXX;Banca Popolare di Sondrio (Suisse) SA;Hauptsitz;8252;;Casella postale 5832;;6901;Lugano 1;CH;082524;ja;ja;ja;ja;ja;ja
+8268;BILSCHZZXXX;Banque Internationale à Luxembourg (Suisse) SA;Hauptsitz;8268;;Bahnhofstrasse;20;8001;Zürich;CH;082681;ja;ja;ja;ja;ja;nein
+8270;BBVACHZZXXX;BBVA SA;Hauptsitz;8270;;Selnaustrasse;32/36;8021;Zürich;CH;082708;ja;ja;ja;ja;nein;nein
+8278;GOLDCHZZXXX;Goldman Sachs Bank AG;Hauptsitz;8278;;Claridenstrasse;22;8022;Zürich;CH;082784;ja;nein;nein;nein;nein;nein
+8288;FBGSCHZZXXX;Frankfurter Bankgesellschaft (Schweiz) AG;Hauptsitz;8288;;Börsenstrasse;16;8022;Zürich;CH;082887;ja;ja;ja;ja;ja;ja
+8289;BHFBCHZZXXX;ODDO BHF (Schweiz) AG;Hauptsitz;8289;;Gartenstrasse;14;8002;Zürich;CH;082895;ja;ja;ja;ja;ja;ja
+8296;CMBNCHZHXXX;Cembra Money Bank AG;Hauptsitz;8296;;Bändliweg;20;8048;Zürich;CH;082968;ja;nein;ja;ja;ja;nein
+8300;SLWYCH21XXX;Spar- und Leihkasse Wynigen AG;Hauptsitz;8300;;Postfach 180;;3472;Wynigen;CH;083001;ja;nein;ja;ja;ja;nein
+8307;HYPLCH22XXX;Hypothekarbank Lenzburg AG;Hauptsitz;8307;;Bahnhofstrasse;2;5600;Lenzburg 1;CH;083077;ja;ja;ja;ja;ja;ja
+8309;SYCOCHGGXXX;Banque SYZ SA;Hauptsitz;8309;;Quai des Bergues;1;1201;Geneva;CH;083090;ja;ja;ja;ja;nein;nein
+8326;CAGYCH21XXX;Caisse d'Epargne de Nyon société coopérative;Hauptsitz;8326;;Rue St-Jean;11;1260;Nyon;CH;083261;ja;ja;ja;ja;ja;nein
+8327;RBABCH22CEA;Caisse d'Epargne d'Aubonne Sociéte coopérative;Hauptsitz;8327;;Rue de l'Hôtel-de-Ville;21;1170;Aubonne;CH;083276;ja;ja;ja;ja;ja;ja
+8329;ERSCCH21XXX;Ersparniskasse Speicher;Hauptsitz;8329;;Hauptstrasse;21;9042;Speicher;CH;083292;ja;nein;ja;ja;ja;nein
+8334;KBSOCH22XXX;Baloise Bank AG;Hauptsitz;8334;;Amthausplatz;4;4500;Solothurn;CH;083342;ja;ja;ja;ja;ja;ja
+8335;BLFLCHBBXXX;LGT Bank (Schweiz) AG;Hauptsitz;8335;;Lange Gasse;15;4002;Basel;CH;083358;ja;ja;ja;ja;ja;ja
+8346;AEXTCHZZXXX;Banque Algérienne du Commerce Extérieur SA;Hauptsitz;8346;;Talacker;35;8001;Zürich;CH;083468;ja;ja;ja;ja;ja;ja
+8348;CDEMCH21XXX;Caisse d'Epargne et de Crédit Mutuel de Chermignon;Hauptsitz;8348;;Case postale 14;;3971;Chermignon;CH;083489;ja;nein;ja;nein;ja;nein
+8349;CDDVCH21XXX;Caisse d'Epargne Riviera, société coopérative;Hauptsitz;8349;;Avenue Paul-Ceresole;3;1800;Vevey 1;CH;083497;ja;ja;ja;ja;ja;ja
+8351;;SOS Cash & Value SA;Hauptsitz;8351;;Route de Tabary;1;1904;Vernayaz;CH;083518;ja;nein;ja;nein;nein;nein
+8352;VIMMCHZZXXX;Loomis Schweiz SA;Hauptsitz;8352;;Peter Merian-Strasse;50;4052;Basel;CH;083523;ja;nein;ja;nein;nein;nein
+8373;PCBCCHZZXXX;China Construction Bank Corporation, Beijing, Swiss Branch;Hauptsitz;8373;;Beethovenstrasse;33;8002;Zürich;CH;083731;ja;ja;ja;ja;nein;nein
+8374;ISAECH2NXXX;CACEIS Bank, Montrouge, succursale de Nyon / Suisse;Hauptsitz;8374;;Route de Signy;35;1260;Nyon;CH;083746;ja;nein;ja;ja;nein;nein
+8377;VSFACHZZXXX;Vontobel Swiss Financial Advisers AG;Hauptsitz;8377;;Gotthardstrasse;43;8022;Zürich;CH;083778;ja;nein;ja;ja;nein;nein
+8378;NEPICHZZXXX;NPB Neue Privat Bank AG;Hauptsitz;8378;;Limmatquai 1 / am Bellevue;;8024;Zürich;CH;083783;ja;nein;ja;ja;ja;nein
+8379;QNBACHGGXXX;QNB (Suisse) SA;Hauptsitz;8379;;Quai du Mont-Blanc;1;1201;Genève;CH;083799;ja;ja;ja;ja;nein;nein
+8380;MGTCCHGGXXX;J.P. Morgan (Suisse) SA;Hauptsitz;8380;;Rue de la Confédération;8;1204;Genève;CH;083806;ja;nein;ja;ja;nein;nein
+8384;REYLCHGGXXX;Intesa Sanpaolo Wealth Management SA;Hauptsitz;8384;;Rue du Rhône;4;1204;Genève;CH;083843;ja;ja;ja;ja;ja;ja
+8385;NBOKCHGGXXX;NBK Banque Privée (Suisse) SA;Hauptsitz;8385;;Rue de la Corraterie;5;1204;Genève;CH;083859;ja;ja;ja;ja;nein;nein
+8387;BBRUCHGTXXX;ING Bank N.V., Amsterdam, succursale de Lancy/Genève;Hauptsitz;8387;;Avenue de Morgines;10;1213;Petit-Lancy;CH;083875;ja;nein;ja;ja;ja;nein
+8388;BABRCHGGXXX;Banque Eric Sturdza SA;Hauptsitz;8388;;Rue du Rhône;112;1211;Genève 3;CH;083880;ja;ja;ja;ja;nein;nein
+8389;RBABCH22BSD;Bezirks-Sparkasse Dielsdorf Genossenschaft;Hauptsitz;8389;;Bahnhofstrasse;29;8157;Dielsdorf;CH;083891;ja;ja;ja;ja;ja;ja
+8390;ABSOCH22XXX;Alternative Bank Schweiz AG;Hauptsitz;8390;;Amthausquai;21;4600;Olten;CH;083909;ja;ja;ja;ja;ja;nein
+8391;WIRBCHBBXXX;WIR Bank Genossenschaft;Hauptsitz;8391;;Auberg;1;4002;Basel;CH;083917;ja;ja;ja;ja;ja;ja
+8392;FRGGCHB1XXX;Freie Gemeinschaftsbank Genossenschaft;Hauptsitz;8392;;Meret Oppenheim-Strasse;10;4002;Basel;CH;083925;ja;ja;ja;ja;ja;nein
+8393;RBABCH22EKI;Bank EKI Genossenschaft;Hauptsitz;8393;;Rosenstrasse;1;3800;Interlaken;CH;083930;ja;ja;ja;ja;ja;ja
+8394;RBABCH22EEK;Bank EEK AG;Hauptsitz;8394;;Amthausgasse 14 / Marktgasse;19;3001;Bern;CH;083941;ja;ja;ja;ja;ja;ja
+8395;RBABCH22SLB;Spar- und Leihkasse Bucheggberg;Hauptsitz;8395;;Hauptstrasse;4;4584;Lüterswil;CH;083956;ja;ja;ja;ja;ja;ja
+8396;SLGUCH2MXXX;Spar + Leihkasse Gürbetal AG;Hauptsitz;8396;;Dorfstrasse;19;3127;Mühlethurnen;CH;083964;ja;ja;ja;ja;ja;nein
+8397;RBABCH22DCB;DC Bank AG;Hauptsitz;8397;;Schauplatzgasse;21;3001;Bern;CH;083972;ja;ja;ja;ja;ja;ja
+8398;VZDBCHZZXXX;VZ Depotbank AG;Hauptsitz;8398;;Innere Güterstrasse;2;6300;Zug;CH;083988;ja;ja;ja;ja;ja;ja
+8401;MIGRCHZZXXX;Migros Bank AG;Hauptsitz;8401;;Postfach;;8010;Zürich;CH;084010;ja;ja;ja;ja;ja;ja
+8440;BCLRCHBBXXX;Bank Cler AG;Hauptsitz;8440;;Postfach;;4002;Basel;CH;084406;ja;ja;ja;ja;ja;ja
+8441;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Gundeldingen;;4018;Basel;CH;084414;ja;ja;ja;ja;ja;ja
+8442;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Kleinbasel;;4005;Basel;CH;084422;ja;ja;ja;ja;ja;ja
+8443;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Postfach;;3001;Bern;CH;084438;ja;ja;ja;ja;ja;ja
+8444;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Postfach;;2501;Biel/Bienne;CH;084443;ja;ja;ja;ja;ja;ja
+8445;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Neumarkt;2;5201;Brugg AG;CH;084459;ja;ja;ja;ja;ja;ja
+8446;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Case postale;;2001;Neuchâtel;CH;084467;ja;ja;ja;ja;ja;ja
+8447;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Case postale;;1204;Genève 3;CH;084475;ja;ja;ja;ja;ja;ja
+8448;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Case postale 5783;;1002;Lausanne;CH;084480;ja;ja;ja;ja;ja;ja
+8449;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Casella postale;;6901;Lugano;CH;084491;ja;ja;ja;ja;ja;ja
+8450;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Postfach;;6002;Luzern;CH;084509;ja;ja;ja;ja;ja;ja
+8451;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Postfach;;4600;Olten;CH;084517;ja;ja;ja;ja;ja;ja
+8452;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Postfach;;8201;Schaffhausen;CH;084525;ja;ja;ja;ja;ja;ja
+8453;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Uraniastrasse;6;8021;Zürich;CH;084530;ja;ja;ja;ja;ja;ja
+8454;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Oerlikon;;8050;Zürich;CH;084541;ja;ja;ja;ja;ja;ja
+8455;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Casella postale;;6501;Bellinzona;CH;084556;ja;ja;ja;ja;ja;ja
+8456;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Postfach;;9001;St. Gallen;CH;084564;ja;ja;ja;ja;ja;ja
+8457;BCLRCHBBXXX;Bank Cler AG;Filiale;8440;;Rue de Romont;35;1701;Fribourg;CH;084572;ja;ja;ja;ja;ja;ja
+8490;CBLUCH22XXX;Cornèr Banca SA;Hauptsitz;8490;;Via Canova;16;6901;Lugano;CH;084900;ja;ja;ja;ja;ja;ja
+8495;BCRECH22XXX;Banca Credinvest SA;Hauptsitz;8495;;Via G. Cattori;14;6902;Lugano;CH;084958;ja;ja;ja;ja;ja;ja
+8496;VRBPCH22XXX;Banca Aletti & C. (Suisse) SA;Hauptsitz;8496;;Via Massimiliano Magatti;6;6900;Lugano;CH;084963;ja;nein;nein;nein;nein;nein
+8497;SAXOCHZHXXX;SAXO BANK (SCHWEIZ) AG;Hauptsitz;8497;;The Circle;38;8302;Kloten;CH;084979;ja;ja;ja;ja;nein;nein
+8498;UNCECH22XXX;Axion SWISS Bank SA;Hauptsitz;8498;;Viale Stefano Franscini;22;6900;Lugano;CH;084987;ja;nein;ja;ja;ja;nein
+8499;NBPSCHGGXXX;FAB Private Bank (Suisse) SA;Hauptsitz;8499;;Quai de l'Ile;5;1211;Geneva 1;CH;084995;ja;nein;ja;ja;ja;nein
+8509;BAMRCHZZXXX;Mercantil Bank (Schweiz) AG;Hauptsitz;8509;;Kasernenstrasse;1;8036;Zürich;CH;085098;ja;nein;ja;ja;nein;nein
+8515;BAERCHZZXXX;Bank Julius Bär & Co AG;Hauptsitz;8515;;Bahnhofstrasse;36;8010;Zürich;CH;085154;ja;ja;ja;ja;ja;nein
+8518;RBABCH22BGA;Bank Gantrisch Genossenschaft;Hauptsitz;8518;;Bahnhofstrasse;2;3150;Schwarzenburg;CH;085183;ja;ja;ja;ja;ja;ja
+8519;RBABCH22EKR;Ersparniskasse Rüeggisberg Genossenschaft;Hauptsitz;8519;;Dorfstrasse;19;3088;Rüeggisberg;CH;085199;ja;ja;ja;ja;ja;ja
+8521;RBABCH22BBO;BBO Bank Brienz Oberhasli AG;Hauptsitz;8521;;Hauptstrasse;115;3855;Brienz;CH;085214;ja;ja;ja;ja;ja;ja
+8522;SBTICH22XXX;Società Bancaria Ticinese;Hauptsitz;8522;;Casella postale 2062;;6501;Bellinzona;CH;085222;ja;nein;ja;nein;ja;nein
+8525;BTVACH22XXX;BTV Vier Länder Bank AG Innsbruck, Zweigniederlassung Staad;Hauptsitz;8525;;Hauptstrasse;19;9422;Staad SG;CH;085259;ja;ja;ja;ja;ja;ja
+8533;SELVCHGGXXX;SELVI & Cie SA;Hauptsitz;8533;;Rue du Grütli;4;1211;Genève 11;CH;085330;ja;ja;ja;nein;nein;nein
+8534;VPBVCHZHXXX;VP Bank (Schweiz) AG;Hauptsitz;8534;;Talstrasse;59;8001;Zürich;CH;085341;ja;ja;ja;ja;ja;ja
+8537;BICFCHGGXXX;Banque Internationale de Commerce-BRED (Suisse) SA;Hauptsitz;8537;;Boulevard du Théatre;8;1204;Genève;CH;085372;ja;nein;nein;nein;nein;nein
+8539;BEGOCHZZXXX;Bergos AG;Hauptsitz;8539;;Postfach 186;;8034;Zürich;CH;085393;ja;ja;ja;ja;ja;ja
+8540;BLOMCHGGXXX;BANQUE BANORIENT (SUISSE) SA;Hauptsitz;8540;;Rue Rodolphe Toepffer;1;1206;Genève;CH;085401;ja;ja;ja;ja;nein;nein
+8543;SCOPCHBBXXX;Scobag Privatbank AG;Hauptsitz;8543;;Postfach;;4010;Basel;CH;085432;ja;ja;ja;ja;ja;nein
+8548;CCIECHGGXXX;Hyposwiss Private Bank Genève SA;Hauptsitz;8548;;Rue du Général-Dufour;3;1211;Genève 1;CH;085485;ja;ja;ja;ja;ja;ja
+8553;BZBKCH2WXXX;BZ Bank Aktiengesellschaft;Hauptsitz;8553;;Egglirain;15;8832;Wilen b. Wollerau;CH;085533;ja;nein;ja;ja;ja;nein
+8564;GRAFCH22XXX;Privatbank Von Graffenried AG;Hauptsitz;8564;;Spitalgasse;3;3011;Bern;CH;085645;ja;nein;ja;nein;nein;nein
+8565;DREYCHBBXXX;Dreyfus Söhne & Cie AG, Banquiers;Hauptsitz;8565;;Aeschenvorstadt;16;4002;Basel;CH;085650;ja;ja;ja;ja;ja;ja
+8570;BONHCH22XXX;Banque Bonhôte & Cie SA;Hauptsitz;8570;;Quai Ostervald;2;2001;Neuchâtel;CH;085700;ja;ja;ja;ja;ja;ja
+8571;PRIBCHGGXXX;Edmond de Rothschild (Suisse) S.A;Hauptsitz;8571;;Avenue de I'Etang;62b;1219;Châtelaine;CH;085711;ja;ja;ja;ja;ja;ja
+8572;TRAPCHBBXXX;Trafina Privatbank AG;Hauptsitz;8572;;Rennweg;50;4020;Basel;CH;085726;ja;ja;ja;ja;ja;nein
+8573;MAEBCHZZXXX;Maerki, Baumann & Co. AG;Hauptsitz;8573;;Dreikönigstrasse;6;8022;Zürich;CH;085734;ja;ja;ja;ja;ja;ja
+8574;MEDSCHGGXXX;Banque Des Monts Blancs SA;Hauptsitz;8574;;Rue du Mont Blanc;3;1211;Genève;CH;085742;ja;ja;ja;nein;nein;nein
+8584;BACECH22XXX;Banca del Ceresio SA;Hauptsitz;8584;;Casella postale 2860;;6901;Lugano;CH;085844;ja;ja;ja;ja;ja;ja
+8609;EUBACH22XXX;Banca Zarattini & Co. SA;Hauptsitz;8609;;Via Sarafino Balestra;17;6900;Lugano;CH;086091;ja;ja;ja;ja;nein;nein
+8615;GENOCHZZXXX;DZ PRIVATBANK (Schweiz) AG;Hauptsitz;8615;;Münsterhof;12;8022;Zürich;CH;086156;ja;ja;ja;ja;ja;ja
+8616;EFGBCHGGXXX;EFG Bank European Financial Group SA;Hauptsitz;8616;;Quai du Seujet;24;1211;Genève 2;CH;086164;ja;nein;ja;ja;ja;nein
+8619;NBSZCHZZXXX;Nomura Bank (Switzerland) Ltd;Hauptsitz;8619;;Postfach;;8021;Zürich;CH;086193;ja;nein;nein;nein;nein;nein
+8624;AUDSCHGGXXX;Banque Audi (Suisse) SA;Hauptsitz;8624;;Case postale 384;;1211;Genève 12;CH;086248;ja;nein;ja;ja;ja;nein
+8629;BPCPCHGGXXX;Banque de Commerce et de Placements SA;Hauptsitz;8629;;Rue de la Fontaine;1;1211;Genève 3;CH;086290;ja;ja;ja;ja;ja;ja
+8634;BJHSCHZZXXX;Schroder & Co Bank AG;Hauptsitz;8634;;Central;2;8021;Zürich;CH;086349;ja;ja;nein;nein;nein;nein
+8635;CHASCHGXXXX;JPMorgan Chase Bank, National Association, Columbus;Hauptsitz;8635;;Dreikönigstrasse;37;8027;Zürich;CH;086357;ja;nein;ja;ja;ja;nein
+8638;CBSWCHZZXXX;Citibank (Switzerland) AG;Hauptsitz;8638;;Prime Tower / Hardstrasse;201;8010;Zürich;CH;086381;ja;nein;nein;nein;nein;nein
+8657;UBPGCHGGXXX;Union Bancaire Privée, UBP SA;Hauptsitz;8657;;Case postale 1320;;1211;Genève 1;CH;086579;ja;ja;ja;ja;ja;ja
+8659;DEUTCHGGXXX;Deutsche Bank (Suisse) S.A.;Hauptsitz;8659;;Place des Bergues;3;1201;Genève 1;CH;086595;ja;ja;ja;nein;ja;ja
+8660;RKBZCHZZXXX;GPB (Schweiz) AG;Hauptsitz;8660;;Zollikerstrasse;183;8032;Zürich;CH;086605;ja;nein;ja;nein;nein;nein
+8661;ROTACHZZXXX;Rothschild & Co Bank AG;Hauptsitz;8661;;Postfach;;8034;Zürich;CH;086610;ja;ja;ja;ja;ja;ja
+8663;PKBSCH22XXX;PKB PRIVATE BANK SA;Hauptsitz;8663;;Via Serafina Balestra;1;6900;Lugano;CH;086636;ja;ja;ja;ja;ja;ja
+8664;PKBSCH2269A;PKB PRIVATBANK AG;Filiale;8663;;Tödistrasse;47;8022;Zürich;CH;086644;ja;ja;ja;ja;ja;ja
+8665;PKBSCH2212A;PKB PRIVATBANK SA;Filiale;8663;;Charles Galland;12;1206;Genève;CH;086652;ja;ja;ja;ja;ja;ja
+8666;BASECH22XXX;Banca del Sempione SA;Hauptsitz;8666;;Via Peri;5;6901;Lugano 1;CH;086668;ja;ja;ja;ja;ja;nein
+8667;EFGBCHZZXXX;EFG Bank AG;Hauptsitz;8667;;Bleicherweg;8;8022;Zürich;CH;086673;ja;ja;ja;ja;ja;ja
+8686;BPPBCHGGXXX;BNP PARIBAS, Paris, succursale de Lancy/Genève;Hauptsitz;8686;;Esplanade de Pont-Rouge;9a;1212;Grand-Lancy;CH;086866;ja;ja;ja;ja;ja;ja
+8689;BLICCHGGXXX;HSBC Private Bank (Suisse) SA;Hauptsitz;8689;;Quai Général-Guisan;2;1211;Genève 1;CH;086898;ja;ja;ja;ja;ja;nein
+8700;CITICHZZXXX;Citibank N.A., Sioux Falls;Hauptsitz;8700;;Bleicherweg;10;8010;Zürich;CH;087000;ja;nein;nein;nein;nein;nein
+8701;HSBCCHZZXXX;HSBC Bank plc, London, Zweigniederlassung Zürich;Hauptsitz;8701;;Bederstrasse;49;8002;Zürich;CH;087011;ja;ja;ja;ja;ja;ja
+8702;EFGFCHZZXXX;Leonteq Securities AG;Hauptsitz;8702;;Europaallee;39;8004;Zürich;CH;087026;ja;nein;nein;nein;nein;nein
+8703;BZPLCHZZXXX;bank zweiplus ag;Hauptsitz;8703;;Buckhauserstrasse;22;8048;Zürich;CH;087034;ja;ja;ja;ja;ja;ja
+8704;AEKTCH22XXX;AEK BANK 1826 Genossenschaft;Hauptsitz;8704;;Hofstettenstrasse;2;3601;Thun;CH;087042;ja;ja;ja;ja;ja;ja
+8705;SGABCHZZXXX;Société Générale;Hauptsitz;8705;;Talacker;50;8021;Zürich;CH;087058;ja;ja;ja;ja;ja;ja
+8710;CIALCHBBXXX;Bank CIC (SCHWEIZ) AG;Hauptsitz;8710;;Marktplatz;13;4001;Basel;CH;087105;ja;ja;ja;ja;ja;ja
+8719;ARBSCHZZXXX;Arab Bank (Switzerland) Ltd.;Hauptsitz;8719;;Place de Longemalle;10-12;1204;Genève;CH;087197;ja;ja;ja;ja;ja;nein
+8721;GONECHGGXXX;Gonet & Cie SA;Hauptsitz;8721;;Boulevard du Théâtre;6;1211;Genève 11;CH;087218;ja;ja;ja;ja;ja;ja
+8726;BOFACH2XXXX;Bank of America Europe DAC, Dublin, Zurich Branch;Hauptsitz;8726;;Stockerhof, Stockerstrasse;23;8002;Zürich;CH;087260;ja;nein;ja;ja;ja;nein
+8727;CRAMCHGGXXX;Banque Cramer & Cie SA;Hauptsitz;8727;;Avenue de Miremont;22;1211;Genève 12;CH;087271;ja;ja;ja;ja;ja;ja
+8731;LINSCH23XXX;LLB (Schweiz) AG;Hauptsitz;8731;;Zürcherstrasse;3;8730;Uznach;CH;087319;ja;ja;ja;ja;ja;ja
+8733;RBABCH22BKT;Bank Thalwil Genossenschaft;Hauptsitz;8733;;Gotthardstrasse;14;8800;Thalwil;CH;087335;ja;ja;ja;ja;ja;ja
+8735;BARCCHGGXXX;Barclays Bank (Suisse) SA;Hauptsitz;8735;;Chemin de Grange-Canal;18-20;1211;Genève 3;CH;087351;ja;ja;ja;ja;ja;ja
+8740;AGRICHGGXXX;CA Indosuez (Switzerland) SA;Filiale;8741;;Chemin de Bérée;46-48;1010;Lausanne;CH;087407;ja;ja;ja;ja;ja;ja
+8741;AGRICHGGXXX;CA Indosuez (Switzerland) SA;Hauptsitz;8741;;Quai Général Guisan;4;1211;Genève 11;CH;087415;ja;ja;ja;ja;ja;ja
+8742;AGRICHGGXXX;CA Indosuez (Switzerland) SA;Filiale;8741;;Via F. Pelli;3;6901;Lugano;CH;087420;ja;ja;ja;ja;ja;ja
+8743;AGRICHGGXXX;CA Indosuez (Switzerland) SA;Filiale;8741;;Lintheschergasse;15;8021;Zürich;CH;087431;ja;ja;ja;ja;ja;ja
+8750;SARACHBBXXX;Bank J. Safra Sarasin AG;Hauptsitz;8750;;Elisabethenstrasse;62;4002;Basel;CH;087506;ja;ja;ja;ja;ja;ja
+8751;SARACHBBXXX;Bank J. Safra Sarasin AG;Filiale;8750;;Bleicherweg 1 / Paradeplatz;;8022;Zürich;CH;087514;ja;ja;ja;ja;ja;ja
+8752;SARACHBBXXX;Bank J. Safra Sarasin AG;Filiale;8750;;(ex Direkt Anlage Bank);;4002;Basel;CH;087522;ja;nein;ja;ja;ja;nein
+8755;PICTCHGGXXX;Banque Pictet & Cie SA;Hauptsitz;8755;;Route des Acacias;60;1211;Genève 73;CH;087559;ja;ja;ja;ja;ja;ja
+8756;BAUMCHBBXXX;Baumann & Cie KmG;Hauptsitz;8756;;St. Jakobs-Strasse;46;4002;Basel;CH;087567;ja;ja;ja;ja;ja;nein
+8757;VONTCHZZXXX;Bank Vontobel AG;Hauptsitz;8757;;Gotthardstrasse;43;8022;Zürich;CH;087575;ja;ja;ja;ja;ja;ja
+8760;LOCYCHGGXXX;Banque Lombard Odier & Cie SA;Hauptsitz;8760;;Chemin Messidor;1;1293;Bellevue;CH;087609;ja;ja;ja;ja;ja;ja
+8761;REICCH22XXX;Reichmuth & Co.;Hauptsitz;8761;;Rütligasse;1;6000;Luzern 7;CH;087617;ja;ja;ja;ja;nein;nein
+8762;BSSACHGGXXX;CBH - Compagnie Bancaire Helvétique SA;Hauptsitz;8762;;Boulevard Emile-Jaques-Dalcroze;7;1211;Genève 3;CH;087625;ja;ja;ja;ja;ja;nein
+8767;BORDCHGGXXX;Bordier & Cie SCmA;Hauptsitz;8767;;Case postale 5515;;1211;Genève 11;CH;087672;ja;ja;ja;ja;ja;ja
+8770;MIRACHGGXXX;Mirabaud & Cie SA;Hauptsitz;8770;;Boulevard Georges-Favon;29;1211;Genève 11;CH;087701;ja;ja;ja;ja;ja;ja
+8775;GUTZCHBBXXX;E. Gutzwiller & Cie Banquiers;Hauptsitz;8775;;Postfach 1216;;4001;Basel;CH;087753;ja;ja;ja;ja;ja;ja
+8777;PIGUCH22XXX;Piguet Galland & Cie SA;Hauptsitz;8777;;Rue de la Plaine;14;1401;Yverdon-les-Bains;CH;087777;ja;ja;ja;ja;ja;ja
+8779;RAHNCHZZXXX;Rahn+Bodmer Co.;Hauptsitz;8779;;Münstergasse;2;8001;Zürich;CH;087790;ja;ja;ja;ja;ja;nein
+8780;DEUTCHZZXXX;Deutsche Bank AG Zürich Branch;Hauptsitz;8780;;Postfach 3604 / Uraniastrasse;9;8021;Zürich;CH;087804;ja;nein;ja;ja;ja;nein
+8781;SWQBCHZZXXX;Swissquote Bank SA;Hauptsitz;8781;;Chemin de la Crétaux;33;1196;Gland;CH;087812;ja;ja;ja;ja;ja;ja
+8784;RBABCH22SLF;Spar- und Leihkasse Frutigen AG;Hauptsitz;8784;;Dorfstrasse;15;3714;Frutigen;CH;087849;ja;ja;ja;ja;ja;ja
+8785;RSOSCH22XXX;Regiobank Solothurn AG;Hauptsitz;8785;;Westbahnhofstrasse;11;4502;Solothurn;CH;087857;ja;ja;ja;ja;ja;ja
+8787;;Pfandbriefbank schweizerischer Hypothekarinstitute AG;Hauptsitz;8787;;Nansenstrasse;16;8050;Zürich;CH;087870;ja;nein;ja;nein;ja;nein
+8788;HFTCCHGGXXX;BANQUE HERITAGE SA;Hauptsitz;8788;;Route de Chêne;61;1211;Genève 6;CH;087881;ja;ja;ja;ja;ja;ja
+8789;HBZUCHZZXXX;Habib Bank AG Zürich;Hauptsitz;8789;;Weinbergstrasse;59;8042;Zürich;CH;087896;ja;ja;ja;ja;nein;nein
+8797;TMBECH22XXX;IBKR Financial Services AG;Hauptsitz;8797;;Gubelstrasse;28;6300;Zug;CH;087976;ja;ja;ja;nein;nein;nein
+8799;INCOCHZZXXX;InCore Bank AG;Hauptsitz;8799;;Wiesenstrasse;17;8952;Schlieren;CH;087992;ja;ja;ja;ja;ja;ja
+8820;DOMICHZZXXX;Founders Bank AG;Hauptsitz;8820;;Bahnhofstrasse;4;6430;Schwyz;CH;088205;ja;nein;ja;ja;ja;nein
+8821;RBABCH22VLH;Hypo Vorarlberg Bank AG, Bregenz, Zweigniederl., St. Gallen;Hauptsitz;8821;;Bankgasse;1;9004;St. Gallen;CH;088210;ja;ja;ja;ja;ja;ja
+8822;CIMMCHGGXXX;CIM Banque SA;Hauptsitz;8822;;Rue Merle d'Aubigné;16;1211;Genève 6;CH;088221;ja;ja;ja;ja;nein;nein
+8825;TXBZCHZZXXX;TradeXBank AG;Hauptsitz;8825;;Gartenstrasse;24;8002;Zürich;CH;088252;ja;nein;ja;ja;ja;nein
+8827;ABSGCHGGXXX;Arya Banque Privée SA;Hauptsitz;8827;;Place de la Fusterie 3 bis;;1211;Genève 1;CH;088273;ja;ja;ja;ja;ja;nein
+8831;CAGLCHGGXXX;ABANCA CORPORACION BANCARIA S.A., BETANZOS;Hauptsitz;8831;;Quai des Bergues;27;1211;Genève 1;CH;088318;ja;nein;ja;ja;nein;nein
+8836;COBACHZHXXX;COMMERZBANK AG FF, Zweigniederlassung Zürich;Hauptsitz;8836;;Pelikanplatz;15;8001;Zürich;CH;088360;ja;ja;ja;ja;ja;ja
+8838;BLEMCHGGXXX;Banque du Léman SA;Hauptsitz;8838;;Rue François-Bonivard;12;1201;Genève;CH;088386;ja;ja;ja;ja;ja;ja
+8839;QVCHCHZHXXX;EFG Bank AG (ex Quilvest (Switzerland) Ltd.);Hauptsitz;8839;;Füsslistrasse;6;8001;Zürich;CH;088394;ja;nein;ja;ja;nein;nein
+8841;ITAUCHZZXXX;Banco Itaú (Suisse) SA;Hauptsitz;8841;;Bleicherweg;30;8002;Zürich;CH;088419;ja;nein;ja;ja;nein;nein
+8842;GLBNCHZZXXX;Globalance Bank AG;Hauptsitz;8842;;Gartenstrasse;16;8002;Zürich;CH;088427;ja;nein;ja;ja;ja;nein
+8843;DUBACHGGXXX;Dukascopy Bank SA;Hauptsitz;8843;;Route de Pré-Bois;20;1215;Genève 15;CH;088435;ja;ja;ja;ja;nein;nein
+8845;SFBFCH22XXX;Helvetische Bank AG;Hauptsitz;8845;;Seefeldstrasse;215;8008;Zürich;CH;088451;ja;ja;ja;ja;ja;nein
+8846;AQULCHZZXXX;Aquila AG;Hauptsitz;8846;;Bahnhofstrasse;43;8001;Zürich;CH;088466;ja;nein;ja;ja;ja;nein
+8848;IGBKCHGGXXX;IG Bank S.A.;Hauptsitz;8848;;Rue du Rhône;42;1204;Genève;CH;088482;ja;ja;ja;ja;nein;nein
+8850;FAVSCHGAXXX;compenswiss (Fonds de compensation AVS/AI/APG);Hauptsitz;8850;;Bd. Georges Favon;6;1204;Genève;CH;088507;ja;nein;ja;nein;nein;nein
+8851;SUAACH22XXX;SUVA;Hauptsitz;8851;;Fluhmattstrasse;1;6002;Luzern;CH;088515;ja;nein;ja;nein;nein;nein
+8852;SLAMCHZZKV0;Swiss Life AG (KV, geb. Vermögen);Hauptsitz;8852;;General-Guisan-Quai;40;8022;Zürich;CH;088520;ja;nein;ja;nein;nein;nein
+8853;SWRECHZHXXX;Schweizerische Rückversicherungs-Gesellschaft AG;Hauptsitz;8853;;Mythenquai;50/60;8022;Zürich;CH;088531;ja;nein;ja;nein;nein;nein
+8854;AXIPCHZZXXX;AXA Leben AG;Hauptsitz;8854;;General Guisan-Strasse;40;8401;Winterthur;CH;088546;ja;nein;ja;nein;nein;nein
+8855;ZURICHZFXXX;Zurich Insurance Company Ltd;Hauptsitz;8855;;Mythenquai;2;8002;Zurich;CH;088554;ja;nein;ja;nein;nein;nein
+8856;BAAMCHBBXXX;Helvetia Schweizerische Lebensvers.- Ges. AG, (FV BAL);Hauptsitz;8856;;Aeschengraben;21;4051;Basel;CH;088562;ja;nein;ja;nein;nein;nein
+8858;BAAMCHBBBVG;Helvetia Schweizerische Vers.- Ges. AG, (GV BAL);Hauptsitz;8858;;Aeschengraben;21;4051;Basel;CH;088583;ja;nein;ja;nein;nein;nein
+8859;;Schweizerische Mobiliar Versicherungsgesellschaft AG;Hauptsitz;8859;;Bundesgasse;35;3001;Bern;CH;088599;ja;nein;ja;nein;nein;nein
+8865;RMCOCHBBXXX;Remaco Asset Management AG;Hauptsitz;8865;;Postfach 2282;;4020;Basel;CH;088659;ja;nein;ja;nein;nein;nein
+8866;LFFSCHGGXXX;LF Finance (Suisse) SA;Hauptsitz;8866;;Case postale 3667;;1211;Genève 3;CH;088667;ja;nein;ja;ja;nein;nein
+8867;SSBECHZZXXX;State Street Bank International GmbH, München, ZN Zürich;Hauptsitz;8867;;Kalanderplatz;5;8045;Zürich;CH;088675;ja;nein;nein;nein;nein;nein
+8868;DELECHG2XXX;Delen (Suisse) SA;Hauptsitz;8868;;Boulevard Helvétique;31;1207;Genève;CH;088680;ja;nein;ja;nein;nein;nein
+8871;ZAPRCH22XXX;Zähringer Privatbank AG;Hauptsitz;8871;;Schmiedenplatz;3;3011;Bern;CH;088717;ja;ja;ja;ja;ja;ja
+8880;INSECHZZXXX;SIX SIS AG;Hauptsitz;8880;;Pfingstweidstrasse;110;8005;Zürich;CH;088801;ja;ja;ja;nein;ja;nein
+8881;INSECHZZXXX;SIX SIS AG;Filiale;8880;;Pfingstweidstrasse;110;8005;Zürich;CH;088816;ja;ja;ja;nein;ja;nein
+8883;EUXCDEFZXXX;EUREX Clearing AG;Hauptsitz;8883;;Mergenthalerallee;61;65760;Eschborn;DE;088832;ja;ja;nein;nein;nein;nein
+8887;INSECHZZXXX;SIX SIS AG;Filiale;8880;;Pfingstweidstrasse;110;8005;Zürich;CH;088877;ja;ja;ja;nein;ja;nein
+8890;SKBPCH22XXX;Sparkasse Bundespersonal;Hauptsitz;8890;;Monbijoustrasse;118;3003;Bern;CH;088904;ja;nein;ja;ja;ja;nein
+8899;BISBCHBBXXX;BIZ Bank für Internationalen Zahlungsausgleich;Hauptsitz;8899;;Postfach;;4002;Basel;CH;088996;ja;nein;ja;nein;nein;nein
+8910;CLSBUS33XXX;CLS Bank International;Hauptsitz;8910;;Broadway, 29th Floor;39;10006;New York, NY 1006-3053;US;089106;ja;nein;nein;nein;nein;nein
+9000;POFICHBEXXX;PostFinance AG;Hauptsitz;9000;;Mingerstrasse;20;3030;Bern;CH;090002;ja;ja;ja;ja;nein;nein
+30000;POFICHBEXXX;PostFinance AG;QR-IID;30000;9000;Mingerstrasse;20;3030;Bern;CH;300005;ja;ja;ja;ja;nein;nein
+30002;BHFBCHZZXXX;ODDO BHF (Schweiz) AG;QR-IID;30002;8289;Gartenstrasse;14;8002;Zürich;CH;300021;ja;ja;ja;ja;nein;nein
+30003;ZURICHZFZLT;Zürich Lebensvers.-Ges. AG Individual Life geb. Vermögen;QR-IID;30003;83034;Mythenquai;2;8002;Zürich;CH;300036;ja;nein;ja;nein;nein;nein
+30004;ZURICHZFZKT;Zürich Lebensvers.-Ges. AG Group Life geb. Vermögen;QR-IID;30004;83033;Mythenquai;2;8002;Zürich;CH;300044;ja;nein;ja;nein;nein;nein
+30005;UBSWCHZH80A;UBS Switzerland AG;QR-IID;30005;230;Bahnhofstrasse;45;8098;Zürich;CH;300052;ja;ja;ja;ja;nein;nein
+30006;ZURICHZFZNT;Zürich Versicherungs.-Ges. AG gebundenes Vermögen;QR-IID;30006;83032;Mythenquai;2;8002;Zürich;CH;300068;ja;nein;ja;nein;nein;nein
+30010;AGRICHGGXXX;CA Indosuez (Switzerland) SA;QR-IID;30010;8740;Quai Général Guisan;4;1211;Genève 11;CH;300102;ja;ja;ja;ja;nein;nein
+30020;RBABCH22180;Crédit Mutuel de la Vallée SA;QR-IID;30020;6180;Grande Rue;22;1347;Sentier, Le;CH;300203;ja;ja;ja;ja;nein;nein
+30021;RBABCH22182;Caisse d'Epargne de Cossonay société coopérative;QR-IID;30021;6182;Rue du Temple;2;1304;Cossonay-Ville;CH;300219;ja;ja;ja;ja;nein;nein
+30022;RBABCH22186;Sparkasse Sense;QR-IID;30022;6186;Mariahilfstrasse;4;1712;Tafers/Tavel;CH;300227;ja;ja;ja;ja;nein;nein
+30023;RBABCH22240;Caisse d'Epargne Courtelary SA;QR-IID;30023;6240;Grand-Rue;45;2608;Courtelary;CH;300235;ja;ja;ja;ja;nein;nein
+30024;VABECH22XXX;Valiant Bank AG;QR-IID;30024;6300;Bundesplatz;4;3001;Bern;CH;300240;ja;ja;ja;ja;nein;nein
+30026;RBABCH22313;Bernerland Bank AG;QR-IID;30026;6313;Kirchgasse;2;3454;Sumiswald;CH;300266;ja;ja;ja;ja;nein;nein
+30027;RBABCH22342;SB Saanen Bank AG;QR-IID;30027;6342;Bahnhofstrasse;2;3792;Saanen;CH;300274;ja;ja;ja;ja;nein;nein
+30028;RBABCH22363;Bank SLM AG;QR-IID;30028;6363;Dorfplatz;5;3110;Münsingen;CH;300282;ja;ja;ja;ja;nein;nein
+30029;RBABCH22374;Spar+Leihkasse Riggisberg AG;QR-IID;30029;6374;Grabenstrasse;7;3132;Riggisberg;CH;300298;ja;ja;ja;ja;nein;nein
+30030;RBABCH22382;Burgerliche Ersparniskasse Bern Genossenschaft;QR-IID;30030;6382;Marktgasse;37;3001;Bern;CH;300307;ja;ja;ja;ja;nein;nein
+30031;RBABCH22387;Ersparniskasse Affoltern i. E. AG;QR-IID;30031;6387;Postfach;;3462;Weier im Emmental;CH;300315;ja;ja;ja;ja;nein;nein
+30032;RBABCH22XXX;Entris Banking AG;QR-IID;30032;6395;Mattenstrasse;8;3073;Gümligen;CH;300320;ja;ja;ja;nein;nein;nein
+30033;RBABCH22428;Clientis Sparkasse Oftringen Genossenschaft;QR-IID;30033;6428;Baslerstrasse;1;4665;Oftringen;CH;300331;ja;ja;ja;ja;nein;nein
+30034;RBABCH22434;Clientis Bank im Thal AG;QR-IID;30034;6434;Goldgasse;11;4710;Balsthal;CH;300346;ja;ja;ja;ja;nein;nein
+30035;RBABCH22450;Bank Oberaargau AG;QR-IID;30035;6450;Stadthausstrasse;1;4950;Huttwil;CH;300354;ja;ja;ja;ja;nein;nein
+30036;RBABCH22575;Clientis Bank Aareland AG;QR-IID;30036;6575;Hauptstrasse;10;5024;Küttigen;CH;300362;ja;ja;ja;ja;nein;nein
+30037;RBABCH22588;Bank Leerau Genossenschaft;QR-IID;30037;6588;Dorfstrasse;476;5054;Kirchleerau;CH;300378;ja;ja;ja;ja;nein;nein
+30038;RBABCH22633;Sparkasse Schwyz AG;QR-IID;30038;6633;Herrengasse;23;6431;Schwyz;CH;300383;ja;ja;ja;ja;nein;nein
+30040;RBABCH22670;Clientis Entlebucher Bank AG;QR-IID;30040;6670;Hauptstrasse;32;6170;Schüpfheim;CH;300406;ja;ja;ja;ja;nein;nein
+30042;RBABCH22807;GRB Glarner Regionalbank Genossenschaft;QR-IID;30042;6807;Bahnhofstrasse;25;8762;Schwanden;CH;300422;ja;ja;ja;ja;nein;nein
+30043;BSZHCHZZXXX;Sparhafen Bank AG;QR-IID;30043;6808;Fraumünsterstrasse;21;8001;Zürich;CH;300438;ja;ja;ja;ja;nein;nein
+30044;RBABCH22814;Sparcassa 1816 Genossenschaft;QR-IID;30044;6814;Zugerstrasse;18;8820;Wädenswil;CH;300443;ja;ja;ja;ja;nein;nein
+30045;RBABCH22824;BANK ZIMMERBERG AG;QR-IID;30045;6824;Dorfplatz;1;8810;Horgen 1;CH;300459;ja;ja;ja;ja;nein;nein
+30046;RBABCH22828;acrevis Bank AG (ex Regiobank Männedorf);QR-IID;30046;6828;Bahnhofstrasse;14;8708;Männedorf;CH;300467;ja;ja;ja;ja;nein;nein
+30047;RBABCH22830;Lienhardt & Partner Privatbank Zürich AG;QR-IID;30047;6830;Rämistrasse;23;8024;Zürich;CH;300475;ja;ja;ja;ja;nein;nein
+30048;RBABCH22835;Ersparniskasse Schaffhausen AG;QR-IID;30048;6835;Münsterplatz;34;8201;Schaffhausen;CH;300480;ja;ja;ja;ja;nein;nein
+30049;RBABCH22850;Bank Avera Genossenschaft;QR-IID;30049;6850;Spitalstrasse;2;8620;Wetzikon ZH;CH;300491;ja;ja;ja;ja;nein;nein
+30050;RBABCH22858;BS Bank Schaffhausen AG;QR-IID;30050;6858;Klettgauerplatz;3;8213;Neunkirch;CH;300509;ja;ja;ja;ja;nein;nein
+30051;RBABCH22866;Spar- und Leihkasse Thayngen AG;QR-IID;30051;6866;Bahnhofstrasse;32;8240;Thayngen;CH;300517;ja;ja;ja;ja;nein;nein
+30053;RBABCH22875;Leihkasse Stammheim AG;QR-IID;30053;6875;Hauptstrasse;6;8477;Oberstammheim;CH;300530;ja;ja;ja;ja;nein;nein
+30054;RBABCH22877;Zürcher Landbank AG;QR-IID;30054;6877;Lindenplatz;3;8353;Elgg;CH;300541;ja;ja;ja;ja;nein;nein
+30055;RBABCH22888;Bank BSU Genossenschaft;QR-IID;30055;6888;Bankstrasse;21;8610;Uster 1;CH;300556;ja;ja;ja;ja;nein;nein
+30056;ACRGCH22XXX;acrevis Bank AG;QR-IID;30056;6900;Marktplatz;1;9004;St. Gallen;CH;300564;ja;ja;ja;ja;nein;nein
+30057;ARBHCH22XXX;Alpha RHEINTAL Bank AG;QR-IID;30057;6920;Bahnhofstrasse;2;9435;Heerbrugg;CH;300572;ja;ja;ja;ja;nein;nein
+30058;RBABCH22935;Clientis Bank Oberuzwil AG;QR-IID;30058;6935;Wiesentalstrasse;7;9242;Oberuzwil;CH;300588;ja;ja;ja;ja;nein;nein
+30060;RBABCH22955;Clientis Bank Toggenburg AG;QR-IID;30060;6955;Harfengrund;2;9533;Kirchberg SG;CH;300601;ja;ja;ja;ja;nein;nein
+30061;RBABCH22964;Bank in Zuzwil;QR-IID;30061;6964;Mitteldorfstrasse;48;9524;Zuzwil SG;CH;300616;ja;ja;ja;ja;nein;nein
+30062;RBABCH22977;Clientis Bank Thur Genossenschaft;QR-IID;30062;6977;Kappler Strasse;21;9642;Ebnat-Kappel;CH;300624;ja;ja;ja;ja;nein;nein
+30063;RBABCH22980;Biene Bank im Rheintal Genossenschaft;QR-IID;30063;6980;Rorschacherstrasse;9;9450;Altstätten SG;CH;300632;ja;ja;ja;ja;nein;nein
+30110;POSOCH22XXX;Banca Popolare di Sondrio (Suisse) SA;QR-IID;30110;8252;Casella postale 5832;;6901;Lugano 1;CH;301107;ja;ja;ja;ja;nein;nein
+30113;AGRICHGXXXX;Crédit Agricole next Bank (Suisse) SA;QR-IID;30113;8243;Esplanade de Pont-Rouge;4-6;1212;Grand-Lancy;CH;301131;ja;ja;ja;ja;nein;nein
+30114;CMBNCHZHXXX;Cembra Money Bank AG;QR-IID;30114;8296;Bändliweg;20;8048;Zürich;CH;301146;ja;nein;ja;ja;nein;nein
+30115;SLWYCH21XXX;Spar- und Leihkasse Wynigen AG;QR-IID;30115;8300;Postfach 180;;3472;Wynigen;CH;301154;ja;nein;ja;ja;nein;nein
+30116;HYPLCH22XXX;Hypothekarbank Lenzburg AG;QR-IID;30116;8307;Bahnhofstrasse;2;5600;Lenzburg 1;CH;301162;ja;ja;ja;ja;nein;nein
+30117;ERSCCH21XXX;Ersparniskasse Speicher;QR-IID;30117;8329;Hauptstrasse;21;9042;Speicher;CH;301178;ja;nein;ja;ja;nein;nein
+30118;KBSOCH22XXX;Baloise Bank AG;QR-IID;30118;8334;Amthausplatz;4;4500;Solothurn;CH;301183;ja;ja;ja;ja;nein;nein
+30119;BLFLCHBBXXX;LGT Bank (Schweiz) AG;QR-IID;30119;8335;Lange Gasse;15;4002;Basel;CH;301199;ja;ja;ja;ja;nein;nein
+30121;CDDVCH21XXX;Caisse d'Epargne Riviera, société coopérative;QR-IID;30121;8349;Avenue Paul-Ceresole;3;1800;Vevey 1;CH;301214;ja;ja;ja;ja;nein;nein
+30122;RBABCH22BSD;Bezirks-Sparkasse Dielsdorf Genossenschaft;QR-IID;30122;8389;Bahnhofstrasse;29;8157;Dielsdorf;CH;301222;ja;ja;ja;ja;nein;nein
+30123;ABSOCH22XXX;Alternative Bank Schweiz AG;QR-IID;30123;8390;Amthausquai;21;4600;Olten;CH;301238;ja;ja;ja;ja;nein;nein
+30124;WIRBCHBBXXX;WIR Bank Genossenschaft;QR-IID;30124;8391;Auberg;1;4002;Basel;CH;301243;ja;ja;ja;ja;nein;nein
+30125;FRGGCHB1XXX;Freie Gemeinschaftsbank Genossenschaft;QR-IID;30125;8392;Meret Oppenheim-Strasse;10;4002;Basel;CH;301259;ja;ja;ja;ja;nein;nein
+30126;RBABCH22EKI;Bank EKI Genossenschaft;QR-IID;30126;8393;Rosenstrasse;1;3800;Interlaken;CH;301267;ja;ja;ja;ja;nein;nein
+30127;RBABCH22EEK;Bank EEK AG;QR-IID;30127;8394;Amthausgasse 14 / Marktgasse;19;3001;Bern;CH;301275;ja;ja;ja;ja;nein;nein
+30128;RBABCH22SLB;Spar- und Leihkasse Bucheggberg;QR-IID;30128;8395;Hauptstrasse;4;4584;Lüterswil;CH;301280;ja;ja;ja;ja;nein;nein
+30129;SLGUCH2MXXX;Spar + Leihkasse Gürbetal AG;QR-IID;30129;8396;Dorfstrasse;19;3127;Mühlethurnen;CH;301291;ja;ja;ja;ja;nein;nein
+30130;RBABCH22DCB;DC Bank AG;QR-IID;30130;8397;Schauplatzgasse;21;3001;Bern;CH;301309;ja;ja;ja;ja;nein;nein
+30131;VZDBCHZZXXX;VZ Depotbank AG;QR-IID;30131;8398;Innere Güterstrasse;2;6300;Zug;CH;301317;ja;ja;ja;ja;nein;nein
+30132;MIGRCHZZXXX;Migros Bank AG;QR-IID;30132;8401;Postfach;;8010;Zürich;CH;301325;ja;ja;ja;ja;nein;nein
+30133;BCLRCHBBXXX;Bank Cler AG;QR-IID;30133;8440;Postfach;;4002;Basel;CH;301330;ja;ja;ja;ja;nein;nein
+30141;CBLUCH22XXX;Cornèr Banca SA;QR-IID;30141;8490;Via Canova;16;6901;Lugano;CH;301416;ja;ja;ja;ja;nein;nein
+30143;RBABCH22BGA;Bank Gantrisch Genossenschaft;QR-IID;30143;8518;Bahnhofstrasse;2;3150;Schwarzenburg;CH;301432;ja;ja;ja;ja;nein;nein
+30144;RBABCH22EKR;Ersparniskasse Rüeggisberg Genossenschaft;QR-IID;30144;8519;Dorfstrasse;19;3088;Rüeggisberg;CH;301448;ja;ja;ja;ja;nein;nein
+30145;RBABCH22BBO;BBO Bank Brienz Oberhasli AG;QR-IID;30145;8521;Hauptstrasse;115;3855;Brienz;CH;301453;ja;ja;ja;ja;nein;nein
+30146;SBTICH22XXX;Società Bancaria Ticinese;QR-IID;30146;8522;Casella postale 2062;;6501;Bellinzona;CH;301469;ja;nein;ja;nein;nein;nein
+30147;BTVACH22XXX;BTV Vier Länder Bank AG Innsbruck, Zweigniederlassung Staad;QR-IID;30147;8525;Hauptstrasse;19;9422;Staad SG;CH;301477;ja;ja;ja;ja;nein;nein
+30151;BZBKCH2WXXX;BZ Bank Aktiengesellschaft;QR-IID;30151;8553;Egglirain;15;8832;Wilen b. Wollerau;CH;301512;ja;nein;ja;ja;nein;nein
+30152;CHASCHGXXXX;JPMorgan Chase Bank, National Association, Columbus;QR-IID;30152;8635;Dreikönigstrasse;37;8027;Zürich;CH;301528;ja;nein;ja;ja;nein;nein
+30153;BASECH22XXX;Banca del Sempione SA;QR-IID;30153;8666;Via Peri;5;6901;Lugano 1;CH;301533;ja;ja;ja;ja;nein;nein
+30154;BPPBCHGGXXX;BNP PARIBAS, Paris, succursale de Lancy/Genève;QR-IID;30154;8686;Esplanade de Pont-Rouge;9a;1212;Grand-Lancy;CH;301549;ja;ja;ja;ja;nein;nein
+30156;HSBCCHZZXXX;HSBC Bank plc, London, Zweigniederlassung Zürich;QR-IID;30156;8701;Bederstrasse;49;8002;Zürich;CH;301565;ja;ja;ja;ja;nein;nein
+30157;AEKTCH22XXX;AEK BANK 1826 Genossenschaft;QR-IID;30157;8704;Hofstettenstrasse;2;3601;Thun;CH;301570;ja;ja;ja;ja;nein;nein
+30159;CIALCHBBXXX;Bank CIC (SCHWEIZ) AG;QR-IID;30159;8710;Marktplatz;13;4001;Basel;CH;301596;ja;ja;ja;ja;nein;nein
+30162;LINSCH23XXX;LLB (Schweiz) AG;QR-IID;30162;8731;Zürcherstrasse;3;8730;Uznach;CH;301629;ja;ja;ja;ja;nein;nein
+30163;RBABCH22BKT;Bank Thalwil Genossenschaft;QR-IID;30163;8733;Gotthardstrasse;14;8800;Thalwil;CH;301637;ja;ja;ja;ja;nein;nein
+30164;AGRICHGGXXX;CA Indosuez (Switzerland) SA;QR-IID;30164;8740;Quai Général Guisan;4;1211;Genève 11;CH;301645;ja;ja;ja;ja;nein;nein
+30165;SARACHBBXXX;Bank J. Safra Sarasin AG;QR-IID;30165;8750;Elisabethenstrasse;62;4002;Basel;CH;301650;ja;ja;ja;ja;nein;nein
+30166;BSSACHGGXXX;CBH - Compagnie Bancaire Helvétique SA;QR-IID;30166;8762;Boulevard Emile-Jaques-Dalcroze;7;1211;Genève 3;CH;301661;ja;ja;ja;ja;nein;nein
+30167;DEUTCHZZXXX;Deutsche Bank AG Zürich Branch;QR-IID;30167;8780;Postfach 3604 / Uraniastrasse;9;8021;Zürich;CH;301676;ja;nein;ja;ja;nein;nein
+30168;SWQBCHZZXXX;Swissquote Bank SA;QR-IID;30168;8781;Chemin de la Crétaux;33;1196;Gland;CH;301684;ja;ja;ja;ja;nein;nein
+30169;RBABCH22SLF;Spar- und Leihkasse Frutigen AG;QR-IID;30169;8784;Dorfstrasse;15;3714;Frutigen;CH;301692;ja;ja;ja;ja;nein;nein
+30170;RSOSCH22XXX;Regiobank Solothurn AG;QR-IID;30170;8785;Westbahnhofstrasse;11;4502;Solothurn;CH;301700;ja;ja;ja;ja;nein;nein
+30176;RBABCH22VLH;Hypo Vorarlberg Bank AG, Bregenz, Zweigniederl., St. Gallen;QR-IID;30176;8821;Bankgasse;1;9004;St. Gallen;CH;301763;ja;ja;ja;ja;nein;nein
+30177;COBACHZHXXX;COMMERZBANK AG FF, Zweigniederlassung Zürich;QR-IID;30177;8836;Pelikanplatz;15;8001;Zürich;CH;301779;ja;ja;ja;ja;nein;nein
+30178;SKBPCH22XXX;Sparkasse Bundespersonal;QR-IID;30178;8890;Monbijoustrasse;118;3003;Bern;CH;301787;ja;nein;ja;ja;nein;nein
+30180;BSCHCHGGXXX;Banco Santander International SA;QR-IID;30180;8235;Case postale 1256;;1211;Genève 1;CH;301805;ja;nein;ja;nein;nein;nein
+30182;FSUICHGGXXX;Nexent Bank (Suisse) SA;QR-IID;30182;8236;Rue du Rhône;80;1204;Genève;CH;301821;ja;ja;ja;ja;nein;nein
+30184;IVESCHZZXXX;Investec Bank (Switzerland) AG;QR-IID;30184;8238;Bahnhofstrasse;75;8022;Zürich;CH;301844;ja;ja;nein;nein;nein;nein
+30186;ANPRCH22XXX;Banque Richelieu (Schweiz) AG;QR-IID;30186;8245;Bellerivestrasse;17;8008;Zürich;CH;301868;ja;ja;ja;ja;nein;nein
+30188;FVLBCHZZXXX;Van Lanschot Kempen (Schweiz) AG;QR-IID;30188;8248;Mittelstrasse;10;8034;Zürich;CH;301889;ja;ja;ja;ja;nein;nein
+30189;BILSCHZZXXX;Banque Internationale à Luxembourg (Suisse) SA;QR-IID;30189;8268;Bahnhofstrasse;20;8001;Zürich;CH;301897;ja;ja;ja;ja;nein;nein
+30190;BBVACHZZXXX;BBVA SA;QR-IID;30190;8270;Selnaustrasse;32/36;8021;Zürich;CH;301902;ja;ja;ja;ja;nein;nein
+30194;FBGSCHZZXXX;Frankfurter Bankgesellschaft (Schweiz) AG;QR-IID;30194;8288;Börsenstrasse;16;8022;Zürich;CH;301947;ja;ja;ja;ja;nein;nein
+30196;VRLLCHZZXXX;Bank von Roll AG;QR-IID;30196;83002;Bleicherweg;37;8027;Zürich;CH;301960;ja;ja;ja;ja;nein;nein
+30197;SYCOCHGGXXX;Banque SYZ SA;QR-IID;30197;8309;Quai des Bergues;1;1201;Geneva;CH;301971;ja;ja;ja;ja;nein;nein
+30198;CAGYCH21XXX;Caisse d'Epargne de Nyon société coopérative;QR-IID;30198;8326;Rue St-Jean;11;1260;Nyon;CH;301986;ja;ja;ja;ja;nein;nein
+30199;RBABCH22CEA;Caisse d'Epargne d'Aubonne Sociéte coopérative;QR-IID;30199;8327;Rue de l'Hôtel-de-Ville;21;1170;Aubonne;CH;301994;ja;ja;ja;ja;nein;nein
+30201;AEXTCHZZXXX;Banque Algérienne du Commerce Extérieur SA;QR-IID;30201;8346;Talacker;35;8001;Zürich;CH;302014;ja;ja;ja;ja;nein;nein
+30202;CDEMCH21XXX;Caisse d'Epargne et de Crédit Mutuel de Chermignon;QR-IID;30202;8348;Case postale 14;;3971;Chermignon;CH;302022;ja;nein;ja;nein;nein;nein
+30203;ISAECH2NXXX;CACEIS Bank, Montrouge, succursale de Nyon / Suisse;QR-IID;30203;8374;Route de Signy;35;1260;Nyon;CH;302038;ja;nein;ja;ja;nein;nein
+30206;NEPICHZZXXX;NPB Neue Privat Bank AG;QR-IID;30206;8378;Limmatquai 1 / am Bellevue;;8024;Zürich;CH;302067;ja;nein;ja;ja;nein;nein
+30207;QNBACHGGXXX;QNB (Suisse) SA;QR-IID;30207;8379;Quai du Mont-Blanc;1;1201;Genève;CH;302075;ja;ja;ja;ja;nein;nein
+30208;MGTCCHGGXXX;J.P. Morgan (Suisse) SA;QR-IID;30208;8380;Rue de la Confédération;8;1211;Genève 11;CH;302080;ja;nein;ja;ja;nein;nein
+30209;REYLCHGGXXX;Intesa Sanpaolo Wealth Management SA;QR-IID;30209;8384;Rue du Rhône;4;1204;Genève;CH;302091;ja;ja;ja;ja;nein;nein
+30210;NBOKCHGGXXX;NBK Banque Privée (Suisse) SA;QR-IID;30210;8385;Rue de la Corraterie;5;1204;Genève;CH;302109;ja;ja;ja;ja;nein;nein
+30211;BBRUCHGTXXX;ING Bank N.V., Amsterdam, succursale de Lancy/Genève;QR-IID;30211;8387;Avenue de Morgines;10;1213;Petit-Lancy;CH;302117;ja;nein;ja;ja;nein;nein
+30212;BABRCHGGXXX;Banque Eric Sturdza SA;QR-IID;30212;8388;Rue du Rhône;112;1211;Genève 3;CH;302125;ja;ja;ja;ja;nein;nein
+30213;BCRECH22XXX;Banca Credinvest SA;QR-IID;30213;8495;Via G. Cattori;14;6902;Lugano;CH;302130;ja;ja;ja;ja;nein;nein
+30214;VRBPCH22XXX;Banca Aletti & C. (Suisse) SA;QR-IID;30214;8496;Via Massimiliano Magatti;6;6900;Lugano;CH;302141;ja;nein;nein;nein;nein;nein
+30216;UNCECH22XXX;Axion SWISS Bank SA;QR-IID;30216;8498;Viale Stefano Franscini;22;6900;Lugano;CH;302164;ja;nein;ja;ja;nein;nein
+30217;NBPSCHGGXXX;FAB Private Bank (Suisse) SA;QR-IID;30217;8499;Quai de l'Ile;5;1211;Geneva 1;CH;302172;ja;nein;ja;ja;nein;nein
+30218;BAMRCHZZXXX;Mercantil Bank (Schweiz) AG;QR-IID;30218;8509;Kasernenstrasse;1;8036;Zürich;CH;302188;ja;nein;ja;ja;nein;nein
+30220;VPBVCHZHXXX;VP Bank (Schweiz) AG;QR-IID;30220;8534;Talstrasse;59;8001;Zürich;CH;302201;ja;ja;ja;ja;nein;nein
+30221;SELVCHGGXXX;SELVI & Cie SA;QR-IID;30221;8533;Rue du Grütli;4;1211;Genève 11;CH;302216;ja;ja;ja;nein;nein;nein
+30223;BEGOCHZZXXX;Bergos AG;QR-IID;30223;8539;Postfach 186;;8034;Zürich;CH;302232;ja;ja;ja;ja;nein;nein
+30224;BLOMCHGGXXX;BANQUE BANORIENT (SUISSE) SA;QR-IID;30224;8540;Rue Rodolphe Toepffer;1;1206;Genève;CH;302248;ja;ja;ja;ja;nein;nein
+30225;SCOPCHBBXXX;Scobag Privatbank AG;QR-IID;30225;8543;Postfach;;4010;Basel;CH;302253;ja;ja;ja;ja;nein;nein
+30226;CCIECHGGXXX;Hyposwiss Private Bank Genève SA;QR-IID;30226;8548;Rue du Général-Dufour;3;1211;Genève 1;CH;302269;ja;nein;ja;ja;nein;nein
+30228;GRAFCH22XXX;Privatbank Von Graffenried AG;QR-IID;30228;8564;Postfach;;3001;Bern;CH;302285;ja;nein;ja;nein;nein;nein
+30229;DREYCHBBXXX;Dreyfus Söhne & Cie AG, Banquiers;QR-IID;30229;8565;Aeschenvorstadt;16;4002;Basel;CH;302290;ja;ja;ja;ja;nein;nein
+30230;BONHCH22XXX;Banque Bonhôte & Cie SA;QR-IID;30230;8570;Quai Ostervald;2;2001;Neuchâtel;CH;302304;ja;ja;ja;ja;nein;nein
+30231;PRIBCHGGXXX;Edmond de Rothschild (Suisse) S.A;QR-IID;30231;8571;Avenue de I'Etang;62b;1219;Châtelaine;CH;302312;ja;ja;ja;ja;nein;nein
+30232;TRAPCHBBXXX;Trafina Privatbank AG;QR-IID;30232;8572;Rennweg;50;4020;Basel;CH;302328;ja;ja;ja;ja;nein;nein
+30233;MAEBCHZZXXX;Maerki, Baumann & Co. AG;QR-IID;30233;8573;Dreikönigstrasse;6;8022;Zürich;CH;302333;ja;ja;ja;ja;nein;nein
+30234;MEDSCHGGXXX;Banque Des Monts Blancs SA;QR-IID;30234;8574;Rue du Mont Blanc;3;1211;Genève;CH;302349;ja;ja;ja;nein;nein;nein
+30237;BACECH22XXX;Banca del Ceresio SA;QR-IID;30237;8584;Casella postale 2860;;6901;Lugano;CH;302370;ja;ja;ja;ja;nein;nein
+30238;EUBACH22XXX;Banca Zarattini & Co. SA;QR-IID;30238;8609;Via Sarafino Balestra;17;6900;Lugano;CH;302381;ja;ja;ja;ja;nein;nein
+30239;GENOCHZZXXX;DZ PRIVATBANK (Schweiz) AG;QR-IID;30239;8615;Münsterhof;12;8022;Zürich;CH;302396;ja;ja;ja;ja;nein;nein
+30240;EFGBCHGGXXX;EFG Bank European Financial Group SA;QR-IID;30240;8616;Quai du Seujet;24;1211;Genève 2;CH;302408;ja;nein;ja;ja;nein;nein
+30241;NBSZCHZZXXX;Nomura Bank (Switzerland) Ltd;QR-IID;30241;8619;Postfach;;8021;Zürich;CH;302413;ja;nein;nein;nein;nein;nein
+30243;AUDSCHGGXXX;Banque Audi (Suisse) SA;QR-IID;30243;8624;Case postale 384;;1211;Genève 12;CH;302437;ja;nein;ja;ja;nein;nein
+30244;BPCPCHGGXXX;Banque de Commerce et de Placements SA;QR-IID;30244;8629;Rue de la Fontaine;1;1211;Genève 3;CH;302445;ja;ja;ja;ja;nein;nein
+30245;BJHSCHZZXXX;Schroder & Co Bank AG;QR-IID;30245;8634;Central;2;8021;Zürich;CH;302450;ja;ja;nein;nein;nein;nein
+30246;CBSWCHZZXXX;Citibank (Switzerland) AG;QR-IID;30246;8638;Prime Tower / Hardstrasse;201;8010;Zürich;CH;302461;ja;nein;nein;nein;nein;nein
+30248;UBPGCHGGXXX;Union Bancaire Privée, UBP SA;QR-IID;30248;8657;Case postale 1320;;1211;Genève 1;CH;302484;ja;ja;ja;ja;nein;nein
+30249;DEUTCHGGXXX;Deutsche Bank (Suisse) S.A.;QR-IID;30249;8659;Place des Bergues;3;1201;Genève 1;CH;302492;ja;ja;ja;nein;nein;nein
+30250;RKBZCHZZXXX;GPB (Schweiz) AG;QR-IID;30250;8660;Zollikerstrasse;183;8032;Zürich;CH;302500;ja;nein;ja;nein;nein;nein
+30251;ROTACHZZXXX;Rothschild & Co Bank AG;QR-IID;30251;8661;Postfach;;8034;Zürich;CH;302511;ja;ja;ja;ja;nein;nein
+30252;PKBSCH22XXX;PKB PRIVATE BANK SA;QR-IID;30252;8663;Via Serafina Balestra;1;6900;Lugano;CH;302526;ja;ja;ja;ja;nein;nein
+30253;EFGBCHZZXXX;EFG Bank AG;QR-IID;30253;8667;Bleicherweg;8;8022;Zürich;CH;302534;ja;ja;ja;ja;nein;nein
+30254;BLICCHGGXXX;HSBC Private Bank (Suisse) SA;QR-IID;30254;8689;Quai Général-Guisan;2;1211;Genève 1;CH;302542;ja;ja;ja;ja;nein;nein
+30256;CITICHZZXXX;Citibank N.A., Sioux Falls;QR-IID;30256;8700;Bleicherweg;10;8010;Zürich;CH;302563;ja;nein;nein;nein;nein;nein
+30259;SGABCHZZXXX;Société Générale;QR-IID;30259;8705;Talacker;50;8021;Zürich;CH;302595;ja;ja;ja;ja;nein;nein
+30260;ARBSCHZZXXX;Arab Bank (Switzerland) Ltd.;QR-IID;30260;8719;Place de Longemalle;10-12;1204;Genève;CH;302605;ja;ja;ja;ja;nein;nein
+30261;GONECHGGXXX;Gonet & Cie SA;QR-IID;30261;8721;Boulevard du Théâtre;6;1211;Genève 11;CH;302610;ja;ja;ja;ja;nein;nein
+30262;BOFACH2XXXX;Bank of America Europe DAC, Dublin, Zurich Branch;QR-IID;30262;8726;Stockerhof, Stockerstrasse;23;8002;Zürich;CH;302621;ja;nein;ja;ja;nein;nein
+30263;CRAMCHGGXXX;Banque Cramer & Cie SA;QR-IID;30263;8727;Avenue de Miremont;22;1211;Genève 12;CH;302636;ja;ja;ja;ja;nein;nein
+30264;BARCCHGGXXX;Barclays Bank (Suisse) SA;QR-IID;30264;8735;Chemin de Grange-Canal;18-20;1211;Genève 3;CH;302644;ja;ja;ja;ja;nein;nein
+30269;BAUMCHBBXXX;Baumann & Cie KmG;QR-IID;30269;8756;St. Jakobs-Strasse;46;4002;Basel;CH;302697;ja;ja;ja;ja;nein;nein
+30270;VONTCHZZXXX;Bank Vontobel AG;QR-IID;30270;8757;Gotthardstrasse;43;8022;Zürich;CH;302702;ja;ja;ja;ja;nein;nein
+30272;REICCH22XXX;Reichmuth & Co.;QR-IID;30272;8761;Rütligasse;1;6000;Luzern 7;CH;302723;ja;ja;ja;ja;nein;nein
+30273;BORDCHGGXXX;Bordier & Cie SCmA;QR-IID;30273;8767;Case postale 5515;;1211;Genève 11;CH;302739;ja;ja;ja;ja;nein;nein
+30275;MIRACHGGXXX;Mirabaud & Cie SA;QR-IID;30275;8770;Boulevard Georges-Favon;29;1211;Genève 11;CH;302755;ja;ja;ja;ja;nein;nein
+30277;PIGUCH22XXX;Piguet Galland & Cie SA;QR-IID;30277;8777;Rue de la Plaine;14;1401;Yverdon-les-Bains;CH;302771;ja;ja;ja;ja;nein;nein
+30281;;Pfandbriefbank schweizerischer Hypothekarinstitute AG;QR-IID;30281;30281;Nansenstrasse;16;8050;Zürich;CH;302819;ja;nein;ja;nein;nein;nein
+30283;HBZUCHZZXXX;Habib Bank AG Zürich;QR-IID;30283;8789;Weinbergstrasse;59;8042;Zürich;CH;302835;ja;ja;ja;ja;nein;nein
+30285;TMBECH22XXX;IBKR Financial Services AG;QR-IID;30285;8797;Gubelstrasse;28;6300;Zug;CH;302851;ja;ja;ja;nein;nein;nein
+30286;INCOCHZZXXX;InCore Bank AG;QR-IID;30286;8799;Wiesenstrasse;17;8952;Schlieren;CH;302866;ja;ja;ja;ja;nein;nein
+30295;DOMICHZZXXX;Founders Bank AG;QR-IID;30295;8820;Bahnhofstrasse;4;6430;Schwyz;CH;302954;ja;nein;ja;ja;nein;nein
+30296;CIMMCHGGXXX;CIM Banque SA;QR-IID;30296;8822;Rue Merle d'Aubigné;16;1211;Genève 6;CH;302962;ja;ja;ja;ja;nein;nein
+30297;TXBZCHZZXXX;TradeXBank AG;QR-IID;30297;8825;Gartenstrasse;24;8002;Zürich;CH;302978;ja;nein;ja;ja;nein;nein
+30299;ABSGCHGGXXX;Arya Banque Privée SA;QR-IID;30299;8827;Place de la Fusterie 3 bis;;1211;Genève 1;CH;302999;ja;ja;ja;ja;nein;nein
+30308;UBSWCHZH80A;UBS Switzerland AG;QR-IID;30005;230;Bahnhofstrasse;45;8098;Zürich;CH;303087;ja;ja;ja;ja;nein;nein
+30311;CAGLCHGGXXX;ABANCA CORPORACION BANCARIA S.A., BETANZOS;QR-IID;30311;8831;Quai des Bergues;27;1211;Genève 1;CH;303110;ja;nein;ja;ja;nein;nein
+30313;BLEMCHGGXXX;Banque du Léman SA;QR-IID;30313;8838;Rue François-Bonivard;12;1201;Genève;CH;303136;ja;ja;ja;ja;nein;nein
+30314;QVCHCHZHXXX;EFG Bank AG (ex Quilvest (Switzerland) Ltd.);QR-IID;30314;8839;Füsslistrasse;6;8001;Zürich;CH;303144;ja;nein;ja;ja;nein;nein
+30315;ITAUCHZZXXX;Banco Itaú (Suisse) SA;QR-IID;30315;8841;Bleicherweg;30;8002;Zürich;CH;303152;ja;nein;ja;ja;nein;nein
+30316;GLBNCHZZXXX;Globalance Bank AG;QR-IID;30316;8842;Gartenstrasse;16;8002;Zürich;CH;303168;ja;nein;ja;ja;nein;nein
+30317;DUBACHGGXXX;Dukascopy Bank SA;QR-IID;30317;8843;Route de Pré-Bois;20;1215;Genève 15;CH;303173;ja;ja;ja;ja;nein;nein
+30318;SFBFCH22XXX;Helvetische Bank AG;QR-IID;30318;8845;Seefeldstrasse;215;8008;Zürich;CH;303189;ja;ja;ja;ja;nein;nein
+30319;AQULCHZZXXX;Aquila AG;QR-IID;30319;8846;Bahnhofstrasse;43;8001;Zürich;CH;303197;ja;nein;ja;ja;nein;nein
+30321;SYGNCHZZXXX;Sygnum Bank AG;QR-IID;30321;83014;Uetlibergstrasse;134A;8045;Zürich;CH;303218;ja;ja;ja;ja;nein;nein
+30322;SCRYCH22XXX;AMINA Bank AG;QR-IID;30322;83018;Kolinplatz;15;6300;Zug;CH;303223;ja;ja;ja;ja;nein;nein
+30324;RMCOCHBBXXX;Remaco Asset Management AG;QR-IID;30324;8865;Postfach 2282;;4020;Basel;CH;303247;ja;nein;ja;nein;nein;nein
+30325;LFFSCHGGXXX;LF Finance (Suisse) SA;QR-IID;30325;8866;Case postale 3667;;1211;Genève 3;CH;303255;ja;nein;ja;ja;nein;nein
+30326;SSBECHZZXXX;State Street Bank International GmbH, München, ZN Zürich;QR-IID;30326;8867;Kalanderplatz;5;8045;Zürich;CH;303260;ja;nein;nein;nein;nein;nein
+30327;ZAPRCH22XXX;Zähringer Privatbank AG;QR-IID;30327;8871;Schmiedenplatz;3;3011;Bern;CH;303271;ja;ja;ja;ja;nein;nein
+30328;BISBCHBBXXX;BIZ Bank für Internationalen Zahlungsausgleich;QR-IID;30328;8899;Postfach;;4002;Basel;CH;303286;ja;nein;ja;nein;nein;nein
+30329;ICBKCHZZXXX;Industrial and Commercial Bank of China Limited;QR-IID;30329;83006;Nüschelerstrasse;1;8001;Zürich;CH;303294;ja;nein;ja;ja;nein;nein
+30330;JLSECHGGXXX;JL Securities SA;QR-IID;30330;83007;Rue du Rhône;60;1204;Genève;CH;303303;ja;nein;ja;nein;nein;nein
+30331;FIDHCHGGXXX;Fidurhône SA;QR-IID;30331;83008;Rue Muzy;8;1207;Genéve;CH;303319;ja;ja;ja;nein;nein;nein
+30333;PRBECHZZXXX;Privatbank Bellerive AG;QR-IID;30333;83011;Postfach;;8034;Zürich;CH;303335;ja;ja;ja;ja;nein;nein
+30334;;Yapeal AG;QR-IID;30334;30334;Gartenstrasse;14;8002;Zürich;CH;303340;ja;nein;ja;ja;nein;nein
+30520;CITIGB2LXXX;Citibank N.A.;QR-IID;30520;89095;Canada Square / Canary Wharf;;E14 5LB;London;GB;305209;ja;nein;ja;ja;nein;nein
+30700;ZKBKCHZZ80A;Zürcher Kantonalbank;QR-IID;30700;700;Postfach;;8010;Zürich;CH;307004;ja;ja;ja;ja;nein;nein
+30761;KBAGCH22XXX;Aargauische Kantonalbank;QR-IID;30761;761;Bahnhofplatz;1;5001;Aarau;CH;307615;ja;ja;ja;ja;nein;nein
+30763;AIKACH22XXX;Appenzeller Kantonalbank;QR-IID;30763;763;Postfach;;9050;Appenzell;CH;307631;ja;ja;ja;ja;nein;nein
+30764;BSCTCH22XXX;Banca dello Stato del Cantone Ticino;QR-IID;30764;764;Viale H. Guisan;5;6501;Bellinzona;CH;307646;ja;ja;ja;ja;nein;nein
+30765;BCVSCH2LXXX;Banque Cantonale du Valais;QR-IID;30765;765;Place des Cèdres;8;1951;Sion/Sitten;CH;307654;ja;ja;ja;ja;nein;nein
+30766;BCNNCH22XXX;Banque Cantonale Neuchâteloise;QR-IID;30766;766;Case postale 275;;2001;Neuchâtel;CH;307662;ja;ja;ja;ja;nein;nein
+30767;BCVLCH2LXXX;Banque Cantonale Vaudoise;QR-IID;30767;767;St-François;;1001;Lausanne;CH;307678;ja;ja;ja;ja;nein;nein
+30768;BEFRCH22XXX;Banque Cantonale de Fribourg;QR-IID;30768;768;Bd de Pérolles;1;1701;Fribourg;CH;307683;ja;ja;ja;ja;nein;nein
+30769;BLKBCH22XXX;Basellandschaftliche Kantonalbank;QR-IID;30769;769;Postfach;;4410;Liestal;CH;307699;ja;ja;ja;ja;nein;nein
+30770;BKBBCHBBXXX;Basler Kantonalbank;QR-IID;30770;770;Aeschenvorstadt;41;4051;Basel;CH;307706;ja;ja;ja;ja;nein;nein
+30773;GLKBCH22XXX;Glarner Kantonalbank;QR-IID;30773;773;Postfach 365;;8750;Glarus;CH;307738;ja;ja;ja;ja;nein;nein
+30774;GRKBCH2270A;Graubündner Kantonalbank;QR-IID;30774;774;Postfach;;7001;Chur;CH;307743;ja;ja;ja;ja;nein;nein
+30777;KBSZCH22XXX;Schwyzer Kantonalbank;QR-IID;30777;777;Bahnhofstrasse;3;6431;Schwyz;CH;307775;ja;ja;ja;ja;nein;nein
+30778;LUKBCH2260A;Luzerner Kantonalbank AG;QR-IID;30778;778;Pilatusstrasse;12;6002;Luzern;CH;307780;ja;ja;ja;ja;nein;nein
+30779;NIKACH22XXX;Nidwaldner Kantonalbank;QR-IID;30779;779;Stansstaderstrasse;54;6371;Stans;CH;307791;ja;ja;ja;ja;nein;nein
+30780;OBWKCH22XXX;Obwaldner Kantonalbank;QR-IID;30780;780;Im Feld;2;6060;Sarnen;CH;307809;ja;ja;ja;ja;nein;nein
+30781;KBSGCH22XXX;St. Galler Kantonalbank AG;QR-IID;30781;781;Postfach;;9001;St. Gallen;CH;307817;ja;ja;ja;ja;nein;nein
+30782;SHKBCH2SXXX;Schaffhauser Kantonalbank;QR-IID;30782;782;Vorstadt;53;8201;Schaffhausen;CH;307825;ja;ja;ja;ja;nein;nein
+30784;KBTGCH22XXX;Thurgauer Kantonalbank;QR-IID;30784;784;Postfach;;8570;Weinfelden;CH;307841;ja;ja;ja;ja;nein;nein
+30785;URKNCH22XXX;Urner Kantonalbank;QR-IID;30785;785;Postfach;;6460;Altdorf UR;CH;307856;ja;ja;ja;ja;nein;nein
+30787;KBZGCH22XXX;Zuger Kantonalbank;QR-IID;30787;787;Postfach;;6301;Zug;CH;307872;ja;ja;ja;ja;nein;nein
+30788;BCGECHGGXXX;Banque Cantonale de Genève;QR-IID;30788;788;Case postale 2251;;1211;Genève 2;CH;307888;ja;ja;ja;ja;nein;nein
+30789;BCJUCH22XXX;Banque Cantonale du Jura SA;QR-IID;30789;789;Case postale 278;;2900;Porrentruy 2;CH;307893;ja;ja;ja;ja;nein;nein
+30790;KBBECH22XXX;Berner Kantonalbank AG;QR-IID;30790;790;Bundesplatz;8;3001;Bern;CH;307901;ja;ja;ja;ja;nein;nein
+30808;RAIFCH22XXX;Raiffeisen;QR-IID;30808;80000;Raiffeisenplatz;;9001;St. Gallen;CH;308086;ja;ja;ja;ja;nein;nein
+31101;KLARCH22XXX;Bivial AG;QR-IID;31101;83041;Industriestrasse;24;6300;Zug;CH;311015;ja;ja;ja;ja;nein;nein
+61861;RBABCH22186;Sparkasse Sense;Filiale;6186;;F.X. Müllerstrasse;17;3185;Schmitten FR;CH;618614;ja;ja;ja;ja;ja;ja
+62401;RBABCH22240;Caisse d'Epargne Courtelary SA;Filiale;6240;;Grand-Rue;136;2720;Tramelan;CH;624014;ja;ja;ja;ja;ja;ja
+62402;RBABCH22240;Caisse d'Epargne Courtelary SA;Filiale;6240;;Rue Francillon;31;2610;St-Imier;CH;624022;ja;ja;ja;ja;ja;ja
+62403;RBABCH22240;Caisse d'Epargne Courtelary SA;Filiale;6240;;Rue du Collège;3;2605;Sonceboz-Sombeval;CH;624038;ja;ja;ja;ja;ja;ja
+66701;RBABCH22670;Clientis Entlebucher Bank AG;Filiale;6670;;Dorf;48;6162;Entlebuch;CH;667017;ja;ja;ja;ja;ja;ja
+66702;RBABCH22670;Clientis Entlebucher Bank AG;Filiale;6670;;Bahnhofstrasse;2;6182;Escholzmatt;CH;667025;ja;ja;ja;ja;ja;ja
+68141;RBABCH22814;Sparcassa 1816 Genossenschaft;Filiale;6814;;Dorfstrasse;11a;8805;Richterswil;CH;681411;ja;ja;ja;ja;ja;ja
+68142;RBABCH22814;Sparcassa 1816 Genossenschaft;Filiale;6814;;Bahnhofplatz;9;8910;Affoltern am Albis;CH;681426;ja;ja;ja;ja;ja;ja
+68143;RBABCH22814;Sparcassa 1816 Genossenschaft;Filiale;6814;;Stationsstrasse;7;8907;Wettswil;CH;681434;ja;ja;ja;ja;ja;ja
+68144;RBABCH22814;Sparcassa 1816 Genossenschaft;Filiale;6814;;Albisstrasse;5;8932;Mettmenstetten;CH;681442;ja;ja;ja;ja;ja;ja
+68241;RBABCH22824;BANK ZIMMERBERG AG;Filiale;6824;;Alte Landstrasse;29;8942;Oberrieden;CH;682418;ja;ja;ja;ja;ja;ja
+68242;RBABCH22824;BANK ZIMMERBERG AG;Filiale;6824;;Vorderi Siten;1;8816;Hirzel;CH;682423;ja;ja;ja;ja;ja;ja
+76410;BSCTCH22LUG;Banca dello Stato del Cantone Ticino;Filiale;764;;Via Pioda;7;6901;Lugano;CH;764103;ja;nein;ja;ja;ja;nein
+76411;BSCTCH22XXX;Banca dello Stato del Cantone Ticino;Filiale;764;;Molino Nuovo;;6900;Lugano;CH;764119;ja;nein;ja;ja;ja;nein
+76412;BSCTCH22XXX;Banca dello Stato del Cantone Ticino;Filiale;764;;Via Pietro Fontana;;6950;Tesserete;CH;764127;ja;nein;ja;ja;ja;nein
+76420;BSCTCH22LOC;Banca dello Stato del Cantone Ticino;Filiale;764;;Via Trevani;;6601;Locarno;CH;764207;ja;nein;ja;ja;ja;nein
+76430;BSCTCH22CHI;Banca dello Stato del Cantone Ticino;Filiale;764;;Corso San Gottardo;4;6830;Chiasso 1;CH;764306;ja;nein;ja;ja;ja;nein
+76440;BSCTCH22XXX;Banca dello Stato del Cantone Ticino;Filiale;764;;Corso Bello;3;6850;Mendrisio;CH;764409;ja;nein;ja;ja;ja;nein
+76450;BSCTCH22XXX;Banca dello Stato del Cantone Ticino;Filiale;764;;Via Pini;2;6710;Biasca;CH;764501;ja;nein;ja;ja;ja;nein
+76460;BSCTCH22XXX;Banca dello Stato del Cantone Ticino;Filiale;764;;Viale Papio;5;6612;Ascona;CH;764604;ja;nein;ja;ja;ja;nein
+76470;BSCTCH22XXX;Banca dello Stato del Cantone Ticino;Filiale;764;;Via Cantonale;;6982;Agno;CH;764708;ja;nein;ja;ja;ja;nein
+76711;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Bel-Air;;1002;Lausanne;CH;767115;ja;ja;ja;nein;ja;ja
+76712;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1860;Aigle;CH;767120;ja;ja;ja;nein;ja;ja
+76713;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1170;Aubonne;CH;767131;ja;ja;ja;nein;ja;ja
+76714;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1580;Avenches;CH;767146;ja;ja;ja;nein;ja;ja
+76715;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1880;Bex;CH;767154;ja;ja;ja;nein;ja;ja
+76716;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1660;Château-d'Oex;CH;767162;ja;ja;ja;nein;ja;ja
+76717;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1304;Cossonay-Ville;CH;767178;ja;ja;ja;nein;ja;ja
+76718;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1096;Cully;CH;767183;ja;ja;ja;nein;ja;ja
+76719;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1040;Echallens;CH;767199;ja;ja;ja;nein;ja;ja
+76720;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1422;Grandson;CH;767206;ja;ja;ja;nein;ja;ja
+76721;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1095;Lutry;CH;767214;ja;ja;ja;nein;ja;ja
+76722;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1820;Montreux 1;CH;767222;ja;ja;ja;nein;ja;ja
+76723;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1110;Morges 1;CH;767238;ja;ja;ja;nein;ja;ja
+76724;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1510;Moudon;CH;767243;ja;ja;ja;nein;ja;ja
+76725;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1260;Nyon;CH;767259;ja;ja;ja;nein;ja;ja
+76726;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1350;Orbe;CH;767267;ja;ja;ja;nein;ja;ja
+76727;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1610;Oron-la-Ville;CH;767275;ja;ja;ja;nein;ja;ja
+76728;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale 64;;1530;Payerne;CH;767280;ja;ja;ja;nein;ja;ja
+76729;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1020;Renens VD;CH;767291;ja;ja;ja;nein;ja;ja
+76730;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1180;Rolle;CH;767309;ja;ja;ja;nein;ja;ja
+76731;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1450;Ste-Croix;CH;767317;ja;ja;ja;nein;ja;ja
+76732;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1347;Sentier, Le;CH;767325;ja;ja;ja;nein;ja;ja
+76733;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1337;Vallorbe;CH;767330;ja;ja;ja;nein;ja;ja
+76734;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1800;Vevey 1;CH;767341;ja;ja;ja;nein;ja;ja
+76735;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1401;Yverdon-les-Bains;CH;767356;ja;ja;ja;nein;ja;ja
+76736;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1814;Tour-de-Peilz, La;CH;767364;ja;ja;ja;nein;ja;ja
+76737;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1844;Villeneuve VD;CH;767372;ja;ja;ja;nein;ja;ja
+76738;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1008;Prilly;CH;767388;ja;ja;ja;nein;ja;ja
+76739;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Place de la Gare;;1000;Lausanne;CH;767393;ja;ja;ja;nein;ja;ja
+76740;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1854;Leysin;CH;767401;ja;ja;ja;nein;ja;ja
+76741;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1884;Villars-sur-Ollon;CH;767416;ja;ja;ja;nein;ja;ja
+76742;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1815;Clarens;CH;767424;ja;ja;ja;nein;ja;ja
+76743;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1196;Gland;CH;767432;ja;ja;ja;nein;ja;ja
+76744;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1009;Pully;CH;767448;ja;ja;ja;nein;ja;ja
+76745;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1033;Cheseaux-sur-Lausanne;CH;767453;ja;ja;ja;nein;ja;ja
+76746;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Chailly;;1000;Lausanne 12;CH;767469;ja;ja;ja;nein;ja;ja
+76747;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;La Sallaz;;1010;Lausanne 10;CH;767477;ja;ja;ja;nein;ja;ja
+76748;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1865;Diablerets, Les;CH;767485;ja;ja;ja;nein;ja;ja
+76749;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Ouchy;;1000;Lausanne 6;CH;767490;ja;ja;ja;nein;ja;ja
+76750;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1030;Bussigny-près-Lausanne;CH;767504;ja;ja;ja;nein;ja;ja
+76751;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Pontaise;;1018;Lausanne 18;CH;767512;ja;ja;ja;nein;ja;ja
+76752;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1305;Penthalaz;CH;767528;ja;ja;ja;nein;ja;ja
+76753;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1296;Coppet;CH;767533;ja;ja;ja;nein;ja;ja
+76754;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1023;Crissier;CH;767549;ja;ja;ja;nein;ja;ja
+76755;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Bellevaux;;1000;Lausanne 8;CH;767557;ja;ja;ja;nein;ja;ja
+76756;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1522;Lucens;CH;767565;ja;ja;ja;nein;ja;ja
+76758;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1373;Chavornay;CH;767581;ja;ja;ja;nein;ja;ja
+76761;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1807;Blonay;CH;767613;ja;ja;ja;nein;ja;ja
+76762;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1071;Chexbres;CH;767629;ja;ja;ja;nein;ja;ja
+76763;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Cour;;1000;Lausanne 3;CH;767637;ja;ja;ja;nein;ja;ja
+76764;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1073;Savigny;CH;767645;ja;ja;ja;nein;ja;ja
+76765;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Route de Divonne;;1260;Nyon;CH;767650;ja;ja;ja;nein;ja;ja
+76766;BCVLCH2LXXX;Banque Cantonale Vaudoise;Filiale;767;;Case postale;;1066;Epalinges;CH;767661;ja;ja;ja;nein;ja;ja
+76822;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Rue de Romont;;1701;Fribourg;CH;768224;ja;ja;ja;ja;ja;ja
+76823;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1630;Bulle;CH;768232;ja;ja;ja;ja;ja;ja
+76824;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1618;Châtel-St-Denis;CH;768248;ja;ja;ja;ja;ja;ja
+76825;BEFRCH22XXX;Freiburger Kantonalbank;Filiale;768;;Postfach;;3210;Kerzers;CH;768253;ja;ja;ja;ja;ja;ja
+76826;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1564;Domdidier;CH;768269;ja;ja;ja;ja;ja;ja
+76827;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1470;Estavayer-le-Lac;CH;768277;ja;ja;ja;ja;ja;ja
+76828;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1726;Farvagny-le-Grand;CH;768285;ja;ja;ja;ja;ja;ja
+76829;BEFRCH22XXX;Freiburger Kantonalbank;Filiale;768;;Postfach;;3280;Murten/Morat;CH;768290;ja;ja;ja;ja;ja;ja
+76830;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1680;Romont FR;CH;768304;ja;ja;ja;ja;ja;ja
+76831;BEFRCH22XXX;Freiburger Kantonalbank;Filiale;768;;Postfach;;1712;Tafers/Tavel;CH;768312;ja;ja;ja;ja;ja;ja
+76832;BEFRCH22XXX;Freiburger Kantonalbank;Filiale;768;;Guin;;3186;Düdingen;CH;768328;ja;ja;ja;ja;ja;ja
+76833;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Bourg;;1702;Fribourg;CH;768333;ja;ja;ja;ja;ja;ja
+76834;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1616;Attalens;CH;768349;ja;ja;ja;ja;ja;ja
+76835;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1784;Courtepin;CH;768357;ja;ja;ja;ja;ja;ja
+76836;BEFRCH22XXX;Freiburger Kantonalbank;Filiale;768;;Postfach;;3175;Flamatt;CH;768365;ja;ja;ja;ja;ja;ja
+76837;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1754;Avry-sur-Matran;CH;768370;ja;ja;ja;ja;ja;ja
+76838;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Schönberg;;1707;Fribourg;CH;768381;ja;ja;ja;ja;ja;ja
+76839;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Hôpital Cantonal;;1708;Fribourg;CH;768396;ja;ja;ja;ja;ja;ja
+76840;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1731;Ependes FR;CH;768408;ja;ja;ja;ja;ja;ja
+76841;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1637;Charmey (Gruyère);CH;768413;ja;ja;ja;ja;ja;ja
+76842;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Postfach;;1716;Plaffeien;CH;768429;ja;ja;ja;ja;ja;ja
+76843;BEFRCH22XXX;Banque Cantonale de Fribourg;Filiale;768;;Case postale;;1611;Crêt, Le;CH;768437;ja;ja;ja;ja;ja;ja
+77711;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Hauptstrasse;61;8840;Einsiedeln;CH;777110;ja;ja;ja;ja;ja;ja
+77712;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Mittlere Bahnhofstrasse;5;8853;Lachen SZ;CH;777121;ja;ja;ja;ja;ja;ja
+77713;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Glarnerstrasse;7;8854;Siebnen;CH;777136;ja;ja;ja;ja;ja;ja
+77714;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Bahnhofstrasse;29;6440;Brunnen;CH;777144;ja;ja;ja;ja;ja;ja
+77715;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Bahnhofstrasse;8;6403;Küssnacht am Rigi;CH;777152;ja;ja;ja;ja;ja;ja
+77716;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Gotthardstrasse;21;6415;Arth;CH;777168;ja;ja;ja;ja;ja;ja
+77717;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Bahnhofstrasse;6;8808;Pfäffikon SZ;CH;777173;ja;ja;ja;ja;ja;ja
+77718;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Parkstrasse;1;6410;Goldau;CH;777189;ja;ja;ja;ja;ja;ja
+77719;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Dorfplatz;2;8832;Wollerau;CH;777197;ja;ja;ja;ja;ja;ja
+77720;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Poststrasse;2;6442;Gersau;CH;777202;ja;ja;ja;ja;ja;ja
+77721;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Bahnhofstrasse;1;6418;Rothenthurm;CH;777218;ja;ja;ja;ja;ja;ja
+77722;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Gotthardstrasse;62;6438;Ibach;CH;777223;ja;ja;ja;ja;ja;ja
+77723;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Bahnhofstrasse;132;6423;Seewen SZ;CH;777239;ja;ja;ja;ja;ja;ja
+77724;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Postplatz;3;6422;Steinen;CH;777247;ja;ja;ja;ja;ja;ja
+77725;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Hauptstrasse;25;6436;Muotathal;CH;777255;ja;ja;ja;ja;ja;ja
+77726;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Waagtalstrasse;;8842;Unteriberg;CH;777260;ja;ja;ja;ja;ja;ja
+77727;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Mythen-Center;;6438;Ibach;CH;777271;ja;ja;ja;ja;ja;ja
+77728;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Kantonsstrasse;102;8807;Freienbach;CH;777286;ja;ja;ja;ja;ja;ja
+77729;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Seedamm-Center;;8808;Pfäffikon SZ;CH;777294;ja;ja;ja;ja;ja;ja
+77730;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Dorfstrasse;10;6417;Sattel;CH;777303;ja;ja;ja;ja;ja;ja
+77731;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Säntisstrasse;2;8856;Tuggen;CH;777319;ja;ja;ja;ja;ja;ja
+77732;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Pfäffikonerstrasse;1;8834;Schindellegi;CH;777327;ja;ja;ja;ja;ja;ja
+77733;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Zürcherstrasse;6;8852;Altendorf;CH;777335;ja;ja;ja;ja;ja;ja
+77734;KBSZCH22XXX;Schwyzer Kantonalbank;Filiale;777;;Kreuzwiesmarkt;;8864;Reichenburg;CH;777340;ja;ja;ja;ja;ja;ja
+77811;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Vorstadt;11;6130;Willisau;CH;778111;ja;ja;ja;ja;ja;ja
+77812;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Hauptstrasse;31;6170;Schüpfheim;CH;778126;ja;ja;ja;ja;ja;ja
+77813;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Oberstadt;7;6210;Sursee;CH;778134;ja;ja;ja;ja;ja;ja
+77814;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Brauiplatz;2;6281;Hochdorf;CH;778142;ja;ja;ja;ja;ja;ja
+77815;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Hauptstrasse;48;6260;Reiden;CH;778158;ja;ja;ja;ja;ja;ja
+77816;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Gerliswilstrasse;4;6020;Emmenbrücke 1;CH;778163;ja;ja;ja;ja;ja;ja
+77817;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Schachenstrasse;6;6011;Kriens;CH;778179;ja;ja;ja;ja;ja;ja
+77818;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Gemeindehausplatz;3;6048;Horw;CH;778187;ja;ja;ja;ja;ja;ja
+77819;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Zürichstrasse;12;6006;Luzern;CH;778195;ja;ja;ja;ja;ja;ja
+77820;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Zentralstrasse;14;6031;Ebikon;CH;778205;ja;ja;ja;ja;ja;ja
+77821;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Hauptstrasse;52;6045;Meggen;CH;778210;ja;ja;ja;ja;ja;ja
+77823;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Fanghöfli;6;6014;Luzern;CH;778236;ja;ja;ja;ja;ja;ja
+77824;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Menznauerstrasse;11;6110;Wolhusen;CH;778244;ja;ja;ja;ja;ja;ja
+77825;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Fläcke;15;6215;Beromünster;CH;778252;ja;ja;ja;ja;ja;ja
+77828;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Luzernerstrasse;8;6285;Hitzkirch;CH;778289;ja;ja;ja;ja;ja;ja
+77829;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Stadtstrasse;2;6204;Sempach;CH;778297;ja;ja;ja;ja;ja;ja
+77860;LUKBCH2260A;Luzerner Kantonalbank AG;Filiale;778;;Hellbühlerstrasse;10;6017;Ruswil;CH;778606;ja;ja;ja;ja;ja;ja
+78102;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Neudorf;;9016;St. Gallen;CH;781024;ja;ja;ja;ja;ja;ja
+78103;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Bruggen;;9014;St. Gallen;CH;781032;ja;ja;ja;ja;ja;ja
+78111;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9450;Altstätten SG;CH;781112;ja;ja;ja;ja;ja;ja
+78112;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;7310;Bad Ragaz;CH;781128;ja;ja;ja;ja;ja;ja
+78113;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9470;Buchs SG;CH;781133;ja;ja;ja;ja;ja;ja
+78114;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9113;Degersheim;CH;781149;ja;ja;ja;ja;ja;ja
+78115;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;8887;Mels;CH;781157;ja;ja;ja;ja;ja;ja
+78116;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;8640;Rapperswil SG;CH;781165;ja;ja;ja;ja;ja;ja
+78117;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9400;Rorschach;CH;781170;ja;ja;ja;ja;ja;ja
+78118;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9630;Wattwil;CH;781181;ja;ja;ja;ja;ja;ja
+78119;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9501;Wil SG 1;CH;781196;ja;ja;ja;ja;ja;ja
+78120;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9230;Flawil;CH;781208;ja;ja;ja;ja;ja;ja
+78121;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9473;Gams;CH;781213;ja;ja;ja;ja;ja;ja
+78122;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9201;Gossau SG;CH;781229;ja;ja;ja;ja;ja;ja
+78123;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9435;Heerbrugg;CH;781237;ja;ja;ja;ja;ja;ja
+78124;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9424;Rheineck;CH;781245;ja;ja;ja;ja;ja;ja
+78125;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9430;St. Margrethen SG;CH;781250;ja;ja;ja;ja;ja;ja
+78126;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;8730;Uznach;CH;781261;ja;ja;ja;ja;ja;ja
+78127;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9240;Uzwil;CH;781276;ja;ja;ja;ja;ja;ja
+78128;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;8880;Walenstadt;CH;781284;ja;ja;ja;ja;ja;ja
+78129;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9650;Nesslau;CH;781292;ja;ja;ja;ja;ja;ja
+78130;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;7320;Sargans;CH;781300;ja;ja;ja;ja;ja;ja
+78131;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9403;Goldach;CH;781311;ja;ja;ja;ja;ja;ja
+78132;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Postfach;;9642;Ebnat-Kappel;CH;781326;ja;ja;ja;ja;ja;ja
+78158;KBSGCH22XXX;St. Galler Kantonalbank AG;Filiale;781;;Zentrale;;9001;St. Gallen;CH;781586;ja;ja;ja;ja;ja;ja
+78213;SHKBCH2SXXX;Schaffhauser Kantonalbank;Filiale;782;;Rathausplatz;4;8260;Stein am Rhein;CH;782139;ja;ja;ja;ja;ja;ja
+78910;BCJUCH22XXX;Banque Cantonale du Jura SA;Filiale;789;;Case postale;;2800;Delémont 1;CH;789108;ja;nein;ja;ja;ja;nein
+78920;BCJUCH22XXX;Banque Cantonale du Jura SA;Filiale;789;;Case postale;;2350;Saignelégier;CH;789200;ja;nein;ja;ja;ja;nein
+80000;RAIFCH22XXX;Raiffeisen Schweiz;Hauptsitz;80000;;Raiffeisenplatz;;9001;St. Gallen;CH;800001;ja;ja;ja;nein;ja;ja
+80002;RAIFCH22002;Banque Raiffeisen Région Delémont;Filiale;80000;;Place de la Gare;2;2800;Delémont;CH;800024;ja;ja;ja;nein;ja;ja
+80005;RAIFCH22005;Raiffeisenbank St.Gallen;Filiale;80000;;Vadianstrasse;17;9001;St.Gallen;CH;800053;ja;ja;ja;nein;ja;ja
+80027;RAIFCH22027;Banque Raiffeisen  Ajoie;Filiale;80000;;Rue du Jura;37;2900;Porrentruy;CH;800276;ja;ja;ja;nein;ja;ja
+80037;RAIFCH22037;Banque Raiffeisen Clos du Doubs et Haute-Ajoie;Filiale;80000;;Rue de l'Hôpital;5;2882;St-Ursanne;CH;800379;ja;ja;ja;nein;ja;ja
+80051;RAIFCH22051;Banque Raiffeisen Grand Chasseral;Filiale;80000;;Rue du Collège;32;2605;Sonceboz-Sombeval;CH;800518;ja;ja;ja;nein;ja;ja
+80059;RAIFCH22059;Banque Raiffeisen Franches-Montagnes;Filiale;80000;;Rue de l'Hôpital;8;2350;Saignelégier;CH;800594;ja;ja;ja;nein;ja;ja
+80073;RAIFCH22073;Banque Raiffeisen du Val-Terbi;Filiale;80000;;Route Principale;51;2824;Vicques;CH;800731;ja;ja;ja;nein;ja;ja
+80094;RAIFCH22094;Raiffeisenbank Worblen-Emmental;Filiale;80000;;Bahnhofstrasse;7;3507;Biglen;CH;800941;ja;ja;ja;nein;ja;ja
+80097;RAIFCH22097;Raiffeisenbank Laufental-Thierstein;Filiale;80000;;Bahnhofstrasse;17;4242;Laufen;CH;800972;ja;ja;ja;nein;ja;ja
+80098;RAIFCH22098;Raiffeisenbank Gürbe;Filiale;80000;;Dorfstrasse;11;3123;Belp;CH;800988;ja;ja;ja;nein;ja;ja
+80102;RAIFCH22102;Banque Raiffeisen Sarine-Ouest;Filiale;80000;;Route de Fribourg;4;1782;Belfaux;CH;801021;ja;ja;ja;nein;ja;ja
+80105;RAIFCH22105;Banque Raiffeisen Région Marly-Cousimbert;Filiale;80000;;Route de Montena;1;1728;Rossens FR;CH;801052;ja;ja;ja;nein;ja;ja
+80129;RAIFCH22129;Banque Raiffeisen Moléson;Filiale;80000;;Rue de l'Ancien Comté;27;1635;Tour-de-Trême, La;CH;801298;ja;ja;ja;nein;ja;ja
+80139;RAIFCH22139;Banque Raiffeisen Broye Vully Lac;Filiale;80000;;Vy d'Avenches;1;1564;Domdidier;CH;801399;ja;ja;ja;nein;ja;ja
+80159;RAIFCH22159;Banque Raiffeisen Fribourg-Ouest;Filiale;80000;;Route de Moncor;12;1752;Villars-sur-Glâne;CH;801593;ja;ja;ja;nein;ja;ja
+80181;RAIFCH22181;Banque Raiffeisen Région Genève Rhône;Filiale;80000;;Rue de Bernex;259A;1233;Bernex;CH;801813;ja;ja;ja;nein;ja;ja
+80187;RAIFCH22187;Banque Raiffeisen Genève Lac;Filiale;80000;;Avenue Krieg;15;1208;Genève;CH;801876;ja;ja;ja;nein;ja;ja
+80210;RAIFCH22210;Banque Raiffeisen Villes et Vignobles genevois;Filiale;80000;;Place Casa-Bamba;1;1219;Châtelaine;CH;802107;ja;ja;ja;nein;ja;ja
+80237;RAIFCH22237;Banque Raiffeisen des Montagnes Neuchâteloises;Filiale;80000;;Av. Léopold-Robert;11;2300;Chaux-de-Fonds, La;CH;802372;ja;ja;ja;nein;ja;ja
+80241;RAIFCH22241;Banque Raiffeisen Neuchâtel et Vallées;Filiale;80000;;Rue St-Honoré;5;2000;Neuchâtel;CH;802416;ja;ja;ja;nein;ja;ja
+80272;RAIFCH22272;Banca Raiffeisen del Basso Mendrisiotto;Filiale;80000;;Corso San Gottardo;54A;6830;Chiasso;CH;802726;ja;ja;ja;nein;ja;ja
+80280;RAIFCH22280;Banca Raiffeisen Piano di Magadino;Filiale;80000;;Via San Gottardo;67;6596;Gordola;CH;802805;ja;ja;ja;nein;ja;ja
+80283;RAIFCH22283;Banca Raiffeisen Vedeggio Cassarate;Filiale;80000;;Via Grumo;31;6929;Gravesano;CH;802836;ja;ja;ja;nein;ja;ja
+80287;RAIFCH22287;Banca Raiffeisen Basso Ceresio;Filiale;80000;;Via Cantonale;85;6818;Melano;CH;802873;ja;ja;ja;nein;ja;ja
+80290;RAIFCH22290;Banca Raiffeisen Morbio-Vacallo;Filiale;80000;;Via Asilo;3;6834;Morbio Inferiore;CH;802902;ja;ja;ja;nein;ja;ja
+80317;RAIFCH22317;Banca Raiffeisen del Malcantone;Filiale;80000;;Via Stazione;20;6987;Caslano;CH;803172;ja;ja;ja;nein;ja;ja
+80333;RAIFCH22333;Banca Raiffeisen Losone Pedemonte Vallemaggia;Filiale;80000;;Al Croséll;4;6673;Maggia;CH;803333;ja;ja;ja;nein;ja;ja
+80340;RAIFCH22340;Banca Raiffeisen Mendrisio e Valle di Muggio;Filiale;80000;;Via Lavizzari;19A;6850;Mendrisio;CH;803408;ja;ja;ja;nein;ja;ja
+80344;RAIFCH22344;Banca Raiffeisen del Camoghè;Filiale;80000;;Via della Posta;7;6512;Giubiasco;CH;803445;ja;ja;ja;nein;ja;ja
+80350;RAIFCH22350;Banca Raiffeisen Tre Valli;Filiale;80000;;Via A. Giovannini;4;6710;Biasca;CH;803500;ja;ja;ja;nein;ja;ja
+80362;RAIFCH22362;Banca Raiffeisen Colline del Ceresio;Filiale;80000;;Via San Gottardo;131;6942;Savosa;CH;803621;ja;ja;ja;nein;ja;ja
+80365;RAIFCH22365;Banca Raiffeisen della Campagnadorna;Filiale;80000;;Via Boff;2;6855;Stabio;CH;803652;ja;ja;ja;nein;ja;ja
+80375;RAIFCH22375;Banca Raiffeisen Lugano;Filiale;80000;;Via Pretorio;22;6900;Lugano;CH;803755;ja;ja;ja;nein;ja;ja
+80379;RAIFCH22379;Banca Raiffeisen Locarno;Filiale;80000;;Piazza Muraccio;6;6601;Locarno;CH;803794;ja;ja;ja;nein;ja;ja
+80387;RAIFCH22387;Banca Raiffeisen Bellinzonese e Visagno;Filiale;80000;;Via G. Jauch;1;6501;Bellinzona;CH;803874;ja;ja;ja;nein;ja;ja
+80401;RAIFCH22401;Banque Raiffeisen Mont-Aubert Orbe;Filiale;80000;;En Chamard;41 C;1442;Montagny-près-Yverdon;CH;804011;ja;ja;ja;nein;ja;ja
+80414;RAIFCH22414;Banque Raiffeisen d'Assens;Filiale;80000;;Place Victor Favre;1;1042;Assens;CH;804144;ja;ja;ja;nein;ja;ja
+80430;RAIFCH22430;Banque Raiffeisen Alpes Riviera Chablais Vaudois;Filiale;80000;;Rue Margencel;7;1860;Aigle;CH;804303;ja;ja;ja;nein;ja;ja
+80434;RAIFCH22434;Banque Raiffeisen du Gros-de-Vaud;Filiale;80000;;Route de Lausanne;1;1040;Echallens;CH;804340;ja;ja;ja;nein;ja;ja
+80442;RAIFCH22442;Banque Raiffeisen Nyon-La Vallée;Filiale;80000;;Avenue Alfred-Cortot;14;1260;Nyon;CH;804420;ja;ja;ja;nein;ja;ja
+80445;RAIFCH22445;Banque Raiffeisen du Mont-Tendre;Filiale;80000;;Route de Bière;3;1143;Apples;CH;804454;ja;ja;ja;nein;ja;ja
+80451;RAIFCH22451;Banque Raiffeisen Lausanne Haute-Broye-Jorat;Filiale;80000;;Voie du Chariot;7;1003;Lausanne;CH;804514;ja;ja;ja;nein;ja;ja
+80454;RAIFCH22454;Banque Raiffeisen de Lavaux;Filiale;80000;;Chemin de Publoz;11;1070;Puidoux;CH;804543;ja;ja;ja;nein;ja;ja
+80460;RAIFCH22460;Banque Raiffeisen Morges Venoge;Filiale;80000;;Rue du Centre;172;1025;St-Sulpice VD;CH;804609;ja;ja;ja;nein;ja;ja
+80472;RAIFCH22472;Banque Raiffeisen d'Yverdon-les-Bains;Filiale;80000;;Av. de la Gare;4;1401;Yverdon-les-Bains;CH;804724;ja;ja;ja;nein;ja;ja
+80479;RAIFCH22479;Banque Raiffeisen de la Broye;Filiale;80000;;Grand'Rue;20;1530;Payerne;CH;804790;ja;ja;ja;nein;ja;ja
+80485;RAIFCH22485;Banque Raiffeisen de Gimel;Filiale;80000;;La Chomaz;8;1188;Gimel;CH;804857;ja;ja;ja;nein;ja;ja
+80496;RAIFCH22496;Raiffeisenbank Mischabel-Matterhorn;Filiale;80000;;Bahnhofstrasse;13 - 15;3924;St. Niklaus VS;CH;804961;ja;ja;ja;nein;ja;ja
+80521;RAIFCH22521;Raiffeisenbank Gampel-Raron;Filiale;80000;;Bahnhofstrasse;49;3945;Gampel;CH;805210;ja;ja;ja;nein;ja;ja
+80527;RAIFCH22527;Raiffeisenbank Region Leuk;Filiale;80000;;Bahnhofstrasse;2;3952;Susten;CH;805273;ja;ja;ja;nein;ja;ja
+80532;RAIFCH22532;Raiffeisenbank Belalp-Simplon;Filiale;80000;;Kelchbachstrasse;18;3904;Naters;CH;805323;ja;ja;ja;nein;ja;ja
+80539;RAIFCH22539;Raiffeisenbank Aletsch-Goms;Filiale;80000;;Furkastrasse;469;3998;Reckingen VS;CH;805394;ja;ja;ja;nein;ja;ja
+80553;RAIFCH22553;Raiffeisenbank Region Visp;Filiale;80000;;Bahnhofstrasse;10;3930;Visp;CH;805531;ja;ja;ja;nein;ja;ja
+80572;RAIFCH22572;Banque Raiffeisen Sion et Région;Filiale;80000;;Avenue de la Gare;6;1950;Sion;CH;805725;ja;ja;ja;nein;ja;ja
+80581;RAIFCH22581;Banque Raiffeisen Entremont;Filiale;80000;;Route de Verbier;19;1934;Châble VS, Le;CH;805816;ja;ja;ja;nein;ja;ja
+80588;RAIFCH22588;Banque Raiffeisen du Haut-Léman;Filiale;80000;;Route du Léman;10;1895;Vionnaz;CH;805885;ja;ja;ja;nein;ja;ja
+80595;RAIFCH22595;Banque Raiffeisen Martigny et Région;Filiale;80000;;Rue de la Poste;7;1920;Martigny;CH;805957;ja;ja;ja;nein;ja;ja
+80598;RAIFCH22598;Banque Raiffeisen de Sierre & Région;Filiale;80000;;Place de la Gare;7;3960;Sierre/Siders;CH;805981;ja;ja;ja;nein;ja;ja
+80606;RAIFCH22606;Banque Raiffeisen de Massongex-St-Maurice-Vérossaz;Filiale;80000;;Route du Chablais;11;1869;Massongex;CH;806062;ja;ja;ja;nein;ja;ja
+80611;RAIFCH22611;Banque Raiffeisen de Monthey;Filiale;80000;;Avenue de la Gare;24;1870;Monthey 2;CH;806114;ja;ja;ja;nein;ja;ja
+80615;RAIFCH22615;Banque Raiffeisen des Communes du Haut Plateau;Filiale;80000;;Tsanveulle;15;3971;Chermignon;CH;806159;ja;ja;ja;nein;ja;ja
+80626;RAIFCH22626;Banque Raiffeisen Vallée d'Illiez;Filiale;80000;;Place du Village;5;1872;Troistorrents;CH;806264;ja;ja;ja;nein;ja;ja
+80652;RAIFCH22652;Raiffeisenbank Böttstein;Filiale;80000;;Hauptstrasse;18;5314;Kleindöttingen;CH;806529;ja;ja;ja;nein;ja;ja
+80666;RAIFCH22666;Raiffeisenbank an der Limmat;Filiale;80000;;Zürcherstrasse;64;8953;Dietikon;CH;806663;ja;ja;ja;nein;ja;ja
+80690;RAIFCH22690;Raiffeisenbank Wasserschloss;Filiale;80000;;Unterriedenstrasse;1;5412;Gebenstorf;CH;806903;ja;ja;ja;nein;ja;ja
+80691;RAIFCH22691;Raiffeisenbank Regio Frick-Mettauertal;Filiale;80000;;Hauptstrasse;35;5070;Frick;CH;806919;ja;ja;ja;nein;ja;ja
+80696;RAIFCH22696;Raiffeisenbank Regio Laufenburg;Filiale;80000;;Mitteldorf;2;5082;Kaisten;CH;806966;ja;ja;ja;nein;ja;ja
+80698;RAIFCH22698;Raiffeisenbank Aarau-Lenzburg;Filiale;80000;;Kasinostrasse;37;5000;Aarau;CH;806982;ja;ja;ja;nein;ja;ja
+80700;RAIFCH22700;Raiffeisenbank Surbtal-Wehntal;Filiale;80000;;Martkgasse;20;5304;Endingen;CH;807009;ja;ja;ja;nein;ja;ja
+80701;RAIFCH22701;Raiffeisenbank Aare-Rhein;Filiale;80000;;Schulweg;1;5316;Leuggern;CH;807017;ja;ja;ja;nein;ja;ja
+80702;RAIFCH22702;Raiffeisenbank Kelleramt-Albis;Filiale;80000;;Zürcherstrasse;7;8917;Oberlunkhofen;CH;807025;ja;ja;ja;nein;ja;ja
+80704;RAIFCH22704;Raiffeisenbank Aare-Reuss;Filiale;80000;;Lenzburgerstrasse;38;5507;Mellingen;CH;807041;ja;ja;ja;nein;ja;ja
+80705;RAIFCH22705;Raiffeisenbank Reuss-Lindenberg;Filiale;80000;;Rütistrasse;1;5634;Merenschwand;CH;807056;ja;ja;ja;nein;ja;ja
+80706;RAIFCH22706;Raiffeisenbank Möhlin;Filiale;80000;;Bachstrasse;4;4313;Möhlin;CH;807064;ja;ja;ja;nein;ja;ja
+80719;RAIFCH22719;Raiffeisenbank Mutschellen;Filiale;80000;;Schulstrasse;14;5621;Zufikon;CH;807190;ja;ja;ja;nein;ja;ja
+80721;RAIFCH22721;Raiffeisenbank Region Zofingen;Filiale;80000;;Vordere Hauptgasse;51;4800;Zofingen;CH;807212;ja;ja;ja;nein;ja;ja
+80723;RAIFCH22723;Raiffeisenbank Reitnau-Rued;Filiale;80000;;Turnhallenstrasse;435;5044;Schlossrued;CH;807233;ja;ja;ja;nein;ja;ja
+80728;RAIFCH22728;Raiffeisenbank Oberfreiamt;Filiale;80000;;Poststrasse;2;5630;Muri AG;CH;807281;ja;ja;ja;nein;ja;ja
+80736;RAIFCH22736;Raiffeisenbank Villmergen;Filiale;80000;;Dorfplatz;2;5612;Villmergen;CH;807361;ja;ja;ja;nein;ja;ja
+80740;RAIFCH22740;Raiffeisenbank Lägern-Baregg;Filiale;80000;;St. Bernhardstrasse;2;5430;Wettingen;CH;807400;ja;ja;ja;nein;ja;ja
+80744;RAIFCH22744;Raiffeisenbank Wohlen;Filiale;80000;;Stegmattweg;1;5610;Wohlen AG;CH;807442;ja;ja;ja;nein;ja;ja
+80746;RAIFCH22746;Raiffeisenbank Siggenthal-Würenlingen;Filiale;80000;;Gartenstrasse;34;5303;Würenlingen;CH;807463;ja;ja;ja;nein;ja;ja
+80747;RAIFCH22747;Raiffeisenbank Würenlos;Filiale;80000;;Schulstrasse;4;5436;Würenlos;CH;807479;ja;ja;ja;nein;ja;ja
+80748;RAIFCH22748;Raiffeisenbank Wegenstettertal;Filiale;80000;;Haldengasse;1;4314;Zeiningen;CH;807487;ja;ja;ja;nein;ja;ja
+80773;RAIFCH22773;Raiffeisenbank Liestal-Oberbaselbiet;Filiale;80000;;Rathausstrasse;58;4410;Liestal;CH;807735;ja;ja;ja;nein;ja;ja
+80774;RAIFCH22774;Raiffeisenbank Leimental;Filiale;80000;;Mühlemattstrasse ;22;4104;Oberwil BL;CH;807740;ja;ja;ja;nein;ja;ja
+80775;RAIFCH22775;Raiffeisenbank Allschwil-Schönenbuch;Filiale;80000;;Baslerstrasse;70;4123;Allschwil;CH;807751;ja;ja;ja;nein;ja;ja
+80776;RAIFCH22776;Raiffeisenbank Regio Muttenz;Filiale;80000;;Hauptstrasse;81;4132;Muttenz;CH;807766;ja;ja;ja;nein;ja;ja
+80779;RAIFCH22779;Raiffeisenbank Aesch-Pfeffingen;Filiale;80000;;Hauptstrasse;107;4147;Aesch BL;CH;807798;ja;ja;ja;nein;ja;ja
+80780;RAIFCH22780;Raiffeisenbank Reinach BL;Filiale;80000;;Hauptstrasse;9;4153;Reinach BL;CH;807807;ja;ja;ja;nein;ja;ja
+80808;RAIFCH22XXX;Raiffeisen;Filiale;80000;;Raiffeisenplatz;;9001;St. Gallen;CH;808081;ja;ja;ja;ja;ja;ja
+80816;RAIFCH22816;Raiffeisenbank Niedersimmental;Filiale;80000;;Diemtigtalstrasse;22;3753;Oey;CH;808161;ja;ja;ja;nein;ja;ja
+80817;RAIFCH22817;Raiffeisenbank Steffisburg;Filiale;80000;;Höchhusweg;4;3612;Steffisburg;CH;808176;ja;ja;ja;nein;ja;ja
+80819;RAIFCH22819;Raiffeisenbank Grauholz;Filiale;80000;;Zentrum;32;3322;Urtenen-Schönbühl;CH;808192;ja;ja;ja;nein;ja;ja
+80820;RAIFCH22820;Raiffeisenbank Frutigland;Filiale;80000;;Marktplatz;;3714;Frutigen;CH;808200;ja;ja;ja;nein;ja;ja
+80842;RAIFCH22842;Raiffeisenbank Jungfrau;Filiale;80000;;Untere Bönigstr.;3;3800;Interlaken;CH;808423;ja;ja;ja;nein;ja;ja
+80843;RAIFCH22843;Raiffeisenbank Region Haslital-Brienz;Filiale;80000;;Hauptstrasse;1;3860;Meiringen;CH;808439;ja;ja;ja;nein;ja;ja
+80856;RAIFCH22856;Raiffeisenbank Obersimmental-Saanenland;Filiale;80000;;Farbgasse;6;3770;Zweisimmen;CH;808566;ja;ja;ja;nein;ja;ja
+80860;RAIFCH22860;Raiffeisenbank Schwarzwasser;Filiale;80000;;Dorfstrasse;3;3182;Ueberstorf;CH;808607;ja;ja;ja;nein;ja;ja
+80862;RAIFCH22862;Raiffeisenbank Seeland;Filiale;80000;;Bahnhofplatz;11;2502;Biel/Bienne;CH;808620;ja;ja;ja;nein;ja;ja
+80867;RAIFCH22867;Raiffeisenbank Thunersee-Kiesental;Filiale;80000;;Burgstrasse;20;3600;Thun;CH;808678;ja;ja;ja;nein;ja;ja
+80875;RAIFCH22875;Raiffeisenbank Emmental;Filiale;80000;;Dorfstrasse;1;3550;Langnau im Emmental;CH;808759;ja;ja;ja;nein;ja;ja
+80895;RAIFCH22895;Raiffeisenbank Sense-Oberland;Filiale;80000;;Dorfplatz;7;1735;Giffers;CH;808953;ja;ja;ja;nein;ja;ja
+80896;RAIFCH22896;Raiffeisenbank See-Lac;Filiale;80000;;St. Germanstrasse;5;3212;Gurmels;CH;808969;ja;ja;ja;nein;ja;ja
+80905;RAIFCH22905;Raiffeisenbank Sensetal Freiburg-Ost / Sensetal Fribourg-Est;Filiale;80000;;Bahnhofplatz;1;3186;Düdingen;CH;809055;ja;ja;ja;nein;ja;ja
+80911;RAIFCH22911;Raiffeisenbank Dulliken-Starrkirch;Filiale;80000;;Bahnhofstrasse;40;4657;Dulliken;CH;809119;ja;ja;ja;nein;ja;ja
+80912;RAIFCH22912;Raiffeisenbank Gäu-Bipperamt;Filiale;80000;;Kornhausplatz;2;4622;Egerkingen;CH;809127;ja;ja;ja;nein;ja;ja
+80914;RAIFCH22914;Raiffeisenbank Aare-Langete;Filiale;80000;;Breitenstrasse;2;4629;Fulenbach;CH;809140;ja;ja;ja;nein;ja;ja
+80918;RAIFCH22918;Raiffeisenbank Mittelgösgen-Staffelegg;Filiale;80000;;Hauptstrasse;34;5015;Erlinsbach SO;CH;809182;ja;ja;ja;nein;ja;ja
+80938;RAIFCH22938;Raiffeisenbank Wasseramt-Buchsi;Filiale;80000;;Hauptstrasse;37;4552;Derendingen;CH;809380;ja;ja;ja;nein;ja;ja
+80939;RAIFCH22939;Raiffeisenbank Dornach;Filiale;80000;;Amthausstrasse;12;4143;Dornach;CH;809391;ja;ja;ja;nein;ja;ja
+80947;RAIFCH22947;Raiffeisenbank Untergäu;Filiale;80000;;Eigasse;8;4614;Hägendorf;CH;809472;ja;ja;ja;nein;ja;ja
+80962;RAIFCH22962;Raiffeisenbank Region Thal;Filiale;80000;;Hauptstrasse;550;4717;Mümliswil;CH;809628;ja;ja;ja;nein;ja;ja
+80965;RAIFCH22965;Raiffeisenbank am Eppenberg;Filiale;80000;;Hauptstr.;17;5013;Niedergösgen;CH;809657;ja;ja;ja;nein;ja;ja
+80970;RAIFCH22970;Raiffeisenbank Olten;Filiale;80000;;Ringstrasse;15;4600;Olten;CH;809708;ja;ja;ja;nein;ja;ja
+80971;RAIFCH22971;Raiffeisenbank Untere Emme;Filiale;80000;;Hauptstr.;109;4565;Recherswil;CH;809713;ja;ja;ja;nein;ja;ja
+80976;RAIFCH22976;Raiffeisenbank Weissenstein;Filiale;80000;;Hauptgasse;67;4502;Solothurn;CH;809761;ja;ja;ja;nein;ja;ja
+81011;RAIFCH22A11;Raiffeisenbank Appenzeller Hinterland;Filiale;80000;;Platz;7;9100;Herisau;CH;810115;ja;ja;ja;nein;ja;ja
+81012;RAIFCH22A12;Raiffeisenbank Heiden;Filiale;80000;;Werdstrasse;1;9410;Heiden;CH;810120;ja;ja;ja;nein;ja;ja
+81023;RAIFCH22A23;Raiffeisenbank Appenzell;Filiale;80000;;Hauptgasse;41;9050;Appenzell;CH;810238;ja;ja;ja;nein;ja;ja
+81031;RAIFCH22A31;Raiffeisenbank Glarnerland;Filiale;80000;;Im Dorf;4;8752;Näfels;CH;810317;ja;ja;ja;nein;ja;ja
+81045;RAIFCH22A45;Raiffeisenbank Bündner Rheintal;Filiale;80000;;Bahnhofplatz;6;7001;Chur;CH;810453;ja;ja;ja;nein;ja;ja
+81054;RAIFCH22A54;Banca Raiffeisen del Moesano;Filiale;80000;;Strada di Magistri;10;6535;Roveredo GR;CH;810549;ja;ja;ja;nein;ja;ja
+81063;RAIFCH22A63;Raiffeisenbank Mittelbünden;Filiale;80000;;Italienische Strasse;54;7408;Cazis;CH;810637;ja;ja;ja;nein;ja;ja
+81072;RAIFCH22A72;Raiffeisenbank Cadi;Filiale;80000;;Via Cons;1;7180;Disentis/Mustér;CH;810726;ja;ja;ja;nein;ja;ja
+81073;RAIFCH22A73;Raiffeisenbank Surselva;Filiale;80000;;Glennerstrasse;7;7130;Ilanz;CH;810734;ja;ja;ja;nein;ja;ja
+81084;RAIFCH22A84;Raiffeisenbank Prättigau-Davos;Filiale;80000;;Promenade;74 A;7270;Davos Platz;CH;810844;ja;ja;ja;nein;ja;ja
+81103;RAIFCH22B03;Banca Raiffeisen Valposchiavo;Filiale;80000;;Via da Spultri;20;7742;Poschiavo;CH;811038;ja;ja;ja;nein;ja;ja
+81144;RAIFCH22B44;Raiffeisenbank Engiadina Val Müstair;Filiale;80000;;Plaz;86;7530;Zernez;CH;811445;ja;ja;ja;nein;ja;ja
+81165;RAIFCH22B65;Raiffeisenbank Pilatus;Filiale;80000;;Luzernerstrasse;4/6;6010;Kriens;CH;811652;ja;ja;ja;nein;ja;ja
+81168;RAIFCH22B68;Raiffeisenbank Adligenswil-Udligenswil-Meggen;Filiale;80000;;Dorfstrasse;2;6043;Adligenswil;CH;811689;ja;ja;ja;nein;ja;ja
+81169;RAIFCH22B69;Raiffeisenbank Hitzkirchertal;Filiale;80000;;Bahnhofstrasse;12;6285;Hitzkirch;CH;811697;ja;ja;ja;nein;ja;ja
+81170;RAIFCH22B70;Raiffeisenbank Beromünster;Filiale;80000;;Oberdorf;3;6215;Beromünster;CH;811702;ja;ja;ja;nein;ja;ja
+81177;RAIFCH22B77;Raiffeisenbank Emmen;Filiale;80000;;Gerliswilstrasse;95;6020;Emmenbrücke;CH;811771;ja;ja;ja;nein;ja;ja
+81179;RAIFCH22B79;Raiffeisenbank im Entlebuch;Filiale;80000;;Hauptstrasse;113;6182;Escholzmatt;CH;811794;ja;ja;ja;nein;ja;ja
+81186;RAIFCH22B86;Raiffeisenbank Horw;Filiale;80000;;Kantonsstrasse;104;6048;Horw;CH;811866;ja;ja;ja;nein;ja;ja
+81187;RAIFCH22B87;Raiffeisenbank Oberseetal;Filiale;80000;;Hauptstrasse;7;6280;Hochdorf;CH;811874;ja;ja;ja;nein;ja;ja
+81194;RAIFCH22B94;Raiffeisenbank Menznau-Wolhusen;Filiale;80000;;Unterdorfstrasse;4;6122;Menznau;CH;811946;ja;ja;ja;nein;ja;ja
+81196;RAIFCH22B96;Raiffeisenbank Sempachersee-Rottal Süd;Filiale;80000;;Zentrum Sagi;;6207;Nottwil;CH;811962;ja;ja;ja;nein;ja;ja
+81203;RAIFCH22C03;Raiffeisenbank Luzern;Filiale;80000;;Bahnhofstrasse;5;6003;Luzern;CH;812034;ja;ja;ja;nein;ja;ja
+81204;RAIFCH22C04;Raiffeisenbank Rothenburg;Filiale;80000;;Stationsstrasse;7;6023;Rothenburg;CH;812042;ja;ja;ja;nein;ja;ja
+81211;RAIFCH22C11;Raiffeisenbank Luzerner Hinterland;Filiale;80000;;Mohrenplatz;10;6130;Willisau;CH;812110;ja;ja;ja;nein;ja;ja
+81212;RAIFCH22C12;Raiffeisenbank Ettiswil;Filiale;80000;;Dorf;7;6218;Ettiswil;CH;812121;ja;ja;ja;nein;ja;ja
+81214;RAIFCH22C14;Raiffeisenbank Luzerner Landschaft Nordwest;Filiale;80000;;Dorfchärn;2;6247;Schötz;CH;812144;ja;ja;ja;nein;ja;ja
+81223;RAIFCH22C23;Raiffeisenbank Nidwalden;Filiale;80000;;Riedenmatt;1;6370;Stans;CH;812239;ja;ja;ja;nein;ja;ja
+81232;RAIFCH22C32;Raiffeisenbank Obwalden;Filiale;80000;;Brünigstrasse;97;6072;Sachseln;CH;812327;ja;ja;ja;nein;ja;ja
+81241;RAIFCH22C41;Raiffeisenbank Regio St. Gallen West;Filiale;80000;;Sonnenbergstrasse;8;9030;Abtwil SG;CH;812415;ja;ja;ja;nein;ja;ja
+81251;RAIFCH22C51;Raiffeisenbank Werdenberg;Filiale;80000;;Bahnhofstrasse;50;9470;Buchs;CH;812514;ja;ja;ja;nein;ja;ja
+81256;RAIFCH22C56;Raiffeisenbank Benken;Filiale;80000;;Dorfplatz;1;8717;Benken SG;CH;812567;ja;ja;ja;nein;ja;ja
+81259;RAIFCH22C59;Raiffeisenbank Bernhardzell;Filiale;80000;;St. Gallerstr.;31;9304;Bernhardzell;CH;812591;ja;ja;ja;nein;ja;ja
+81261;RAIFCH22C61;Raiffeisenbank Regio Unteres Toggenburg & Neckertal;Filiale;80000;;Landstrasse;13;9606;Bütschwil;CH;812617;ja;ja;ja;nein;ja;ja
+81262;RAIFCH22C62;Raiffeisenbank Diepoldsau-Schmitter;Filiale;80000;;Vordere Kirchstrasse;2;9444;Diepoldsau;CH;812625;ja;ja;ja;nein;ja;ja
+81271;RAIFCH22C71;Raiffeisenbank Gossau-Andwil-Niederwil;Filiale;80000;;Herisauerstrasse;25;9200;Gossau SG;CH;812716;ja;ja;ja;nein;ja;ja
+81274;RAIFCH22C74;Raiffeisenbank Rapperswil-Jona;Filiale;80000;;St. Gallerstrasse;51;8645;Jona;CH;812748;ja;ja;ja;nein;ja;ja
+81281;RAIFCH22C81;Raiffeisenbank Sarganserland;Filiale;80000;;Oberdorfstrasse;11;8887;Mels;CH;812812;ja;ja;ja;nein;ja;ja
+81284;RAIFCH22C84;Raiffeisenbank Mörschwil;Filiale;80000;;Schulstrasse;1;9402;Mörschwil;CH;812849;ja;ja;ja;nein;ja;ja
+81287;RAIFCH22C87;Raiffeisenbank Obertoggenburg;Filiale;80000;;Bahnhofstrasse;8;9650;Nesslau;CH;812870;ja;ja;ja;nein;ja;ja
+81291;RAIFCH22C91;Raiffeisenbank Regio Uzwil;Filiale;80000;;Neudorf;8;9245;Oberbüren;CH;812913;ja;ja;ja;nein;ja;ja
+81295;RAIFCH22C95;Raiffeisenbank Unteres Rheintal;Filiale;80000;;Berneckerstrasse;3;9434;Au SG;CH;812950;ja;ja;ja;nein;ja;ja
+81296;RAIFCH22C96;Raiffeisenbank Region Rorschach;Filiale;80000;;Hauptstrasse;25;9400;Rorschach;CH;812961;ja;ja;ja;nein;ja;ja
+81297;RAIFCH22C97;Raiffeisenbank Oberes Rheintal;Filiale;80000;;Churerstrasse;1;9450;Altstätten SG;CH;812976;ja;ja;ja;nein;ja;ja
+81298;RAIFCH22C98;Raiffeisenbank am Ricken;Filiale;80000;;Rössligass;3;8733;Eschenbach SG;CH;812984;ja;ja;ja;nein;ja;ja
+81302;RAIFCH22D02;Raiffeisenbank Schänis-Amden;Filiale;80000;;Oberdorf;7;8718;Schänis;CH;813029;ja;ja;ja;nein;ja;ja
+81304;RAIFCH22D04;Raiffeisenbank Sennwald;Filiale;80000;;Äugstisriet;7;9466;Sennwald;CH;813045;ja;ja;ja;nein;ja;ja
+81307;RAIFCH22D07;Raiffeisenbank Regio Arbon;Filiale;80000;;St. Gallerstrasse;20;9320;Arbon;CH;813076;ja;ja;ja;nein;ja;ja
+81313;RAIFCH22D13;Raiffeisenbank Waldkirch;Filiale;80000;;Arneggerstr.;2;9205;Waldkirch;CH;813134;ja;ja;ja;nein;ja;ja
+81314;RAIFCH22D14;Raiffeisenbank Walenstadt;Filiale;80000;;Bahnhofstasse;9;8880;Walenstadt;CH;813142;ja;ja;ja;nein;ja;ja
+81317;RAIFCH22D17;Raiffeisenbank Mittleres Toggenburg;Filiale;80000;;Poststrasse;27;9630;Wattwil;CH;813179;ja;ja;ja;nein;ja;ja
+81319;RAIFCH22D19;Raiffeisenbank Mittelrheintal;Filiale;80000;;Poststrasse;1;9443;Widnau;CH;813195;ja;ja;ja;nein;ja;ja
+81320;RAIFCH22D20;Raiffeisenbank Wil und Umgebung;Filiale;80000;;Bronschhoferstrasse;11;9500;Wil SG;CH;813205;ja;ja;ja;nein;ja;ja
+81323;RAIFCH22D23;Raiffeisenbank Wittenbach-Häggenschwil;Filiale;80000;;Im Zentrum;1;9300;Wittenbach;CH;813236;ja;ja;ja;nein;ja;ja
+81324;RAIFCH22D24;Raiffeisenbank Marbach-Rebstein;Filiale;80000;;Staatstr.;17a;9437;Marbach SG;CH;813244;ja;ja;ja;nein;ja;ja
+81325;RAIFCH22D25;Raiffeisenbank Flawil-Degersheim-Mogelsberg-Oberuzwil;Filiale;80000;;Magdenauerstrasse;1;9230;Flawil;CH;813252;ja;ja;ja;nein;ja;ja
+81344;RAIFCH22D44;Raiffeisenbank Schaffhausen;Filiale;80000;;Bahnhofstrasse;30;8200;Schaffhausen;CH;813440;ja;ja;ja;nein;ja;ja
+81351;RAIFCH22D51;Raiffeisenbank Rigi;Filiale;80000;;Postplatz;5;6430;Schwyz;CH;813515;ja;ja;ja;nein;ja;ja
+81356;RAIFCH22D56;Raiffeisenbank Region linker Zürichsee;Filiale;80000;;Churerstrasse;42;8808;Pfäffikon SZ;CH;813562;ja;ja;ja;nein;ja;ja
+81360;RAIFCH22D60;Raiffeisenbank Muotathal;Filiale;80000;;Hauptstrasse;48;6436;Muotathal;CH;813606;ja;ja;ja;nein;ja;ja
+81361;RAIFCH22D61;Raiffeisenbank Einsiedeln-Ybrig;Filiale;80000;;Hauptstrasse;19;8840;Einsiedeln;CH;813614;ja;ja;ja;nein;ja;ja
+81371;RAIFCH22D71;Raiffeisenbank Regio Altnau;Filiale;80000;;Bahnhofstrasse;14;8595;Altnau;CH;813717;ja;ja;ja;nein;ja;ja
+81377;RAIFCH22D77;Raiffeisenbank Aadorf;Filiale;80000;;Gemeindeplatz;3;8355;Aadorf;CH;813772;ja;ja;ja;nein;ja;ja
+81378;RAIFCH22D78;Raiffeisenbank am Bichelsee;Filiale;80000;;Tösstalstrasse;64;8488;Turbenthal;CH;813788;ja;ja;ja;nein;ja;ja
+81380;RAIFCH22D80;Raiffeisenbank Mittelthurgau;Filiale;80000;;Bahnhofstrasse;12;8570;Weinfelden;CH;813801;ja;ja;ja;nein;ja;ja
+81382;RAIFCH22D82;Raiffeisenbank Untersee-Rhein;Filiale;80000;;Frauenfelderstrasse;4;8264;Eschenz;CH;813824;ja;ja;ja;nein;ja;ja
+81384;RAIFCH22D84;Raiffeisenbank Frauenfeld;Filiale;80000;;Zürcherstrasse;162;8501;Frauenfeld;CH;813848;ja;ja;ja;nein;ja;ja
+81398;RAIFCH22D98;Raiffeisenbank Neukirch-Romanshorn;Filiale;80000;;Amriswilerstrasse;2a;9315;Neukirch (Egnach);CH;813981;ja;ja;ja;nein;ja;ja
+81401;RAIFCH22E01;Raiffeisenbank Seerücken;Filiale;80000;;Hauptstrasse;35;8505;Pfyn;CH;814015;ja;ja;ja;nein;ja;ja
+81402;RAIFCH22E02;Raiffeisenbank Regio Sirnach;Filiale;80000;;Wilerstrasse;4;8370;Sirnach;CH;814020;ja;ja;ja;nein;ja;ja
+81412;RAIFCH22E12;Raiffeisenbank Tägerwilen;Filiale;80000;;Hauptstrasse;67;8274;Tägerwilen;CH;814122;ja;ja;ja;nein;ja;ja
+81414;RAIFCH22E14;Raiffeisenbank Münchwilen-Tobel;Filiale;80000;;Hauptstrasse;10;9555;Tobel;CH;814143;ja;ja;ja;nein;ja;ja
+81416;RAIFCH22E16;Raiffeisenbank Wängi-Matzingen;Filiale;80000;;Aadorferstrasse;1;9545;Wängi;CH;814167;ja;ja;ja;nein;ja;ja
+81417;RAIFCH22E17;Raiffeisenbank Amriswil Bischofszell;Filiale;80000;;Kirchstrasse;13;8580;Amriswil;CH;814175;ja;ja;ja;nein;ja;ja
+81431;RAIFCH22E31;Raiffeisenbank Urnerland;Filiale;80000;;Lehnplatz;20;6460;Altdorf UR;CH;814316;ja;ja;ja;nein;ja;ja
+81432;RAIFCH22E32;Raiffeisenbank Schächental;Filiale;80000;;Klausenstrasse;146;6463;Bürglen UR;CH;814324;ja;ja;ja;nein;ja;ja
+81454;RAIFCH22E54;Raiffeisenbank Zug;Filiale;80000;;Rathausstrasse;10;6341;Baar;CH;814545;ja;ja;ja;nein;ja;ja
+81455;RAIFCH22E55;Raiffeisenbank Cham-Steinhausen;Filiale;80000;;Sinserstrasse;1;6330;Cham;CH;814550;ja;ja;ja;nein;ja;ja
+81456;RAIFCH22E56;Raiffeisenbank Hünenberg-Risch;Filiale;80000;;Luzernerstrasse;2;6343;Rotkreuz;CH;814561;ja;ja;ja;nein;ja;ja
+81457;RAIFCH22E57;Raiffeisenbank Menzingen-Neuheim;Filiale;80000;;Neudorfstrasse;4;6313;Menzingen;CH;814576;ja;ja;ja;nein;ja;ja
+81459;RAIFCH22E59;Raiffeisenbank Region Ägerital-Sattel;Filiale;80000;;Zugerstrasse;24;6314;Unterägeri;CH;814592;ja;ja;ja;nein;ja;ja
+81471;RAIFCH22E71;Raiffeisenbank Zürcher Oberland;Filiale;80000;;Bahnhofstrasse;2;8610;Uster;CH;814710;ja;ja;ja;nein;ja;ja
+81474;RAIFCH22E74;Raiffeisenbank Zürich Flughafen;Filiale;80000;;Flughafenstrasse;1;8302;Kloten;CH;814744;ja;ja;ja;nein;ja;ja
+81475;RAIFCH22E75;Raiffeisenbank Züri-Unterland;Filiale;80000;;Bahnhofstrasse;15;8180;Bülach;CH;814752;ja;ja;ja;nein;ja;ja
+81477;RAIFCH22E77;Raiffeisenbank Region Glatt;Filiale;80000;;Bahnhofstrasse;1;8304;Wallisellen;CH;814773;ja;ja;ja;nein;ja;ja
+81479;RAIFCH22E79;Raiffeisenbank Weinland;Filiale;80000;;Thurtalstrasse;4;8450;Andelfingen;CH;814797;ja;ja;ja;nein;ja;ja
+81481;RAIFCH22E81;Raiffeisenbank rechter Zürichsee;Filiale;80000;;Bahnhofstrasse;20;8708;Männedorf;CH;814818;ja;ja;ja;nein;ja;ja
+81485;RAIFCH22E85;Raiffeisenbank Winterthur;Filiale;80000;;Bahnhofplatz;15;8401;Winterthur;CH;814855;ja;ja;ja;nein;ja;ja
+81486;RAIFCH22E86;Raiffeisenbank Basel;Filiale;80000;;St. Jakobs-Strasse;7;4052;Basel;CH;814860;ja;ja;ja;nein;ja;ja
+81487;RAIFCH22E87;Raiffeisenbank Zürich;Filiale;80000;;Limmatquai;68;8001;Zürich;CH;814871;ja;ja;ja;nein;ja;ja
+81488;RAIFCH22E88;Raiffeisenbank Bern;Filiale;80000;;Waisenhausplatz;26;3011;Bern;CH;814886;ja;ja;ja;nein;ja;ja
+81490;RAIFCH22E90;Raiffeisenbank Thalwil;Filiale;80000;;Gotthardstrasse;20/22;8800;Thalwil;CH;814903;ja;ja;ja;nein;ja;ja
+81491;RAIFCH22E91;RAIFFEISEN SCHWEIZ, FIRMENKUNDEN;Filiale;80000;;Raiffeisenplatz;4;9001;St. Gallen;CH;814919;ja;ja;ja;nein;ja;ja
+82007;DBSALULLFND;Union Bancaire Privée (Europe) SA;Hauptsitz;82007;;Route d'Arlon;287-289;1150;Luxembourg;LU;820078;nein;ja;nein;nein;nein;nein
+82008;MIRALULLXXX;Mirabaud & Cie (Europe) SA;Hauptsitz;82008;;Avenue de la Liberté;25;1931;Luxembourg;LU;820083;nein;ja;nein;nein;nein;nein
+82018;SRLGGB3LXXX;Starling Bank Limited;Hauptsitz;82018;;5th Floor, 1 Duval Square;;E1 6PW;London;GB;820180;nein;ja;nein;nein;nein;nein
+82961;CMBNCHZHXXX;Cembra Money Bank SA;Filiale;8296;;Rue de la Banque;1;1701;Fribourg;CH;829614;ja;nein;ja;ja;ja;nein
+82962;CMBNCHZHXXX;Cembra Money Bank SA;Filiale;8296;;Rue du Cendrier;17;1201;Genève;CH;829622;ja;nein;ja;ja;ja;nein
+82963;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Freie Strasse;39;4001;Basel;CH;829638;ja;nein;ja;ja;ja;nein
+82964;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Oberer Graben;3;9004;St. Gallen;CH;829643;ja;nein;ja;ja;ja;nein
+82965;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Bahnhofstrasse;8;5001;Aarau;CH;829659;ja;nein;ja;ja;ja;nein
+82966;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Schwanengasse;1;3001;Bern;CH;829667;ja;nein;ja;ja;ja;nein
+82967;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Weggisgasse 1 / Falkenplatz;;6000;Luzern 5;CH;829675;ja;nein;ja;ja;ja;nein
+82968;CMBNCHZHXXX;Cembra Money Bank SA;Filiale;8296;;Avenue Ruchonnet;1;1003;Lausanne;CH;829680;ja;nein;ja;ja;ja;nein
+82969;CMBNCHZHXXX;Cembra Money Bank SA;Filiale;8296;;Faubourg de l'Hôpital;1;2001;Neuchâtel;CH;829691;ja;nein;ja;ja;ja;nein
+82971;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Dufourstrasse;12;2500;Biel/Bienne 3;CH;829717;ja;nein;ja;ja;ja;nein
+82972;CMBNCHZHXXX;Cembra Money Bank SA;Filiale;8296;;Avenue Léopold-Robert;25;2301;Chaux-de-Fonds, La;CH;829725;ja;nein;ja;ja;ja;nein
+82973;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Hauptbahnhofstrasse;12;4501;Solothurn;CH;829730;ja;nein;ja;ja;ja;nein
+82975;CMBNCHZHXXX;Cembra Money Bank SA;Filiale;8296;;Via E. Bossi;1;6901;Lugano;CH;829756;ja;nein;ja;ja;ja;nein
+82976;CMBNCHZHXXX;Cembra Money Bank SA;Filiale;8296;;Avenue des Mayennets;5;1951;Sion/Sitten;CH;829764;ja;nein;ja;ja;ja;nein
+82977;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Schmidgasse;7;8401;Winterthur;CH;829772;ja;nein;ja;ja;ja;nein
+82979;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Bahnhofstrasse;14;5401;Baden;CH;829793;ja;nein;ja;ja;ja;nein
+82981;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Jurastrasse;19;4601;Olten;CH;829816;ja;nein;ja;ja;ja;nein
+82983;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Schaffhauserstrasse;315;8050;Zürich;CH;829832;ja;nein;ja;ja;ja;nein
+82984;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Alexanderstrasse;18;7001;Chur;CH;829848;ja;nein;ja;ja;ja;nein
+82986;CMBNCHZHXXX;Cembra Money Bank SA;Filiale;8296;;Rue Igor Stravinsky;2;1820;Montreux 2;CH;829869;ja;nein;ja;ja;ja;nein
+82998;CMBNCHZHXXX;Cembra Money Bank AG;Filiale;8296;;Bändliweg;20;8048;Zürich;CH;829981;ja;nein;ja;ja;ja;nein
+83002;VRLLCHZZXXX;Bank von Roll AG;Hauptsitz;83002;;Bleicherweg;37;8027;Zürich;CH;830021;ja;ja;ja;ja;ja;ja
+83003;CLRXCHZZXXX;SIX x-clear AG;Hauptsitz;83003;;Pfingstweidstrasse;110;8005;Zürich;CH;830036;ja;nein;ja;nein;nein;nein
+83004;;Allianz Suisse Versicherungs-Ges. AG (geb. Vermögen);Hauptsitz;83004;;Richtiplatz;1;8304;Wallisellen;CH;830044;ja;nein;ja;nein;nein;nein
+83006;ICBKCHZZXXX;Industrial and Commercial Bank of China Limited;Hauptsitz;83006;;Nüschelerstrasse;1;8001;Zürich;CH;830068;ja;nein;ja;ja;nein;nein
+83007;JLSECHGGXXX;JL Securities SA;Hauptsitz;83007;;Rue du Rhône;60;1204;Genève;CH;830073;ja;ja;ja;nein;nein;nein
+83008;FIDHCHGGXXX;Fidurhône SA;Hauptsitz;83008;;Rue Muzy;8;1207;Genéve;CH;830089;ja;ja;ja;nein;nein;nein
+83009;HELNCH22XXX;Helvetia Schweizerische Versicherungsgesellschaft AG;Hauptsitz;83009;;Dufourstrasse;40;9001;St. Gallen;CH;830097;ja;nein;ja;nein;nein;nein
+83010;;Allianz Suisse Lebensvers.-Ges. AG (geb. Vermögen KL);Hauptsitz;83010;;Richtiplatz;1;8304;Wallisellen;CH;830102;ja;nein;ja;nein;nein;nein
+83011;PRBECHZZXXX;Privatbank Bellerive AG;Hauptsitz;83011;;Postfach;;8034;Zürich;CH;830118;ja;ja;ja;ja;ja;ja
+83012;BLFLATWWXXX;LGT Bank AG, Zweigniederlassung Österreich;Hauptsitz;83012;;Bankgasse;9;1010;Wien;AT;830123;nein;ja;nein;nein;nein;nein
+83013;JHOTCHZZXXX;Hottinger, Gaultier & Partners AG;Hauptsitz;83013;;Hottingerstrasse;21;8024;Zürich;CH;830139;ja;ja;ja;ja;nein;nein
+83014;SYGNCHZZXXX;Sygnum Bank AG;Hauptsitz;83014;;Uetlibergstrasse;134A;8045;Zürich;CH;830147;ja;ja;ja;ja;ja;ja
+83016;AXIPCHZZWIN;AXA Versicherungen AG;Hauptsitz;83016;;General Guisan-Strasse;40;8400;Winterthur;CH;830160;ja;nein;ja;nein;nein;nein
+83017;SDXXCHZHXXX;SIX SIS AG (ex SIX Digital Exchange AG);Hauptsitz;83017;;Pfingstweidstrasse;110;8005;Zürich;CH;830171;ja;ja;nein;nein;nein;nein
+83018;SCRYCH22XXX;AMINA Bank AG;Hauptsitz;83018;;Kolinplatz;15;6300;Zug;CH;830186;ja;ja;ja;ja;ja;ja
+83019;YAPECHZ2XXX;Yapeal AG;Hauptsitz;83019;;Gartenstrasse;14;8002;Zürich;CH;830194;ja;nein;ja;ja;nein;nein
+83020;;Barclays Capital, Zurich Branch of Barclays Bank PLC, London;Hauptsitz;83020;;Beethovenstrasse;19;8002;Zürich;CH;830203;ja;nein;nein;nein;nein;nein
+83021;CITECHGGXXX;Cité Gestion SA;Hauptsitz;83021;;Rue de la Cité;15-17;1204;Genève;CH;830219;ja;ja;ja;ja;ja;nein
+83022;PLESCHZZXXX;ISP Securities Ltd;Hauptsitz;83022;;Bellerivestrasse;45;8034;Zürich;CH;830227;ja;ja;ja;nein;nein;nein
+83024;SLAMCHZZEV0;Swiss Life AG (EV, geb. Vermögen);Hauptsitz;83024;;General-Guisan-Quai;40;8022;Zürich;CH;830240;ja;nein;ja;nein;nein;nein
+83025;SLAMCHZZNZ0;Swiss Life AG (freies Vermögen);Hauptsitz;83025;;General-Guisan-Quai;40;8022;Zürich;CH;830251;ja;nein;ja;nein;nein;nein
+83026;AXIPCHZZWLE;AXA Leben AG (Einzel, geb. Vermögen);Hauptsitz;83026;;General Guisan-Strasse;40;8400;Winterthur;CH;830266;ja;nein;ja;nein;nein;nein
+83027;BAAMCHBBBKL;Helvetia Schweizerische Lebensvers.- Ges. AG, (KL GV BAL);Hauptsitz;83027;;Aeschengraben;21;4051;Basel;CH;830274;ja;nein;ja;nein;nein;nein
+83028;BAAMCHBBBEL;Helvetia Schweizerische Lebensvers.- Ges. AG, (EL GV BAL);Hauptsitz;83028;;Aeschengraben;21;4051;Basel;CH;830282;ja;nein;ja;nein;nein;nein
+83030;;Allianz Suisse Lebensvers.-Ges. AG (geb. Vermögen EL);Hauptsitz;83030;;Richtiplatz;1;8304;Wallisellen;CH;830307;ja;nein;ja;nein;nein;nein
+83031;SWIPCHZHXXX;Swisscanto Fondsleitung AG, handelnd für SUVA EAF;Hauptsitz;83031;;Bahnhofstrasse;9;8001;Zürich;CH;830315;ja;nein;nein;nein;nein;nein
+83032;ZURICHZFZNT;Zürich Versicherungs.-Ges. AG gebundenes Vermögen;Hauptsitz;83032;;Mythenquai;2;8002;Zürich;CH;830320;ja;nein;ja;nein;nein;nein
+83033;ZURICHZFZKT;Zürich Lebensvers.-Ges. AG Group Life geb. Vermögen;Hauptsitz;83033;;Mythenquai;2;8002;Zürich;CH;830331;ja;nein;ja;nein;nein;nein
+83034;ZURICHZFZLT;Zürich Lebensvers.-Ges. AG Individual Life geb. Vermögen;Hauptsitz;83034;;Mythenquai;2;8002;Zürich;CH;830346;ja;nein;ja;nein;nein;nein
+83035;TARSCHGGXXX;Taurus SA;Hauptsitz;83035;;Place Ruth-Bösiger;6;1201;Genève;CH;830354;ja;ja;ja;nein;nein;nein
+83037;;Vaudoise Générale, Compagnie d'Assurances SA (geb. Vermögen);Hauptsitz;83037;;Avenue de Cour;41;1007;Lausanne;CH;830378;ja;nein;ja;nein;nein;nein
+83039;APNACHGGXXX;Alpian SA;Hauptsitz;83039;;Quai du Seujet;18;1201;Genève;CH;830399;ja;ja;ja;ja;nein;nein
+83040;KSEHCHGGXXX;Kendra Securities House SA;Hauptsitz;83040;;Place Saint-Gervais;1;1201;Geneva;CH;830406;ja;ja;ja;nein;nein;nein
+83041;KLARCH22XXX;Bivial AG;Hauptsitz;83041;;Industriestrasse;24;6300;Zug;CH;830414;ja;ja;ja;ja;nein;nein
+83042;;MG Finance SA;Hauptsitz;83042;;Av. du Général Guisan;46A;1009;Pully;CH;830422;ja;nein;ja;nein;nein;nein
+83045;BKCHCHGEXXX;Bank of China Limited, GenevaBranch;Hauptsitz;83045;;Rue de la Tour de l'île;1;1204;Geneva;CH;830459;ja;nein;ja;ja;nein;nein
+83046;BGPBCH22XXX;BG (Suisse) Private Bank SA;Hauptsitz;83046;;Piazza Riforma;3;6900;Lugano;CH;830467;ja;ja;ja;ja;ja;ja
+83050;REOICHZ2XXX;Relio AG;Hauptsitz;83050;;Schiffbaustrasse;7;8005;Zürich;CH;830509;ja;nein;ja;ja;nein;nein
+83051;SAHHCHZ2XXX;SR Saphirstein AG;Hauptsitz;83051;;Bellerivestrasse;245;8008;Zürich;CH;830517;ja;ja;ja;ja;nein;nein
+83054;HELNCH22XXX;Helvetia Schweizerische Lebensvers.- Ges. AG (EL GV);Hauptsitz;83054;;St Alban Anlage;26;4052;Basel;CH;830541;ja;nein;ja;nein;nein;nein
+83055;HELNCH22XXX;Helvetia Schweizerische Lebensvers.- Ges. AG (KL GV);Hauptsitz;83055;;St Alban Anlage;26;4052;Basel;CH;830556;ja;nein;ja;nein;nein;nein
+83056;;Helveticor AG;Hauptsitz;83056;;Lerzenstrasse;14;8953;Dietikon;CH;830564;ja;nein;ja;nein;nein;nein
+83057;;Union Securities Switzerland SA;Hauptsitz;83057;;Cours de Rive;11;1204;Geneva;CH;830572;ja;nein;ja;nein;nein;nein
+83058;SLAMCHZZFMM;Swiss Life Asset Management AG, handelnd für SLF (CH) MM CHF;Hauptsitz;83058;;General-Guisan-Quai;40;8022;Zürich;CH;830588;ja;nein;ja;nein;nein;nein
+83059;FNPICH22XXX;finpension AG;Hauptsitz;83059;;Inseliquai;12B;6005;Luzern;CH;830593;ja;nein;ja;nein;nein;nein
+83064;AUDUCHZ2XXX;Audax Solutions AG;Hauptsitz;83064;;Bleicherweg;7;8002;Zürich;CH;830648;ja;nein;ja;ja;nein;nein
+83066;BVVACH22XXX;BIVIAL AG;Hauptsitz;83066;;Industriestrasse;24;6300;Zug;CH;830669;ja;ja;ja;nein;nein;nein
+83838;UBSWCHZH80A;UBS Switzerland AG;Filiale;230;;Bahnhofstrasse;45;8098;Zürich;CH;838380;ja;ja;ja;ja;ja;ja
+87105;CIALCHBBXXX;Bank CIC (SCHWEIZ) AG;Filiale;8710;;CIC-Group;;4001;Basel;CH;871050;ja;nein;ja;ja;ja;nein
+87801;DEUTCHZZXXX;Deutsche Bank AG Zürich Branch;Filiale;8780;;Postfach 3604 / Uraniastrasse;9;8021;Zürich;CH;878019;ja;nein;ja;ja;ja;nein
+87802;DEUTCHZZXXX;Deutsche Bank AG Zürich Branch;Filiale;8780;;Postfach 3604 / Uraniastrasse;9;8021;Zürich;CH;878027;ja;nein;ja;ja;ja;nein
+89002;METZDEFFXXX;B. Metzler seel. Sohn & Co. AG;Hauptsitz;89002;;Untermainanlage;1;60329;Frankfurt am Main;DE;890028;ja;nein;nein;nein;nein;nein
+89018;COBADEFFXXX;COMMERZBANK AG;Hauptsitz;89018;;Kaiserstrasse;16;60261;Frankfurt am Main;DE;890184;ja;nein;nein;nein;nein;nein
+89022;DEUTDEFFXXX;Deutsche Bank AG;Hauptsitz;89022;;Börsenstrasse;7-11;60272;Frankfurt am Main;DE;890226;ja;nein;ja;ja;nein;nein
+89025;GENODEFFXXX;DZ Bank AG;Hauptsitz;89025;;Platz der Republik;;60265;Frankfurt am Main;DE;890258;ja;nein;nein;nein;nein;nein
+89042;MEFIDEMM501;Merck Finck, a Quintet Private Bank (Europe) S.A. branch;Hauptsitz;89042;;Pacellistrasse;16;80333;München;DE;890423;ja;nein;nein;nein;nein;nein
+89045;MSFFDEFXXXX;Morgan Stanley Bank AG;Hauptsitz;89045;;Junghofstrasse;13-15;60016;Frankfurt am Main;DE;890455;ja;nein;nein;nein;nein;nein
+89058;SOLADESTXXX;Landesbank Baden-Württemberg;Hauptsitz;89058;;Am Hauptbahnhof;2;70049;Stuttgart;DE;890582;ja;nein;nein;nein;nein;nein
+89059;TUBDDEDDXXX;HSBC Continental Europe S.A., Germany;Hauptsitz;89059;;Hansaallee;3;40549;Düsseldorf;DE;890598;ja;nein;nein;nein;nein;nein
+89070;GOLDDEFAXXX;Goldman Sachs Bank Europe SE;Hauptsitz;89070;;Marienturm / Taunusanlage;9-10;60329;Frankfurt am Main;DE;890706;ja;nein;nein;nein;nein;nein
+89081;DOSPAT2DXXX;Dornbirner Sparkasse Bank AG;Hauptsitz;89081;;Bahnhofstrasse;2;6850;Dornbirn;AT;890817;ja;nein;ja;ja;nein;nein
+89088;ESSESESSXXX;Skandinaviska Enskilda Banken AB;Hauptsitz;89088;;Kungsträdgardsgatan;8;0640;Stockholm;SE;890888;ja;nein;ja;ja;nein;nein
+89091;GENOLULLXXX;DZ PRIVATBANK AG, Luxembourg Branch;Hauptsitz;89091;;Rue Thomas Edison;4;1445;Luxembourg-Strassen;LU;890916;ja;nein;nein;nein;nein;nein
+89093;VOLODE66XXX;Volksbank Dreiländereck EG;Hauptsitz;89093;;Tumringer-Strasse;237;79537;Lörrach;DE;890932;ja;nein;ja;ja;nein;nein
+89095;CITIGB2LXXX;Citibank N.A.;Hauptsitz;89095;;Canada Square / Canary Wharf;;E14 5LB;London;GB;890953;ja;nein;ja;ja;ja;nein
+89099;GIBAATWGXXX;Erste Group Bank AG;Hauptsitz;89099;;Am Belvedere;1;1100;Wien;AT;890990;ja;nein;nein;nein;nein;nein
+89102;RABONL2UXXX;Coöperatieve Rabobank U.A.;Hauptsitz;89102;;Croeselann;18;3500;HG Utrecht;NL;891023;ja;nein;nein;nein;nein;nein
+89109;RZOOAT2LXXX;Raiffeisenlandesbank Oberösterreich AG;Hauptsitz;89109;;Europaplatz;1a;4020;Linz;AT;891094;ja;nein;nein;nein;nein;nein
+89115;CEDELULLXXX;Clearstream Banking S.A.;Hauptsitz;89115;;Avenue J.F. Kennedy;42;L-1855;Luxembourg;LU;891151;ja;nein;nein;nein;nein;nein
+89128;BCITITMMXXX;Intesa Sanpaolo S.P.A.;Hauptsitz;89128;;Piazza San Carlo;156;10121;Torino;IT;891283;ja;nein;nein;nein;nein;nein
+89129;BTVAAT22XXX;BTV Vier Länder Bank AG;Hauptsitz;89129;;Stadtforum;1;6020;Innsbruck;AT;891299;ja;ja;nein;nein;nein;nein
+89136;BILLLULLXXX;Banque Internationale à Luxembourg SA;Hauptsitz;89136;;Route d'Esch;69;2953;Luxembourg;LU;891367;ja;nein;ja;ja;nein;nein
+89139;RZBAATWWXXX;Raiffeisen Bank International AG;Hauptsitz;89139;;Am Stadtpark;9;1011;Wien;AT;891391;ja;nein;ja;ja;nein;nein
+89142;BEILLULLXXX;European Investment Bank;Hauptsitz;89142;;Boulevard Konrad Adenauer;100;2950;Luxembourg;LU;891425;ja;nein;nein;nein;nein;nein
+89151;INGBNL2AXXX;ING Bank N.V.;Hauptsitz;89151;;Foppingadreef;7;1000;BV Amsterdam;NL;891516;ja;nein;nein;nein;nein;nein
+89152;SPFKAT2BXXX;Sparkasse der Stadt Feldkirch;Hauptsitz;89152;;Sparkassenplatz;1;6800;Feldkirch;AT;891524;ja;nein;ja;ja;nein;nein
+89158;ROYCGB22XXX;RBC Europe Limited;Hauptsitz;89158;;Bishopsgate;100;EC2N 4AA;London;GB;891585;ja;nein;nein;nein;nein;nein
+89162;DABADKKKXXX;Danske Bank A/S;Hauptsitz;89162;;Bernstorffsgade;40;1577;Kobenhavn V;DK;891628;ja;nein;nein;nein;nein;nein
+89165;RVVGAT2BXXX;Raiffeisen Landesbank Vorarlberg mit Revisionsverband eGen;Hauptsitz;89165;;Postfach 120;;6900;Bregenz;AT;891657;ja;nein;nein;nein;nein;nein
+89169;FMBKDEMMXXX;CACEIS Bank S.A., Germany Branch;Hauptsitz;89169;;Lilienthalallee;36;80939;München;DE;891696;ja;nein;ja;nein;nein;nein
+89191;GSILGB2XXXX;Goldman Sachs International;Hauptsitz;89191;;Plumtree Court 25 Shoe Lane;;EC4A 4AU;London;GB;891910;ja;nein;nein;nein;nein;nein
+89197;NDEAFIHHXXX;Nordea Bank Abp;Hauptsitz;89197;;Satamaradankatu;5;00020;Nordea-Helsinki;FI;891973;ja;nein;nein;nein;nein;nein
+89199;GENODE61WT1;Volksbank Hochrhein eG;Hauptsitz;89199;;Bismarckstrasse;29;79761;Waldshut-Tiengen;DE;891997;ja;nein;ja;ja;nein;nein
+89202;SKHRDE6WXXX;Sparkasse Hochrhein;Hauptsitz;89202;;Bismarckstrasse;7;79761;Waldshut-Tiengen;DE;892024;ja;nein;ja;ja;nein;nein
+89207;OEKOATWWXXX;Oesterreichische Kontrollbank AG;Hauptsitz;89207;;Am Hof;4;1011;Wien;AT;892077;ja;nein;nein;nein;nein;nein
+89208;GENODE61OG1;Volksbank eG - Die Gestalterbank;Hauptsitz;89208;;Schützenstrasse;7-11;79713;Bad Säckingen;DE;892085;ja;nein;ja;ja;nein;nein
+89213;BLUXLULLXXX;Banque de Luxembourg S.A.;Hauptsitz;89213;;Rue de Scillas;55;2529;luxembourg;LU;892133;ja;nein;nein;nein;nein;nein
+89214;SKLODE66XXX;Sparkasse Lörrach-Rheinfelden;Hauptsitz;89214;;Haagener Strasse;2;79539;Lörrach;DE;892149;ja;nein;ja;ja;nein;nein
+89215;LCHLGB2LXXX;LCH Limited;Hauptsitz;89215;;Paternoster Square;10;EC4M 7LS;London;GB;892157;ja;nein;ja;nein;nein;nein
+89216;ABNCNL2AXXX;ABN AMRO Clearing Bank N.V.;Hauptsitz;89216;;Gustav Mahlerlaan;10;1082;PP Amsterdam;NL;892165;ja;nein;nein;nein;nein;nein

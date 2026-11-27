@@ -238,6 +238,8 @@ def api_eintraege(land: ModuleType) -> dict[str, dict]:
             else:  # wieder aufgetaucht
                 entfernt.pop(blz, None)
     eintraege.update({k: v for k, v in entfernt.items() if k not in eintraege})
+    if hasattr(land, "zusatz_eintraege"):  # z. B. überführte Bankleitzahlen (Schweiz/Liechtenstein)
+        eintraege.update({k: v for k, v in land.zusatz_eintraege(eintraege, meta).items() if k not in eintraege})
     return dict(sorted(eintraege.items(), key=lambda kv: sortierschluessel(kv[0])))
 
 

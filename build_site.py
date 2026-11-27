@@ -96,6 +96,7 @@ def main() -> int:
             "csv": f"data/{cc}/bankleitzahlen.csv",
             "aenderungen": f"changes/{cc}/",
             "stand_text": land.stand_text(meta),
+            "blz_stellen": land.BLZ_STELLEN,
             **land.WEB,
         }
         alt = getattr(land, "ALTE_CSV_ADRESSE", None)  # frühere Download-Adresse weiter bedienen

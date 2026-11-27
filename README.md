@@ -1,4 +1,4 @@
-# BIC-Verzeichnis Österreich & Deutschland
+# BIC-Verzeichnis Österreich & Nachbarländer
 
 Für eine Überweisung braucht man die Kontonummer (IBAN) und oft auch den **BIC**. Das ist eine Art
 „Adresse“ der Bank, z. B. `GIBAATWWXXX` für die Erste Bank. Jede Bank hat außerdem eine
@@ -6,9 +6,11 @@ Für eine Überweisung braucht man die Kontonummer (IBAN) und oft auch den **BIC
 
 - **Österreich:** fünfstellig, an den Stellen 5 bis 9 der IBAN (`AT61 2011 1…` → `20111`)
 - **Deutschland:** achtstellig, an den Stellen 5 bis 12 der IBAN (`DE89 1001 0010 …` → `10010010`)
+- **Schweiz und Liechtenstein:** die IID (frühere BC-Nummer), fünfstellig an den Stellen 5 bis 9 (`CH93 0076 2…` → `00762`)
+- **Tschechien und Slowakei:** vierstellig, an den Stellen 5 bis 8 (`CZ65 0800 …` → `0800`)
 
-Dieses Projekt sammelt die BICs und Bankleitzahlen aller Banken in Österreich und Deutschland an einem
-Ort und hält sie aktuell.
+Dieses Projekt sammelt die BICs und Bankleitzahlen aller Banken in Österreich, Deutschland, der Schweiz,
+Liechtenstein, Tschechien und der Slowakei an einem Ort und hält sie aktuell.
 
 ## Was es macht
 
@@ -17,27 +19,35 @@ Ort und hält sie aktuell.
   - Deutschland: die [Bankleitzahlendatei der Deutschen Bundesbank](https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/serviceangebot/bankleitzahlen/download-bankleitzahlen-602592),
     die viermal im Jahr erscheint (März, Juni, September, Dezember). Die neue Datei wird automatisch
     genau an dem Tag übernommen, ab dem sie gilt.
+  - Schweiz und Liechtenstein: der [Bank Master der SIX](https://api.six-group.com/api/epcd/bankmaster/v3/bankmaster.json), täglich aktualisiert
+  - Tschechien: der [Číselník kódů platebního styku](https://www.cnb.cz/cs/platebni-styk/ucty-kody-bank/) der Tschechischen
+    Nationalbank (ČNB); neue Fassungen werden wie in Deutschland ab ihrem Gültigkeitstag übernommen
+  - Slowakei: der [Prevodník identifikačných kódov](https://nbs.sk/platby/vseobecne-informacie/ciselniky-a-registre/prevodnik-sk/)
+    der Slowakischen Nationalbank (NBS)
 - **Es vergleicht sie mit dem letzten Stand** und hält fest, welche Banken neu dazugekommen sind, sich geändert
   haben oder weggefallen sind, z. B. durch eine Fusion.
 - Weggefallene Banken **bleiben nachvollziehbar**. Die offiziellen Listen zeigen nur den aktuellen Stand, hier
-  bleibt der letzte Stand jeder Bank erhalten – in Deutschland samt Nachfolge-Bankleitzahl, wenn die Bank eine angegeben hat.
+  bleibt der letzte Stand jeder Bank erhalten – in Deutschland, der Schweiz und Liechtenstein samt
+  Nachfolge-Bankleitzahl, wenn es eine gibt.
 
 ## So nutzt du es
 
 👉 **[alexanderwendel8.github.io/bic-verzeichnis](https://alexanderwendel8.github.io/bic-verzeichnis/)**
 
-- **Land wählen:** oben zwischen Österreich und Deutschland umschalten.
+- **Land wählen:** oben das Land umschalten (AT, DE, CH, LI, CZ, SK).
 - **Suchen:** Bankleitzahl, BIC, Banknamen oder Ort eintippen, die Treffer erscheinen sofort.
   Ein Klick auf eine Bank zeigt alle Details, BLZ und BIC lassen sich mit einem Klick kopieren.
   In Deutschland findet die Suche auch Filial-BICs und frühere Banknamen und zeigt, zu welcher
-  Bankleitzahl sie gehören.
+  Bankleitzahl sie gehören. Bankleitzahlen lassen sich auch so eingeben, wie sie in der IBAN stehen
+  (z. B. `0200` in der Slowakei). Entfernte oder überführte Bankleitzahlen erscheinen, wenn man sie
+  genau eingibt, mit Hinweis auf den Nachfolger.
 - **Änderungen ansehen:** Der Reiter „Änderungen“ zeigt Tag für Tag, was sich getan hat.
 - **Herunterladen:** Über „CSV herunterladen“ bekommst du die ganze Liste des gewählten Landes als
   Datei. Sie öffnet sich direkt in Excel.
 - **Per API abfragen:** Für Programme gibt es eine einfache Schnittstelle, siehe [API](#api).
 
-Ein Projekt von Alexander Wendel. Die Daten stammen von der OeNB und der Deutschen Bundesbank und
-werden ohne Gewähr weitergegeben.
+Ein Projekt von Alexander Wendel. Die Daten stammen von OeNB, Deutscher Bundesbank, SIX, ČNB und NBS
+und werden ohne Gewähr weitergegeben.
 
 ## API
 
@@ -104,13 +114,20 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
 | `/api/v1/{land}/alle.json` | Alle Banken eines Landes mit allen Daten in einer Datei (kompakt) |
 | `/api/v1/index.json` | Übersicht: unterstützte Länder und Anzahl der Banken |
 
-- **Land:** `AT` (Österreich) oder `DE` (Deutschland), Kleinbuchstaben gehen auch.
+- **Land:** `AT`, `DE`, `CH`, `LI`, `CZ` oder `SK`, Kleinbuchstaben gehen auch.
 - **Bankleitzahl Österreich:** wie in der IBAN fünfstellig (`00100`) oder ohne führende Nullen (`100`).
 - **Bankleitzahl Deutschland:** immer achtstellig (`10010010`).
+- **Bankleitzahl Schweiz/Liechtenstein:** die IID, fünfstellig (`00100`) oder ohne führende Nullen (`100`).
+- **Bankleitzahl Tschechien:** vierstellig (`0800`). **Slowakei:** vierstellig (`0200`) oder ohne führende Nullen (`200`).
 - **Felder je Land unterschiedlich:** Die Bundesbank liefert keine Straße, keine Kontaktdaten und keinen LEI,
   dafür Kurzbezeichnung, Prüfziffermethode, angekündigte Löschung, Nachfolge-Bankleitzahl und Filialen.
 - **Deutschland – welcher BIC gilt:** Für Zahlungen gilt `bic`. Die BICs in `filialen` dienen nur der Zuordnung.
 - **Deutschland – Gültigkeit:** `gueltig_ab` und `gueltig_bis` geben an, welche Bundesbank-Datei verwendet wurde.
+- **Schweiz/Liechtenstein:** `art` (Hauptsitz, Filiale, QR-IID), `hauptsitz_bankleitzahl`, `qr_iid_gehoert_zu`,
+  `sic_iid`, `teilnahme` (z. B. SIC, euroSIC, Instant Payments CHF) und bei überführten IIDs `nachfolge_bankleitzahl`.
+  Die Schweiz enthält auch ausländische Teilnehmer am Schweizer Zahlungsverkehr; ihr Sitzland steht in `adresse.land`.
+- **Tschechien:** `certis` (Teilnahme am Clearing CERTIS) und `gueltig_ab` der verwendeten Fassung. **Slowakei:** `sips`
+  (Teilnahme am Clearing SIPS). Beide Quellen liefern keine Adressen.
 - **Unbekannte Bankleitzahl oder unbekanntes Land:** Antwort mit HTTP-Status **404**.
 - **Weggefallene Banken** liefern weiter ihren letzten Stand, mit `"status": "entfernt"` und dem Datum in `entfernt_am`.
 - Leere Felder sind `null`, Datumsangaben im Format `JJJJ-MM-TT`.
@@ -145,18 +162,19 @@ Jedes Land ist ein eigenes kleines Modul in `laender/`. Alles andere – Verglei
 | Pfad | Inhalt |
 |---|---|
 | `laender/__init__.py` | Liste der Länder und Beschreibung, was ein Land-Modul bereitstellen muss |
-| `laender/at.py`, `laender/de.py` | je Land: Download, Umwandlung, API-Felder, Einstellungen der Webseite |
+| `laender/at.py`, `de.py`, `ch.py`, `li.py`, `cz.py`, `sk.py` | je Land: Download, Umwandlung, API-Felder, Einstellungen der Webseite |
+| `laender/_six.py` | gemeinsame SIX-Quelle für die Schweiz und Liechtenstein |
 | `kern.py` | gemeinsamer Teil: Vergleich, Änderungsprotokoll, Ablage, API-Einträge |
 | `update.py` | lädt alle (oder ausgewählte) Länder und protokolliert Änderungen |
 | `build_site.py` | stellt Webseite, `laender.json` und API für GitHub Pages zusammen (API nicht im Repo abgelegt) |
 | `web/` | Weboberfläche (statisch, ohne Build-Schritt; Länder kommen aus `laender.json`) |
 | `data/<land>/bankleitzahlen.csv` | aktueller Stand, eine Zeile je Bankleitzahl |
 | `data/<land>/filialen.csv` | weitere Orte je Bankleitzahl (derzeit nur Deutschland) |
-| `data/<land>/meta.json` | Angaben zur verwendeten Quelldatei (derzeit nur Deutschland: `FileRef`, `ValidFrom`, `ValidTill`) |
+| `data/<land>/meta.json` | Angaben zur verwendeten Quelldatei (z. B. Gültigkeit in DE und CZ, Überführungen in CH/LI) |
 | `changes/<land>/JJJJ-MM-TT.csv` | Änderungen eines Tages (nur an Tagen mit Änderungen) |
 | `changes/<land>/index.json` | Liste der Tage mit Änderungen |
 
-`<land>` ist der Ländercode in Kleinbuchstaben (`at`, `de`). Die frühere Adresse der österreichischen
+`<land>` ist der Ländercode in Kleinbuchstaben (`at`, `de`, `ch`, `li`, `cz`, `sk`). Die frühere Adresse der österreichischen
 Gesamtliste, `data/sepa-zv-vz_gesamt.csv`, wird auf der Webseite weiter bedient.
 Ältere Gesamtstände sind über die Git-Historie der Dateien in `data/` abrufbar.
 
@@ -191,6 +209,17 @@ Danach folgt der Eintrag (bei `entfernt` der letzte bekannte Stand). Schlüssel 
 - Einträge mit Änderungskennzeichen „D“ gelten ab dem Gültigkeitstag als `entfernt`. Das Änderungskennzeichen
   selbst wird nicht abgelegt, damit nicht jedes Quartal alle Einträge als „geändert“ erscheinen.
 - Ändern sich nur die Filialen einer Bankleitzahl, steht in `Geänderte Felder` z. B. `Filialen: 5 -> 4`.
+
+**Schweiz/Liechtenstein, Tschechien, Slowakei – Besonderheiten der Quellen:**
+
+- Vor der Umsetzung wurde geprüft, ob es die Daten in moderneren Formaten gibt: Die SIX liefert JSON (verwendet).
+  ČNB und NBS bieten nur CSV und PDF an, kein XML oder JSON – daher CSV.
+- **SIX:** eine Datei für die Schweiz und Liechtenstein, je Lauf nur einmal geladen (`laender/_six.py`). Überführte
+  IIDs („BankMasterConcatenated“) stehen in `data/ch/meta.json` und verweisen in der API auf die neue IID.
+- **ČNB:** Die gültige und meist schon die nächste Fassung stehen nebeneinander auf der Seite, Nummer und
+  Gültigkeitsdatum („platný od“) nur dort, nicht in der Datei. Das Skript nimmt die Fassung, die heute gilt.
+- **NBS:** CSV in Windows-1250 mit Titelzeile; der Link enthält eine Dokument-ID und wird jedes Mal von der Seite
+  gelesen. Die Liste enthält auch tschechische Institute, die im slowakischen Zahlungsverkehr erreichbar sind.
 
 ### Weboberfläche (GitHub Pages)
 
@@ -235,3 +264,5 @@ veröffentlicht, der Workflow wird aber als fehlgeschlagen markiert.
 Daten: © Oesterreichische Nationalbank, es gelten deren [Nutzungsbedingungen](https://www.oenb.at/Service/Impressum-und-Haftung.html);
 © Deutsche Bundesbank, die Bankleitzahlendatei wird dort „unverbindlich“ bereitgestellt, es gelten die
 Hinweise im [Impressum](https://www.bundesbank.de/de/startseite/impressum).
+© SIX Group AG (Bank Master), © Česká národní banka, © Národná banka Slovenska. Für diese Quellen wurden die
+Nutzungsbedingungen noch nicht im Einzelnen geprüft.

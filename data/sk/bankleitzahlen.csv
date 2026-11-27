@@ -1,0 +1,39 @@
+﻿Bankleitzahl;BIC;Bankenname;SIPS
+200;SUBASKBX;Všeobecná úverová banka, a.s.;ja
+600;AGBACZPP;MONETA Money Bank, a.s.;ja
+720;NBSBSKBX;Národná banka Slovenska;ja
+900;GIBASKBX;Slovenská sporiteľňa, a.s.;ja
+1100;TATRSKBX;Tatra banka, a.s.;ja
+1111;UNCRSKBX;UniCredit Bank Czech Republic and Slovakia, a.s., pobočka zahraničnej banky;ja
+2010;FIOBCZPP;Fio banka, a.s.;ja
+2070;MPUBCZPP;TRINITY BANK a.s.;ja
+2250;CTASCZ22;Banka CREDITAS a.s.;ja
+3000;SLZBSKBA;Slovenská záručná a rozvojová banka, a.s.;ja
+3030;AIRACZPP;Air bank a.s.;ja
+3100;LUBASKBX;Prima banka Slovensko, a.s.  – kód pre dobeh platieb;ja
+5600;KOMASK2X;Prima banka Slovensko, a.s.;ja
+5800;JTBPCZPP;J&T BANKA, a.s.;ja
+5900;PRVASKBA;Prvá stavebná sporiteľňa, a.s.;ja
+6000;PMBPCZPP;PPF banka a.s.;ja
+6363;PTBNCZPP;Partners Banka, a.s.;ja
+6500;POBNSKBA;Československá obchodná banka, a.s. (predtým 365.bank, a.s.) - kód pre dobeh platieb;ja
+7300;INGBSKBX;ING Bank N.V.,  pobočka zahraničnej banky;nein
+7500;CEKOSKBX;Československá obchodná banka, a.s.;ja
+7930;WUSTSKBA;Bausparkasse Wüstenrot Aktiengesselschaft, pobočka zahraničnej banky;ja
+8100;KOMBSKBA;Komerční banka, a.s., pobočka zahraničnej banky;ja
+8120;BSLOSK22;Penta Bank, a.s.;ja
+8130;CITISKBA;Citibank Europe plc, pobočka zahraničnej banky;nein
+8160;EXSKSKBX;EXIMBANKA SR;ja
+8180;SPSRSKBA;Štátna pokladnica;ja
+8191;;Centrálny depozitár cenných papierov SR, a.s.;nein
+8320;JTBPSKBA;J&T BANKA, a.s., pobočka zahraničnej banky;ja
+8330;FIOZSKBA;Fio banka, a.s., pobočka zahraničnej banky;ja
+8360;BREXSKBX;mBank S.A., pobočka zahraničnej banky;ja
+8370;OBKLSKBA;Oberbank AG  pobočka zahraničnej banky v Slovenskej republike;ja
+8400;;COFIDIS SA, pobočka zahraničnej banky;nein
+8420;BFKKSKBB;BKS Bank AG, pobočka zahraničnej banky v SR;ja
+8450;BPKOSKBB;PKO BP S.A., pobočka zahraničnej banky;nein
+9950;;Nexi Central Europe, a.s.;nein
+9952;TPAYSKBX;Trust Pay, a.s.;nein
+9955;PANXSK22;Unifiedpost Payments, organizačná zložka;nein
+9956;PYYUSK22;Payout a.s.;nein

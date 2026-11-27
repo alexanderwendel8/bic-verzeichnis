@@ -49,23 +49,27 @@ const D = () => state.data[state.country];
 
 function prepare(conf, records) {
   const all = new Map();
-  const active = [];
+  const active = [], removed = [];
   for (const r of records) {
+    // Bankleitzahl zusätzlich in IBAN-Schreibweise suchbar (z. B. 200 -> 0200)
+    const padded = conf.blz_stellen ? r.bankleitzahl.padStart(conf.blz_stellen, "0") : "";
     const b = {
       rec: r,
       blz: r.bankleitzahl,
-      search: norm(conf.suche.map((p) => get(r, p)).filter(Boolean).join(" ")),
+      blzKeys: new Set([r.bankleitzahl, padded].filter(Boolean)),
+      search: norm([...conf.suche.map((p) => get(r, p)), padded].filter(Boolean).join(" ")),
       branchSearch: (r.filialen || []).map((f) => norm([f.bic, f.name, f.plz, f.ort].filter(Boolean).join(" "))),
     };
     all.set(b.blz, b);
-    if (r.status === "aktiv") active.push(b);
+    (r.status === "aktiv" ? active : removed).push(b);
   }
-  return { all, banks: active };
+  return { all, banks: active, removed };
 }
 
 function col5(conf, r) {
   const v = get(r, conf.spalte5.feld);
   if (conf.spalte5.art === "anzahl") return Array.isArray(v) && v.length ? fmtNum(v.length) : "–";
+  if (conf.spalte5.art === "ja_nein") return v === true ? "ja" : v === false ? "nein" : "";
   return v ?? "";
 }
 
@@ -104,6 +108,9 @@ function applyFilter() {
     const m = matchBank(b, terms);
     if (m) state.filtered.push({ b, branchHit: m.branchHit });
   }
+  // entfernte/überführte Bankleitzahlen nur bei exakter Eingabe der Bankleitzahl zeigen
+  const raw = $("#q").value.trim().split(/\s+/).filter(Boolean);
+  if (raw.length === 1) for (const b of D().removed) if (b.blzKeys.has(raw[0])) state.filtered.push({ b, branchHit: null });
   state.shown = 0;
   $("#rows").innerHTML = "";
   renderMore();
@@ -123,9 +130,9 @@ function renderMore() {
     <tr data-blz="${esc(b.blz)}" tabindex="0">
       <td>${highlight(r.bankleitzahl, terms)}</td>
       <td>${highlight(r.bic, terms) || "–"}</td>
-      <td>${highlight(r.name, terms)}${r.art === "Filiale" ? ' <span class="branch">(Filiale)</span>' : ""}${r.loeschung_angekuendigt ? ' <span class="tag entfernt small">Löschung angekündigt</span>' : ""}
+      <td>${highlight(r.name, terms)}${r.art === "Filiale" ? ' <span class="branch">(Filiale)</span>' : ""}${r.loeschung_angekuendigt ? ' <span class="tag entfernt small">Löschung angekündigt</span>' : ""}${r.status === "entfernt" ? ` <span class="tag entfernt small">entfernt${r.nachfolge_bankleitzahl ? ` → ${esc(r.nachfolge_bankleitzahl)}` : ""}</span>` : ""}
         ${f ? `<div class="branch">Filiale: ${highlight([f.plz, f.ort].filter(Boolean).join(" "), terms)}${f.bic ? ` · <span class="mono">${highlight(f.bic, terms)}</span>` : ""}${f.name && f.name !== r.name ? ` · ${highlight(f.name, terms)}` : ""}</div>` : ""}</td>
-      <td class="hide-sm">${highlight(plzOrt(r.adresse), terms)}</td>
+      <td class="hide-sm">${highlight(plzOrt(r.adresse), terms) || "–"}</td>
       <td class="hide-md">${esc(col5(conf, r))}</td>
     </tr>`;
   }).join(""));
@@ -142,6 +149,7 @@ function fieldHtml(value, kind = "") {
     return text ? esc(text) : null;
   }
   if (kind.startsWith("ja:")) return value === true ? esc(kind.slice(3)) : null;
+  if (kind === "liste") return Array.isArray(value) && value.length ? esc(value.join(", ")) : null;
   if (typeof value === "object") return null;
   const html = esc(value);
   const copy = ` <button class="copy" data-copy="${html}">Kopieren</button>`;
@@ -158,7 +166,9 @@ function fieldHtml(value, kind = "") {
 
 function showDetail(b, note, hit) {
   const r = b.rec;
-  if (!note && r.status === "entfernt") note = `Am ${fmtDate(r.entfernt_am)} aus dem Verzeichnis entfernt – letzter bekannter Stand.`;
+  if (!note && r.status === "entfernt") note = r.entfernt_am
+    ? `Am ${fmtDate(r.entfernt_am)} aus dem Verzeichnis entfernt – letzter bekannter Stand.`
+    : `Nicht mehr im Verzeichnis${r.nachfolge_bankleitzahl ? `, überführt in ${r.nachfolge_bankleitzahl}` : ""}.`;
   const rows = C().details.map(([label, path, kind]) => {
     const h = fieldHtml(get(r, path), kind);
     return h ? `<dt>${esc(label)}</dt><dd>${h}</dd>` : "";
@@ -339,12 +349,13 @@ async function init() {
     return;
   }
   $("#countries").innerHTML = Object.entries(state.laender).map(([cc, l]) =>
-    `<button type="button" data-country="${esc(cc)}" aria-pressed="false"><span class="cc">${esc(cc)}</span> ${esc(l.name)}</button>`).join("");
+    `<button type="button" data-country="${esc(cc)}" aria-pressed="false" title="${esc(l.name)}" aria-label="${esc(l.name)}"><span class="cc">${esc(cc)}</span><span class="cn"> ${esc(l.name)}</span></button>`).join("");
   document.querySelectorAll("[data-country]").forEach((b) => b.addEventListener("click", () => {
     if (b.dataset.country !== state.country) selectCountry(b.dataset.country);
   }));
-  $("#sources").innerHTML = Object.values(state.laender).map((l) =>
-    `<a href="${esc(l.quelle.url)}">${esc(l.quelle.name.split(" – ")[0])}</a> (<a href="${esc(l.quelle.bedingungen)}">Bedingungen</a>)`).join(", ");
+  const quellen = new Map(Object.values(state.laender).map((l) => [l.quelle.url, l.quelle]));
+  $("#sources").innerHTML = [...quellen.values()].map((q) =>
+    `<a href="${esc(q.url)}">${esc(q.name.split(" – ")[0])}</a>${q.bedingungen !== q.url ? ` (<a href="${esc(q.bedingungen)}">Bedingungen</a>)` : ""}`).join(", ");
 
   const params = new URLSearchParams(location.hash.slice(1));
   if (params.get("q")) $("#q").value = params.get("q");
