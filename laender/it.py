@@ -27,6 +27,7 @@ import csv
 import http.cookiejar
 import io
 import json
+import re
 import sys
 import time
 import urllib.parse
@@ -48,8 +49,27 @@ QUELLE = {
     "name": "Banca d'Italia – Albi ed elenchi di vigilanza (BIC: GLEIF)",
     "kurz": "Banca d'Italia",
     "url": SEITE,
-    "bedingungen": SEITE,
+    # Die drei Listen sind Open Data der Banca d'Italia unter CC BY 4.0 (Katalog dati.gov.it)
+    "bedingungen": "https://creativecommons.org/licenses/by/4.0/deed.de",
+    "hinweis": "Fonte: Banca d'Italia – Albi ed elenchi di vigilanza (Lista intermediari, Lista succursali banche, "
+               "Lista fusioni, incorporazioni, cessioni attività e passività), Lizenz CC BY 4.0. Geändert: auf heute "
+               "gültige Banken, Zahlungs- und E-Geld-Institute gefiltert, umformatiert, BICs aus der BIC/LEI-Zuordnung "
+               "von GLEIF ergänzt.",
 }
+GLEIF_LIZENZ = ("https://www.gleif.org/lei-data/lei-mapping/download-bic-to-lei-relationship-files/"
+                "2017-12-21_annex-2_bic-to-lei-mapping-table-license-agreement_final.pdf")
+MONATE = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+          "November", "December"]
+
+
+def swift_hinweis(tabelle: str | None) -> str:
+    """Pflicht-Hinweis der BIC/LEI-Lizenz (Abschnitt 2) für jede Kopie, auch in Teilen. tabelle = JJJJ-MM."""
+    datum = f"{MONATE[int(tabelle[5:7]) - 1]} {tabelle[:4]}" if tabelle else "[unbekannt]"
+    return (f"SWIFT © and database rights {datum}. All rights reserved. "
+            "This Mapping Table has been developed by SWIFT. Any use of the Mapping Table, in whole or in part, "
+            "is subject to the BIC/LEI Mapping Table License Agreement as published with the Mapping Table available "
+            "on GLEIF's website. The Mapping Table is updated monthly. For the latest BIC information and updates, "
+            "always refer to www.swift.com/bic .")
 GLEIF_MAPPING = "https://mapping.gleif.org/api/v2/bic-lei"
 GLEIF_LEI = "https://api.gleif.org/api/v1/lei-records"
 
@@ -121,8 +141,8 @@ def _ort_rang(bic: str) -> int:
     return {"0": 0, "1": 1, "2": 2}.get(bic[7:8], 3)
 
 
-def _gleif_bics() -> dict[str, list[str]]:
-    """{Steuernummer ohne führende Nullen: [BICs]} für aktive italienische LEIs."""
+def _gleif_bics() -> tuple[dict[str, list[str]], str]:
+    """({Steuernummer ohne führende Nullen: [BICs]} für aktive italienische LEIs, Stand der Tabelle JJJJ-MM)."""
     def holen(url: str) -> bytes:
         req = urllib.request.Request(url, headers={"User-Agent": "bic-verzeichnis-update", "Accept": "application/vnd.api+json"})
         with urllib.request.urlopen(req, timeout=180) as r:
@@ -148,7 +168,9 @@ def _gleif_bics() -> dict[str, list[str]]:
             bics[e["registeredAs"].strip().lstrip("0")].append(bic)
     print(f"[{CODE}] GLEIF {neueste['attributes'].get('fileName', '')}: {len(zuordnung)} italienische BICs, "
           f"{len(bics)} Steuernummern")
-    return bics
+    m = re.search(r"(\d{4})(\d{2})\d{2}", neueste["attributes"].get("fileName", "")) \
+        or re.search(r"(\d{4})-(\d{2})", neueste["attributes"].get("uploadedAt", ""))
+    return bics, f"{m.group(1)}-{m.group(2)}" if m else ""
 
 
 def _bic_wahl(bics: list[str]) -> tuple[str, list[str]]:
@@ -202,11 +224,11 @@ def laden(args, alte_meta: dict) -> Stand:
 
     # BICs über GLEIF (bei Ausfall: letzter Stand)
     try:
-        nach_steuer = _gleif_bics()
+        nach_steuer, tabelle = _gleif_bics()
     except Exception as e:
         print(f"[{CODE}] Warnung: GLEIF nicht erreichbar ({e}) – BICs des letzten Stands werden verwendet")
         alt = {z[SCHLUESSEL]: z for z in kern.csv_lesen(kern.daten_ordner(sys.modules[__name__]) / "bankleitzahlen.csv")[1]}
-        nach_steuer = None
+        nach_steuer, tabelle = None, alte_meta.get("GLEIF-Tabelle", "")
     for abi, z in banken.items():
         if nach_steuer is None:
             z["BIC"], z["Weitere BICs"] = alt.get(abi, {}).get("BIC", ""), alt.get(abi, {}).get("Weitere BICs", "")
@@ -246,9 +268,13 @@ def laden(args, alte_meta: dict) -> Stand:
     print(f"[{CODE}] Stand {stichtag}: {len(banken)} Institute ({mit_bic} mit BIC über GLEIF), "
           f"{len(filialen)} Filialen, {len(fusionen)} frühere ABI-Codes mit Nachfolger")
     # Kein Stichtag in meta.json: er ändert sich täglich und würde sonst jeden Tag einen Commit auslösen.
-    meta = {"Quelle": SEITE, "Fusionen": sorted(fusionen.values(), key=lambda f: f["Bankleitzahl"].zfill(5))}
+    meta = {"Quelle": SEITE, "GLEIF-Tabelle": tabelle, "Fusionen": sorted(fusionen.values(), key=lambda f: f["Bankleitzahl"].zfill(5))}
     return Stand(spalten=SPALTEN, banken=sorted(banken.values(), key=lambda z: z[SCHLUESSEL].zfill(5)),
-                 datum=heute, filialen=filialen, filial_spalten=FILIAL_SPALTEN, meta=meta)
+                 datum=heute, filialen=filialen, filial_spalten=FILIAL_SPALTEN, meta=meta,
+                 dateien={"HINWEIS-BIC.txt": (
+                     "Die BICs in bankleitzahlen.csv (Spalten BIC und Weitere BICs) stammen aus der BIC/LEI-Zuordnung\n"
+                     "von SWIFT und GLEIF. Für sie gilt:\n\n" + swift_hinweis(tabelle) + "\n\nLizenz: " + GLEIF_LIZENZ +
+                     "\n\nAlle übrigen Angaben: " + QUELLE["hinweis"] + "\n").encode("utf-8")})
 
 
 # ---------------------------------------------------------------- API
@@ -338,3 +364,7 @@ WEB = {
 
 def stand_text(meta: dict) -> str:
     return "BICs über GLEIF ergänzt"
+
+
+def zusatz_hinweis(meta: dict) -> str:
+    return swift_hinweis(meta.get("GLEIF-Tabelle"))

@@ -30,6 +30,8 @@ QUELLE = {
     "kurz": "Deutscher Bundesbank",
     "url": SEITE,
     "bedingungen": "https://www.bundesbank.de/de/startseite/impressum",
+    "hinweis": "Quelle: Deutsche Bundesbank, Bankleitzahlendatei (von der Bundesbank unverbindlich bereitgestellt). "
+               "Übernommen werden die Haupteinträge je Bankleitzahl, Zusatzeinträge als Filialen.",
 }
 NS = "{urn:BBk:BLZ:xsd:BLZDat}"
 

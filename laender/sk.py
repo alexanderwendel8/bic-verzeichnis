@@ -29,8 +29,12 @@ QUELLE = {
     "name": "Národná banka Slovenska – Prevodník identifikačných kódov",
     "kurz": "NBS",
     "url": SEITE,
-    "bedingungen": SEITE,
+    "bedingungen": "https://nbs.sk/disclaimer-sk/",
+    # Bedingungen: NBS als Quelle nennen, die Datei darf weder inhaltlich noch anders verändert werden
+    "hinweis": "Zdroj: Národná banka Slovenska – Prevodník identifikačných kódov. Inhalt unverändert übernommen, "
+               "nur umformatiert; die Originaldatei der NBS liegt unverändert bei.",
 }
+ORIGINAL = "original-nbs.csv"
 SPALTEN = ["Bankleitzahl", "BIC", "Bankenname", "SIPS"]
 
 
@@ -59,7 +63,7 @@ def laden(args, alte_meta: dict) -> Stand:
                        "SIPS": "ja" if len(r) > 3 and r[3].strip().lower() == "x" else "nein"})
     banken.sort(key=lambda z: z[SCHLUESSEL].zfill(4))
     print(f"[{CODE}] NBS-Prevodník: {len(banken)} Einträge")
-    return Stand(spalten=SPALTEN, banken=banken, datum=args.today.isoformat())
+    return Stand(spalten=SPALTEN, banken=banken, datum=args.today.isoformat(), dateien={ORIGINAL: roh})
 
 
 def api_eintrag(z: dict, filialen: list, meta: dict, entfernt: bool) -> dict:

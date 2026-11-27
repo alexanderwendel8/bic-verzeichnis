@@ -22,7 +22,11 @@ QUELLE = {
     "name": "Banka Slovenije – Seznam identifikacijskih oznak PPS",
     "kurz": "Banka Slovenije",
     "url": URL,
-    "bedingungen": URL,
+    "bedingungen": "https://bsi.si/en/disclaimer-and-copyright",
+    # Bedingungen: Banka Slovenije als Quelle nennen, Änderungen ausdrücklich angeben
+    "hinweis": "Vir: Banka Slovenije – Seznam identifikacijskih oznak ponudnikov plačilnih storitev. Geändert: "
+               "umformatiert, Spalten umbenannt, eine doppelte Zeile der Quelle nur einmal übernommen; "
+               "die Angaben selbst sind unverändert.",
 }
 SPALTEN = ["Bankleitzahl", "BIC", "Bankenname", "Straße", "PLZ", "Ort"]
 _KOPF = {"NACIONALNA IDENTIFIKACIJSKA OZNAKA": "Bankleitzahl", "BIC11": "BIC", "NAZIV": "Bankenname",

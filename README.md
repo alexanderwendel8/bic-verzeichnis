@@ -154,6 +154,8 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
 - Leere Felder sind `null`, Datumsangaben im Format `JJJJ-MM-TT`.
 - Die API darf aus jedem Browser und jeder Webseite abgefragt werden (CORS ist offen).
 - Aktualisiert wird täglich zusammen mit der Webseite.
+- **Quellenangaben sind Pflicht:** Wer Daten aus der API verwendet, muss die Quellenangaben des jeweiligen Landes
+  sichtbar darstellen – siehe [Quellen und Lizenzen](#quellen-und-lizenzen).
 
 Beispiel mit der Kommandozeile:
 
@@ -305,10 +307,48 @@ massenhaft Banken als „entfernt“ zu melden. Mit `--force` wird der Stand tro
 Die Länder laufen unabhängig voneinander: Fällt eine Quelle aus, werden die anderen trotzdem übernommen und
 veröffentlicht, der Workflow wird aber als fehlgeschlagen markiert.
 
-Daten: © Oesterreichische Nationalbank, es gelten deren [Nutzungsbedingungen](https://www.oenb.at/Service/Impressum-und-Haftung.html);
-© Deutsche Bundesbank, die Bankleitzahlendatei wird dort „unverbindlich“ bereitgestellt, es gelten die
-Hinweise im [Impressum](https://www.bundesbank.de/de/startseite/impressum).
-© SIX Group AG (Bank Master), © Česká národní banka, © Národná banka Slovenska, © Magyar Nemzeti Bank,
-© Banka Slovenije, © Banca d'Italia; BIC-Zuordnung Italien: © GLEIF (Bedingungen der BIC/LEI-Zuordnung beachten).
-Für diese Quellen wurden die
-Nutzungsbedingungen noch nicht im Einzelnen geprüft.
+---
+
+## Quellen und Lizenzen
+
+Die Daten stammen von den unten genannten Notenbanken und Stellen. Sie erlauben die Weitergabe, verlangen aber
+**Quellenangaben** und teils einen Hinweis auf Änderungen. Auf der Webseite stehen die Angaben des gewählten Landes in
+der Fußzeile, direkt neben dem CSV-Download.
+
+**Bei Verwendung der API oder der CSV-Dateien sind die Quellenangaben sichtbar darzustellen** – mit dem Wortlaut aus
+der Tabelle für jedes Land, dessen Daten verwendet werden, und einem Link zu den Nutzungsbedingungen, z. B. in der
+Fußzeile, im Impressum oder direkt bei den angezeigten Daten. Für BICs aus Italien ist zusätzlich der SWIFT-Hinweis
+(unten) Pflicht. Die Quellen übernehmen keine Haftung für Richtigkeit und Vollständigkeit; dasselbe gilt für dieses
+Verzeichnis.
+
+| Land | Quelle | Pflichtangabe (Wortlaut) | Bedingungen |
+|---|---|---|---|
+| AT | Oesterreichische Nationalbank | Quelle: Oesterreichische Nationalbank (OeNB), SEPA-Zahlungsverkehrs-Verzeichnis. | [Impressum und Haftung](https://www.oenb.at/Service/Impressum-und-Haftung.html) |
+| DE | Deutsche Bundesbank | Quelle: Deutsche Bundesbank, Bankleitzahlendatei (von der Bundesbank unverbindlich bereitgestellt). | [Impressum](https://www.bundesbank.de/de/startseite/impressum) |
+| CH, LI | SIX Interbank Clearing | Quelle: SIX Interbank Clearing, Bank Master. BICs sind Eigentum von S.W.I.F.T. SCRL. | [Record Description](https://www.six-group.com/dam/download/banking-services/interbank-clearing/bc-bank-master/bankmaster-v3.0-record-description-en.pdf): „Information in the Download Bank Master may be used freely.“ |
+| IT | Banca d'Italia (Open Data, CC BY 4.0) | Fonte: Banca d'Italia – Albi ed elenchi di vigilanza, Lizenz CC BY 4.0. Geändert: gefiltert, umformatiert, BICs von GLEIF ergänzt. | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de), Datensätze auf [dati.gov.it](https://www.dati.gov.it) |
+| IT (BICs) | SWIFT / GLEIF, BIC/LEI-Zuordnung | SWIFT-Hinweis, siehe unten | [License Agreement](https://www.gleif.org/lei-data/lei-mapping/download-bic-to-lei-relationship-files/2017-12-21_annex-2_bic-to-lei-mapping-table-license-agreement_final.pdf) |
+| CZ | Česká národní banka | Source: the CNB (Zdroj: ČNB). | [Terms and conditions](https://www.cnb.cz/en/privacy-statement-and-disclaimer/disclaimer-copyright/) |
+| SK | Národná banka Slovenska | Zdroj: Národná banka Slovenska. | [Disclaimer](https://nbs.sk/disclaimer-sk/) |
+| HU | Magyar Nemzeti Bank | Forrás: Magyar Nemzeti Bank. | [Disclaimer](https://www.mnb.hu/en/the-central-bank/practical-issues/disclaimer) |
+| SI | Banka Slovenije | Vir: Banka Slovenije. Geändert: umformatiert, Spalten umbenannt. | [Disclaimer and Copyright](https://bsi.si/en/disclaimer-and-copyright) |
+
+**SWIFT-Hinweis für die italienischen BICs** (Pflicht für jede Kopie, auch in Teilen; `[Monat Jahr]` = Stand der
+verwendeten Zuordnungstabelle, auf der Webseite und in `data/it/HINWEIS-BIC.txt` jeweils eingesetzt):
+
+> SWIFT © and database rights [Monat Jahr]. All rights reserved. This Mapping Table has been developed by SWIFT. Any use
+> of the Mapping Table, in whole or in part, is subject to the BIC/LEI Mapping Table License Agreement as published with
+> the Mapping Table available on GLEIF's website. The Mapping Table is updated monthly. For the latest BIC information and
+> updates, always refer to www.swift.com/bic .
+
+Die LEI-Daten von GLEIF (für die Zuordnung über die Steuernummer) stehen unter
+[CC0](https://www.gleif.org/en/meta/lei-data-terms-of-use).
+
+**Unveränderte Originale:** ČNB, NBS und MNB erlauben die Weitergabe nur ohne inhaltliche Änderung. Das Verzeichnis
+ändert die Angaben nicht, formatiert sie aber um (Spaltennamen, „ja“/„nein“ statt „A“ oder „x“, Adressen in Felder
+aufgeteilt). Deshalb liegen die Originaldateien unverändert bei: `data/cz/original-cnb.csv`, `data/sk/original-nbs.csv`,
+`data/hu/original-mnb.xlsx` – auf der Webseite als „Originaldatei“ verlinkt.
+
+**Logos** der Notenbanken werden nicht verwendet; deren Nutzung ist bei allen Quellen genehmigungspflichtig.
+
+Stand der Prüfung der Nutzungsbedingungen: 27.11.2026. Das ist keine Rechtsberatung.

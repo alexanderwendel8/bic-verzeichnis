@@ -154,6 +154,8 @@ dl.kv dd { margin: 0; overflow-wrap: anywhere; }
 .foot { color: var(--muted); font-size: .85em; padding-bottom: 28px; }
 .foot p { margin: 0 0 6px; }
 .foot-links { color: var(--text); }
+.foot .attribution { color: var(--text); }
+.foot .swift { font-size: .92em; }
 
 @media (max-width: 720px) { .hide-md { display: none; } }
 @media (max-width: 720px) {

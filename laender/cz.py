@@ -27,8 +27,13 @@ QUELLE = {
     "name": "Česká národní banka – Číselník kódů platebního styku",
     "kurz": "ČNB",
     "url": SEITE,
-    "bedingungen": SEITE,
+    "bedingungen": "https://www.cnb.cz/en/privacy-statement-and-disclaimer/disclaimer-copyright/",
+    # Bedingungen: „The CNB must always be stated as the source of the information (Source: the CNB),
+    # the file and its content may not be altered in any manner“
+    "hinweis": "Source: the CNB (Zdroj: ČNB) – Číselník kódů platebního styku. Inhalt unverändert übernommen, "
+               "nur umformatiert; die Originaldatei der ČNB liegt unverändert bei.",
 }
+ORIGINAL = "original-cnb.csv"
 SPALTEN = ["Bankleitzahl", "BIC", "Bankenname", "CERTIS"]
 _SPALTEN_QUELLE = {"Kód platebního styku": "Bankleitzahl", "BIC kód (SWIFT)": "BIC",
                    "Poskytovatel platebních služeb": "Bankenname", "Systém CERTIS": "CERTIS"}
@@ -86,7 +91,7 @@ def laden(args, alte_meta: dict) -> Stand:
     print(f"[{CODE}] Verwendet: Číselník {fassung['nummer']} ({len(banken)} Einträge)")
     meta = {"Číselník": fassung["nummer"], "ValidFrom": ab, "Quelle": SEITE}
     datum = ab if alte_meta.get("ValidFrom") != ab else args.today.isoformat()
-    return Stand(spalten=SPALTEN, banken=banken, datum=datum, meta=meta)
+    return Stand(spalten=SPALTEN, banken=banken, datum=datum, meta=meta, dateien={ORIGINAL: roh})
 
 
 def api_eintrag(z: dict, filialen: list, meta: dict, entfernt: bool) -> dict:
