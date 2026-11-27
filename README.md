@@ -10,9 +10,11 @@ Für eine Überweisung braucht man die Kontonummer (IBAN) und oft auch den **BIC
 - **Tschechien und Slowakei:** vierstellig, an den Stellen 5 bis 8 (`CZ65 0800 …` → `0800`)
 - **Ungarn:** der achtstellige Filialcode (Bankcode, Filiale, Prüfziffer) an den Stellen 5 bis 12 (`HU.. 1173 8008 …` → `11738008`, OTP Bank Debrecen)
 - **Slowenien:** fünfstellig an den Stellen 5 bis 9 (`SI56 0100 0…` → `01000`)
+- **Italien:** der fünfstellige ABI-Code an den Stellen 6 bis 10, danach der CAB-Code der Filiale an den Stellen 11 bis 15
+  (`IT.. X 03069 15417 …` → ABI `03069` Intesa Sanpaolo, CAB `15417` Filiale Pescara)
 
 Dieses Projekt sammelt die BICs und Bankleitzahlen aller Banken in Österreich und seinen Nachbarländern
-Deutschland, Schweiz, Liechtenstein, Tschechien, Slowakei, Ungarn und Slowenien an einem Ort und hält sie aktuell.
+Deutschland, Schweiz, Liechtenstein, Italien, Tschechien, Slowakei, Ungarn und Slowenien an einem Ort und hält sie aktuell.
 
 ## Was es macht
 
@@ -29,6 +31,9 @@ Deutschland, Schweiz, Liechtenstein, Tschechien, Slowakei, Ungarn und Slowenien 
   - Ungarn: die [Rövid irányítókód-tábla](https://www.mnb.hu/en/payments/mnb-as-payment-authority/routing-table) der
     Ungarischen Nationalbank (MNB), monatlich aktualisiert und ab ihrem Gültigkeitstag übernommen
   - Slowenien: die [Liste der Identifikationskennungen](https://www.bsi.si/sl/d/seznam-identifikacijskih-oznak-pps) der Banka Slovenije
+  - Italien: die Register der [Banca d'Italia](https://www.bancaditalia.it/servizi-cittadino/servizi/albi-elenchi/index.html)
+    (Institute, Filialen mit CAB-Code, Fusionen). Die Banca d'Italia führt keine BICs; sie werden über die
+    [BIC/LEI-Zuordnung von GLEIF](https://www.gleif.org/en/lei-data/lei-mapping/download-bic-to-lei-relationship-files) ergänzt.
 - **Es vergleicht sie mit dem letzten Stand** und hält fest, welche Banken neu dazugekommen sind, sich geändert
   haben oder weggefallen sind, z. B. durch eine Fusion.
 - Weggefallene Banken **bleiben nachvollziehbar**. Die offiziellen Listen zeigen nur den aktuellen Stand, hier
@@ -39,7 +44,7 @@ Deutschland, Schweiz, Liechtenstein, Tschechien, Slowakei, Ungarn und Slowenien 
 
 👉 **[alexanderwendel8.github.io/bic-verzeichnis](https://alexanderwendel8.github.io/bic-verzeichnis/)**
 
-- **Land wählen:** oben das Land umschalten (AT, DE, CH, LI, CZ, SK, HU, SI).
+- **Land wählen:** oben das Land umschalten (AT, DE, CH, LI, IT, CZ, SK, HU, SI).
 - **Suchen:** Bankleitzahl, BIC, Banknamen oder Ort eintippen, die Treffer erscheinen sofort.
   Ein Klick auf eine Bank zeigt alle Details, BLZ und BIC lassen sich mit einem Klick kopieren.
   In Deutschland findet die Suche auch Filial-BICs und frühere Banknamen und zeigt, zu welcher
@@ -51,7 +56,7 @@ Deutschland, Schweiz, Liechtenstein, Tschechien, Slowakei, Ungarn und Slowenien 
   Datei. Sie öffnet sich direkt in Excel.
 - **Per API abfragen:** Für Programme gibt es eine einfache Schnittstelle, siehe [API](#api).
 
-Ein Projekt von Alexander Wendel. Die Daten stammen von OeNB, Deutscher Bundesbank, SIX, ČNB, NBS, MNB und
+Ein Projekt von Alexander Wendel. Die Daten stammen von OeNB, Deutscher Bundesbank, SIX, Banca d'Italia (BICs: GLEIF), ČNB, NBS, MNB und
 Banka Slovenije und werden ohne Gewähr weitergegeben.
 
 ## API
@@ -119,12 +124,14 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
 | `/api/v1/{land}/alle.json` | Alle Banken eines Landes mit allen Daten in einer Datei (kompakt) |
 | `/api/v1/index.json` | Übersicht: unterstützte Länder und Anzahl der Banken |
 
-- **Land:** `AT`, `DE`, `CH`, `LI`, `CZ`, `SK`, `HU` oder `SI`, Kleinbuchstaben gehen auch.
+- **Land:** `AT`, `DE`, `CH`, `LI`, `IT`, `CZ`, `SK`, `HU` oder `SI`, Kleinbuchstaben gehen auch.
 - **Bankleitzahl Österreich:** wie in der IBAN fünfstellig (`00100`) oder ohne führende Nullen (`100`).
 - **Bankleitzahl Deutschland:** immer achtstellig (`10010010`).
 - **Bankleitzahl Schweiz/Liechtenstein:** die IID, fünfstellig (`00100`) oder ohne führende Nullen (`100`).
 - **Bankleitzahl Tschechien:** vierstellig (`0800`). **Slowakei:** vierstellig (`0200`) oder ohne führende Nullen (`200`).
 - **Bankleitzahl Ungarn:** der achtstellige Filialcode (`11738008`). **Slowenien:** fünfstellig (`01000`).
+- **Bankleitzahl Italien:** der ABI-Code, fünfstellig (`03069`) oder ohne führende Nullen (`3069`). Die CAB-Codes
+  stehen in `filialen`.
 - **Felder je Land unterschiedlich:** Die Bundesbank liefert keine Straße, keine Kontaktdaten und keinen LEI,
   dafür Kurzbezeichnung, Prüfziffermethode, angekündigte Löschung, Nachfolge-Bankleitzahl und Filialen.
 - **Deutschland – welcher BIC gilt:** Für Zahlungen gilt `bic`. Die BICs in `filialen` dienen nur der Zuordnung.
@@ -137,6 +144,11 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
 - **Ungarn:** jede Filiale ist ein eigener Eintrag; dazu `bankcode` (die ersten drei Stellen), `viber_senden`,
   `viber_empfangen` (Großzahlungssystem VIBER) und `gueltig_ab` der verwendeten Monatstabelle.
   **Slowenien:** `institut` (die ersten zwei Stellen der Kennung).
+- **Italien:** `register` (Bank, Zahlungsinstitut, E-Geld-Institut), `rechtsform`, `steuernummer`, `registernummer`,
+  `eingetragen_seit`, `filialen` (mit `cab`, Adresse, `eroeffnet`). Der `bic` stammt **nicht von der Banca d'Italia,
+  sondern von GLEIF** (`bic_quelle`: `GLEIF`); weitere BICs desselben Instituts stehen in `weitere_bics`. Für etwa jedes
+  siebte Institut findet GLEIF keinen BIC – dann ist `bic` `null`. Frühere ABI-Codes aus Übernahmen und Fusionen
+  (rund 1.700, seit 1970) liefern `status: entfernt` mit Datum und `nachfolge_bankleitzahl` (heute aktiver Nachfolger).
 - **Unbekannte Bankleitzahl oder unbekanntes Land:** Antwort mit HTTP-Status **404**.
 - **Weggefallene Banken** liefern weiter ihren letzten Stand, mit `"status": "entfernt"` und dem Datum in `entfernt_am`.
 - Leere Felder sind `null`, Datumsangaben im Format `JJJJ-MM-TT`.
@@ -171,19 +183,19 @@ Jedes Land ist ein eigenes kleines Modul in `laender/`. Alles andere – Verglei
 | Pfad | Inhalt |
 |---|---|
 | `laender/__init__.py` | Liste der Länder und Beschreibung, was ein Land-Modul bereitstellen muss |
-| `laender/at.py`, `de.py`, `ch.py`, `li.py`, `cz.py`, `sk.py`, `hu.py`, `si.py` | je Land: Download, Umwandlung, API-Felder, Einstellungen der Webseite |
+| `laender/at.py`, `de.py`, `ch.py`, `li.py`, `it.py`, `cz.py`, `sk.py`, `hu.py`, `si.py` | je Land: Download, Umwandlung, API-Felder, Einstellungen der Webseite |
 | `laender/_six.py` | gemeinsame SIX-Quelle für die Schweiz und Liechtenstein |
 | `kern.py` | gemeinsamer Teil: Vergleich, Änderungsprotokoll, Ablage, API-Einträge |
 | `update.py` | lädt alle (oder ausgewählte) Länder und protokolliert Änderungen |
 | `build_site.py` | stellt Webseite, `laender.json` und API für GitHub Pages zusammen (API nicht im Repo abgelegt) |
 | `web/` | Weboberfläche (statisch, ohne Build-Schritt; Länder kommen aus `laender.json`) |
 | `data/<land>/bankleitzahlen.csv` | aktueller Stand, eine Zeile je Bankleitzahl |
-| `data/<land>/filialen.csv` | weitere Orte je Bankleitzahl (derzeit nur Deutschland) |
-| `data/<land>/meta.json` | Angaben zur verwendeten Quelldatei (z. B. Gültigkeit in DE, CZ und HU, Überführungen in CH/LI) |
+| `data/<land>/filialen.csv` | weitere Orte je Bankleitzahl (Deutschland: Zusatzeinträge, Italien: Filialen mit CAB) |
+| `data/<land>/meta.json` | Angaben zur verwendeten Quelldatei (z. B. Gültigkeit in DE, CZ und HU, Überführungen in CH/LI, Fusionen in IT) |
 | `changes/<land>/JJJJ-MM-TT.csv` | Änderungen eines Tages (nur an Tagen mit Änderungen) |
 | `changes/<land>/index.json` | Liste der Tage mit Änderungen |
 
-`<land>` ist der Ländercode in Kleinbuchstaben (`at`, `de`, `ch`, `li`, `cz`, `sk`, `hu`, `si`). Die frühere Adresse der österreichischen
+`<land>` ist der Ländercode in Kleinbuchstaben (`at`, `de`, `ch`, `li`, `it`, `cz`, `sk`, `hu`, `si`). Die frühere Adresse der österreichischen
 Gesamtliste, `data/sepa-zv-vz_gesamt.csv`, wird auf der Webseite weiter bedient.
 Ältere Gesamtstände sind über die Git-Historie der Dateien in `data/` abrufbar.
 
@@ -238,6 +250,21 @@ Danach folgt der Eintrag (bei `entfernt` der letzte bekannte Stand). Schlüssel 
   (z. B. `SHT20261101`) nennt das Gültigkeitsdatum; neue Monatstabellen werden ab diesem Tag als Änderung protokolliert.
 - **Banka Slovenije:** Windows-1250. Doppelte Zeilen in der Quelle (derzeit `19352`) werden nur einmal übernommen.
 
+**Italien – Besonderheiten der Quelle:**
+
+- Die Banca d'Italia bietet in ihrem Download-Bereich („Area download“ der Register) täglich aktualisierte Dateien als
+  **XML** (gezippt) an – verwendet werden „Lista intermediari“, „Lista succursali banche“ und „Lista fusioni,
+  incorporazioni …“. Die Dateinamen sind nicht fest veröffentlicht; das Skript holt jedes Mal die Produktliste der
+  Webanwendung. Der Abruf ist ohne Anmeldung möglich; die Anwendung leitet dabei automatisch über
+  `auth.bancaditalia.it` und schickt für anonyme Besucher selbst `username=OBLIXANONYMOUS` mit.
+- Die Dateien enthalten auch frühere Fassungen jedes Eintrags; verwendet wird nur die heute gültige
+  (`DATA_I_VAL`/`DATA_F_VAL`). Übernommen werden Banken, Zahlungs- und E-Geld-Institute mit ABI-Code.
+- Die Filialliste ist entpackt rund 200 MB groß und wird beim Lesen gestreamt.
+- BICs: GLEIF-Zuordnung BIC → LEI, dann LEI-Datensätze (`registeredAs` = italienische Steuernummer) → Institut.
+  Als Haupt-BIC gilt ein voll verbundener BIC, bevorzugt der des Hauptsitzes (`…XXX`). Ist GLEIF nicht erreichbar,
+  bleiben die BICs des letzten Stands erhalten.
+- Ein Lauf dauert etwa eine Minute (rund 10 MB Download plus GLEIF).
+
 ### Weboberfläche (GitHub Pages)
 
 `web/` enthält eine statische Seite mit Umschalter Österreich/Deutschland, Suche (Bankleitzahl, BIC, Name,
@@ -282,5 +309,6 @@ Daten: © Oesterreichische Nationalbank, es gelten deren [Nutzungsbedingungen](h
 © Deutsche Bundesbank, die Bankleitzahlendatei wird dort „unverbindlich“ bereitgestellt, es gelten die
 Hinweise im [Impressum](https://www.bundesbank.de/de/startseite/impressum).
 © SIX Group AG (Bank Master), © Česká národní banka, © Národná banka Slovenska, © Magyar Nemzeti Bank,
-© Banka Slovenije. Für diese Quellen wurden die
+© Banka Slovenije, © Banca d'Italia; BIC-Zuordnung Italien: © GLEIF (Bedingungen der BIC/LEI-Zuordnung beachten).
+Für diese Quellen wurden die
 Nutzungsbedingungen noch nicht im Einzelnen geprüft.

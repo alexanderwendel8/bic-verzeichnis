@@ -13,7 +13,7 @@ Optional:
   zusatz_eintraege(eintraege, meta) -> dict   weitere API-Einträge, z. B. überführte Bankleitzahlen
 """
 
-from laender import at, ch, cz, de, hu, li, si, sk
+from laender import at, ch, cz, de, hu, it, li, si, sk
 
 # Reihenfolge = Reihenfolge der Länderknöpfe auf der Webseite
-LAENDER = {m.CODE: m for m in (at, de, ch, li, cz, sk, hu, si)}
+LAENDER = {m.CODE: m for m in (at, de, ch, li, it, cz, sk, hu, si)}

@@ -57,8 +57,10 @@ function prepare(conf, records) {
       rec: r,
       blz: r.bankleitzahl,
       blzKeys: new Set([r.bankleitzahl, padded].filter(Boolean)),
-      search: norm([...conf.suche.map((p) => get(r, p)), padded].filter(Boolean).join(" ")),
-      branchSearch: (r.filialen || []).map((f) => norm([f.bic, f.name, f.plz, f.ort].filter(Boolean).join(" "))),
+      search: norm([...conf.suche.map((p) => get(r, p)), ...(conf.suche_listen || []).flatMap((p) => get(r, p) || []), padded]
+        .filter(Boolean).join(" ")),
+      branchSearch: (r.filialen || []).map((f) => norm((conf.filial_suche || ["bic", "name", "plz", "ort"])
+        .map((k) => f[k]).filter(Boolean).join(" "))),
     };
     all.set(b.blz, b);
     (r.status === "aktiv" ? active : removed).push(b);
@@ -111,6 +113,11 @@ function applyFilter() {
   // entfernte/überführte Bankleitzahlen nur bei exakter Eingabe der Bankleitzahl zeigen
   const raw = $("#q").value.trim().split(/\s+/).filter(Boolean);
   if (raw.length === 1) for (const b of D().removed) if (b.blzKeys.has(raw[0])) state.filtered.push({ b, branchHit: null });
+  // exakte Treffer der Bankleitzahl zuerst (z. B. ABI 1010 vor Filialen mit CAB 01010)
+  if (raw.length === 1) {
+    const exakt = (x) => (x.b.blzKeys.has(raw[0]) ? 0 : 1);
+    state.filtered.sort((x, y) => exakt(x) - exakt(y));
+  }
   state.shown = 0;
   $("#rows").innerHTML = "";
   renderMore();
@@ -131,7 +138,7 @@ function renderMore() {
       <td>${highlight(r.bankleitzahl, terms)}</td>
       <td>${highlight(r.bic, terms) || "–"}</td>
       <td>${highlight(r.name, terms)}${r.art === "Filiale" ? ' <span class="branch">(Filiale)</span>' : ""}${r.loeschung_angekuendigt ? ' <span class="tag entfernt small">Löschung angekündigt</span>' : ""}${r.status === "entfernt" ? ` <span class="tag entfernt small">entfernt${r.nachfolge_bankleitzahl ? ` → ${esc(r.nachfolge_bankleitzahl)}` : ""}</span>` : ""}
-        ${f ? `<div class="branch">Filiale: ${highlight([f.plz, f.ort].filter(Boolean).join(" "), terms)}${f.bic ? ` · <span class="mono">${highlight(f.bic, terms)}</span>` : ""}${f.name && f.name !== r.name ? ` · ${highlight(f.name, terms)}` : ""}</div>` : ""}</td>
+        ${f ? `<div class="branch">Filiale: ${f.cab ? `<span class="mono">CAB ${highlight(f.cab, terms)}</span> · ` : ""}${highlight([f.plz, f.ort].filter(Boolean).join(" "), terms)}${f.strasse ? `, ${highlight(f.strasse, terms)}` : ""}${f.bic ? ` · <span class="mono">${highlight(f.bic, terms)}</span>` : ""}${f.name && f.name !== r.name ? ` · ${highlight(f.name, terms)}` : ""}</div>` : ""}</td>
       <td class="hide-sm">${highlight(plzOrt(r.adresse), terms) || "–"}</td>
       <td class="hide-md">${esc(col5(conf, r))}</td>
     </tr>`;
@@ -174,14 +181,17 @@ function showDetail(b, note, hit) {
     return h ? `<dt>${esc(label)}</dt><dd>${h}</dd>` : "";
   }).join("");
   const fil = r.filialen || [];
+  const spalten = C().filial_spalten || [["Ort", "plz_ort"], ["BIC", "bic", "mono"], ["Name", "name"]];
   let branches = "";
   if (fil.length) {
     branches = `<details class="branches" ${fil.length <= 8 || hit ? "open" : ""}>
       <summary>${fmtNum(fil.length)} weitere ${fil.length === 1 ? "Ort" : "Orte"} mit dieser Bankleitzahl</summary>
-      <p class="hint">Für Zahlungen gilt der BIC oben. Filial-BICs und abweichende Namen dienen nur der Zuordnung.</p>
-      <table class="mini"><thead><tr><th>Ort</th><th>BIC</th><th>Name</th></tr></thead><tbody>
-      ${fil.map((f) => `<tr${f === hit ? ' class="hit"' : ""}><td>${esc(plzOrt(f))}</td>
-        <td class="mono">${esc(f.bic) || "–"}</td><td>${f.name !== r.name ? esc(f.name) : ""}</td></tr>`).join("")}
+      ${fil.some((f) => f.bic) ? '<p class="hint">Für Zahlungen gilt der BIC oben. Filial-BICs und abweichende Namen dienen nur der Zuordnung.</p>' : ""}
+      <table class="mini"><thead><tr>${spalten.map(([t]) => `<th>${esc(t)}</th>`).join("")}</tr></thead><tbody>
+      ${fil.map((f) => `<tr${f === hit ? ' class="hit"' : ""}>${spalten.map(([, k, art]) => {
+        const v = k === "plz_ort" ? plzOrt(f) : k === "name" && f.name === r.name ? "" : f[k];
+        return `<td${art === "mono" ? ' class="mono"' : ""}>${esc(v) || (art === "mono" ? "–" : "")}</td>`;
+      }).join("")}</tr>`).join("")}
       </tbody></table></details>`;
   }
   $("#detail-body").innerHTML = `<h2>${esc(r.name)}</h2>${note ? `<p class="hint">${esc(note)}</p>` : ""}<dl class="kv">${rows}</dl>${branches}`;
