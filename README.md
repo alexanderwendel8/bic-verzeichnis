@@ -6,7 +6,7 @@ Für eine Überweisung braucht man die Kontonummer (IBAN) und oft auch den **BIC
 
 - **Österreich:** fünfstellig, an den Stellen 5 bis 9 der IBAN (`AT61 2011 1…` → `20111`)
 - **Deutschland:** achtstellig, an den Stellen 5 bis 12 der IBAN (`DE89 1001 0010 …` → `10010010`)
-- **Schweiz und Liechtenstein:** die IID (frühere BC-Nummer), fünfstellig an den Stellen 5 bis 9 (`CH93 0076 2…` → `00762`)
+- **Schweiz und Liechtenstein:** die IID (frühere BC-Nummer), fünfstellig an den Stellen 5 bis 9 (`CH.. 0070 0…` → `00700`, Zürcher Kantonalbank)
 - **Tschechien und Slowakei:** vierstellig, an den Stellen 5 bis 8 (`CZ65 0800 …` → `0800`)
 
 Dieses Projekt sammelt die BICs und Bankleitzahlen aller Banken in Österreich, Deutschland, der Schweiz,
