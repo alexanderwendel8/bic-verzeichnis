@@ -23,11 +23,9 @@ nur die heute gültige. Übernommen werden Banken (Albo 001), Zahlungsinstitute 
 
 from __future__ import annotations
 
-import csv
 import http.cookiejar
 import io
 import json
-import re
 import sys
 import time
 import urllib.parse
@@ -39,6 +37,7 @@ from pathlib import Path
 
 import kern
 from kern import SCHLUESSEL, Stand, leer
+from laender import _gleif
 
 CODE = "IT"
 NAME = "Italien"
@@ -57,23 +56,6 @@ QUELLE = {
                "gültige Banken, Zahlungs- und E-Geld-Institute gefiltert, umformatiert, BICs aus der BIC/LEI-Zuordnung "
                "von GLEIF ergänzt.",
 }
-GLEIF_LIZENZ = ("https://www.gleif.org/lei-data/lei-mapping/download-bic-to-lei-relationship-files/"
-                "2017-12-21_annex-2_bic-to-lei-mapping-table-license-agreement_final.pdf")
-MONATE = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
-          "November", "December"]
-
-
-def swift_hinweis(tabelle: str | None) -> str:
-    """Pflicht-Hinweis der BIC/LEI-Lizenz (Abschnitt 2) für jede Kopie, auch in Teilen. tabelle = JJJJ-MM."""
-    datum = f"{MONATE[int(tabelle[5:7]) - 1]} {tabelle[:4]}" if tabelle else "[unbekannt]"
-    return (f"SWIFT © and database rights {datum}. All rights reserved. "
-            "This Mapping Table has been developed by SWIFT. Any use of the Mapping Table, in whole or in part, "
-            "is subject to the BIC/LEI Mapping Table License Agreement as published with the Mapping Table available "
-            "on GLEIF's website. The Mapping Table is updated monthly. For the latest BIC information and updates, "
-            "always refer to www.swift.com/bic .")
-GLEIF_MAPPING = "https://mapping.gleif.org/api/v2/bic-lei"
-GLEIF_LEI = "https://api.gleif.org/api/v1/lei-records"
-
 REGISTER = {"001": "Bank", "012": "Zahlungsinstitut", "016": "E-Geld-Institut"}
 FUSIONS_ARTEN = {"INCORPORAZIONE", "FUSIONE", "CESSIONE ATTIVITA/PASSIVITA"}
 PRODUKTE = {"VFLUSSO_INTERMEDIARIO": "INTERMEDIARI", "VFLUSSO_SEDE_BANCHE": "SUCCURSALI",
@@ -137,49 +119,23 @@ def _stichtag(zip_bytes: bytes) -> str:
 
 # ---------------------------------------------------------------- BICs über GLEIF
 
-def _ort_rang(bic: str) -> int:
-    # 2. Zeichen des Ortscodes: 0 = Test-BIC, 1 = passiv, 2 = Reverse Billing; sonst voll verbunden
-    return {"0": 0, "1": 1, "2": 2}.get(bic[7:8], 3)
-
-
 def _gleif_bics() -> tuple[dict[str, list[str]], str]:
     """({Steuernummer ohne führende Nullen: [BICs]} für aktive italienische LEIs, Stand der Tabelle JJJJ-MM)."""
-    def holen(url: str) -> bytes:
-        req = urllib.request.Request(url, headers={"User-Agent": "bic-verzeichnis-update", "Accept": "application/vnd.api+json"})
-        with urllib.request.urlopen(req, timeout=180) as r:
-            return r.read()
-
-    dateien = json.loads(holen(GLEIF_MAPPING))["data"]
-    neueste = max((d for d in dateien if d["attributes"]["valid"]), key=lambda d: d["attributes"]["uploadedAt"])
-    z = zipfile.ZipFile(io.BytesIO(holen(neueste["attributes"]["downloadLink"])))
-    name = next(n for n in z.namelist() if n.endswith(".csv"))
-    with z.open(name) as f:
-        zuordnung = {r["BIC"].strip().upper(): r["LEI"].strip()
-                     for r in csv.DictReader(io.TextIOWrapper(f, encoding="utf-8-sig")) if r["BIC"][4:6].upper() == "IT"}
+    paare, tabelle, name = _gleif.zuordnung()
+    zuordnung = {bic: lei for bic, lei in paare if bic[4:6] == "IT"}
     leis = sorted(set(zuordnung.values()))
     entitaeten = {}
     for i in range(0, len(leis), 100):
         q = urllib.parse.urlencode({"filter[lei]": ",".join(leis[i:i + 100]), "page[size]": 100})
-        for d in json.loads(holen(f"{GLEIF_LEI}?{q}"))["data"]:
+        for d in json.loads(_gleif.holen(f"{_gleif.LEI_API}?{q}"))["data"]:
             entitaeten[d["id"]] = d["attributes"]["entity"]
     bics = defaultdict(list)
     for bic, lei in sorted(zuordnung.items()):
         e = entitaeten.get(lei)
         if e and e.get("status") == "ACTIVE" and e.get("registeredAs"):
             bics[e["registeredAs"].strip().lstrip("0")].append(bic)
-    print(f"[{CODE}] GLEIF {neueste['attributes'].get('fileName', '')}: {len(zuordnung)} italienische BICs, "
-          f"{len(bics)} Steuernummern")
-    m = re.search(r"(\d{4})(\d{2})\d{2}", neueste["attributes"].get("fileName", "")) \
-        or re.search(r"(\d{4})-(\d{2})", neueste["attributes"].get("uploadedAt", ""))
-    return bics, f"{m.group(1)}-{m.group(2)}" if m else ""
-
-
-def _bic_wahl(bics: list[str]) -> tuple[str, list[str]]:
-    """Haupt-BIC (voll verbunden, bevorzugt Hauptsitz …XXX) und die übrigen."""
-    if not bics:
-        return "", []
-    haupt = max(bics, key=lambda b: (_ort_rang(b), b.endswith("XXX"), -len(b)))
-    return haupt, sorted(b for b in bics if b != haupt)
+    print(f"[{CODE}] GLEIF {name}: {len(zuordnung)} italienische BICs, {len(bics)} Steuernummern")
+    return bics, tabelle
 
 
 # ---------------------------------------------------------------- Laden
@@ -234,7 +190,7 @@ def laden(args, alte_meta: dict) -> Stand:
         if nach_steuer is None:
             z["BIC"], z["Weitere BICs"] = alt.get(abi, {}).get("BIC", ""), alt.get(abi, {}).get("Weitere BICs", "")
         else:
-            haupt, weitere = _bic_wahl(nach_steuer.get(z["Steuernummer"].lstrip("0"), []))
+            haupt, weitere = _gleif.bic_wahl(nach_steuer.get(z["Steuernummer"].lstrip("0"), []))
             z["BIC"], z["Weitere BICs"] = haupt, " ".join(weitere)
 
     # Filialen
@@ -272,10 +228,7 @@ def laden(args, alte_meta: dict) -> Stand:
     meta = {"Quelle": SEITE, "GLEIF-Tabelle": tabelle, "Fusionen": sorted(fusionen.values(), key=lambda f: f["Bankleitzahl"].zfill(5))}
     return Stand(spalten=SPALTEN, banken=sorted(banken.values(), key=lambda z: z[SCHLUESSEL].zfill(5)),
                  datum=heute, filialen=filialen, filial_spalten=FILIAL_SPALTEN, meta=meta,
-                 dateien={"HINWEIS-BIC.txt": (
-                     "Die BICs in bankleitzahlen.csv (Spalten BIC und Weitere BICs) stammen aus der BIC/LEI-Zuordnung\n"
-                     "von SWIFT und GLEIF. Für sie gilt:\n\n" + swift_hinweis(tabelle) + "\n\nLizenz: " + GLEIF_LIZENZ +
-                     "\n\nAlle übrigen Angaben: " + QUELLE["hinweis"] + "\n").encode("utf-8")})
+                 dateien={"HINWEIS-BIC.txt": _gleif.hinweis_datei(tabelle, QUELLE["hinweis"])})
 
 
 # ---------------------------------------------------------------- API
@@ -368,4 +321,4 @@ def stand_text(meta: dict) -> str:
 
 
 def zusatz_hinweis(meta: dict) -> str:
-    return swift_hinweis(meta.get("GLEIF-Tabelle"))
+    return _gleif.swift_hinweis(meta.get("GLEIF-Tabelle"))

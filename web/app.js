@@ -327,7 +327,7 @@ function renderAttribution(conf) {
   if (conf.original) links.push(`<a href="${esc(conf.original)}" download>Originaldatei</a>`);
   $("#attribution").innerHTML = `<strong>${esc(conf.name)}:</strong> ${esc(q.hinweis || q.name)} · ${links.join(" · ")}`;
   $("#swift").hidden = !conf.zusatz_hinweis;
-  $("#swift").textContent = conf.zusatz_hinweis ? `BICs (Italien): ${conf.zusatz_hinweis}` : "";
+  $("#swift").textContent = conf.zusatz_hinweis ? `BICs (${conf.name}): ${conf.zusatz_hinweis}` : "";
 }
 
 /* ---------- Tabs & Start ---------- */

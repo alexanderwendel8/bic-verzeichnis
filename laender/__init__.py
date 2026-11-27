@@ -11,9 +11,12 @@ Jedes Land-Modul stellt bereit:
   stand_text(meta)      kurzer Text zur verwendeten Quelldatei (oder "")
 Optional:
   zusatz_eintraege(eintraege, meta) -> dict   weitere API-Einträge, z. B. überführte Bankleitzahlen
+  zusatz_hinweis(meta) -> str                 weiterer Pflichthinweis, z. B. SWIFT-Hinweis für BICs von GLEIF
+  ORIGINAL                                    Name der unverändert beigelegten Originaldatei in data/<land>/
+  ORIGINAL_URL                                stattdessen Link zur Originaldatei bei der Quelle
 """
 
-from laender import at, ch, cz, de, hu, it, li, si, sk
+from laender import at, be, ch, cz, de, es, hu, it, li, si, sk
 
 # Reihenfolge = Reihenfolge der Länderknöpfe auf der Webseite
-LAENDER = {m.CODE: m for m in (at, de, ch, li, it, cz, sk, hu, si)}
+LAENDER = {m.CODE: m for m in (at, de, ch, li, it, cz, sk, hu, si, be, es)}
