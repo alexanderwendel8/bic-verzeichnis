@@ -286,6 +286,7 @@ async function selectCountry(cc) {
   const conf = C();
   document.querySelectorAll("[data-country]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.country === cc)));
   $("#source").textContent = conf.quelle.kurz;
+  renderAttribution(conf);
   $("#q").placeholder = conf.suche_platzhalter;
   $("#col5").textContent = conf.spalte5.titel;
   document.querySelectorAll("a.dl").forEach((a) => (a.href = conf.csv));
@@ -315,6 +316,17 @@ async function selectCountry(cc) {
   renderMeta();
   applyFilter();
   renderDays();
+}
+
+/* ---------- Quellenangabe des gewählten Landes ---------- */
+
+function renderAttribution(conf) {
+  const q = conf.quelle;
+  const links = [`<a href="${esc(q.url)}">Quelle</a>`, `<a href="${esc(q.bedingungen)}">Nutzungsbedingungen</a>`];
+  if (conf.original) links.push(`<a href="${esc(conf.original)}" download>Originaldatei</a>`);
+  $("#attribution").innerHTML = `<strong>${esc(conf.name)}:</strong> ${esc(q.hinweis || q.name)} · ${links.join(" · ")}`;
+  $("#swift").hidden = !conf.zusatz_hinweis;
+  $("#swift").textContent = conf.zusatz_hinweis ? `BICs (Italien): ${conf.zusatz_hinweis}` : "";
 }
 
 /* ---------- Tabs & Start ---------- */

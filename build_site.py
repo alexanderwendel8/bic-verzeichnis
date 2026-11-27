@@ -97,6 +97,8 @@ def main() -> int:
             "aenderungen": f"changes/{cc}/",
             "stand_text": land.stand_text(meta),
             "blz_stellen": land.BLZ_STELLEN,
+            "original": f"data/{cc}/{land.ORIGINAL}" if getattr(land, "ORIGINAL", None) else None,
+            "zusatz_hinweis": land.zusatz_hinweis(meta) if hasattr(land, "zusatz_hinweis") else "",
             **land.WEB,
         }
         alt = getattr(land, "ALTE_CSV_ADRESSE", None)  # frühere Download-Adresse weiter bedienen

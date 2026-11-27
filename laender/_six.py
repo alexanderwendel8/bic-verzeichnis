@@ -23,8 +23,10 @@ URL = "https://api.six-group.com/api/epcd/bankmaster/v3/bankmaster.json"
 QUELLE = {
     "name": "SIX – Bank Master (Bankenstamm)",
     "kurz": "SIX",
-    "url": URL,
-    "bedingungen": URL,
+    "url": "https://www.six-group.com/en/products-services/banking-services/interbank-clearing/online-services/download-bank-master.html",
+    # „Information in the Download Bank Master may be used freely.“ (Record Description)
+    "bedingungen": "https://www.six-group.com/dam/download/banking-services/interbank-clearing/bc-bank-master/bankmaster-v3.0-record-description-en.pdf",
+    "hinweis": "Quelle: SIX Interbank Clearing, Bank Master. BICs sind Eigentum von S.W.I.F.T. SCRL.",
 }
 
 ARTEN = {"HEADQUARTERS": "Hauptsitz", "MAIN_BRANCH": "Filiale", "QR_IID": "QR-IID"}

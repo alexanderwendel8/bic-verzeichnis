@@ -45,6 +45,7 @@ class Stand:
     filial_spalten: list[str] | None = None
     meta: dict = field(default_factory=dict)             # z. B. Gültigkeit der Quelldatei
     entfernt: list[dict[str, str]] = field(default_factory=list)  # von der Quelle selbst als gelöscht markiert
+    dateien: dict[str, bytes] = field(default_factory=dict)  # weitere Dateien für data/<cc>/ (z. B. Originaldatei, Hinweis)
 
 
 # ---------------------------------------------------------------- Hilfen für Land-Module
@@ -203,6 +204,10 @@ def aktualisieren(land: ModuleType, stand: Stand, erzwingen: bool = False) -> No
         csv_schreiben(filial_pfad, stand.filial_spalten or [], stand.filialen)
     if stand.meta:
         text_schreiben(meta_pfad, json.dumps(stand.meta, ensure_ascii=False, indent=1) + "\n")
+    for name, inhalt in stand.dateien.items():  # nur schreiben, wenn sich der Inhalt ändert
+        pfad = ordner / name
+        if not pfad.exists() or pfad.read_bytes() != inhalt:
+            pfad.write_bytes(inhalt)
     aenderungs_index_schreiben(land)
 
 

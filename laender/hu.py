@@ -29,8 +29,12 @@ QUELLE = {
     "name": "Magyar Nemzeti Bank – Rövid irányítókód-tábla",
     "kurz": "MNB",
     "url": SEITE,
-    "bedingungen": SEITE,
+    "bedingungen": "https://www.mnb.hu/en/the-central-bank/practical-issues/disclaimer",
+    # Bedingungen: „may be freely distributed, without changing the content, subject to specifying the source“
+    "hinweis": "Forrás: Magyar Nemzeti Bank – Rövid irányítókód-tábla. Inhalt unverändert übernommen, nur umformatiert "
+               "(Adresse in PLZ, Ort und Straße aufgeteilt); die Originaldatei der MNB liegt unverändert bei.",
 }
+ORIGINAL = "original-mnb.xlsx"
 SPALTEN = ["Bankleitzahl", "BIC", "Bankenname", "Adresse", "Bankcode", "VIBER senden", "VIBER empfangen"]
 _KOPF = {"Branch office code": "Bankleitzahl", "BIC code": "BIC", "Name of the branch office": "Bankenname",
          "Address of the branch office": "Adresse", "Branch office may send VIBER items": "VIBER senden",
@@ -95,7 +99,7 @@ def laden(args, alte_meta: dict) -> Stand:
     print(f"[{CODE}] MNB-Tabelle {blatt}: {len(banken)} Filialcodes, {len({z['Bankcode'] for z in banken})} Bankcodes")
     meta = {"Blatt": blatt, "ValidFrom": ab, "Quelle": URL}
     datum = ab if alte_meta.get("ValidFrom") != ab else args.today.isoformat()
-    return Stand(spalten=SPALTEN, banken=banken, datum=datum, meta=meta)
+    return Stand(spalten=SPALTEN, banken=banken, datum=datum, meta=meta, dateien={ORIGINAL: roh})
 
 
 def _adresse(text: str | None) -> dict:
