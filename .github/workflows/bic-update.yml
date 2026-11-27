@@ -23,8 +23,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: OeNB-Verzeichnis laden und vergleichen
+      # Beide Länder laufen unabhängig: fällt eine Quelle aus, wird die andere trotzdem übernommen.
+      - name: OeNB-Verzeichnis laden und vergleichen (AT)
+        id: at
+        continue-on-error: true
         run: python update_bic.py
+
+      - name: Bundesbank-Bankleitzahlendatei laden und vergleichen (DE)
+        id: de
+        continue-on-error: true
+        run: python update_bic_de.py
 
       - name: Änderungen committen
         run: |
@@ -37,3 +45,9 @@ jobs:
             git commit -m "BIC-Verzeichnis: Stand $(date -u +%Y-%m-%d)"
             git push
           fi
+
+      - name: Fehlgeschlagene Quelle melden
+        if: steps.at.outcome == 'failure' || steps.de.outcome == 'failure'
+        run: |
+          echo "::error::Aktualisierung fehlgeschlagen – AT: ${{ steps.at.outcome }}, DE: ${{ steps.de.outcome }}"
+          exit 1

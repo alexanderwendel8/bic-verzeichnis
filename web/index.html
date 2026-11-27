@@ -3,20 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BIC-Verzeichnis Österreich</title>
-  <meta name="description" content="Bankleitzahlen, BIC und LEI österreichischer Banken – Daten der Oesterreichischen Nationalbank, täglich aktualisiert.">
+  <title>BIC-Verzeichnis Österreich & Deutschland</title>
+  <meta name="description" content="Bankleitzahlen und BIC österreichischer und deutscher Banken – Daten der Oesterreichischen Nationalbank und der Deutschen Bundesbank, täglich geprüft.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c8102e'/%3E%3Cpath d='M6 13h20v-2L16 5 6 11zM8 15h3v8H8zm6.5 0h3v8h-3zM21 15h3v8h-3zM6 25h20v2H6z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="top">
     <div class="wrap">
-      <h1>BIC-Verzeichnis Österreich</h1>
-      <p class="sub">Bankleitzahl, BIC und LEI aller Zahlungsdienstleister laut OeNB · <span id="meta">lädt …</span></p>
+      <div class="title-row">
+        <h1>BIC-Verzeichnis</h1>
+        <div class="country" role="group" aria-label="Land">
+          <button type="button" data-country="AT" aria-pressed="true"><span class="cc">AT</span> Österreich</button>
+          <button type="button" data-country="DE" aria-pressed="false"><span class="cc">DE</span> Deutschland</button>
+        </div>
+      </div>
+      <p class="sub">Bankleitzahl und BIC aller Zahlungsdienstleister laut <span id="source">OeNB</span> · <span id="meta">lädt …</span></p>
       <nav class="tabs" role="tablist">
         <button role="tab" id="tab-suche" aria-selected="true" aria-controls="view-suche">Suche</button>
         <button role="tab" id="tab-aenderungen" aria-selected="false" aria-controls="view-aenderungen">Änderungen <span id="changes-badge" class="count"></span></button>
-        <a class="download" href="data/sepa-zv-vz_gesamt.csv" download>
+        <a class="download dl" href="data/sepa-zv-vz_gesamt.csv" download>
           <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 1v9m0 0L4.5 6.5M8 10l3.5-3.5M2 12v2h12v-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           CSV<span class="download-label">&nbsp;herunterladen</span></a>
       </nav>
@@ -30,14 +36,14 @@
           <span class="sr">Suche</span>
           <input id="q" type="search" placeholder="Bankleitzahl, BIC, Bankname, Ort oder LEI …" autocomplete="off" autofocus>
         </label>
-        <label><span class="sr">Bundesland</span><select id="f-land"><option value="">Alle Bundesländer</option></select></label>
-        <label><span class="sr">Sektor</span><select id="f-sektor"><option value="">Alle Sektoren</option></select></label>
+        <label class="f-at"><span class="sr">Bundesland</span><select id="f-land"><option value="">Alle Bundesländer</option></select></label>
+        <label class="f-at"><span class="sr">Sektor</span><select id="f-sektor"><option value="">Alle Sektoren</option></select></label>
       </div>
       <p class="result-info"><span id="result-count"></span></p>
       <div class="table-wrap">
         <table class="list">
           <thead>
-            <tr><th>BLZ</th><th>BIC</th><th>Bank</th><th class="hide-sm">Ort</th><th class="hide-md">Sektor</th></tr>
+            <tr><th>BLZ</th><th>BIC</th><th>Bank</th><th class="hide-sm">Ort</th><th class="hide-md" id="col5">Sektor</th></tr>
           </thead>
           <tbody id="rows"></tbody>
         </table>
@@ -46,7 +52,7 @@
     </section>
 
     <section id="view-aenderungen" role="tabpanel" aria-labelledby="tab-aenderungen" hidden>
-      <p class="hint">Täglicher Vergleich mit dem Vortag. Banken, die aus dem OeNB-Verzeichnis verschwinden, bleiben hier mit ihrem letzten Stand erhalten.</p>
+      <p class="hint" id="changes-hint"></p>
       <div id="days"></div>
     </section>
   </main>
@@ -60,11 +66,13 @@
     <p class="foot-links">
       Ein Projekt von <strong>Alexander Wendel</strong>
       · <a href="https://github.com/alexanderwendel8/bic-verzeichnis#readme">README</a>
-      · <a href="data/sepa-zv-vz_gesamt.csv" download>CSV herunterladen</a>
+      · <a class="dl" href="data/sepa-zv-vz_gesamt.csv" download>CSV herunterladen</a>
       · <a href="https://github.com/alexanderwendel8/bic-verzeichnis#api">API</a>
     </p>
-    <p>Daten: © <a href="https://www.oenb.at/Statistik/Klassifikationen/SEPA-Zahlungsverkehrs-Verzeichnis.html">Oesterreichische Nationalbank</a>,
-    es gelten deren <a href="https://www.oenb.at/Service/Impressum-und-Haftung.html">Nutzungsbedingungen</a>. Angaben ohne Gewähr.</p>
+    <p>Daten: © <a href="https://www.oenb.at/Statistik/Klassifikationen/SEPA-Zahlungsverkehrs-Verzeichnis.html">Oesterreichische Nationalbank</a>
+    (<a href="https://www.oenb.at/Service/Impressum-und-Haftung.html">Nutzungsbedingungen</a>) und
+    <a href="https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/serviceangebot/bankleitzahlen/download-bankleitzahlen-602592">Deutsche Bundesbank</a>
+    (<a href="https://www.bundesbank.de/de/startseite/impressum">Impressum</a>). Angaben ohne Gewähr.</p>
   </footer>
 
   <script src="app.js"></script>

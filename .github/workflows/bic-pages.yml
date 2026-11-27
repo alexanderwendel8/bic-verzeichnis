@@ -22,7 +22,8 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    # auch nach einem teilweise fehlgeschlagenen Update veröffentlichen (das andere Land ist dann trotzdem aktuell)
+    if: github.event_name != 'workflow_run' || contains(fromJSON('["success", "failure"]'), github.event.workflow_run.conclusion)
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -37,7 +38,7 @@ jobs:
           mkdir -p _site/changes
           cp web/* _site/
           cp -r data _site/
-          cp changes/* _site/changes/ 2>/dev/null || true
+          cp -r changes/. _site/changes/
           [ -f _site/changes/index.json ] || echo "[]" > _site/changes/index.json
           echo "{\"geprueft\": \"$(TZ=Europe/Vienna date +%Y-%m-%d)\"}" > _site/build.json
           python3 build_api.py _site/api
