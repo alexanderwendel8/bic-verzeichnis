@@ -3,12 +3,13 @@
 
 Aufruf:  python3 build_api.py <zielordner>      (z. B. _site/api)
 
-Ergebnis (Beispiel für Österreich):
+Ergebnis:
   <ziel>/v1/index.json            Übersicht: Länder, Stand, Anzahl
-  <ziel>/v1/AT/index.json         alle Banken kurz (Bankleitzahl, BIC, Name, Status)
-  <ziel>/v1/AT/20111.json         eine Bank mit allen Daten
+  <ziel>/v1/AT/index.json         alle Banken eines Landes kurz (Bankleitzahl, BIC, Name, Status)
+  <ziel>/v1/AT/20111.json         eine österreichische Bank mit allen Daten
                                   (kurze BLZ auch fünfstellig: 100.json und 00100.json)
-  (zusätzlich alles unter <ziel>/v1/at/… in Kleinbuchstaben)
+  <ziel>/v1/DE/10010010.json      eine deutsche Bankleitzahl mit Filialen
+  (zusätzlich alles unter <ziel>/v1/at/… bzw. /de/… in Kleinbuchstaben)
 
 Banken, die aus dem OeNB-Verzeichnis entfernt wurden, bleiben mit
 "status": "entfernt" und ihrem letzten bekannten Stand abrufbar.
@@ -28,6 +29,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 DATA_FILE = BASE_DIR / "data" / "sepa-zv-vz_gesamt.csv"
 CHANGES_DIR = BASE_DIR / "changes"
+DE_DIR = BASE_DIR / "data" / "de"
+DE_CHANGES_DIR = BASE_DIR / "changes" / "de"
 COUNTRY = "AT"
 VERSION = "v1"
 ENCODING = "utf-8-sig"
@@ -108,9 +111,95 @@ def removed_banks(active_keys: set[str]) -> dict[str, dict]:
     return {k: v for k, v in removed.items() if k not in active_keys}
 
 
+# ---------------------------------------------------------------- Deutschland
+
+def de_bank_record(row: dict[str, str], branches: list[dict], meta: dict,
+                   status: str, removed_on: str | None = None) -> dict:
+    successor = clean(row.get("Nachfolge-Bankleitzahl"))
+    return {
+        "land": "DE",
+        "bankleitzahl": clean(row.get("Bankleitzahl")),
+        "bic": clean(row.get("BIC")),
+        "name": clean(row.get("Bezeichnung")),
+        "kurzbezeichnung": clean(row.get("Kurzbezeichnung")),
+        "status": status,
+        "entfernt_am": removed_on,
+        "loeschung_angekuendigt": row.get("Bankleitzahllöschung") == "1",
+        "nachfolge_bankleitzahl": None if successor in (None, "00000000") else successor,
+        "adresse": {"plz": clean(row.get("PLZ")), "ort": clean(row.get("Ort"))},
+        "pan": clean(row.get("PAN")),
+        "pruefziffermethode": clean(row.get("Prüfzifferberechnungsmethode")),
+        "datensatznummer": clean(row.get("Datensatznummer")),
+        "gueltig_ab": meta.get("ValidFrom"),
+        "gueltig_bis": meta.get("ValidTill"),
+        "filialen": [
+            {"name": clean(b.get("Bezeichnung")), "plz": clean(b.get("PLZ")), "ort": clean(b.get("Ort")),
+             "bic": clean(b.get("BIC")), "pan": clean(b.get("PAN"))}
+            for b in branches
+        ],
+    }
+
+
+def de_banks() -> dict[str, dict]:
+    if not (DE_DIR / "bankleitzahlen.csv").exists():
+        return {}
+    meta = json.loads((DE_DIR / "meta.json").read_text(encoding="utf-8"))
+    branches: dict[str, list] = {}
+    for b in read_csv(DE_DIR / "filialen.csv"):
+        branches.setdefault(b["Bankleitzahl"], []).append(b)
+    banks = {}
+    for row in read_csv(DE_DIR / "bankleitzahlen.csv"):
+        rec = de_bank_record(row, branches.get(row["Bankleitzahl"], []), meta, "aktiv")
+        banks[rec["bankleitzahl"]] = rec
+    removed: dict[str, dict] = {}
+    for f in sorted(DE_CHANGES_DIR.glob("????-??-??.csv")):
+        for row in read_csv(f):
+            blz = clean(row.get("Bankleitzahl"))
+            if not blz:
+                continue
+            if row.get("Änderung") == "entfernt":
+                rec = de_bank_record(row, [], {}, "entfernt", f.stem)
+                rec["loeschung_angekuendigt"] = False
+                removed[blz] = rec
+            else:
+                removed.pop(blz, None)
+    banks.update({k: v for k, v in removed.items() if k not in banks})
+    return banks
+
+
+# ---------------------------------------------------------------- Ausgabe
+
 def write_json(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def write_country(root: Path, country: str, banks: dict[str, dict], pad_to: int | None = None) -> None:
+    for code in (country, country.lower()):
+        for blz, rec in banks.items():
+            write_json(root / code / f"{blz}.json", rec)
+            # In der österreichischen IBAN steht die Bankleitzahl fünfstellig (100 -> 00100).
+            if pad_to:
+                padded = blz.zfill(pad_to)
+                if padded != blz and padded not in banks:
+                    write_json(root / code / f"{padded}.json", rec)
+        write_json(root / code / "index.json", {
+            "land": country,
+            "anzahl": len(banks),
+            "banken": [
+                {"bankleitzahl": r["bankleitzahl"], "bic": r["bic"], "name": r["name"], "status": r["status"]}
+                for r in sorted(banks.values(), key=lambda r: r["bankleitzahl"].zfill(10))
+            ],
+        })
+
+
+def summary(banks: dict[str, dict], source: str) -> dict:
+    return {
+        "quelle": source,
+        "anzahl": len(banks),
+        "aktiv": sum(r["status"] == "aktiv" for r in banks.values()),
+        "entfernt": sum(r["status"] == "entfernt" for r in banks.values()),
+    }
 
 
 def main() -> int:
@@ -122,41 +211,30 @@ def main() -> int:
     if root.exists():
         shutil.rmtree(root)
 
-    banks = {}
+    at = {}
     for row in read_csv(DATA_FILE):
         rec = bank_record(row, "aktiv")
         if rec["bankleitzahl"]:
-            banks[rec["bankleitzahl"]] = rec
-    banks.update(removed_banks(set(banks)))
+            at[rec["bankleitzahl"]] = rec
+    at.update(removed_banks(set(at)))
+    write_country(root, "AT", at, pad_to=5)
+    countries = {"AT": summary(at, "Oesterreichische Nationalbank – SEPA-Zahlungsverkehrs-Verzeichnis")}
 
-    for code in (COUNTRY, COUNTRY.lower()):
-        for blz, rec in banks.items():
-            write_json(root / code / f"{blz}.json", rec)
-            # In der IBAN steht die Bankleitzahl immer fünfstellig (100 -> 00100).
-            padded = blz.zfill(5)
-            if padded != blz and padded not in banks:
-                write_json(root / code / f"{padded}.json", rec)
-        write_json(root / code / "index.json", {
-            "land": COUNTRY,
-            "anzahl": len(banks),
-            "banken": [
-                {"bankleitzahl": r["bankleitzahl"], "bic": r["bic"], "name": r["name"], "status": r["status"]}
-                for r in sorted(banks.values(), key=lambda r: r["bankleitzahl"].zfill(10))
-            ],
-        })
+    de = de_banks()
+    if de:
+        write_country(root, "DE", de)
+        countries["DE"] = summary(de, "Deutsche Bundesbank – Bankleitzahlendatei")
+        meta = json.loads((DE_DIR / "meta.json").read_text(encoding="utf-8"))
+        countries["DE"].update({"gueltig_ab": meta.get("ValidFrom"), "gueltig_bis": meta.get("ValidTill")})
 
     write_json(root / "index.json", {
         "version": VERSION,
-        "quelle": "Oesterreichische Nationalbank – SEPA-Zahlungsverkehrs-Verzeichnis",
         "erzeugt_am": dt.date.today().isoformat(),
-        "laender": {COUNTRY: {
-            "anzahl": len(banks),
-            "aktiv": sum(r["status"] == "aktiv" for r in banks.values()),
-            "entfernt": sum(r["status"] == "entfernt" for r in banks.values()),
-        }},
+        "laender": countries,
         "aufruf": f"/api/{VERSION}/{{land}}/{{bankleitzahl}}.json",
     })
-    print(f"API erzeugt: {len(banks)} Banken für {COUNTRY} -> {root}")
+    for c, v in countries.items():
+        print(f"API erzeugt: {v['anzahl']} Bankleitzahlen für {c}")
     return 0
 
 
