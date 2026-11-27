@@ -97,7 +97,8 @@ def main() -> int:
             "aenderungen": f"changes/{cc}/",
             "stand_text": land.stand_text(meta),
             "blz_stellen": land.BLZ_STELLEN,
-            "original": f"data/{cc}/{land.ORIGINAL}" if getattr(land, "ORIGINAL", None) else None,
+            "original": f"data/{cc}/{land.ORIGINAL}" if getattr(land, "ORIGINAL", None)
+            else getattr(land, "ORIGINAL_URL", None),  # zu große, täglich neue Originale: Link zur Quelle
             "zusatz_hinweis": land.zusatz_hinweis(meta) if hasattr(land, "zusatz_hinweis") else "",
             **land.WEB,
         }
