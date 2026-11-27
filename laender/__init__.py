@@ -17,7 +17,7 @@ Optional:
   ORIGINAL_URL                                stattdessen Link zur Originaldatei bei der Quelle
 """
 
-from laender import at, be, ch, cz, de, es, fr, hu, it, li, si, sk
+from laender import at, be, ch, cz, de, es, fr, hu, it, li, pl, si, sk
 
 # Reihenfolge = Reihenfolge der Länderknöpfe auf der Webseite
-LAENDER = {m.CODE: m for m in (at, de, ch, li, it, cz, sk, hu, si, be, es, fr)}
+LAENDER = {m.CODE: m for m in (at, de, ch, li, it, cz, sk, hu, si, be, es, fr, pl)}
