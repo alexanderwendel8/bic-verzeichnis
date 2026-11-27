@@ -29,10 +29,15 @@ QUELLE = {
     "name": "Deutsche Bundesbank – Bankleitzahlendatei",
     "kurz": "Deutscher Bundesbank",
     "url": SEITE,
-    "bedingungen": "https://www.bundesbank.de/de/startseite/impressum",
-    "hinweis": "Quelle: Deutsche Bundesbank, Bankleitzahlendatei (von der Bundesbank unverbindlich bereitgestellt). "
-               "Übernommen werden die Haupteinträge je Bankleitzahl, Zusatzeinträge als Filialen.",
+    # Nutzungsbedingungen Abschnitt 4: speichern, weitergeben, vervielfältigen frei; „Die Informationen dürfen nicht
+    # verändert oder verfälscht werden.“; Angabe „Quelle: Deutsche Bundesbank“
+    "bedingungen": "https://www.bundesbank.de/de/startseite/benutzerhinweise/"
+                   "nutzungsbedingungen-fuer-den-allgemeinen-gebrauch-der-website-763554",
+    "hinweis": "Quelle: Deutsche Bundesbank – Bankleitzahlendatei (von der Bundesbank unverbindlich bereitgestellt). "
+               "Angaben unverändert übernommen, nur umstrukturiert (Haupteinträge je Bankleitzahl, Zusatzeinträge "
+               "als Filialen); die Originaldatei der Bundesbank liegt unverändert bei.",
 }
+ORIGINAL = "original-bundesbank.xml"
 NS = "{urn:BBk:BLZ:xsd:BLZDat}"
 
 BANK_FELDER = {
@@ -71,8 +76,8 @@ def laden(args, alte_meta: dict) -> Stand:
         roh = [p.read_bytes() for p in args.input]
     else:
         roh = [herunterladen(u) for u in _xml_links(herunterladen(SEITE).decode("utf-8", "replace"))]
-    dateien = [_xml_lesen(r) for r in roh]
-    for kopf, e in dateien:
+    dateien = [(*_xml_lesen(r), r) for r in roh]
+    for kopf, e, _ in dateien:
         print(f"[{CODE}] Bundesbank-Datei {kopf['FileRef']}: gültig {kopf['ValidFrom']} bis {kopf['ValidTill']}, {len(e)} Datensätze")
 
     heute = args.today
@@ -81,7 +86,7 @@ def laden(args, alte_meta: dict) -> Stand:
     gueltig = gueltig or [f for f in dateien if d(f[0]["ValidFrom"]) <= heute]  # Lücke: zuletzt gültig gewordene
     if not gueltig:
         raise RuntimeError("keine der Bundesbank-Dateien ist heute gültig")
-    kopf, eintraege = max(gueltig, key=lambda f: f[0]["ValidFrom"])
+    kopf, eintraege, original = max(gueltig, key=lambda f: f[0]["ValidFrom"])
     print(f"[{CODE}] Verwendet: {kopf['FileRef']}")
 
     banken, entfernt, filialen = [], [], []
@@ -100,7 +105,8 @@ def laden(args, alte_meta: dict) -> Stand:
     # Wechsel der Quelldatei -> Änderungen zum Gültigkeitstag, sonst (Korrektur) zum heutigen Tag
     datum = kopf["ValidFrom"] if alte_meta.get("ValidFrom") != kopf["ValidFrom"] else heute.isoformat()
     return Stand(spalten=list(BANK_FELDER.values()), banken=banken, datum=datum,
-                 filialen=filialen, filial_spalten=list(FILIAL_FELDER.values()), meta=meta, entfernt=entfernt)
+                 filialen=filialen, filial_spalten=list(FILIAL_FELDER.values()), meta=meta, entfernt=entfernt,
+                 dateien={ORIGINAL: original})
 
 
 # ---------------------------------------------------------------- API

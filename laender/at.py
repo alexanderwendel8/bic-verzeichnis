@@ -23,7 +23,10 @@ QUELLE = {
     "kurz": "OeNB",
     "url": "https://www.oenb.at/Statistik/Klassifikationen/SEPA-Zahlungsverkehrs-Verzeichnis.html",
     "bedingungen": "https://www.oenb.at/Service/Impressum-und-Haftung.html",
-    "hinweis": "Quelle: Oesterreichische Nationalbank (OeNB), SEPA-Zahlungsverkehrs-Verzeichnis.",
+    # Nutzungsbedingungen Abschnitt 2.2: Daten der OeNB unter CC BY 4.0, auch kommerziell, ohne Zustimmung
+    "hinweis": "Quelle: Oesterreichische Nationalbank (OeNB), SEPA-Zahlungsverkehrs-Verzeichnis, Lizenz CC BY 4.0. "
+               "Geändert: Hinweiszeilen am Dateianfang entfernt, in UTF-8 umgewandelt; Inhalte unverändert.",
+    "lizenz": "https://creativecommons.org/licenses/by/4.0/deed.de",
 }
 # frühere Adresse der Gesamtliste, wird beim Veröffentlichen weiter bedient
 ALTE_CSV_ADRESSE = "data/sepa-zv-vz_gesamt.csv"
