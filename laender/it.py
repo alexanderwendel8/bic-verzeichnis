@@ -50,7 +50,8 @@ QUELLE = {
     "kurz": "Banca d'Italia",
     "url": SEITE,
     # Die drei Listen sind Open Data der Banca d'Italia unter CC BY 4.0 (Katalog dati.gov.it)
-    "bedingungen": "https://creativecommons.org/licenses/by/4.0/deed.de",
+    "bedingungen": "https://www.bancaditalia.it/footer/copyright/index.html",
+    "lizenz": "https://creativecommons.org/licenses/by/4.0/deed.de",
     "hinweis": "Fonte: Banca d'Italia – Albi ed elenchi di vigilanza (Lista intermediari, Lista succursali banche, "
                "Lista fusioni, incorporazioni, cessioni attività e passività), Lizenz CC BY 4.0. Geändert: auf heute "
                "gültige Banken, Zahlungs- und E-Geld-Institute gefiltert, umformatiert, BICs aus der BIC/LEI-Zuordnung "

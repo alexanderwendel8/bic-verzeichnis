@@ -323,8 +323,8 @@ Verzeichnis.
 
 | Land | Quelle | Pflichtangabe (Wortlaut) | Bedingungen |
 |---|---|---|---|
-| AT | Oesterreichische Nationalbank | Quelle: Oesterreichische Nationalbank (OeNB), SEPA-Zahlungsverkehrs-Verzeichnis. | [Impressum und Haftung](https://www.oenb.at/Service/Impressum-und-Haftung.html) |
-| DE | Deutsche Bundesbank | Quelle: Deutsche Bundesbank, Bankleitzahlendatei (von der Bundesbank unverbindlich bereitgestellt). | [Impressum](https://www.bundesbank.de/de/startseite/impressum) |
+| AT | Oesterreichische Nationalbank (CC BY 4.0) | Quelle: Oesterreichische Nationalbank (OeNB), SEPA-Zahlungsverkehrs-Verzeichnis, Lizenz CC BY 4.0. Geändert: Hinweiszeilen entfernt, in UTF-8 umgewandelt. | [Impressum & Haftung, Abschnitt 2.2](https://www.oenb.at/Service/Impressum-und-Haftung.html), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de) |
+| DE | Deutsche Bundesbank | Quelle: Deutsche Bundesbank | [Nutzungsbedingungen, Abschnitt 4](https://www.bundesbank.de/de/startseite/benutzerhinweise/nutzungsbedingungen-fuer-den-allgemeinen-gebrauch-der-website-763554): speichern, weitergeben und vervielfältigen frei, „Die Informationen dürfen nicht verändert oder verfälscht werden.“ |
 | CH, LI | SIX Interbank Clearing | Quelle: SIX Interbank Clearing, Bank Master. BICs sind Eigentum von S.W.I.F.T. SCRL. | [Record Description](https://www.six-group.com/dam/download/banking-services/interbank-clearing/bc-bank-master/bankmaster-v3.0-record-description-en.pdf): „Information in the Download Bank Master may be used freely.“ |
 | IT | Banca d'Italia (Open Data, CC BY 4.0) | Fonte: Banca d'Italia – Albi ed elenchi di vigilanza, Lizenz CC BY 4.0. Geändert: gefiltert, umformatiert, BICs von GLEIF ergänzt. | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de), Datensätze auf [dati.gov.it](https://www.dati.gov.it) |
 | IT (BICs) | SWIFT / GLEIF, BIC/LEI-Zuordnung | SWIFT-Hinweis, siehe unten | [License Agreement](https://www.gleif.org/lei-data/lei-mapping/download-bic-to-lei-relationship-files/2017-12-21_annex-2_bic-to-lei-mapping-table-license-agreement_final.pdf) |
@@ -344,10 +344,12 @@ verwendeten Zuordnungstabelle, auf der Webseite und in `data/it/HINWEIS-BIC.txt`
 Die LEI-Daten von GLEIF (für die Zuordnung über die Steuernummer) stehen unter
 [CC0](https://www.gleif.org/en/meta/lei-data-terms-of-use).
 
-**Unveränderte Originale:** ČNB, NBS und MNB erlauben die Weitergabe nur ohne inhaltliche Änderung. Das Verzeichnis
-ändert die Angaben nicht, formatiert sie aber um (Spaltennamen, „ja“/„nein“ statt „A“ oder „x“, Adressen in Felder
-aufgeteilt). Deshalb liegen die Originaldateien unverändert bei: `data/cz/original-cnb.csv`, `data/sk/original-nbs.csv`,
-`data/hu/original-mnb.xlsx` – auf der Webseite als „Originaldatei“ verlinkt.
+**Unveränderte Originale:** Deutsche Bundesbank, ČNB, NBS und MNB erlauben die Weitergabe nur ohne inhaltliche
+Änderung. Das Verzeichnis ändert die Angaben nicht, formatiert bzw. strukturiert sie aber um (Spaltennamen, „ja“/„nein“
+statt „A“ oder „x“, Adressen in Felder aufgeteilt, in Deutschland Zusatzeinträge als Filialen und ohne
+Änderungskennzeichen). Deshalb liegen die Originaldateien unverändert bei: `data/de/original-bundesbank.xml` (die jeweils
+gültige Bankleitzahlendatei), `data/cz/original-cnb.csv`, `data/sk/original-nbs.csv`, `data/hu/original-mnb.xlsx` – auf
+der Webseite als „Originaldatei“ verlinkt.
 
 **Logos** der Notenbanken werden nicht verwendet; deren Nutzung ist bei allen Quellen genehmigungspflichtig.
 

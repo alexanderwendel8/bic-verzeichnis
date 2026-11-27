@@ -323,6 +323,7 @@ async function selectCountry(cc) {
 function renderAttribution(conf) {
   const q = conf.quelle;
   const links = [`<a href="${esc(q.url)}">Quelle</a>`, `<a href="${esc(q.bedingungen)}">Nutzungsbedingungen</a>`];
+  if (q.lizenz) links.push(`<a href="${esc(q.lizenz)}">Lizenz CC BY 4.0</a>`);
   if (conf.original) links.push(`<a href="${esc(conf.original)}" download>Originaldatei</a>`);
   $("#attribution").innerHTML = `<strong>${esc(conf.name)}:</strong> ${esc(q.hinweis || q.name)} · ${links.join(" · ")}`;
   $("#swift").hidden = !conf.zusatz_hinweis;
