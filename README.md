@@ -101,6 +101,7 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
 |---|---|
 | `/api/v1/{land}/{bankleitzahl}.json` | Alle Daten einer Bank |
 | `/api/v1/{land}/index.json` | Liste aller Banken (Bankleitzahl, BIC, Name, Status) |
+| `/api/v1/{land}/alle.json` | Alle Banken eines Landes mit allen Daten in einer Datei (kompakt) |
 | `/api/v1/index.json` | Übersicht: unterstützte Länder und Anzahl der Banken |
 
 - **Land:** `AT` (Österreich) oder `DE` (Deutschland), Kleinbuchstaben gehen auch.
@@ -138,21 +139,35 @@ if (res.ok) {
 
 ### Aufbau
 
+Jedes Land ist ein eigenes kleines Modul in `laender/`. Alles andere – Vergleich mit dem letzten Stand,
+Änderungsprotokoll, Ablage, API und Webseite – ist für alle Länder derselbe Code.
+
 | Pfad | Inhalt |
 |---|---|
-| `update_bic.py` | Österreich: Download, Vergleich, Ablage (nur Python-Standardbibliothek) |
-| `data/sepa-zv-vz_gesamt.csv` | Österreich: aktueller Stand des OeNB-Verzeichnisses |
-| `changes/JJJJ-MM-TT.csv` | Österreich: Änderungen eines Tages (nur an Tagen mit Änderungen) |
-| `changes/index.json` | Österreich: Liste der Tage mit Änderungen (für die Weboberfläche) |
-| `update_bic_de.py` | Deutschland: Download der Bundesbank-XML, Auswahl der gültigen Datei, Vergleich, Ablage |
-| `data/de/bankleitzahlen.csv` | Deutschland: eine Zeile je Bankleitzahl (Haupteintrag, Merkmal „1“) |
-| `data/de/filialen.csv` | Deutschland: weitere Orte je Bankleitzahl (Zusatzeinträge, Merkmal „2“) |
-| `data/de/meta.json` | Deutschland: verwendete Bundesbank-Datei (`FileRef`, `ValidFrom`, `ValidTill`) |
-| `changes/de/JJJJ-MM-TT.csv`, `changes/de/index.json` | Deutschland: Änderungen, datiert auf den Gültigkeitstag |
-| `web/` | Weboberfläche (statisch, ohne Build-Schritt) |
-| `build_api.py` | Erzeugt beim Veröffentlichen die JSON-Dateien der API (nicht im Repo abgelegt) |
+| `laender/__init__.py` | Liste der Länder und Beschreibung, was ein Land-Modul bereitstellen muss |
+| `laender/at.py`, `laender/de.py` | je Land: Download, Umwandlung, API-Felder, Einstellungen der Webseite |
+| `kern.py` | gemeinsamer Teil: Vergleich, Änderungsprotokoll, Ablage, API-Einträge |
+| `update.py` | lädt alle (oder ausgewählte) Länder und protokolliert Änderungen |
+| `build_site.py` | stellt Webseite, `laender.json` und API für GitHub Pages zusammen (API nicht im Repo abgelegt) |
+| `web/` | Weboberfläche (statisch, ohne Build-Schritt; Länder kommen aus `laender.json`) |
+| `data/<land>/bankleitzahlen.csv` | aktueller Stand, eine Zeile je Bankleitzahl |
+| `data/<land>/filialen.csv` | weitere Orte je Bankleitzahl (derzeit nur Deutschland) |
+| `data/<land>/meta.json` | Angaben zur verwendeten Quelldatei (derzeit nur Deutschland: `FileRef`, `ValidFrom`, `ValidTill`) |
+| `changes/<land>/JJJJ-MM-TT.csv` | Änderungen eines Tages (nur an Tagen mit Änderungen) |
+| `changes/<land>/index.json` | Liste der Tage mit Änderungen |
 
+`<land>` ist der Ländercode in Kleinbuchstaben (`at`, `de`). Die frühere Adresse der österreichischen
+Gesamtliste, `data/sepa-zv-vz_gesamt.csv`, wird auf der Webseite weiter bedient.
 Ältere Gesamtstände sind über die Git-Historie der Dateien in `data/` abrufbar.
+
+### Ein Land hinzufügen
+
+1. `laender/<cc>.py` anlegen – am einfachsten eine Kopie von `at.py` (eine Datei, keine Filialen) oder
+   `de.py` (mit Filialen und Gültigkeitsdatum) – und `laden()`, `api_eintrag()`, `QUELLE` und `WEB` anpassen.
+2. Das Modul in `laender/__init__.py` in `LAENDER` aufnehmen.
+3. `python3 update.py <CC>` legt den Ausgangsstand an, `python3 build_site.py /tmp/site` baut Seite und API.
+
+Webseite, API, Workflow und Änderungsprotokoll übernehmen das neue Land automatisch.
 
 ### Format
 
@@ -185,7 +200,8 @@ Detailansicht mit Link zu GLEIF bzw. Filialliste und einer Übersicht aller Änd
 Über `#land=DE&q=…` in der Adresse lässt sich eine Suche direkt verlinken.
 
 Der Workflow `.github/workflows/bic-pages.yml` stellt Seite und Daten zusammen und veröffentlicht sie
-auf GitHub Pages – nach jedem täglichen Update und bei jeder Änderung an `web/`, `data/` oder `changes/` auf `main`.
+auf GitHub Pages – nach jedem täglichen Update und bei jeder Änderung an Oberfläche, Daten oder Code auf `main`.
+Bauen und Veröffentlichen laufen in getrennten Jobs.
 
 **Einmalig einrichten:** Repository → Settings → Pages → „Build and deployment“ → Source: **GitHub Actions**.
 
@@ -195,7 +211,7 @@ Schlägt eine Veröffentlichung fehl (z. B. „No artifacts named github-pages�
 Lokal ansehen:
 
 ```sh
-mkdir -p /tmp/site && cp web/* /tmp/site/ && cp -r data changes /tmp/site/ && python3 build_api.py /tmp/site/api
+python3 build_site.py /tmp/site
 python3 -m http.server -d /tmp/site 8000   # dann http://localhost:8000
 ```
 
@@ -205,16 +221,16 @@ Automatisch täglich über GitHub Actions (`.github/workflows/bic-update.yml`), 
 „Actions → BIC-Verzeichnis aktualisieren → Run workflow“ oder lokal:
 
 ```sh
-python3 update_bic.py                    # Österreich: herunterladen und vergleichen
-python3 update_bic.py --input x.csv      # Österreich: lokale OeNB-Datei verwenden
-python3 update_bic_de.py                 # Deutschland: herunterladen und vergleichen
-python3 update_bic_de.py --input a.xml b.xml --today 2026-12-07   # Deutschland: lokale Dateien, Stichtag testen
+python3 update.py                        # alle Länder herunterladen und vergleichen
+python3 update.py DE                     # nur Deutschland
+python3 update.py AT --input x.csv       # Österreich mit lokaler OeNB-Datei
+python3 update.py DE --input a.xml b.xml --today 2026-12-07   # Deutschland: lokale Dateien, Stichtag testen
 ```
 
-Liefert eine Quelle deutlich weniger Einträge als bisher (unter 80 %), bricht das jeweilige Skript ab, statt
+Liefert eine Quelle deutlich weniger Einträge als bisher (unter 80 %), wird dieses Land nicht übernommen, statt
 massenhaft Banken als „entfernt“ zu melden. Mit `--force` wird der Stand trotzdem übernommen.
-Beide Länder laufen im Workflow unabhängig voneinander: Fällt eine Quelle aus, wird die andere trotzdem
-übernommen und veröffentlicht, der Workflow wird aber als fehlgeschlagen markiert.
+Die Länder laufen unabhängig voneinander: Fällt eine Quelle aus, werden die anderen trotzdem übernommen und
+veröffentlicht, der Workflow wird aber als fehlgeschlagen markiert.
 
 Daten: © Oesterreichische Nationalbank, es gelten deren [Nutzungsbedingungen](https://www.oenb.at/Service/Impressum-und-Haftung.html);
 © Deutsche Bundesbank, die Bankleitzahlendatei wird dort „unverbindlich“ bereitgestellt, es gelten die

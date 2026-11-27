@@ -1,0 +1,16 @@
+"""Alle unterstützten Länder. Ein neues Land = ein Modul in diesem Ordner + ein Eintrag hier.
+
+Jedes Land-Modul stellt bereit:
+  CODE, NAME            Ländercode (ISO, Großbuchstaben) und Anzeigename
+  BLZ_STELLEN           Stellen der Bankleitzahl in der IBAN, falls kürzere Schreibweisen
+                        zusätzlich abrufbar sein sollen (sonst None)
+  QUELLE                dict mit name, kurz, url, bedingungen
+  laden(args, alte_meta) -> kern.Stand
+  api_eintrag(zeile, filialen, meta, entfernt) -> dict   (mit Platzhaltern status / entfernt_am)
+  WEB                   Einstellungen für die Webseite (Suche, Filter, Detailfelder …)
+  stand_text(meta)      kurzer Text zur verwendeten Quelldatei (oder "")
+"""
+
+from laender import at, de
+
+LAENDER = {m.CODE: m for m in (at, de)}

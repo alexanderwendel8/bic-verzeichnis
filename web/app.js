@@ -1,11 +1,16 @@
 "use strict";
 
+// Die Länder und ihre Einstellungen kommen aus laender.json (erzeugt von build_site.py aus laender/*.py),
+// die Bankdaten aus der API (api/v1/<CC>/alle.json). Für ein neues Land ist hier nichts zu ändern.
+
 const PAGE = 100;
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmtDate = (iso) => { if (!iso) return ""; const [y, m, d] = iso.split("-"); return `${d}.${m}.${y}`; };
 const fmtNum = (n) => n.toLocaleString("de-AT");
 const norm = (s) => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ß/g, "ss");
+const get = (obj, path) => path.split(".").reduce((o, k) => (o == null ? o : o[k]), obj);
+const plzOrt = (a) => [a?.plz, a?.ort].filter(Boolean).join(" ");
 
 // Semikolon-CSV mit Anführungszeichen (wie von Pythons csv-Modul geschrieben).
 function parseCSV(text) {
@@ -36,98 +41,33 @@ async function fetchText(url) {
   return res.text();
 }
 
-/* ---------- Länder ---------- */
-
-const COUNTRIES = {
-  AT: {
-    label: "Österreich",
-    csv: "data/sepa-zv-vz_gesamt.csv",
-    changes: "changes/",
-    col5: "Sektor",
-    filters: true,
-    placeholder: "Bankleitzahl, BIC, Bankname, Ort oder LEI …",
-    hint: "Täglicher Vergleich mit dem Vortag. Banken, die aus dem OeNB-Verzeichnis verschwinden, bleiben hier mit ihrem letzten Stand erhalten.",
-    source: "OeNB-Verzeichnis",
-    async load() {
-      const rows = parseCSV(await fetchText(this.csv));
-      return { banks: rows.map((r) => this.bank(r)), info: null };
-    },
-    bank(r) {
-      return {
-        blz: r.Bankleitzahl, bic: r["SWIFT-Code"], name: r.Bankenname, plz: r.PLZ, ort: r.Ort,
-        col5: r.Sektor, land: r.Bundesland, sektor: r.Sektor, isBranch: r.Kennzeichen === "Filiale",
-        branches: [], raw: r,
-        search: norm([r.Bankleitzahl, r["SWIFT-Code"], r.Bankenname, r.PLZ, r.Ort, r.LEI, r.Bundesland, r.Sektor].join(" ")),
-      };
-    },
-    changeName: (r) => r.Bankenname,
-    changeBic: (r) => r["SWIFT-Code"],
-    detail(b) {
-      const r = b.raw;
-      return [
-        ["Bankleitzahl", r.Bankleitzahl, "copy"], ["BIC", r["SWIFT-Code"], "copy"], ["LEI", r.LEI, "lei"],
-        ["Art", r.Kennzeichen], ["Sektor", r.Sektor], ["Institutsart", r.Institutsart],
-        ["Identnummer", r.Identnummer], ["Firmenbuchnummer", r.Firmenbuchnummer === "nullnull" ? "" : r.Firmenbuchnummer],
-        ["Adresse", [r["Straße"], [r.PLZ, r.Ort].filter(Boolean).join(" ")].filter(Boolean).join(", ")],
-        ["Postadresse", [r["Postadresse / Straße"], r.Postfach && `Postfach ${r.Postfach}`,
-          [r["Postadresse / PLZ"], r["Postadresse / Ort"]].filter(Boolean).join(" ")].filter(Boolean).join(", ")],
-        ["Bundesland", r.Bundesland], ["Telefon", r.Telefon], ["Fax", r.Fax],
-        ["E-Mail", r["E-Mail"], "mail"], ["Homepage", r.Homepage, "url"], ["Gründungsdatum", r["Gründungsdatum"]],
-      ];
-    },
-  },
-  DE: {
-    label: "Deutschland",
-    csv: "data/de/bankleitzahlen.csv",
-    changes: "changes/de/",
-    col5: "Filialen",
-    filters: false,
-    placeholder: "Bankleitzahl, BIC (auch Filial-BIC), Bankname oder Ort …",
-    hint: "Die Bundesbank aktualisiert die Bankleitzahlendatei viermal im Jahr (März, Juni, September, Dezember). Änderungen stehen unter dem Tag, ab dem sie gelten. Gelöschte Bankleitzahlen bleiben mit ihrem letzten Stand erhalten.",
-    source: "Bankleitzahlendatei",
-    async load() {
-      const [banks, branches, meta] = await Promise.all([
-        fetchText(this.csv), fetchText("data/de/filialen.csv"), fetchText("data/de/meta.json"),
-      ]);
-      const byBlz = new Map();
-      for (const f of parseCSV(branches)) {
-        if (!byBlz.has(f.Bankleitzahl)) byBlz.set(f.Bankleitzahl, []);
-        byBlz.get(f.Bankleitzahl).push(f);
-      }
-      return { banks: parseCSV(banks).map((r) => this.bank(r, byBlz.get(r.Bankleitzahl) || [])), info: JSON.parse(meta) };
-    },
-    bank(r, branches = []) {
-      return {
-        blz: r.Bankleitzahl, bic: r.BIC, name: r.Bezeichnung, plz: r.PLZ, ort: r.Ort,
-        col5: branches.length ? fmtNum(branches.length) : "–", isBranch: false,
-        announced: r["Bankleitzahllöschung"] === "1",
-        branches, raw: r,
-        search: norm([r.Bankleitzahl, r.BIC, r.Bezeichnung, r.Kurzbezeichnung, r.PLZ, r.Ort].join(" ")),
-        branchSearch: branches.map((f) => norm([f.BIC, f.Bezeichnung, f.Kurzbezeichnung, f.PLZ, f.Ort].join(" "))),
-      };
-    },
-    changeName: (r) => r.Bezeichnung,
-    changeBic: (r) => r.BIC,
-    detail(b) {
-      const r = b.raw, succ = r["Nachfolge-Bankleitzahl"];
-      const hasSucc = succ && succ !== "00000000";
-      return [
-        ["Bankleitzahl", r.Bankleitzahl, "copy"], ["BIC", r.BIC, "copy"],
-        ["Kurzbezeichnung", r.Kurzbezeichnung],
-        ["Ort", [r.PLZ, r.Ort].filter(Boolean).join(" ")],
-        ["Löschung", b.announced ? "angekündigt – Bankleitzahl wird künftig gelöscht" : ""],
-        ["Nachfolge-BLZ", hasSucc ? succ : "", "blz"],
-        ["Prüfziffermethode", r["Prüfzifferberechnungsmethode"]],
-        ["Kartennummer (PAN)", r.PAN],
-        ["Datensatznummer", r.Datensatznummer],
-      ];
-    },
-  },
-};
-
-const state = { country: "AT", data: {}, filtered: [], shown: 0, days: [], loadedDays: new Map(), build: null };
-const C = () => COUNTRIES[state.country];
+const state = { laender: {}, country: null, data: {}, filtered: [], shown: 0, days: [], loadedDays: new Map(), build: null };
+const C = () => state.laender[state.country];
 const D = () => state.data[state.country];
+
+/* ---------- Daten eines Landes ---------- */
+
+function prepare(conf, records) {
+  const all = new Map();
+  const active = [];
+  for (const r of records) {
+    const b = {
+      rec: r,
+      blz: r.bankleitzahl,
+      search: norm(conf.suche.map((p) => get(r, p)).filter(Boolean).join(" ")),
+      branchSearch: (r.filialen || []).map((f) => norm([f.bic, f.name, f.plz, f.ort].filter(Boolean).join(" "))),
+    };
+    all.set(b.blz, b);
+    if (r.status === "aktiv") active.push(b);
+  }
+  return { all, banks: active };
+}
+
+function col5(conf, r) {
+  const v = get(r, conf.spalte5.feld);
+  if (conf.spalte5.art === "anzahl") return Array.isArray(v) && v.length ? fmtNum(v.length) : "–";
+  return v ?? "";
+}
 
 /* ---------- Suche ---------- */
 
@@ -146,21 +86,21 @@ function matchBank(b, terms) {
   let branchHit = null;
   for (const t of terms) {
     if (b.search.includes(t)) continue;
-    const i = (b.branchSearch || []).findIndex((s) => s.includes(t));
+    const i = b.branchSearch.findIndex((s) => s.includes(t));
     if (i < 0) return null;
-    branchHit ??= b.branches[i];
+    branchHit ??= b.rec.filialen[i];
   }
   return { branchHit };
 }
 
 function applyFilter() {
   if (!D()) return;
-  const q = $("#q").value.trim();
-  const terms = norm(q).split(/\s+/).filter(Boolean);
-  const land = $("#f-land").value, sektor = $("#f-sektor").value;
+  const conf = C();
+  const terms = norm($("#q").value.trim()).split(/\s+/).filter(Boolean);
+  const active = conf.filter.map((f, i) => [f.feld, $(`#f-${i}`)?.value]).filter(([, v]) => v);
   state.filtered = [];
   for (const b of D().banks) {
-    if (C().filters && ((land && b.land !== land) || (sektor && b.sektor !== sektor))) continue;
+    if (active.some(([feld, v]) => get(b.rec, feld) !== v)) continue;
     const m = matchBank(b, terms);
     if (m) state.filtered.push({ b, branchHit: m.branchHit });
   }
@@ -173,54 +113,68 @@ function applyFilter() {
 }
 
 function renderMore() {
+  const conf = C();
   const terms = $("#q").value.trim().split(/\s+/).filter(Boolean);
   const slice = state.filtered.slice(state.shown, state.shown + PAGE);
-  if (!state.filtered.length) {
-    $("#rows").innerHTML = `<tr><td colspan="5" class="empty">Keine Bank gefunden.</td></tr>`;
-  }
-  $("#rows").insertAdjacentHTML("beforeend", slice.map(({ b, branchHit }) => `
+  if (!state.filtered.length) $("#rows").innerHTML = `<tr><td colspan="5" class="empty">Keine Bank gefunden.</td></tr>`;
+  $("#rows").insertAdjacentHTML("beforeend", slice.map(({ b, branchHit: f }) => {
+    const r = b.rec;
+    return `
     <tr data-blz="${esc(b.blz)}" tabindex="0">
-      <td>${highlight(b.blz, terms)}</td>
-      <td>${highlight(b.bic, terms) || "–"}</td>
-      <td>${highlight(b.name, terms)}${b.isBranch ? ' <span class="branch">(Filiale)</span>' : ""}${b.announced ? ' <span class="tag entfernt small">Löschung angekündigt</span>' : ""}
-        ${branchHit ? `<div class="branch">Filiale: ${highlight([branchHit.PLZ, branchHit.Ort].filter(Boolean).join(" "), terms)}${branchHit.BIC ? ` · <span class="mono">${highlight(branchHit.BIC, terms)}</span>` : ""}${branchHit.Bezeichnung !== b.name ? ` · ${highlight(branchHit.Bezeichnung, terms)}` : ""}</div>` : ""}</td>
-      <td class="hide-sm">${highlight([b.plz, b.ort].filter(Boolean).join(" "), terms)}</td>
-      <td class="hide-md">${esc(b.col5)}</td>
-    </tr>`).join(""));
+      <td>${highlight(r.bankleitzahl, terms)}</td>
+      <td>${highlight(r.bic, terms) || "–"}</td>
+      <td>${highlight(r.name, terms)}${r.art === "Filiale" ? ' <span class="branch">(Filiale)</span>' : ""}${r.loeschung_angekuendigt ? ' <span class="tag entfernt small">Löschung angekündigt</span>' : ""}
+        ${f ? `<div class="branch">Filiale: ${highlight([f.plz, f.ort].filter(Boolean).join(" "), terms)}${f.bic ? ` · <span class="mono">${highlight(f.bic, terms)}</span>` : ""}${f.name && f.name !== r.name ? ` · ${highlight(f.name, terms)}` : ""}</div>` : ""}</td>
+      <td class="hide-sm">${highlight(plzOrt(r.adresse), terms)}</td>
+      <td class="hide-md">${esc(col5(conf, r))}</td>
+    </tr>`;
+  }).join(""));
   state.shown += slice.length;
   $("#more").hidden = state.shown >= state.filtered.length;
 }
 
 /* ---------- Detail ---------- */
 
-function fieldHtml(value, kind) {
-  let html = esc(value);
-  if (kind === "mail") return `<a href="mailto:${esc(value)}">${html}</a>`;
-  if (kind === "url") return `<a href="${esc(/^https?:/.test(value) ? value : "https://" + value)}" target="_blank" rel="noopener">${html}</a>`;
-  if (kind === "lei") return `<span class="mono">${html}</span> · <a href="https://search.gleif.org/#/record/${encodeURIComponent(value)}" target="_blank" rel="noopener">GLEIF</a> <button class="copy" data-copy="${esc(value)}">Kopieren</button>`;
-  if (kind === "blz") {
-    const known = D().banks.some((x) => x.blz === value);
-    return `<span class="mono">${html}</span>${known ? ` · <a href="#" data-open-blz="${esc(value)}">anzeigen</a>` : ""}`;
+function fieldHtml(value, kind = "") {
+  if (value == null || value === "" || value === false) return null;
+  if (kind === "adresse") {
+    const text = [value.strasse, value.postfach && `Postfach ${value.postfach}`, plzOrt(value)].filter(Boolean).join(", ");
+    return text ? esc(text) : null;
   }
-  if (kind === "copy") return `<span class="mono">${html}</span> <button class="copy" data-copy="${esc(value)}">Kopieren</button>`;
-  return html;
+  if (kind.startsWith("ja:")) return value === true ? esc(kind.slice(3)) : null;
+  if (typeof value === "object") return null;
+  const html = esc(value);
+  const copy = ` <button class="copy" data-copy="${html}">Kopieren</button>`;
+  switch (kind) {
+    case "kopieren": return `<span class="mono">${html}</span>${copy}`;
+    case "lei": return `<span class="mono">${html}</span> · <a href="https://search.gleif.org/#/record/${encodeURIComponent(value)}" target="_blank" rel="noopener">GLEIF</a>${copy}`;
+    case "email": return `<a href="mailto:${html}">${html}</a>`;
+    case "url": return `<a href="${esc(/^https?:/.test(value) ? value : "https://" + value)}" target="_blank" rel="noopener">${html}</a>`;
+    case "datum": return esc(fmtDate(value));
+    case "blz": return `<span class="mono">${html}</span>${D().all.has(value) ? ` · <a href="#" data-open-blz="${html}">anzeigen</a>` : ""}`;
+    default: return html;
+  }
 }
 
 function showDetail(b, note, hit) {
-  const rows = C().detail(b)
-    .filter(([, v]) => v)
-    .map(([label, v, kind]) => `<dt>${label}</dt><dd>${fieldHtml(v, kind)}</dd>`).join("");
+  const r = b.rec;
+  if (!note && r.status === "entfernt") note = `Am ${fmtDate(r.entfernt_am)} aus dem Verzeichnis entfernt – letzter bekannter Stand.`;
+  const rows = C().details.map(([label, path, kind]) => {
+    const h = fieldHtml(get(r, path), kind);
+    return h ? `<dt>${esc(label)}</dt><dd>${h}</dd>` : "";
+  }).join("");
+  const fil = r.filialen || [];
   let branches = "";
-  if (b.branches.length) {
-    branches = `<details class="branches" ${b.branches.length <= 8 || hit ? "open" : ""}>
-      <summary>${fmtNum(b.branches.length)} weitere ${b.branches.length === 1 ? "Ort" : "Orte"} mit dieser Bankleitzahl</summary>
+  if (fil.length) {
+    branches = `<details class="branches" ${fil.length <= 8 || hit ? "open" : ""}>
+      <summary>${fmtNum(fil.length)} weitere ${fil.length === 1 ? "Ort" : "Orte"} mit dieser Bankleitzahl</summary>
       <p class="hint">Für Zahlungen gilt der BIC oben. Filial-BICs und abweichende Namen dienen nur der Zuordnung.</p>
       <table class="mini"><thead><tr><th>Ort</th><th>BIC</th><th>Name</th></tr></thead><tbody>
-      ${b.branches.map((f) => `<tr${f === hit ? ' class="hit"' : ""}><td>${esc([f.PLZ, f.Ort].filter(Boolean).join(" "))}</td>
-        <td class="mono">${esc(f.BIC) || "–"}</td><td>${f.Bezeichnung !== b.name ? esc(f.Bezeichnung) : ""}</td></tr>`).join("")}
+      ${fil.map((f) => `<tr${f === hit ? ' class="hit"' : ""}><td>${esc(plzOrt(f))}</td>
+        <td class="mono">${esc(f.bic) || "–"}</td><td>${f.name !== r.name ? esc(f.name) : ""}</td></tr>`).join("")}
       </tbody></table></details>`;
   }
-  $("#detail-body").innerHTML = `<h2>${esc(b.name)}</h2>${note ? `<p class="hint">${note}</p>` : ""}<dl class="kv">${rows}</dl>${branches}`;
+  $("#detail-body").innerHTML = `<h2>${esc(r.name)}</h2>${note ? `<p class="hint">${esc(note)}</p>` : ""}<dl class="kv">${rows}</dl>${branches}`;
   if (!$("#detail").open) $("#detail").showModal();
   $("#detail tr.hit")?.scrollIntoView({ block: "nearest" });
 }
@@ -229,7 +183,7 @@ function showDetail(b, note, hit) {
 
 function renderDays() {
   const box = $("#days");
-  $("#changes-hint").textContent = C().hint;
+  $("#changes-hint").textContent = C().hinweis_aenderungen;
   if (!state.days.length) {
     box.innerHTML = `<p class="empty">Noch keine Änderungen seit Beginn der Aufzeichnung.</p>`;
     return;
@@ -254,29 +208,23 @@ async function loadDay(el) {
   if (state.loadedDays.has(key)) return;
   state.loadedDays.set(key, null);
   const body = el.querySelector(".day-body");
-  const url = `${conf.changes}${day}.csv`;
+  const url = `${conf.aenderungen}${day}.csv`;
   try {
     const rows = parseCSV(await fetchText(url));
     state.loadedDays.set(key, rows);
     body.innerHTML = `<p class="mono" style="margin:0;padding:6px 14px 0;text-align:right"><a href="${url}" download>CSV</a></p>` +
-      rows.map((r, i) => {
+      rows.map((r) => {
         const fields = r["Geänderte Felder"] ? r["Geänderte Felder"].split(" | ").map((f) => {
           const m = f.match(/^(.*?): (.*) -> (.*)$/);
           return m ? `<div>${esc(m[1])}: <del>${esc(m[2]) || "(leer)"}</del> → <ins>${esc(m[3]) || "(leer)"}</ins></div>` : `<div>${esc(f)}</div>`;
         }).join("") : "";
+        const known = D().all.has(r.Bankleitzahl);
+        const label = `<span class="mono">${esc(r.Bankleitzahl)}</span> · ${esc(r[conf.aenderung_name])}`;
         return `<div class="change"><span><span class="tag ${esc(r["Änderung"])}">${esc(r["Änderung"])}</span></span>
-          <span><a href="#" data-day-row="${i}"><span class="mono">${esc(r.Bankleitzahl)}</span> · ${esc(conf.changeName(r))}</a>
-          <span class="mono">${esc(conf.changeBic(r))}</span></span>
+          <span>${known ? `<a href="#" data-open-blz="${esc(r.Bankleitzahl)}">${label}</a>` : label}
+          <span class="mono">${esc(r[conf.aenderung_bic])}</span></span>
           ${fields ? `<div class="fields">${fields}</div>` : ""}</div>`;
       }).join("");
-    body.querySelectorAll("[data-day-row]").forEach((a) => a.addEventListener("click", (e) => {
-      e.preventDefault();
-      const r = rows[+a.dataset.dayRow];
-      const current = r["Änderung"] !== "entfernt" && D().banks.find((x) => x.blz === r.Bankleitzahl);
-      const note = r["Änderung"] === "entfernt"
-        ? `Am ${fmtDate(day)} aus dem ${conf.source} entfernt – letzter bekannter Stand.` : "";
-      showDetail(current || conf.bank(r), note);
-    }));
   } catch (err) {
     state.loadedDays.delete(key);
     body.innerHTML = `<p class="loading">Fehler beim Laden: ${esc(err.message)}</p>`;
@@ -287,8 +235,9 @@ async function loadDay(el) {
 
 function updateHash() {
   const q = $("#q").value.trim();
+  const first = Object.keys(state.laender)[0];
   const parts = [];
-  if (state.country !== "AT") parts.push(`land=${state.country}`);
+  if (state.country !== first) parts.push(`land=${state.country}`);
   if (q) parts.push(`q=${encodeURIComponent(q)}`);
   try { history.replaceState(null, "", parts.length ? `#${parts.join("&")}` : location.pathname); } catch {}
 }
@@ -296,39 +245,42 @@ function updateHash() {
 function renderMeta() {
   const d = D();
   if (!d) return;
-  let meta = `${fmtNum(d.banks.length)} ${state.country === "DE" ? "Bankleitzahlen" : "Einträge"}`;
-  if (d.info?.ValidFrom) meta += ` · Bundesbank-Datei gültig ${fmtDate(d.info.ValidFrom)}–${fmtDate(d.info.ValidTill)}`;
-  if (state.build?.geprueft) meta += ` · geprüft am ${fmtDate(state.build.geprueft)}`;
-  if (state.days.length) meta += ` · letzte Änderung ${fmtDate(state.days[0].datum)}`;
-  $("#meta").textContent = meta;
+  const parts = [`${fmtNum(d.banks.length)} Bankleitzahlen`];
+  if (C().stand_text) parts.push(C().stand_text);
+  if (state.build?.geprueft) parts.push(`geprüft am ${fmtDate(state.build.geprueft)}`);
+  if (state.days.length) parts.push(`letzte Änderung ${fmtDate(state.days[0].datum)}`);
+  $("#meta").textContent = parts.join(" · ");
+}
+
+function renderFilters(conf) {
+  $("#filters-extra").innerHTML = conf.filter.map((f, i) => `
+    <label><span class="sr">${esc(f.alle)}</span><select id="f-${i}"><option value="">${esc(f.alle)}</option>
+    ${[...new Set(D().banks.map((b) => get(b.rec, f.feld)).filter(Boolean))].sort((a, b) => a.localeCompare(b, "de"))
+      .map((v) => `<option>${esc(v)}</option>`).join("")}</select></label>`).join("");
+  conf.filter.forEach((_, i) => $(`#f-${i}`).addEventListener("change", applyFilter));
 }
 
 async function selectCountry(cc) {
-  if (!COUNTRIES[cc]) cc = "AT";
+  if (!state.laender[cc]) cc = Object.keys(state.laender)[0];
   state.country = cc;
   const conf = C();
   document.querySelectorAll("[data-country]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.country === cc)));
-  $("#source").textContent = cc === "DE" ? "Deutscher Bundesbank" : "OeNB";
-  $("#q").placeholder = conf.placeholder;
-  $("#col5").textContent = conf.col5;
-  document.querySelectorAll(".f-at").forEach((el) => (el.hidden = !conf.filters));
+  $("#source").textContent = conf.quelle.kurz;
+  $("#q").placeholder = conf.suche_platzhalter;
+  $("#col5").textContent = conf.spalte5.titel;
   document.querySelectorAll("a.dl").forEach((a) => (a.href = conf.csv));
+  $("#filters-extra").innerHTML = "";
   $("#meta").textContent = "lädt …";
   $("#rows").innerHTML = `<tr><td colspan="5" class="empty">lädt …</td></tr>`;
   $("#result-count").textContent = "";
 
   if (!state.data[cc]) {
     try {
-      const [loaded, days] = await Promise.all([conf.load(), fetchText(`${conf.changes}index.json`).then(JSON.parse).catch(() => [])]);
-      loaded.banks.sort((a, b) => a.blz.padStart(10, "0").localeCompare(b.blz.padStart(10, "0")));
-      loaded.days = days;
-      state.data[cc] = loaded;
-      if (conf.filters) {
-        const fill = (sel, key) => [...new Set(loaded.banks.map((b) => b[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b, "de"))
-          .forEach((v) => sel.insertAdjacentHTML("beforeend", `<option>${esc(v)}</option>`));
-        fill($("#f-land"), "land");
-        fill($("#f-sektor"), "sektor");
-      }
+      const [records, days] = await Promise.all([
+        fetchText(conf.daten).then(JSON.parse),
+        fetchText(`${conf.aenderungen}index.json`).then(JSON.parse).catch(() => []),
+      ]);
+      state.data[cc] = { ...prepare(conf, records), days };
     } catch (err) {
       if (state.country !== cc) return;
       $("#rows").innerHTML = `<tr><td colspan="5" class="empty">Daten konnten nicht geladen werden (${esc(err.message)}).</td></tr>`;
@@ -339,6 +291,7 @@ async function selectCountry(cc) {
   if (state.country !== cc) return; // inzwischen umgeschaltet
   state.days = D().days;
   $("#changes-badge").textContent = state.days.length || "";
+  renderFilters(conf);
   renderMeta();
   applyFilter();
   renderDays();
@@ -353,31 +306,50 @@ function selectTab(name) {
   }
 }
 
+function openBlz(blz) {
+  const b = D()?.all.get(blz);
+  if (b) showDetail(b);
+}
+
 async function init() {
   $("#tab-suche").addEventListener("click", () => selectTab("suche"));
   $("#tab-aenderungen").addEventListener("click", () => selectTab("aenderungen"));
-  document.querySelectorAll("[data-country]").forEach((b) => b.addEventListener("click", () => {
-    if (b.dataset.country !== state.country) selectCountry(b.dataset.country);
-  }));
   $("#q").addEventListener("input", applyFilter);
-  $("#f-land").addEventListener("change", applyFilter);
-  $("#f-sektor").addEventListener("change", applyFilter);
   $("#more-btn").addEventListener("click", () => renderMore());
   const openRow = (tr) => { const hit = state.filtered.find((x) => x.b.blz === tr.dataset.blz); if (hit) showDetail(hit.b, "", hit.branchHit); };
   $("#rows").addEventListener("click", (e) => { const tr = e.target.closest("tr[data-blz]"); if (tr) openRow(tr); });
   $("#rows").addEventListener("keydown", (e) => { const tr = e.target.closest("tr[data-blz]"); if (tr && e.key === "Enter") openRow(tr); });
+  $("#days").addEventListener("click", (e) => {
+    const a = e.target.closest("[data-open-blz]");
+    if (a) { e.preventDefault(); openBlz(a.dataset.openBlz); }
+  });
   $("#detail").addEventListener("click", (e) => {
     if (e.target === $("#detail")) $("#detail").close();
     const btn = e.target.closest("[data-copy]");
     if (btn) navigator.clipboard?.writeText(btn.dataset.copy).then(() => { btn.textContent = "Kopiert"; setTimeout(() => (btn.textContent = "Kopieren"), 1200); });
     const link = e.target.closest("[data-open-blz]");
-    if (link) { e.preventDefault(); const b = D().banks.find((x) => x.blz === link.dataset.openBlz); if (b) showDetail(b); }
+    if (link) { e.preventDefault(); openBlz(link.dataset.openBlz); }
   });
+
+  try {
+    state.laender = JSON.parse(await fetchText("laender.json"));
+  } catch (err) {
+    $("#meta").textContent = "Daten nicht verfügbar";
+    $("#rows").innerHTML = `<tr><td colspan="5" class="empty">Länderliste konnte nicht geladen werden (${esc(err.message)}).</td></tr>`;
+    return;
+  }
+  $("#countries").innerHTML = Object.entries(state.laender).map(([cc, l]) =>
+    `<button type="button" data-country="${esc(cc)}" aria-pressed="false"><span class="cc">${esc(cc)}</span> ${esc(l.name)}</button>`).join("");
+  document.querySelectorAll("[data-country]").forEach((b) => b.addEventListener("click", () => {
+    if (b.dataset.country !== state.country) selectCountry(b.dataset.country);
+  }));
+  $("#sources").innerHTML = Object.values(state.laender).map((l) =>
+    `<a href="${esc(l.quelle.url)}">${esc(l.quelle.name.split(" – ")[0])}</a> (<a href="${esc(l.quelle.bedingungen)}">Bedingungen</a>)`).join(", ");
 
   const params = new URLSearchParams(location.hash.slice(1));
   if (params.get("q")) $("#q").value = params.get("q");
   fetchText("build.json").then((t) => { state.build = JSON.parse(t); renderMeta(); }).catch(() => {});
-  await selectCountry((params.get("land") || "AT").toUpperCase());
+  await selectCountry((params.get("land") || "").toUpperCase());
 }
 
 init();
