@@ -23,16 +23,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Beide Länder laufen unabhängig: fällt eine Quelle aus, wird die andere trotzdem übernommen.
-      - name: OeNB-Verzeichnis laden und vergleichen (AT)
-        id: at
+      # Alle Länder (laender/*.py) laufen unabhängig: fällt eine Quelle aus, werden die anderen trotzdem übernommen.
+      - name: Bankverzeichnisse laden und vergleichen
+        id: update
         continue-on-error: true
-        run: python update_bic.py
-
-      - name: Bundesbank-Bankleitzahlendatei laden und vergleichen (DE)
-        id: de
-        continue-on-error: true
-        run: python update_bic_de.py
+        run: python update.py
 
       - name: Änderungen committen
         run: |
@@ -47,7 +42,7 @@ jobs:
           fi
 
       - name: Fehlgeschlagene Quelle melden
-        if: steps.at.outcome == 'failure' || steps.de.outcome == 'failure'
+        if: steps.update.outcome == 'failure'
         run: |
-          echo "::error::Aktualisierung fehlgeschlagen – AT: ${{ steps.at.outcome }}, DE: ${{ steps.de.outcome }}"
+          echo "::error::Mindestens ein Land konnte nicht aktualisiert werden – Details im Schritt „Bankverzeichnisse laden und vergleichen“."
           exit 1

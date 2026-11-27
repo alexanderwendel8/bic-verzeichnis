@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BIC-Verzeichnis Österreich & Deutschland</title>
-  <meta name="description" content="Bankleitzahlen und BIC österreichischer und deutscher Banken – Daten der Oesterreichischen Nationalbank und der Deutschen Bundesbank, täglich geprüft.">
+  <title>BIC-Verzeichnis</title>
+  <meta name="description" content="Bankleitzahlen und BIC der Banken in Österreich, Deutschland, der Schweiz, Liechtenstein, Tschechien und der Slowakei – aus den offiziellen Verzeichnissen, täglich geprüft.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c8102e'/%3E%3Cpath d='M6 13h20v-2L16 5 6 11zM8 15h3v8H8zm6.5 0h3v8h-3zM21 15h3v8h-3zM6 25h20v2H6z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,12 +13,9 @@
     <div class="wrap">
       <div class="title-row">
         <h1>BIC-Verzeichnis</h1>
-        <div class="country" role="group" aria-label="Land">
-          <button type="button" data-country="AT" aria-pressed="true"><span class="cc">AT</span> Österreich</button>
-          <button type="button" data-country="DE" aria-pressed="false"><span class="cc">DE</span> Deutschland</button>
-        </div>
+        <div class="country" role="group" aria-label="Land" id="countries"></div>
       </div>
-      <p class="sub">Bankleitzahl und BIC aller Zahlungsdienstleister laut <span id="source">OeNB</span> · <span id="meta">lädt …</span></p>
+      <p class="sub">Bankleitzahl und BIC aller Zahlungsdienstleister laut <span id="source"></span> · <span id="meta">lädt …</span></p>
       <nav class="tabs" role="tablist">
         <button role="tab" id="tab-suche" aria-selected="true" aria-controls="view-suche">Suche</button>
         <button role="tab" id="tab-aenderungen" aria-selected="false" aria-controls="view-aenderungen">Änderungen <span id="changes-badge" class="count"></span></button>
@@ -34,10 +31,9 @@
       <div class="filters">
         <label class="search">
           <span class="sr">Suche</span>
-          <input id="q" type="search" placeholder="Bankleitzahl, BIC, Bankname, Ort oder LEI …" autocomplete="off" autofocus>
+          <input id="q" type="search" placeholder="Bankleitzahl, BIC, Bankname oder Ort …" autocomplete="off" autofocus>
         </label>
-        <label class="f-at"><span class="sr">Bundesland</span><select id="f-land"><option value="">Alle Bundesländer</option></select></label>
-        <label class="f-at"><span class="sr">Sektor</span><select id="f-sektor"><option value="">Alle Sektoren</option></select></label>
+        <span id="filters-extra" class="filters-extra"></span>
       </div>
       <p class="result-info"><span id="result-count"></span></p>
       <div class="table-wrap">
@@ -69,10 +65,7 @@
       · <a class="dl" href="data/sepa-zv-vz_gesamt.csv" download>CSV herunterladen</a>
       · <a href="https://github.com/alexanderwendel8/bic-verzeichnis#api">API</a>
     </p>
-    <p>Daten: © <a href="https://www.oenb.at/Statistik/Klassifikationen/SEPA-Zahlungsverkehrs-Verzeichnis.html">Oesterreichische Nationalbank</a>
-    (<a href="https://www.oenb.at/Service/Impressum-und-Haftung.html">Nutzungsbedingungen</a>) und
-    <a href="https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/serviceangebot/bankleitzahlen/download-bankleitzahlen-602592">Deutsche Bundesbank</a>
-    (<a href="https://www.bundesbank.de/de/startseite/impressum">Impressum</a>). Angaben ohne Gewähr.</p>
+    <p>Daten: © <span id="sources"></span>. Angaben ohne Gewähr.</p>
   </footer>
 
   <script src="app.js"></script>

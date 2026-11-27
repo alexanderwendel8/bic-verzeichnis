@@ -1,0 +1,21 @@
+﻿Bankleitzahl;BIC;Bankenname;Art;Hauptsitz-IID;QR-IID gehört zu;Straße;Hausnummer;PLZ;Ort;Sitzland;SIC-IID;SIC;euroSIC;SIC-Kundenzahlungen CHF;Instant Payments CHF;LSV+/BDD CHF;LSV+/BDD EUR
+8800;LILALI2XXXX;Liechtensteinische Landesbank Aktiengesellschaft;Hauptsitz;8800;;Städtle;44;9490;Vaduz;LI;088008;ja;ja;ja;ja;ja;ja
+8802;NBANLI22XXX;Neue Bank AG;Hauptsitz;8802;;Marktgass;20;9490;Vaduz;LI;088029;ja;ja;ja;ja;ja;ja
+8803;HYIBLI22XXX;BENDURA BANK AG;Hauptsitz;8803;;Schaaner Strasse;27;9487;Gamprin-Bendern;LI;088037;ja;ja;ja;ja;ja;ja
+8805;VPBVLI2XXXX;VP Bank AG;Hauptsitz;8805;;Aeulestrasse;6;9490;Vaduz;LI;088050;ja;ja;ja;ja;ja;ja
+8806;SERBLI22XXX;Kaiser Partner Privatbank AG;Hauptsitz;8806;;Herrengasse;23;9490;Vaduz;LI;088061;ja;ja;ja;ja;ja;nein
+8810;BLFLLI2XXXX;LGT Bank AG;Hauptsitz;8810;;Postfach 85;;9490;Vaduz;LI;088100;ja;ja;ja;ja;ja;ja
+8811;BFRILI22XXX;Bank Frick AG;Hauptsitz;8811;;Landstrasse;14;9496;Balzers;LI;088111;ja;ja;ja;ja;ja;ja
+8812;VOAGLI22XXX;SIGMA Bank AG;Hauptsitz;8812;;Feldkircher Strasse;2;9494;Schaan;LI;088126;ja;ja;ja;nein;ja;ja
+30111;AMNSLI22XXX;Amnis Europe AG;QR-IID;30111;83047;Gewerbeweg;15;9490;Vaduz;LI;301115;ja;nein;ja;ja;nein;nein
+30172;LILALI2XXXX;Liechtensteinische Landesbank Aktiengesellschaft;QR-IID;30172;8800;Städtle;44;9490;Vaduz;LI;301726;ja;ja;ja;ja;nein;nein
+30173;NBANLI22XXX;Neue Bank AG;QR-IID;30173;8802;Marktgass;20;9490;Vaduz;LI;301734;ja;ja;ja;ja;nein;nein
+30174;VPBVLI2XXXX;VP Bank AG;QR-IID;30174;8805;Aeulestrasse;6;9490;Vaduz;LI;301742;ja;ja;ja;ja;nein;nein
+30175;BLFLLI2XXXX;LGT Bank AG;QR-IID;30175;8810;Postfach 85;;9490;Vaduz;LI;301758;ja;ja;ja;ja;nein;nein
+30288;HYIBLI22XXX;BENDURA BANK AG;QR-IID;30288;8803;Schaaner Strasse;27;9487;Gamprin-Bendern;LI;302882;ja;ja;ja;ja;nein;nein
+30289;SERBLI22XXX;Kaiser Partner Privatbank AG;QR-IID;30289;8806;Herrengasse;23;9490;Vaduz;LI;302898;ja;nein;ja;ja;nein;nein
+30290;BFRILI22XXX;Bank Frick AG;QR-IID;30290;8811;Landstrasse;14;9496;Balzers;LI;302907;ja;ja;ja;ja;nein;nein
+30291;VOAGLI22XXX;SIGMA Bank AG;QR-IID;30291;8812;Feldkircher Strasse;2;9494;Schaan;LI;302915;ja;ja;ja;nein;nein;nein
+83047;AMNSLI22XXX;Amnis Europe AG;Hauptsitz;83047;;Gewerbeweg;15;9490;Vaduz;LI;830475;ja;nein;ja;ja;nein;nein
+83049;BCIRLI22XXX;Banking Circle (Liechtenstein) AG;Hauptsitz;83049;;Industriering;40;9491;RUGGELL;LI;830491;ja;nein;ja;ja;nein;nein
+83061;CLNCLI22XXX;Celsion Bank AG;Hauptsitz;83061;;Austrasse;77;9490;Vaduz;LI;830616;ja;nein;ja;nein;nein;nein

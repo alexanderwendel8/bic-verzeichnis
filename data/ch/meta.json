@@ -1,0 +1,109 @@
+{
+ "Quelle": "https://api.six-group.com/api/epcd/bankmaster/v3/bankmaster.json",
+ "Fusionen": [
+  {
+   "Bankleitzahl": "4835",
+   "Nachfolge-Bankleitzahl": "230"
+  },
+  {
+   "Bankleitzahl": "4866",
+   "Nachfolge-Bankleitzahl": "230"
+  },
+  {
+   "Bankleitzahl": "5881",
+   "Nachfolge-Bankleitzahl": "230"
+  },
+  {
+   "Bankleitzahl": "8246",
+   "Nachfolge-Bankleitzahl": "8721"
+  },
+  {
+   "Bankleitzahl": "8582",
+   "Nachfolge-Bankleitzahl": "8657"
+  },
+  {
+   "Bankleitzahl": "8737",
+   "Nachfolge-Bankleitzahl": "8741"
+  },
+  {
+   "Bankleitzahl": "8792",
+   "Nachfolge-Bankleitzahl": "8686"
+  },
+  {
+   "Bankleitzahl": "30187",
+   "Nachfolge-Bankleitzahl": "30261"
+  },
+  {
+   "Bankleitzahl": "30236",
+   "Nachfolge-Bankleitzahl": "30248"
+  },
+  {
+   "Bankleitzahl": "31000",
+   "Nachfolge-Bankleitzahl": "30005"
+  },
+  {
+   "Bankleitzahl": "31866",
+   "Nachfolge-Bankleitzahl": "30005"
+  },
+  {
+   "Bankleitzahl": "31881",
+   "Nachfolge-Bankleitzahl": "30005"
+  },
+  {
+   "Bankleitzahl": "80215",
+   "Nachfolge-Bankleitzahl": "80187"
+  },
+  {
+   "Bankleitzahl": "80366",
+   "Nachfolge-Bankleitzahl": "80283"
+  },
+  {
+   "Bankleitzahl": "80447",
+   "Nachfolge-Bankleitzahl": "80430"
+  },
+  {
+   "Bankleitzahl": "80627",
+   "Nachfolge-Bankleitzahl": "80626"
+  },
+  {
+   "Bankleitzahl": "80673",
+   "Nachfolge-Bankleitzahl": "80719"
+  },
+  {
+   "Bankleitzahl": "80749",
+   "Nachfolge-Bankleitzahl": "80719"
+  },
+  {
+   "Bankleitzahl": "80811",
+   "Nachfolge-Bankleitzahl": "80867"
+  },
+  {
+   "Bankleitzahl": "80833",
+   "Nachfolge-Bankleitzahl": "80862"
+  },
+  {
+   "Bankleitzahl": "80882",
+   "Nachfolge-Bankleitzahl": "80875"
+  },
+  {
+   "Bankleitzahl": "80888",
+   "Nachfolge-Bankleitzahl": "80875"
+  },
+  {
+   "Bankleitzahl": "80901",
+   "Nachfolge-Bankleitzahl": "80905"
+  },
+  {
+   "Bankleitzahl": "80930",
+   "Nachfolge-Bankleitzahl": "80962"
+  },
+  {
+   "Bankleitzahl": "81289",
+   "Nachfolge-Bankleitzahl": "81291"
+  },
+  {
+   "Bankleitzahl": "81460",
+   "Nachfolge-Bankleitzahl": "81456"
+  }
+ ]
+}
