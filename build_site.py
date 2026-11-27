@@ -91,7 +91,8 @@ def main() -> int:
             uebersicht[code].update({"gueltig_ab": meta["ValidFrom"], "gueltig_bis": meta.get("ValidTill")})
         web_laender[code] = {
             "name": land.NAME,
-            "quelle": land.QUELLE,
+            # Hinweis mit Stand der Daten, wo die Quelle das verlangt (z. B. Frankreich)
+            "quelle": {**land.QUELLE, "hinweis": land.quellen_hinweis(meta)} if hasattr(land, "quellen_hinweis") else land.QUELLE,
             "daten": f"api/{VERSION}/{code}/alle.json",
             "csv": f"data/{cc}/bankleitzahlen.csv",
             "aenderungen": f"changes/{cc}/",
