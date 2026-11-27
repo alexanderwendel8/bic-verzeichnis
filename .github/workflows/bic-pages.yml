@@ -8,7 +8,7 @@ on:
   # bei Änderungen an Oberfläche oder Daten auf main
   push:
     branches: [main]
-    paths: ["web/**", "data/**", "changes/**", ".github/workflows/bic-pages.yml"]
+    paths: ["web/**", "data/**", "changes/**", "build_api.py", ".github/workflows/bic-pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -40,6 +40,7 @@ jobs:
           cp changes/* _site/changes/ 2>/dev/null || true
           [ -f _site/changes/index.json ] || echo "[]" > _site/changes/index.json
           echo "{\"geprueft\": \"$(TZ=Europe/Vienna date +%Y-%m-%d)\"}" > _site/build.json
+          python3 build_api.py _site/api
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5
