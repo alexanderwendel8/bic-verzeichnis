@@ -1,7 +1,7 @@
 """Ungarn – Rövid irányítókód-tábla (Short Routing Table) der Ungarischen Nationalbank (MNB).
 
 - Angeboten wird nur eine Excel-Datei (.xlsx), kein XML, JSON oder CSV. Eine .xlsx besteht intern
-  aus XML; sie wird hier ohne Zusatzbibliothek mit zipfile und ElementTree gelesen.
+  aus XML; sie wird ohne Zusatzbibliothek gelesen (laender/_xlsx.py).
 - Jede Zeile ist ein achtstelliger Filialcode (pénzforgalmi irányítókód): 3 Stellen Bankcode,
   4 Stellen Filiale, 1 Prüfziffer. Genau diese 8 Stellen stehen in der IBAN an den Stellen 5–12,
   daher dienen sie hier als Bankleitzahl.
@@ -13,12 +13,10 @@
 from __future__ import annotations
 
 import datetime as dt
-import io
 import re
-import zipfile
-import xml.etree.ElementTree as ET
 
 from kern import SCHLUESSEL, Stand, herunterladen, leer
+from laender._xlsx import xlsx_lesen
 
 CODE = "HU"
 NAME = "Ungarn"
@@ -39,41 +37,9 @@ SPALTEN = ["Bankleitzahl", "BIC", "Bankenname", "Adresse", "Bankcode", "VIBER se
 _KOPF = {"Branch office code": "Bankleitzahl", "BIC code": "BIC", "Name of the branch office": "Bankenname",
          "Address of the branch office": "Adresse", "Branch office may send VIBER items": "VIBER senden",
          "Branch office may receive VIBER items": "VIBER empfangen"}
-_NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
-
-
-def _xlsx_lesen(roh: bytes) -> tuple[str, list[list[str]]]:
-    """-> (Name des ersten Blatts, Zeilen als Listen von Zellwerten)."""
-    z = zipfile.ZipFile(io.BytesIO(roh))
-    texte = []
-    if "xl/sharedStrings.xml" in z.namelist():
-        for si in ET.fromstring(z.read("xl/sharedStrings.xml")).findall(_NS + "si"):
-            texte.append("".join(t.text or "" for t in si.iter(_NS + "t")))
-    blatt = ET.fromstring(z.read("xl/workbook.xml")).find(_NS + "sheets")[0].get("name", "")
-    zeilen = []
-    for r in ET.fromstring(z.read("xl/worksheets/sheet1.xml")).iter(_NS + "row"):
-        zeile: dict[int, str] = {}
-        for c in r.findall(_NS + "c"):
-            spalte = re.match(r"[A-Z]+", c.get("r", "A")).group()
-            idx = 0
-            for ch in spalte:
-                idx = idx * 26 + ord(ch) - 64
-            typ, v = c.get("t"), c.find(_NS + "v")
-            if typ == "inlineStr":
-                wert = "".join(t.text or "" for t in c.iter(_NS + "t"))
-            elif v is None:
-                wert = ""
-            else:
-                wert = texte[int(v.text)] if typ == "s" else (v.text or "")
-            zeile[idx - 1] = wert.strip()
-        if zeile:
-            zeilen.append([zeile.get(i, "") for i in range(max(zeile) + 1)])
-    return blatt, zeilen
-
-
 def laden(args, alte_meta: dict) -> Stand:
     roh = args.input[0].read_bytes() if args.input else herunterladen(URL)
-    blatt, zeilen = _xlsx_lesen(roh)
+    blatt, zeilen = xlsx_lesen(roh)
     if not zeilen:
         raise RuntimeError("MNB-Tabelle ist leer")
     kopf = zeilen[0]
