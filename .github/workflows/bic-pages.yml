@@ -16,18 +16,19 @@ permissions:
   pages: write
   id-token: write
 
+# Eine laufende Veröffentlichung nicht abbrechen (wie in GitHubs Vorlage für Pages).
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
+# Bauen und Veröffentlichen sind getrennte Jobs: deploy-pages findet das hochgeladene Paket
+# sonst gelegentlich noch nicht („No artifacts named github-pages“), wenn es im selben Job
+# unmittelbar nach dem Hochladen danach sucht.
 jobs:
-  deploy:
+  build:
     # auch nach einem teilweise fehlgeschlagenen Update veröffentlichen (das andere Land ist dann trotzdem aktuell)
     if: github.event_name != 'workflow_run' || contains(fromJSON('["success", "failure"]'), github.event.workflow_run.conclusion)
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,5 +49,13 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
