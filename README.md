@@ -25,7 +25,70 @@ aktuell.
 - **Herunterladen:** Über „CSV herunterladen“ bekommst du die ganze Liste als Datei. Sie öffnet sich
   direkt in Excel.
 
+- **Per API abfragen:** Für Programme gibt es eine einfache Schnittstelle, siehe [API](#api).
+
 Ein Projekt von Alexander Wendel. Die Daten stammen von der OeNB und werden ohne Gewähr weitergegeben.
+
+## API
+
+Die Daten jeder Bank lassen sich als JSON abrufen. Übergeben werden **Land** und **Bankleitzahl**:
+
+```
+https://alexanderwendel8.github.io/bic-verzeichnis/api/v1/{land}/{bankleitzahl}.json
+```
+
+Beispiel: [`/api/v1/AT/20111.json`](https://alexanderwendel8.github.io/bic-verzeichnis/api/v1/AT/20111.json)
+
+```json
+{
+  "land": "AT",
+  "bankleitzahl": "20111",
+  "bic": "GIBAATWWXXX",
+  "name": "Erste Bank der oesterreichischen Sparkassen AG",
+  "status": "aktiv",
+  "entfernt_am": null,
+  "art": "Hauptanstalt",
+  "sektor": "Sparkassen",
+  "institutsart": "KI",
+  "identnummer": "7780729",
+  "firmenbuchnummer": "286283f",
+  "lei": "549300HUKIA1IZQHFZ83",
+  "gruendungsdatum": "2006-11-08",
+  "adresse": { "strasse": "Am Belvedere 1", "plz": "1100", "ort": "Wien", "bundesland": "Wien" },
+  "postadresse": { "strasse": null, "plz": null, "ort": null, "postfach": null },
+  "kontakt": { "telefon": "050100/10100", "fax": null, "email": "service@s-servicecenter.at", "homepage": "https://www.erstebank.at" }
+}
+```
+
+| Aufruf | Ergebnis |
+|---|---|
+| `/api/v1/{land}/{bankleitzahl}.json` | Alle Daten einer Bank |
+| `/api/v1/{land}/index.json` | Liste aller Banken (Bankleitzahl, BIC, Name, Status) |
+| `/api/v1/index.json` | Übersicht: unterstützte Länder und Anzahl der Banken |
+
+- **Land:** derzeit nur `AT` (Österreich). `at` in Kleinbuchstaben geht auch.
+- **Bankleitzahl:** wie in der IBAN fünfstellig (`00100`) oder ohne führende Nullen (`100`).
+- **Unbekannte Bankleitzahl oder unbekanntes Land:** Antwort mit HTTP-Status **404**.
+- **Weggefallene Banken** liefern weiter ihren letzten Stand, mit `"status": "entfernt"` und dem Datum in `entfernt_am`.
+- Leere Felder sind `null`, Datumsangaben im Format `JJJJ-MM-TT`.
+- Die API darf aus jedem Browser und jeder Webseite abgefragt werden (CORS ist offen).
+- Aktualisiert wird täglich zusammen mit der Webseite.
+
+Beispiel mit der Kommandozeile:
+
+```sh
+curl https://alexanderwendel8.github.io/bic-verzeichnis/api/v1/AT/20111.json
+```
+
+Beispiel in JavaScript:
+
+```js
+const res = await fetch("https://alexanderwendel8.github.io/bic-verzeichnis/api/v1/AT/20111.json");
+if (res.ok) {
+  const bank = await res.json();
+  console.log(bank.bic); // GIBAATWWXXX
+}
+```
 
 ---
 
@@ -40,6 +103,7 @@ Ein Projekt von Alexander Wendel. Die Daten stammen von der OeNB und werden ohne
 | `changes/JJJJ-MM-TT.csv` | Änderungen eines Tages (nur an Tagen mit Änderungen) |
 | `changes/index.json` | Liste der Tage mit Änderungen (für die Weboberfläche) |
 | `web/` | Weboberfläche (statisch, ohne Build-Schritt) |
+| `build_api.py` | Erzeugt beim Veröffentlichen die JSON-Dateien der API (nicht im Repo abgelegt) |
 
 Ältere Gesamtstände sind über die Git-Historie von `data/sepa-zv-vz_gesamt.csv` abrufbar.
 
@@ -70,7 +134,7 @@ Schlägt eine Veröffentlichung fehl (z. B. „No artifacts named github-pages�
 Lokal ansehen:
 
 ```sh
-mkdir -p /tmp/site && cp web/* /tmp/site/ && cp -r data changes /tmp/site/
+mkdir -p /tmp/site && cp web/* /tmp/site/ && cp -r data changes /tmp/site/ && python3 build_api.py /tmp/site/api
 python3 -m http.server -d /tmp/site 8000   # dann http://localhost:8000
 ```
 
