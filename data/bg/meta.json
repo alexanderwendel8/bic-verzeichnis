@@ -1,0 +1,8 @@
+{
+ "Quelle": "https://www.ecb.europa.eu/stats/financial_corporations/list_of_financial_institutions/html/index.en.html",
+ "BNB-Listen": {
+  "T2": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_download/ps_target_list_users_bg.xlsx",
+  "TIPS": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_download/ps_tips_list_users_bg.xlsx"
+ },
+ "GLEIF-Tabelle": "2026-11"
+}

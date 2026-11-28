@@ -1,0 +1,29 @@
+﻿Bankleitzahl;BIC;Weitere BICs;Bankenname;Art;LEI;EZB-Kennung;Straße;PLZ;Ort;Muttergesellschaft;EZB-Liste;BAE (Zentrale);ЕИК;BNB-Liste
+BGUS;BGUSBGSFXXX;;Bulgarian-American Credit Bank AD;Kreditinstitut;529900UTZ5VF4APIJR57;BGBGUS9160;2, Slaviaynska Str.;1000;Sofia;;MFI;9160;;
+BIGK;BIGKBGSFXXX;;Bigbank AS - Branch Bulgaria;Kreditinstitut;;BG206302580;Triaditsa Dist., 49B, Balgariya Blvd., ent. A, floor 7;1404;Sofia;Bigbank AS;MFI;;;
+BNBG;BNBGBGSFXXX;;Bulgarian National Bank;Zentralbank;5299001WEKCK7E65TI48;BGBNBG9661;1, Knyaz Alexander I Sq.;1000;Sofia;;MFI;9661;;
+BNPA;BNPABGSXXXX;;BNP Paribas S.A. - Sofia Branch;Kreditinstitut;;BGBNPA9440;2, Tsar Osvoboditel Blvd.;1000;Sofia;BNP Paribas;MFI;9440;;
+BPBI;BPBIBGSFXXX;;Eurobank Bulgaria;Kreditinstitut;549300IRGNL8Q3O8Y413;BGBPBI9920;260, Okolovrasten Pat Blvd.;1766;Sofia;;MFI;9920;;
+BUIN;BUINBGSFXXX;;Allianz Bank Bulgaria AD;Kreditinstitut;259400UB1DGSK7SCP470;BGBUIN9561;79, Maria Louisa Blvd.;1202;Sofia;;MFI;9561;;
+CECB;CECBBGSFXXX;;Central Cooperative Bank AD;Kreditinstitut;5299002142DS5ONT5540;BGCECB9790;87, Tsarigradsko Shosse Blvd.;1113;Sofia;;MFI;9790;;
+CITI;CITIBGSFXXX;;Citibank Europe plc, Bulgaria Branch;Kreditinstitut;;BGCITI9250;48, Sitnyakovo Blvd., floor 10;1505;Sofia;Citibank Europe plc;MFI;9250;;
+CREX;CREXBGSFXXX;;Tokuda Bank;Kreditinstitut;5299005OQIUZZAFLA333;BGCREX9260;2, Slavyanska str.;1000;Sofia;;MFI;9260;;
+DEMI;DEMIBGSFXXX;;D Commerce Bank AD;Kreditinstitut;5299007I6XULEQYH1B18;BGDEMI9240;8, Gen. Totleben Blvd.;1606;Sofia;;MFI;9240;;
+ECFE;ECFEBG22XXX;;Econt Financial Services OOD;Zahlungs- oder E-Geld-Institut;984500CD4663A969J318;;;;;;;;205968825;TIPS
+FINV;FINVBGSFXXX;;First Investment Bank;Kreditinstitut;549300UY81ESCZJ0GR95;BGFINV9150;Mladost distr., 111P Tzarigradkso shose blvd.;1784;Sofia;;MFI;9150;;
+IABG;IABGBGSFXXX;;International Asset Bank AD;Kreditinstitut;529900RPGHC6DQEQL615;BGIABG9470;81-83, TODOR ALEKSANDROV 81-83 Str.;1303;Sofia;;MFI;9470;;
+INGB;INGBBGSFXXX;;ING Bank N.V. - Sofia Branch;Kreditinstitut;;BGINGB9145;49 B, Bulgaria Blvd.;1404;Sofia;ING Bank N.V.;MFI;9145;;
+IORT;IORTBGSFXXX;;Investbank AD;Kreditinstitut;529900N42RG1Q1474762;BGIORT9120;85, Bulgaria Blvd.;1404;Sofia;;MFI;9120;;
+MYFN;MYFNBGSFXXX;;MyFin EAD;Zahlungs- oder E-Geld-Institut;485100MHXT75FGBMVG91;;;;;;;;206066023;TIPS
+NASB;NASBBGSFXXX;;BULGARIAN DEVELOPMENT BANK;Kreditinstitut;549300615CPXQO52J309;BGNASB9620;Sredetz distr., 1 Diakon Ignatii str.;1000;Sofia;;MFI;9620;;
+PRCB;PRCBBGSFXXX;;ProCredit Bank (Bulgaria) EAD;Kreditinstitut;529900NLNI85YIRQX052;BGPRCB9230;26, Todor Alexandrov Blvd.;1303;Sofia;;MFI;9230;;
+SOMB;SOMBBGSFXXX;;Municipal Bank AD;Kreditinstitut;2138007DX2PGI77JX128;BGSOMB9130;6, Vrabcha Str.;1000;Sofia;;MFI;9130;;
+STSA;STSABGSFXXX;;DSK Bank AD;Kreditinstitut;529900GEH0DAUTAXUA94;BGSTSA9300;19, Moskovska Str.;1000;Sofia;;MFI;9300;;
+TBIB;TBIBBGSFXXX;;TBI Bank EAD;Kreditinstitut;529900KIX7269PVMPY26;BGTBIB9310;52-54, Dimitar Hadzhikotsev Str.;1421;Sofia;;MFI;9310;;
+TCZB;TCZBBGSFXXX;;T. C. Ziraat Bankasi - Sofia Branch;Kreditinstitut;;BGTCZB9350;87, Tsar Samuil Str.;1000;Sofia;T.C. ZIRAAT BANKASI A.S.;MFI;9350;;
+TEPJ;TEPJBGSFXXX;;Tenen Payments AD;Zahlungs- oder E-Geld-Institut;529900MQPROZR0XRKK24;;;;;;;;206032163;TIPS
+TEXI;TEXIBGSFXXX;;Texim Bank AD;Kreditinstitut;529900EKPN8EYA3AX590;BGTEXI9545;117, Todor Alexandrov Blvd.;1303;Sofia;;MFI;9545;;
+TRIV;TRIVBGS1XXX;;Transcard Financial Services AD;Zahlungs- oder E-Geld-Institut;485100K88SFI7LR6CO65;;;;;;;;131397565;TIPS
+UBBS;UBBSBGSFXXX;;United Bulgarian Bank AD;Kreditinstitut;5299000PCY1EP8QJFV48;BGUBBS9200;89B, VITOShA Str.;1463;Sofia;;MFI;9200;;
+UNCR;UNCRBGSFXXX;;UniCredit Bulbank AD;Kreditinstitut;549300Z7V2WOFIMUEK50;BGUNCR9660;SVETA NEDELYa 7 Sq.;1000;Sofia;;MFI;9660;;
+VGAG;VGAGBGSFXXX;;Ascory Bank AG, Sofia Branch;Kreditinstitut;;BGVGAG9876;43, Hristofor Kolumb Blvd.;1592;Sofia;Ascory Bank AG;MFI;9876;;
