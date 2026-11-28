@@ -9,6 +9,8 @@
 - Die ACPR führt keine BICs. Sie kommen aus der BIC/LEI-Zuordnung von GLEIF, verknüpft über den LEI aus
   REGAFI (BICs aus Frankreich, Monaco und den Überseegebieten, bevorzugt französische). Fällt GLEIF aus,
   werden die BICs des letzten Stands weiterverwendet.
+- Lücken und Fehler der GLEIF-Zuordnung (z. B. Société Générale, LCL) behebt eine kleine, von Hand gepflegte
+  Liste (laender/fr_bic_korrekturen.csv, je Eintrag mit Beleg); diese BICs haben die Quelle „manuell“.
 - REGAFI hat keine eigene Lizenz. Grundlage ist das französische Recht zur Weiterverwendung öffentlicher
   Informationen (CRPA L321-1 ff.) und die rechtlichen Hinweise der Banque de France: ACPR als Quelle und
   das Datum der letzten Aktualisierung nennen, Inhalt nicht verfälschen. Das Datum der letzten inhaltlichen
@@ -18,10 +20,13 @@
 
 from __future__ import annotations
 
+import csv
 import json
+import re
 import sys
 import time
 import urllib.parse
+from pathlib import Path
 
 import kern
 from kern import SCHLUESSEL, Stand, herunterladen, leer
@@ -42,13 +47,16 @@ QUELLE = {
     "bedingungen": "https://www.banque-france.fr/fr/infos-legales",
     "hinweis": "Source : Autorité de contrôle prudentiel et de résolution (ACPR) – REGAFI (www.regafi.fr). Inhalt "
                "unverändert übernommen, nur umformatiert (auf Institute mit code interbancaire gefiltert, je Code "
-               "eine Zeile); BICs nicht von der ACPR, sondern aus der BIC/LEI-Zuordnung von GLEIF ergänzt.",
+               "eine Zeile); BICs nicht von der ACPR, sondern aus der BIC/LEI-Zuordnung von GLEIF ergänzt, einzelne von "
+               "Hand mit Beleg (laender/fr_bic_korrekturen.csv).",
 }
 ORIGINAL_URL = URL
-SPALTEN = ["Bankleitzahl", "BIC", "Weitere BICs", "Bankenname", "Handelsnamen", "Kürzel", "Kategorie", "Rechtsform",
+SPALTEN = ["Bankleitzahl", "BIC", "Weitere BICs", "BIC-Quelle", "Bankenname", "Handelsnamen", "Kürzel", "Kategorie", "Rechtsform",
            "Zulassung", "SIREN", "LEI", "Code seit", "Weitere Codes", "Straße", "PLZ", "Ort", "Land",
            "Muttergesellschaft", "Ereignisse", "REGAFI-ID"]
 # BIC-Ländercodes im französischen IBAN-Raum (Frankreich, Monaco, Überseegebiete)
+# Von Hand gepflegte BICs für Lücken und Fehler der GLEIF-Zuordnung, jeder Eintrag mit Beleg
+KORREKTUREN = Path(__file__).with_name("fr_bic_korrekturen.csv")
 _BIC_LAENDER = {"FR", "MC", "GP", "GF", "MQ", "RE", "YT", "PM", "BL", "MF", "NC", "PF", "WF"}
 
 
@@ -120,23 +128,54 @@ def laden(args, alte_meta: dict) -> Stand:
         nach_lei, tabelle = None, alte_meta.get("GLEIF-Tabelle", "")
     for blz, z in banken.items():
         if nach_lei is None:
-            z["BIC"], z["Weitere BICs"] = alt.get(blz, {}).get("BIC", ""), alt.get(blz, {}).get("Weitere BICs", "")
+            for s in ("BIC", "Weitere BICs", "BIC-Quelle"):
+                z[s] = alt.get(blz, {}).get(s, "")
             continue
         bics = sorted(set(nach_lei.get(z["LEI"], []))) if z["LEI"] else []
         bics = [b for b in bics if b[4:6] == "FR"] or bics  # französische BICs bevorzugen
         haupt, weitere = _gleif.bic_wahl(bics)
-        z["BIC"], z["Weitere BICs"] = haupt, " ".join(weitere)
+        z["BIC"], z["Weitere BICs"], z["BIC-Quelle"] = haupt, " ".join(weitere), "GLEIF" if haupt else ""
+
+    # Korrekturliste: ersetzt den GLEIF-BIC (der dann unter „Weitere BICs“ steht) oder füllt eine Lücke
+    korrigiert = 0
+    for k in _korrekturen():
+        z = banken.get(k["Bankleitzahl"])
+        if z is None:
+            print(f"[{CODE}] Warnung: Korrektur für {k['Bankleitzahl']} ({k['Institut']}) – Code nicht mehr in REGAFI")
+            continue
+        if z["BIC"] != k["BIC"]:
+            weitere = [b for b in [z["BIC"], *z["Weitere BICs"].split()] if b and b != k["BIC"]]
+            z["BIC"], z["Weitere BICs"] = k["BIC"], " ".join(dict.fromkeys(weitere))
+        z["BIC-Quelle"] = "manuell"
+        korrigiert += 1
 
     neu = sorted(banken.values(), key=lambda z: z[SCHLUESSEL])
     heute = args.today.isoformat()
-    vergleich = lambda zeilen: [{s: z.get(s, "") for s in SPALTEN} for z in zeilen]
+    # „Stand“ = letzte Änderung der REGAFI-Angaben (BICs zählen nicht dazu, sie kommen nicht von der ACPR)
+    regafi = [s for s in SPALTEN if s not in ("BIC", "Weitere BICs", "BIC-Quelle")]
+    vergleich = lambda zeilen: [{s: z.get(s, "") for s in regafi} for z in zeilen]
     geaendert = vergleich(neu) != vergleich(sorted(alt.values(), key=lambda z: z[SCHLUESSEL]))
     stand = heute if geaendert or not alte_meta.get("Stand") else alte_meta["Stand"]
     mit_bic = sum(1 for z in neu if z["BIC"])
-    print(f"[{CODE}] REGAFI: {len(eintraege)} Institute mit {len(neu)} CIBs ({mit_bic} mit BIC über GLEIF), Stand {stand}")
+    print(f"[{CODE}] REGAFI: {len(eintraege)} Institute mit {len(neu)} CIBs ({mit_bic} mit BIC, davon {korrigiert} "
+          f"aus der Korrekturliste), Stand {stand}")
     meta = {"Quelle": URL, "Stand": stand, "GLEIF-Tabelle": tabelle}
     return Stand(spalten=SPALTEN, banken=neu, datum=heute, meta=meta,
-                 dateien={"HINWEIS-BIC.txt": _gleif.hinweis_datei(tabelle, QUELLE["hinweis"])})
+                 dateien={"HINWEIS-BIC.txt": _gleif.hinweis_datei(tabelle, QUELLE["hinweis"]) + (
+                     "\nAusnahme: BICs mit BIC-Quelle „manuell“ stammen nicht aus der GLEIF-Zuordnung, sondern aus einer "
+                     "von Hand gepflegten Liste mit Beleg je Eintrag (laender/fr_bic_korrekturen.csv im Repository).\n"
+                 ).encode("utf-8")})
+
+
+def _korrekturen() -> list[dict]:
+    if not KORREKTUREN.exists():
+        return []
+    with KORREKTUREN.open(encoding="utf-8", newline="") as f:
+        zeilen = [{k: (v or "").strip() for k, v in z.items()} for z in csv.DictReader(f, delimiter=";")]
+    for z in zeilen:
+        if not re.fullmatch(r"\d{5}", z["Bankleitzahl"]) or not re.fullmatch(r"[A-Z0-9]{8}([A-Z0-9]{3})?", z["BIC"]):
+            raise RuntimeError(f"ungültige Zeile in {KORREKTUREN.name}: {z}")
+    return zeilen
 
 
 # ---------------------------------------------------------------- API
@@ -154,7 +193,7 @@ def api_eintrag(z: dict, filialen: list, meta: dict, entfernt: bool) -> dict:
         "name": g("Bankenname"),
         "status": None,
         "entfernt_am": None,
-        "bic_quelle": "GLEIF" if g("BIC") else None,
+        "bic_quelle": g("BIC-Quelle") or ("GLEIF" if g("BIC") else None),
         "weitere_bics": (z.get("Weitere BICs") or "").split(),
         "handelsnamen": _liste(z.get("Handelsnamen")),
         "kuerzel": g("Kürzel"),

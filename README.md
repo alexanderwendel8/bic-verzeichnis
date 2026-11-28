@@ -175,8 +175,9 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
   `siren`, `lei`, `code_seit`, `weitere_codes` (weitere CIBs desselben Instituts; jeder CIB ist ein eigener Eintrag),
   `handelsnamen`, `kuerzel`, `muttergesellschaft`, `ereignisse` (z. B. Übernahmen), `adresse`, `stand` (letzte
   inhaltliche Änderung). Der `bic` stammt **von GLEIF** (`bic_quelle`: `GLEIF`), verknüpft über den LEI; für rund
-  zwei Drittel der Codes gibt es einen. GLEIF ist nicht vollständig: Bei manchen Instituten fehlt dort der bekannte
-  Haupt-BIC (z. B. Société Générale), dann erscheint ein anderer BIC desselben LEI.
+  zwei Drittel der Codes gibt es einen. GLEIF ist nicht vollständig; wichtige Lücken und Fehler (z. B. Société Générale,
+  LCL, Crédit Mutuel) behebt eine kleine, von Hand gepflegte Liste – diese BICs haben `bic_quelle`: `manuell`, ein
+  abweichender GLEIF-BIC steht dann in `weitere_bics`.
 - **Polen:** jede Abrechnungsnummer (Zentrale, Filiale, interne Einheit) ist ein Eintrag; `name` ist das Institut,
   dazu `bezeichnung` der Nummer, `einheit`, `art_der_einheit`, `institutsnummer`, `institutsart`, `untertyp`, `lei`,
   `nip`, `adresse` mit `woiwodschaft`, `kontakt`, `vergeben_am` und `version` (EWIB-Veröffentlichung). Neben `bic`
@@ -321,6 +322,11 @@ Danach folgt der Eintrag (bei `entfernt` der letzte bekannte Stand). Schlüssel 
   26.000 Einträgen und 18 MB. Das Feld `cib` ist eine JSON-Liste als Text und wird ein zweites Mal gelesen.
 - REGAFI bricht Verbindungen gelegentlich ab; der Download wird bis zu viermal versucht.
 - BICs: GLEIF-Zuordnung BIC → LEI, nur BICs aus Frankreich, Monaco und den Überseegebieten, französische bevorzugt.
+- **Korrekturliste** `laender/fr_bic_korrekturen.csv` (Bankleitzahl, BIC, Institut, Beleg, Geprüft am): füllt Lücken
+  von GLEIF oder ersetzt einen falschen Haupt-BIC. Derzeit 19 Einträge (16 Lücken, 3 Korrekturen), geprüft anhand der
+  öffentlichen Erreichbarkeitslisten von EBA CLEARING (STEP2, RT1) und teils Wikidata. Die Einträge wurden einzeln von
+  Hand übernommen, die Listen selbst werden weder automatisch ausgewertet noch weitergegeben. Steht ein Code nicht mehr
+  in REGAFI, warnt das Skript. Neue Einträge nur mit Beleg (z. B. Angabe der Bank auf ihrer Website oder ihrem RIB).
 - Die Quellenangabe muss das Datum der letzten Aktualisierung nennen. Gespeichert wird das Datum der letzten
   inhaltlichen Änderung (`Stand` in `data/fr/meta.json`), damit nicht jeden Tag ein Commit entsteht.
 - Die Originaldaten werden nicht abgelegt, sondern als Abfrage bei REGAFI verlinkt.

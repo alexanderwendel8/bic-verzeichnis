@@ -5,4 +5,6 @@ SWIFT © and database rights November 2026. All rights reserved. This Mapping Ta
 
 Lizenz: https://www.gleif.org/lei-data/lei-mapping/download-bic-to-lei-relationship-files/2017-12-21_annex-2_bic-to-lei-mapping-table-license-agreement_final.pdf
 
-Alle übrigen Angaben: Source : Autorité de contrôle prudentiel et de résolution (ACPR) – REGAFI (www.regafi.fr). Inhalt unverändert übernommen, nur umformatiert (auf Institute mit code interbancaire gefiltert, je Code eine Zeile); BICs nicht von der ACPR, sondern aus der BIC/LEI-Zuordnung von GLEIF ergänzt.
+Alle übrigen Angaben: Source : Autorité de contrôle prudentiel et de résolution (ACPR) – REGAFI (www.regafi.fr). Inhalt unverändert übernommen, nur umformatiert (auf Institute mit code interbancaire gefiltert, je Code eine Zeile); BICs nicht von der ACPR, sondern aus der BIC/LEI-Zuordnung von GLEIF ergänzt, einzelne von Hand mit Beleg (laender/fr_bic_korrekturen.csv).
+
+Ausnahme: BICs mit BIC-Quelle „manuell“ stammen nicht aus der GLEIF-Zuordnung, sondern aus einer von Hand gepflegten Liste mit Beleg je Eintrag (laender/fr_bic_korrekturen.csv im Repository).
