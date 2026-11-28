@@ -18,7 +18,7 @@ Optional:
   original_url(meta) -> str                   dasselbe, wenn der Link je Version wechselt
 """
 
-from laender import at, be, ch, cz, de, ee, es, fr, hr, hu, it, li, lt, lv, nl, pl, si, sk
+from laender import at, be, ch, cz, de, ee, es, fr, hr, hu, it, li, lt, lv, nl, pl, ro, si, sk
 
 # Reihenfolge = Reihenfolge der Länderknöpfe auf der Webseite
-LAENDER = {m.CODE: m for m in (at, de, ch, li, it, cz, sk, hu, si, be, es, fr, pl, lv, lt, ee, nl, hr)}
+LAENDER = {m.CODE: m for m in (at, de, ch, li, it, cz, sk, hu, si, be, es, fr, pl, lv, lt, ee, nl, hr, ro)}
