@@ -41,6 +41,8 @@ def api_schreiben(api: Path, land, eintraege: dict[str, dict]) -> None:
         ordner = api / code
         for blz, e in eintraege.items():
             json_schreiben(ordner / f"{blz}.json", e)
+            if blz.lower() != blz and blz.lower() not in eintraege:  # Buchstaben-Codes (Lettland) auch klein
+                json_schreiben(ordner / f"{blz.lower()}.json", e)
             if land.BLZ_STELLEN:  # kürzere Bankleitzahl auch in IBAN-Schreibweise (100 -> 00100)
                 lang = blz.zfill(land.BLZ_STELLEN)
                 if lang != blz and lang not in eintraege:
@@ -99,6 +101,7 @@ def main() -> int:
             "stand_text": land.stand_text(meta),
             "blz_stellen": land.BLZ_STELLEN,
             "original": f"data/{cc}/{land.ORIGINAL}" if getattr(land, "ORIGINAL", None)
+            else land.original_url(meta) if hasattr(land, "original_url")  # Link wechselt je Version
             else getattr(land, "ORIGINAL_URL", None),  # zu große, täglich neue Originale: Link zur Quelle
             "zusatz_hinweis": land.zusatz_hinweis(meta) if hasattr(land, "zusatz_hinweis") else "",
             **land.WEB,
