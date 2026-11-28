@@ -1,0 +1,8 @@
+Die BICs in bankleitzahlen.csv (Spalten BIC und Weitere BICs) stammen aus der BIC/LEI-Zuordnung
+von SWIFT und GLEIF. Für sie gilt:
+
+SWIFT © and database rights November 2026. All rights reserved. This Mapping Table has been developed by SWIFT. Any use of the Mapping Table, in whole or in part, is subject to the BIC/LEI Mapping Table License Agreement as published with the Mapping Table available on GLEIF's website. The Mapping Table is updated monthly. For the latest BIC information and updates, always refer to www.swift.com/bic .
+
+Lizenz: https://www.gleif.org/lei-data/lei-mapping/download-bic-to-lei-relationship-files/2017-12-21_annex-2_bic-to-lei-mapping-table-license-agreement_final.pdf
+
+Alle übrigen Angaben: Source: European Central Bank – list of monetary financial institutions (MFI). Geändert: auf portugiesische Kreditinstitute mit eigenem Code gefiltert, Bankcode aus der EZB-Kennung (RIAD-Code) entnommen; BICs nicht von der EZB, sondern aus der BIC/LEI-Zuordnung von GLEIF ergänzt. Nicht amtlich und unvollständig – die amtliche Liste des Banco de Portugal ist nicht automatisch abrufbar.
