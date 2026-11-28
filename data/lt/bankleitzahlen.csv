@@ -1,0 +1,229 @@
+﻿Bankleitzahl;BIC;Bankenname;Filiale;Registernummer;Straße;PLZ;Ort;Lage;Land
+10100;LIABLT2X;Bank of Lithuania;;188607684;Gedimino Ave. 6;01103;Vilnius;;Lithuania
+10101;LIABLT2X;Bank of Lithuania;Bank of Lithuania Kaunas branch;188607684;Maironio St 25;44250;Kaunas;;Lithuania
+10110;LIABLT2X;Bank of Lithuania;Payment Systems Department;188607684;Totoriu St 4;01121;Vilnius;;Lithuania
+10900;LIABLT2X;Bank of Lithuania;Payment Systems Department;188607684;Totoriu St 4;01121;Vilnius;;Lithuania
+20900;BIGKLT21;Bigbank AS Branch;;301048563;Jogailos St 4;01116;Vilnius;;Lithuania
+21200;HANDLT2X;Svenska Handelsbanken AB Lithuania branch;;302250781;Gyneju St 16;01109;Vilnius;;Lithuania
+21400;AGBLLT2X;Luminor Bank AS Lithuania branch;;304870069;Konstitucijos Ave. 21A;03602;Vilnius;;Lithuania
+21500;OKOYLT2X;"„OP Corporate Bank plc"" Lietuvos Branch";;302535257;Konstitucijos Ave 7;09308;Vilnius;;Lithuania
+21700;MULTLT2X;"AS ""Industra Bank"" Lietuvos Branch";;302570678;Kestucio St 51;08124;Vilnius;;Lithuania
+22500;FJORLT21;"AB ""Fjord Bank""";;304493038;Konstitucijos Ave 9-101;09308;Vilnius;;Lithuania
+22501;FJORLT23;"AB ""Fjord Bank""";;304493038;Konstitucijos Ave 9-101;09308;Vilnius;;Lithuania
+22600;PYYRLT22;PayRay, UAB;;304862948;Lvovo St 25-702;09320;Vilnius;;Lithuania
+30200;PEPGLT21;Perlas Finance, UAB;;301169732;Olimpieciu St. 15-1;09237;Vilnius;;Lithuania
+30300;ABLPLT21;AB Lietuvos pastas;;121215587;J.Jasinskio St 16;03500;Vilnius;;Lithuania
+30600;STUALT21;SatchelPay, UAB;;304628112;Upės St. 21-1;08128;Vilnius;;Lithuania
+30700;VAUALT21;Valyuz, UAB;;304782929;Vilniaus St 31/1;08222;Vilnius;;Lithuania
+30800;NEUALT21;NexPay UAB;;304708124;Kestucio St 91-11;44299;Kaunas;;Lithuania
+30801;NEUALT22;NexPay UAB;;304708124;Kęstučio St. 91-11;44299;Kaunas;;Lithuania
+30900;UAWALT21;"UAB ""Walletto""";;304686884;Gostauto St. 8-107;01108;Vilnius;;Lithuania
+30901;UAWALT22;"UAB""Walletto""";;304686884;Gostauto St. 8-108;01108;Vilnius;;Lithuania
+31000;UACOLT21;UAB Contabilita;;303573008;A. Vivulskio St 7-5;03162;Vilnius;;Lithuania
+31100;MNNELT21;Maneuver LT, UAB;;304785124;Zalgirio St. 88;09303;Vilnius;;Lithuania
+31200;UAPULT22;UAB Paytend Europe;;304730875;Mesiniu St 5;01133;Vilnius;;Lithuania
+31300;BZENLT22;UAB ZEN.COM;;304749651;Mesiniu St. 5;01133;Vilnius;;Lithuania
+31400;PCTULT21;PCS Transfer UAB;;304836743;Lvovo St 105A;08104;Vilnius;;Lithuania
+31500;UADRLT21;"UAB ""Drauskaita""";;304254248;Seimyniskiu St. 21;09236;Vilnius;;Lithuania
+31600;VPLALT21;UAB Etapay;;304932396;Vilniaus St 31/1;01402;Vilnius;;Lithuania
+31700;SHFRLT21;"UAB ""Shift Financial Services LT""";;304726229;Jogailos St 9;01116;Vilnius;;Lithuania
+31800;TBFULT21;TBF Finance, UAB;;304483528;Konstitucijos Ave 21A;08131;Vilnius;;Lithuania
+31801;TBFULT31;TBF Finance, UAB;;304483528;Konstitucijos Ave 21A;08130;Vilnius;;Lithuania
+31900;TEUALT22;TeslaPay, UAB;;304715528;Dariaus ir Gireno St. 42A;02189;Vilnius;;Lithuania
+32000;WAUALT21;Wallter UAB;;305433923;Lvovo St 25-104;09320;Vilnius;;Lithuania
+32200;UAPPLT21;UAB Phoenix Payments;;304920426;Mesiniu St 5;01133;Vilnius;;Lithuania
+32300;UIPULT21;International Payment Union, UAB;;304917978;Mesiniu St. 5;01133;Vilnius;;Lithuania
+32400;TRLULT21;TransferGo Lithuania UAB;;304871705;Palangos St 4, 4-th floor;01402;Vilnius;;Lithuania
+32500;REVOLT21;Revolut Bank, UAB;;304580906;Konstitucijos ave 21B;08130;Vilnius;;Lithuania
+32600;URFSLT21;Rebellion Fintech Services UAB;;304935086;Lvovo St 25-701;09320;Vilnius;;Lithuania
+32700;DSFELT21;"UAB ""DSBC Financial Europe""";;304713395;Mesiniu St 5;01133;Vilnius;;Lithuania
+32800;EPSULT22;Earthport Payment Services UAB;;305022384;Lvovo St. 25-104;09320;Vilnius;;Lithuania
+32900;KUFULT22;Kuan Financial, UAB;;305134383;Gedimino Ave 44A;01110;Vilnius;;Lithuania
+33000;WIUALT22;Wittix, UAB;;304900982;Lvovo St 25-104;09320;Vilnius;;Lithuania
+33100;VAAALT21;ValorPay UAB;;304881005;Lvovo St 25-104;09320;Vilnius;;Lithuania
+33101;VAAALT23;ValorPay UAB;;304881005;Lvovo St 25-104;09320;Vilnius;;Lithuania
+33200;SONCLT21;"UAB ""SONECT Europe""";;305152431;Vokieciu St 28-16;01130;Vilnius;;Lithuania
+33300;UASILT22;"UAB ""Silvergate LT""";;305181493;J. Basanaviciaus St 15;03108;Vilnius;;Lithuania
+33400;UAUPLT22;Paylar, UAB;;305182887;Zygimanto Liauksmino St 3A-4;01101;Vilnius;;Lithuania
+33500;EPUALT22;"UAB ""epayblock""";;304882406;Upes St. 23;08128;Vilnius;;Lithuania
+33700;SUPULT22;SumUp EU Payments, UAB;;305074395;Upes St 23;08128;Vilnius;;Lithuania
+33800;OPTULT22;Opal Transfer EU, UAB;;305026817;Konstitucijos Ave 8;08130;Vilnius;;Lithuania
+33900;USPELT2V;"UAB ""Nuvei""";;304445876;Antakalnio St 17;10312;Vilnius;;Lithuania
+34000;GUPULT22;UAB Guru Pay;;304891889;Kalvariju St 125;08221;Vilnius;;Lithuania
+34100;CBNULT2V;CBI Money UAB;;305224044;Konstitucijos Ave. 21A;08130;Vilnius;;Lithuania
+34200;BAXXLT22;Banxe, UAB;;304934066;Lvovo St 25-104;09320;Vilnius;;Lithuania
+34300;PAUALT22;UAB Paystra;;304888494;Vilniaus St. 31;01402;Vilnius;;Lithuania
+34500;UANILT22;UAB Nandi Finance;;305138937.;A.Tumeno St 4;01109;Vilnius;;Lithuania
+34600;NIKULT22;Nikulipe UAB;;305189166;Konstitucijos Ave 21B;08130;Vilnius;;Lithuania
+34700;CLUALT22;Clearshift, UAB;;305157923;Upės St. 23;08128;Vilnius;;Lithuania
+34800;UATULT22;UAB Travel Union;;305106882;Sauletekio St. 17;01224;Vilnius;;Lithuania
+34900;AMPULT22;Newrails UAB;;305270426;Konstitucijos Ave. 7;09308;Vilnius;;Lithuania
+35000;EVIULT2V;"""Paysera LT"", UAB";;300060819;Pilaites Ave 16;04352;Vilnius;;Lithuania
+35100;MIEGLT21;„Secure Nordic Payments“ UAB;;303262295;Perkunkiemio St 2;12126;Vilnius;;Lithuania
+35200;UANFLT21;"AB ""Neo Finance""";;303225546;Verkiu St 25C-1;08223;Vilnius;;Lithuania
+35400;UAAMLT21;UAB „Argentum mobile“;;304285884;Tuskulėnų g. 39;09219;Vilnius;;Lithuania
+35500;UAPELT21;"UAB ""Pervesk""";;304186270;Ausros St 68;76233;Siauliai;;Lithuania
+35501;UAPELT21BKO;"UAB ""Pervesk""";;304186270;Traku St 12;01132;Vilnius;;Lithuania
+35600;UFUNLT22;UAB Finolita Unio;;303090931;Lvovo St 25;09320;Vilnius;;Lithuania
+35700;VIPULT21;Via Payments, UAB;;304531663;Vilkpedes St 22;03151;Vilnius;;Lithuania
+35800;MOIULT21;Bruc Bond, UAB;;304291086;Jogailos St 4;01116;Vilnius;;Lithuania
+35900;UAINLT21;UAB NIUM EU;;304548794;Mesiniu St 5;01133;Vilnius;;Lithuania
+36000;UAMMLT21;"UAB ""Mobilieji mokejimai""";;304431143.;Lvovo St 25-104;09320;Vilnius;;Lithuania
+36400;INHULT21;UAB International Fintech;;304409766;Jogailos St 4;01116;Vilnius;;Lithuania
+36600;UADELT21;UAB “deVere E-Money”;;304469514;J. Balcikonio St 9;08314;Vilnius;;Lithuania
+36700;UAPLLT21;UAB Pyrros Lithuania;;304600426;Mesiniu St 5;01133;Vilnius;;Lithuania
+36900;TRFBLT21;TRUSTCOM FINANCIAL UAB;;304521377;Jogailos St 4, Vilnius;01116;Vilnius;;Lithuania
+37000;EMAULT21;UAB Elektroniniu mokejimu agentura;;136031358;Zveju St 14;09310;Vilnius;;Lithuania
+37100;SESOLT21;"UAB ""Seven Seas Europe""";;304632897;Olimpieciu St. 1-5;09235;Vilnius;;Lithuania
+37101;SEEOLT21;"UAB ""Seven Seas Europe""";;304632897;Mesiniu St 5;01133;Vilnius;;Lithuania
+37200;GLPELT21;UAB „Glocash Payment“;;304596376;Mesiniu St 5;01133;Vilnius;;Lithuania
+37300;MAABLT21;Majestic Financial, UAB;;304712140;Mesiniu St 5;01133;Vilnius;;Lithuania
+37400;CNUALT21;"UAB ""ConnectPay""";;304696889;Mesiniu St 5;01133;Vilnius;;Lithuania
+37500;VEPALT2X;Verified Payments, UAB;;304576936;Gedimino ave 20;01103;Vilnius;;Lithuania
+37800;TRYULT21;Transactive Systems UAB;;304705758;Jogailos St 9;01103;Vilnius;;Lithuania
+38500;GAUALT21;Galperin, UAB;;304750810;Jogailos St 9;01116;Vilnius;;Lithuania
+38700;PAEOLT21;"UAB ""PanPay Europe""";;304516316;Nidos St 1-80;06293;Vilnius;;Lithuania
+38800;GLUALT22;Payswix, UAB;;304604766;Lvovo St 25–104;09320;Vilnius;;Lithuania
+38900;UNECLT2V;"UAB ""NEOCARD""";;302948868;Topoliu St. 24A-2, Nemezio k., Vilniaus r.;13262;Vilnius;;Lithuania
+39100;IBIULT21;"UAB ""IBS Lithuania """;;304310405;Konstitucijos Ave. 15-69A;09319;Vilnius;;Lithuania
+39600;UFPOLT21;Contis Financial Services Ltd;;304406236;MenulioSt 11-101;04326;Vilnius;;Lithuania
+39801;UALTLT22;UAB Lock Trust;;304841352;J. Basanavičiaus St 26;03224;Vilnius;;Lithuania
+39802;UABELT22;Bebawa UAB;;305483424;Mesiniu St 5;01035;Vilnius;;Lithuania
+39804;CRVULT21;UAB Corporate Services;;304630394;Gedimino Ave 20;01103;Vilnius;;Lithuania
+39805;OKEOLT22;Okeo Payments UAB;;305219549;Gedimino Ave 20;01103;Vilnius;;Lithuania
+39806;DMVOLT22;Demivolt, UAB;;305562462;Jogailos St. 4;01116;Vilnius;;Lithuania
+39807;CRUBLT22;Crius LT, UAB;;304883013;Upes St. 23;08128;Vilnius;;Lithuania
+39808;UANOLT22;AlphaPay, UAB;;305249880;Lvovo St 105A;08104;Vilnius;;Lithuania
+39809;UAPALT22;"UAB ""PayrNet""";;305264430;Giruliu St. 20;12123;Vilnius;;Lithuania
+39810;UAAALT22;UAB Hokodo;;305007941;Gyneju str. 4-333;01109;Vilnius;;Lithuania
+39811;USTILT2V;UAB Stanhope Financial;;305574870;Upes St. 23;08128;Vilnius;;Lithuania
+39812;WIGULT22;WITTY GLOBAL, UAB;;304740691;Didzioji St. 18;01128;Vilnius;;Lithuania
+39814;RILALT22;RIA Lithuania UAB;;305592651;Upės St. 23;08128;Vilnius;;Lithuania
+39815;PMNTLT2V;PAYMONT, UAB;;305673740;Gynėjų g. 14-65;01109;Vilnius;;Lithuania
+39817;PAYHLT22;UAB Paywho;;305540551;A. Gostauto St. 8-108;01108;Vilnius;;Lithuania
+39818;DIUALT22;UAB DiPocket;;305599375;UpesSt 23;08128;Vilnius;;Lithuania
+39819;UDRULT22;UAB EXCHANGELT;;302765361;J. Basanavičiaus St. 24;03224;Vilnius;;Lithuania
+39821;AWXLLT22;AWX Lithuania, UAB;;305697289;Konstitucijos Ave. 21B;08130;Vilnius;;Lithuania
+39822;EXUALT22;TT Express UAB;;302699228;E.Ožeškienės St.15;44254;Kaunas;;Lithuania
+39823;UALELT22;UAB BLUE EMI LT;;305682465;Lvivo St 21A;09313;Vilnius;;Lithuania
+39824;HAWKLT22;Payhawk Financial Services, UAB;;306068630;Gedimino Ave 20;01103;Vilnius;;Lithuania
+39825;LIPYLT22;UAB Lux International Payment System;;305158007;Savanorių av. 7;03116;Vilnius;;Lithuania
+39826;BEMULT22;Benker UAB;;305084126;Konstitucijos av.18B;09308;Vilnius;;Lithuania
+39827;FNCULT22;FinCause, UAB;;306031272;Smetonos St 2;01115;Vilnius;;Lithuania
+39828;NSPYLT22;UAB NS PAY;;305652931;Vašingtono a. 1-62;01108;Vilnius;;Lithuania
+40100;AGBLLT2X;Luminor Bank AS Lithuania branch;;304870069;Konstitucijos Ave. 21A;03601;Vilnius;;Lithuania
+40400;MFRLLT22;Ministry of Finance of the Republic of Lithuania;;288601650;Lukiskiu St. 2;01512;Vilnius;;Lithuania
+50100;LCKULT22;Lithuanian Central Credit Union;;110086034;Savanoriu Ave. 363;49425;Kaunas;;Lithuania
+50101;LCKULT22;"Credit union ""Suduvos parama""";;110067062;Vytauto St 19;68300;Marijampole;;Lithuania
+50102;LCKULT22;Silutes credit union;;112041116;Lietuvininku St 32/Kestucio St 1;99179;Silute;;Lithuania
+50104;LCKULT22;Vilkaviskio credit union;;112040014;Statybininku St 9;70187;Vilkaviskis;;Lithuania
+50105;LCKULT22;Plunges credit union;;112041269;Senamiescio Ave 5;90162;Plunge;;Lithuania
+50106;LCKULT22;"Credit union ""Ebitum""";;112043462;Tilzes St 128;77160;Siauliai;;Lithuania
+50108;LCKULT22;ARKU kredito unija;;112043658;Jonavos St 30;44262;Kaunas;;Lithuania
+50109;JCKULT21;Akademine credit union;;112043843;Mickeviciaus St 15-2;44310;Kaunas;;Lithuania
+50110;LCKULT22;Panevezio credit union;;112040352;Topoliu Ave. 17;35169;Panevezys;;Lithuania
+50111;LCKULT22;Centro credit union;;112040167;M.K.Ciurlionio St 29;44356;Kaunas;;Lithuania
+50112;LCKULT22;"Credit union ""Tikroji viltis""";;112040548;L.Petraviciaus Ave. 4A;85132;Naujoji Akmene;;Lithuania
+50113;LCKULT22;"Credit union ""Germanto lobis""";;112041073;Sedos St 6;87112;Telsiai;;Lithuania
+50114;JCKULT21;"Credit union ""Kupiskenu taupa""";;112044030;Vytauto St 9-2;40115;Kupiskis;;Lithuania
+50115;LCKULT22;"""Pilies"" credit union";;112044226;Vilniaus St 50;19118;Sirvintos;;Lithuania
+50117;JCKULT21;Credit union Zanavyku bankelis;;112044379;Baznycios St 11;71122;Sakiai;;Lithuania
+50118;LCKULT22;Vytauto Dodziojo credit union;;112046049;Birutes St 4-2;56124;Kaisiadorys;;Lithuania
+50119;LCKULT22;Pakruojo credit union;;110067443;Vytauto Didziojo St 47-3;83157;Pakruojis;;Lithuania
+50120;JCKULT22;Elektrenu credit union;;110065773;Draugystes St 19-44;26117;Elektrenai;Traku District;Lithuania
+50121;JCKULT21;Aukstaitijos credit union;;112040733;Nemuno St 73;37356;Panevezys;;Lithuania
+50122;LCKULT22;Kelmes credit union;;112046191;S. Dariaus ir S. Gireno St 21A;86126;Kelme;;Lithuania
+50123;LCKULT22;"Credit union ""Prienu taupa""";;112046234;Vytauto St 1A;59114;Prienai;;Lithuania
+50124;LCKULT22;Pasvalio credit union;;112046387;Vytauto Didziojo Ave. 6/1;39143;Pasvalys;;Lithuania
+50125;LCKULT22;"Credit union ""DELTA""";;212046420;Parodos St 1-3;44214;Kaunas;;Lithuania
+50126;JCKULT21;Birzu credit union;;112046572;J. Janonio St 2;41148;Birzai;;Lithuania
+50127;LCKULT22;Kauno credit union;;112046615;K.Donelaicio St 62-301;44248;Kaunas;;Lithuania
+50128;LCKULT22;Taurages credit union;;112046768;S.Dariaus ir S.Gireno St 28;72250;Taurage;;Lithuania
+50129;JCKULT21;Silales credit union;;112046953;Basanavičiaus St 13;75138;Silale;;Lithuania
+50130;LCKULT22;Anyksciu credit union;;112047140;S.Dariaus ir S. Gireno St. 5-51;29116;Anyksciai;;Lithuania
+50131;LCKULT22;"""Achemos"" credit union";;112047293;Jonalaukis;55296;Jonalaukis;Jonavos District;Lithuania
+50132;LCKULT22;Jonavos credit union;;110082922;Kauno St 6;55176;Jonava;;Lithuania
+50133;LCKULT22;Jurbarko credit union;;110083262;S.Dariaus ir S.Gireno St 55-18;74183;Jurbarkas;;Lithuania
+50134;LCKULT22;Ukmerges Ukininku credit union;;110083981;Kauno St 16A;20114;Ukmerge;;Lithuania
+50135;LCKULT22;Kauno District credit union;;110085466;Cekiskes St 98;54221;Vilkija;Kauno District;Lithuania
+50136;LCKULT22;Vakarų Lietuvos credit union;;110085313;Ganyklu St 6;00127;Palanga;;Lithuania
+50138;LCKULT22;Kretingos credit union;;110086415;J.K.Chodkeviciaus St 10;97130;Kretinga;;Lithuania
+50139;JCKULT21;Raseiniu credit union;;110086568;Maironio St 10;60151;Raseiniai;;Lithuania
+50140;LCKULT22;Pagegiu credit union;;110086753;Vilniaus St 36;99293;Pagegiai;Silutes District;Lithuania
+50142;LCKULT22;Grinkiskio credit union;;110087289;Tilto St. 43;82388;Grinkiskis;Radviliskio District;Lithuania
+50144;JCKULT21;Ignalinos credit union;;110088042;Ateities St 25-3;30121;Ignalina;;Lithuania
+50145;LCKULT22;Utenos credit union;;110088423;Ausros St 34-3;28146;Utena;;Lithuania
+50146;LCKULT22;Mazeikiu credit union;;110088957;Vilniaus St 2;89217;Mazeikiai;;Lithuania
+50147;JCKULT21;Joniskio credit union;;110089678;Miesto Sq 4;84148;Joniskis;;Lithuania
+50149;LCKULT22;Druskininku credit union;;110090118;M. K. Ciurlionio St. 111;66161;Druskininkai;;Lithuania
+50151;LCKULT22;Traku credit union;;300027153;Vytauto St 2;10105;Trakai;;Lithuania
+50152;LCKULT22;Alytaus credit union;;300031511;Dariaus ir Gireno St 4A-3;62137;Alytus;;Lithuania
+50153;LCKULT22;"Credit union ""Gargzdu taupa""";;300044067;Kvietiniu St 11-6;96135;Gargzdai;Klaipedos District;Lithuania
+50154;LCKULT22;"Credit union ""Memelio taupomoji kasa""";;300087289;Minijos St 127-2;93213;Klaipeda;;Lithuania
+50156;LCKULT22;SAGA credit union;;300123739;Kovo 11-osios St 34-33;27112;Vilnius;;Lithuania
+50159;LCKULT22;Kedainiu krasto credit union;;300583851;Josvainiu St 36;57275;Kedainiai;;Lithuania
+50160;VRKULT21;Rato bank, UAB;;112043124;Vilniaus St 10;01102;Vilnius;;Lithuania
+50162;JCKULT21;Pareigunu credit union;;301788649;Birzelio 23-osios St 15;03206;Vilnius;;Lithuania
+50163;LCKULT22;Klaipedos credit union;;302574840;Rutu St 4;91208;Klaipeda;;Lithuania
+50164;JCKULT21;"Credit union ""Litas""";;302448934;Taikos Ave. 21B;50210;Kaunas;;Lithuania
+50165;LCKULT22;Seimos credit union;;302826202;Konstitucijos Ave. 12;09308;Vilnius;;Lithuania
+50166;LCKULT22;"Credit union ""Neris""";;304772963;Jogailos St 4;01116;Vilnius;;Lithuania
+50167;LCKULT22;Vilniaus credit union;;112043996;T. Narbuto St 5-1;08105;Vilnius;;Lithuania
+50168;LCKULT22;"Credit union ""Magnus""";;302671848;Konstitucijos Ave. 15;09319;Vilnius;;Lithuania
+50200;JCKULT21;Jungtine centrine kredito unija;;304739874;J.Jasinskio St 12;01112;Vilnius;;Lithuania
+50300;KUSRLT21;"AB ""Mano bankas""";;112043081;S. Moniuskos St 27;08115;Vilnius;;Lithuania
+50301;KUSRLT24;"AB ""Mano bankas""";;112043081;S. Moniuskos St 27;08115;Vilnius;;Lithuania
+50500;LCKULT22;"Credit union ""Taupa""";;112040886;Kalvariju St 140;08209;Vilnius;;Lithuania
+50800;VIKULT21;Vilniaus credit union;;112043996;Ulonu St 5;08240;Vilnius;;Lithuania
+51400;KUPRLT21;"Credit union ""Magnus""";;302671848;Vilniaus St 25A;36100;Panevezys;;Lithuania
+51500;LTKULT21;LTL credit union;;302791356;Sporto St.18;09238;Vilnius;;Lithuania
+51700;CRUGLT21;Credit union „Saulegraza“;;302894776;A. Jaksto St 12;01105;Vilnius;;Lithuania
+51900;VRKULT21;Rato bank, UAB;;112043124;Vilniaus St 9;01102;Vilnius;;Lithuania
+60024;GRFNLT21;GF bankas, UAB;;300515252;Ukmerges St 322;12106;Vilnius;;Lithuania
+70440;CBVILT2X;AB SEB bankas;;112021238;Gedimino Ave. 12;01103;Vilnius;;Lithuania
+70500;CBSBLT26;AB Artea bankas;AB Artea bankas (former AB Siauliu bankas);112025254;Tilzes St 149;76348;Siauliai;;Lithuania
+70700;RETBLT21;Revolut Bank, UAB;;304580906;Konstitucijos ave 21B;08130;Vilnius;;Lithuania
+70701;RVUALT2V;Revolut Bank, UAB;;304580906;Konstitucijos ave 21B;08130;Vilnius;;Lithuania
+71100;EUEBLT22;European Merchant Bank;;304559043;Gedimino Ave. 35;01109;Vilnius;;Lithuania
+71800;CBSBLT26;AB Artea bankas;;112025254;Tilzes St 149;76348;Siauliai;;Lithuania
+71802;CBSBLT26;AB Artea bankas;AB Artea bankas Kelme client service center;112025254;S.Dariaus ir S.Gireno St 5;86135;Kelme;;Lithuania
+71803;CBSBLT26;AB Artea bankas;AB Artea bankas Vilnius branch;112025254;Verkiu St 37;09109;Vilnius;;Lithuania
+71804;CBSBLT26;AB Artea bankas;AB Artea bankas Kursenai client service center;112025254;J.Basanaviciaus St 9;81156;Kursenai;Siauliu District;Lithuania
+71805;CBSBLT26;AB Artea bankas;AB Artea bankas Klaipeda branch;112025254;Taikos Ave. 66;93219;Klaipeda;;Lithuania
+71806;CBSBLT26;AB Artea bankas;AB Artea bankas Palanga client service center;112025254;Gintaro St 46;00133;Palanga;;Lithuania
+71807;CBSBLT26;AB Artea bankas;AB Artea bankas Siluteclient service center;112025254;Lietuvininku St 17;99134;Silute;;Lithuania
+71808;CBSBLT26;AB Artea bankas;AB Artea bankas Mazeikiai client service center;112025254;Laizuvos St 14;89213;Mazeikiai;;Lithuania
+71809;CBSBLT26;AB Artea bankas;AB Artea bankas Kaunas branch;112025254;Vytauto Ave. 56;44237;Kaunas;;Lithuania
+71810;CBSBLT26;AB Artea bankas;AB Artea bankas Vilkaviskis client service center;112025254;J.Basanaviciaus Ave. 3;70101;Vilkaviskis;;Lithuania
+71811;CBSBLT26;AB Artea bankas;AB Artea bankas Utena client service center;112025254;Utenio Ave. 22;28248;Utena;;Lithuania
+71812;CBSBLT26;AB Artea bankas;AB Artea bankas Alytus client service center;112025254;S.Dariaus ir S.Gireno St 1;62137;Alytus;;Lithuania
+71813;CBSBLT26;AB Artea bankas;AB Artea bankas Taurage client service center;112025254;Vytauto St 76;72216;Taurage;;Lithuania
+71814;CBSBLT26;AB Artea bankas;AB Artea bankas Radviliskis client service center;112025254;Ausros Ave. 1;82123;Radviliskis;;Lithuania
+71815;CBSBLT26;AB Artea bankas;AB Artea bankas Panevezys client service center;112025254;Elektros St 6;35183;Panevezys;;Lithuania
+71816;CBSBLT26;AB Artea bankas;AB Artea bankas Birstonas client service center;112025254;Jaunimo St 3;59206;Birstonas;;Lithuania
+71817;CBSBLT26;AB Artea bankas;AB Artea bankas Telsiai client service center;112025254;Respublikos St 6A;87130;Telsiai;;Lithuania
+71818;CBSBLT26;AB Artea bankas;AB Artea bankas Marijampole client service center;112025254;Kestucio St 9;68308;Marijampole;;Lithuania
+71819;CBSBLT26;AB Artea bankas;AB Artea bankas Druskininkai client service center;112025254;M.K.Ciurlionio St 111;66161;Druskininkai;;Lithuania
+71820;CBSBLT26;AB Artea bankas;AB Artea bankas Plunge client service center;112025254;Telsiu St 1-2A;90162;Plunge;;Lithuania
+71821;CBSBLT26;AB Artea bankas;AB Artea bankas Anyksciai client service center;112025254;J.Biliuno St 7;29113;Anyksciai;;Lithuania
+71822;CBSBLT26;AB Artea bankas;AB Artea bankas Visaginas client service center;112025254;Parko St 7;31130;Visaginas;;Lithuania
+71823;CBSBLT26;AB Artea bankas;AB Artea bankas Kedainiai client service center;112025254;Basanaviciaus St 47C;57283;Kedainiai;;Lithuania
+71824;CBSBLT26;AB Artea bankas;AB Artea bankas Ukmerge client service center;112025254;Kestucio Ave. 7;20114;Ukmerge;;Lithuania
+71825;CBSBLT26;AB Artea bankas;AB Artea bankas Birzai client service center;112025254;J.Janonio Ave. 5;41171;Birzai;;Lithuania
+71826;CBSBLT26;AB Artea bankas;AB Artea bankas Jonava client service center;112025254;Vasario 16-osios St 7;55170;Jonava;;Lithuania
+71827;CBSBLT26;AB Artea bankas;AB Artea bankas Zarasai client service center;112025254;Seliu Ave. 16;32107;Zarasai;;Lithuania
+71828;CBSBLT26;AB Artea bankas;AB Artea bankas Rokiskis client service center;112025254;Vytauto St 1;42114;Rokiskis;;Lithuania
+71829;CBSBLT26;AB Artea bankas;AB Artea bankas Kupiskis client service center;112025254;Vytauto St 8;40115;Kupiskis;;Lithuania
+71830;CBSBLT26;AB Artea bankas;AB Artea bankas Raseiniai client service center;112025254;Dubysos St 2;60146;Raseiniai;;Lithuania
+71899;CBSBLT26;AB Artea bankas;AB Artea bankas Head office;112025254;Tilzes St 149;76348;Siauliai;;Lithuania
+72300;MDBALT22;UAB Urbo bankas;;112027077;Pamenkalnio St 40;01114;Vilnius;;Lithuania
+72900;INDULT2X;"AB ""Citadele"" bankas";;112021619;K.Kalinausko St 13;03107;Vilnius;;Lithuania
+73000;HABALT22;"""Swedbank"", AB";;112029651;Konstitucijos Ave. 20A;03502;Vilnius;;Lithuania
+73300;UASNLT22;Saldo Bank, UAB;;305334925;Zalgirio St. 94-1;09300;Vilnius;;Lithuania
+73400;FNRKLT22;Finora Bank UAB;;305156796;ZalgirioSt 88;09303;Vilnius;;Lithuania
+74000;SMPOLT22;Danske Bank A/S Lietuvos Branch;;301694694;Saltoniskiu St 2;08500;Vilnius;;Lithuania
+74100;USDFLT22;UAB SME Bank;;305223469;Antano Tumeno St. 4-15;01109;Vilnius;;Lithuania
+74101;USDFLT23;UAB SME Bank;;305223469;Antano Tumėno St. 4-15;01109;Vilnius;;Lithuania
+90577;CSDLLT22577;Nasdaq CSD SE Lithuania branch;;110059343;Konstitucijos Ave 29;08105;Vilnius;;Lithuania
+91001;UFOSLT22;Orion Securities, UAB FMI;;122033915;A. Tumeno St 4;01109;Vilnius;;Lithuania
+91002;STEKLT21;Macte Invest FM AB;;122601232;Gedimino Ave 20;01103;Vilnius;;Lithuania
