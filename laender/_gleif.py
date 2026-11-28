@@ -75,3 +75,33 @@ def hinweis_datei(tabelle: str, uebrige: str) -> bytes:
     return ("Die BICs in bankleitzahlen.csv (Spalten BIC und Weitere BICs) stammen aus der BIC/LEI-Zuordnung\n"
             "von SWIFT und GLEIF. Für sie gilt:\n\n" + swift_hinweis(tabelle) + "\n\nLizenz: " + LIZENZ +
             "\n\nAlle übrigen Angaben: " + uebrige + "\n").encode("utf-8")
+
+
+# ---------------------------------------------------------------- Korrekturlisten
+
+def korrekturen_anwenden(code: str, pfad, blz_muster: str, banken: dict[str, dict], quelle_name: str) -> int:
+    """Von Hand gepflegte BICs (CSV: Bankleitzahl;BIC;Institut;Beleg;Geprüft am) auf banken anwenden.
+
+    Ein abweichender bisheriger BIC rückt unter „Weitere BICs“; die BIC-Quelle wird „manuell“.
+    Steht ein Code nicht mehr in der Quelle, gibt es eine Warnung. -> Anzahl angewandter Einträge."""
+    import re as _re
+    from pathlib import Path
+    pfad = Path(pfad)
+    if not pfad.exists():
+        return 0
+    with pfad.open(encoding="utf-8", newline="") as f:
+        zeilen = [{k: (v or "").strip() for k, v in z.items()} for z in csv.DictReader(f, delimiter=";")]
+    angewandt = 0
+    for k in zeilen:
+        if not _re.fullmatch(blz_muster, k["Bankleitzahl"]) or not _re.fullmatch(r"[A-Z0-9]{8}([A-Z0-9]{3})?", k["BIC"]):
+            raise RuntimeError(f"ungültige Zeile in {pfad.name}: {k}")
+        z = banken.get(k["Bankleitzahl"])
+        if z is None:
+            print(f"[{code}] Warnung: Korrektur für {k['Bankleitzahl']} ({k['Institut']}) – Code nicht mehr in {quelle_name}")
+            continue
+        if z["BIC"] != k["BIC"]:
+            weitere = [b for b in [z["BIC"], *z["Weitere BICs"].split()] if b and b != k["BIC"]]
+            z["BIC"], z["Weitere BICs"] = k["BIC"], " ".join(dict.fromkeys(weitere))
+        z["BIC-Quelle"] = "manuell"
+        angewandt += 1
+    return angewandt

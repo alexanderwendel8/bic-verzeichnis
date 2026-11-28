@@ -20,9 +20,7 @@
 
 from __future__ import annotations
 
-import csv
 import json
-import re
 import sys
 import time
 import urllib.parse
@@ -137,17 +135,7 @@ def laden(args, alte_meta: dict) -> Stand:
         z["BIC"], z["Weitere BICs"], z["BIC-Quelle"] = haupt, " ".join(weitere), "GLEIF" if haupt else ""
 
     # Korrekturliste: ersetzt den GLEIF-BIC (der dann unter „Weitere BICs“ steht) oder füllt eine Lücke
-    korrigiert = 0
-    for k in _korrekturen():
-        z = banken.get(k["Bankleitzahl"])
-        if z is None:
-            print(f"[{CODE}] Warnung: Korrektur für {k['Bankleitzahl']} ({k['Institut']}) – Code nicht mehr in REGAFI")
-            continue
-        if z["BIC"] != k["BIC"]:
-            weitere = [b for b in [z["BIC"], *z["Weitere BICs"].split()] if b and b != k["BIC"]]
-            z["BIC"], z["Weitere BICs"] = k["BIC"], " ".join(dict.fromkeys(weitere))
-        z["BIC-Quelle"] = "manuell"
-        korrigiert += 1
+    korrigiert = _gleif.korrekturen_anwenden(CODE, KORREKTUREN, r"\d{5}", banken, "REGAFI")
 
     neu = sorted(banken.values(), key=lambda z: z[SCHLUESSEL])
     heute = args.today.isoformat()
@@ -165,17 +153,6 @@ def laden(args, alte_meta: dict) -> Stand:
                      "\nAusnahme: BICs mit BIC-Quelle „manuell“ stammen nicht aus der GLEIF-Zuordnung, sondern aus einer "
                      "von Hand gepflegten Liste mit Beleg je Eintrag (laender/fr_bic_korrekturen.csv im Repository).\n"
                  ).encode("utf-8")})
-
-
-def _korrekturen() -> list[dict]:
-    if not KORREKTUREN.exists():
-        return []
-    with KORREKTUREN.open(encoding="utf-8", newline="") as f:
-        zeilen = [{k: (v or "").strip() for k, v in z.items()} for z in csv.DictReader(f, delimiter=";")]
-    for z in zeilen:
-        if not re.fullmatch(r"\d{5}", z["Bankleitzahl"]) or not re.fullmatch(r"[A-Z0-9]{8}([A-Z0-9]{3})?", z["BIC"]):
-            raise RuntimeError(f"ungültige Zeile in {KORREKTUREN.name}: {z}")
-    return zeilen
 
 
 # ---------------------------------------------------------------- API

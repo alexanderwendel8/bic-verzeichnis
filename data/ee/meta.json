@@ -1,0 +1,11 @@
+{
+ "Quelle": {
+  "Kreditinstitute": "https://www.fi.ee/et/pangandus-ja-krediit/krediidivaldkonna-tegevuslubade-taotlemine/krediidiasutuse-rahvusvahelise-kontonumbri-tunnuskood",
+  "Zahlungsinstitute": "https://www.fi.ee/et/makse-ja-e-raha-teenused/makseteenuse-valdkonna-tegevuslubade-taotlemine/makse-ja-e-raha-asutuse-rahvusvahelise-kontonumbri-tunnuskood"
+ },
+ "Stand": {
+  "Kreditinstitute": "2025-08-25",
+  "Zahlungsinstitute": "2026-09-09"
+ },
+ "GLEIF-Tabelle": "2026-11"
+}
