@@ -197,7 +197,7 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
   denselben BIC haben (Filialen, frühere Codes). **Lettland:** nur Bankcode, BIC, Name, `iban_struktur` und
   `gueltig_ab` (Datum der letzten Aktualisierung der Liste).
 - **Estland:** `art` (Kreditinstitut, Filiale, Zahlungs- oder E-Geld-Institut), `weitere_codes` (Luminor hat `96` und
-  `17`), `lei`. Der `bic` stammt **von GLEIF** (`bic_quelle`: `GLEIF`), verknüpft über den Namen; für zwei Filialen
+  `17`), `lei`. Der `bic` stammt **von GLEIF** (`bic_quelle`: `GLEIF`), verknüpft über den Namen; für drei Filialen
   ausländischer Banken aus einer kleinen, von Hand gepflegten Liste (`bic_quelle`: `manuell`). **Nur für nicht
   kommerzielle Zwecke:** eine kommerzielle Weiterverwendung der estnischen Codes braucht eine Erlaubnis der
   Finantsinspektsioon (siehe [Quellen und Lizenzen](#quellen-und-lizenzen)).
@@ -377,7 +377,7 @@ Danach folgt der Eintrag (bei `entfernt` der letzte bekannte Stand). Schlüssel 
   herangezogen.
 - BICs führt die Finantsinspektsioon nicht. Sie kommen aus der GLEIF-Zuordnung (nur estnische BICs), verknüpft über den
   Namen (rechtlicher und weitere Namen bei GLEIF, ohne Rechtsformzusätze). Filialen ausländischer Institute führt GLEIF
-  unter dem LEI der Mutter; für sie gibt es `laender/ee_bic_korrekturen.csv` (derzeit Citadele `12`, OP `51`).
+  unter dem LEI der Mutter; für sie gibt es `laender/ee_bic_korrekturen.csv` (derzeit Citadele `12`, OP `51`, Banqup `72`).
 
 **Italien – Besonderheiten der Quelle:**
 
