@@ -18,12 +18,14 @@ Für eine Überweisung braucht man die Kontonummer (IBAN) und oft auch den **BIC
 - **Litauen:** fünfstellig an den Stellen 5 bis 9 (`LT.. 7300 0…` → `73000`, Swedbank)
 - **Lettland:** vier Buchstaben an den Stellen 5 bis 8, gleich den ersten vier Zeichen des BIC (`LV.. HABA …` → `HABA`, Swedbank)
 - **Estland:** zweistellig an den Stellen 5 und 6 (`EE.. 22…` → `22`, Swedbank)
+- **Niederlande:** vier Buchstaben an den Stellen 5 bis 8, gleich den ersten vier Zeichen des BIC (`NL.. INGB …` → `INGB`, ING);
+  hier **abgeleitet und unvollständig**, siehe unten
 - **Italien:** der fünfstellige ABI-Code an den Stellen 6 bis 10, danach der CAB-Code der Filiale an den Stellen 11 bis 15
   (`IT.. X 03069 15417 …` → ABI `03069` Intesa Sanpaolo, CAB `15417` Filiale Pescara)
 
 Dieses Projekt sammelt die BICs und Bankleitzahlen aller Banken in Österreich und seinen Nachbarländern
 Deutschland, Schweiz, Liechtenstein, Italien, Tschechien, Slowakei, Ungarn und Slowenien sowie weiterer EU-Länder
-(Belgien, Spanien, Frankreich, Polen, Litauen, Lettland, Estland) an einem Ort und hält sie aktuell.
+(Belgien, Spanien, Frankreich, Polen, Litauen, Lettland, Estland, Niederlande) an einem Ort und hält sie aktuell.
 
 ## Was es macht
 
@@ -55,6 +57,10 @@ Deutschland, Schweiz, Liechtenstein, Italien, Tschechien, Slowakei, Ungarn und S
     der Latvijas Banka
   - Estland: die Listen der IBAN-Bankcodes der [Finanzaufsicht Finantsinspektsioon](https://www.fi.ee/et/pangandus-ja-krediit/krediidivaldkonna-tegevuslubade-taotlemine/krediidiasutuse-rahvusvahelise-kontonumbri-tunnuskood),
     die die Codes vergibt; BICs über GLEIF
+  - Niederlande: **abgeleitet, nicht amtlich** – Kreditinstitute und Zahlungsdienstleister aus den Listen der
+    [Europäischen Zentralbank](https://www.ecb.europa.eu/stats/financial_corporations/list_of_financial_institutions/html/index.en.html),
+    deren niederländische BICs von GLEIF und daraus der Bankcode. Die amtliche Liste der Betaalvereniging Nederland
+    darf nicht weitergegeben werden.
   - Italien: die Register der [Banca d'Italia](https://www.bancaditalia.it/servizi-cittadino/servizi/albi-elenchi/index.html)
     (Institute, Filialen mit CAB-Code, Fusionen). Die Banca d'Italia führt keine BICs; sie werden über die
     [BIC/LEI-Zuordnung von GLEIF](https://www.gleif.org/en/lei-data/lei-mapping/download-bic-to-lei-relationship-files) ergänzt.
@@ -68,7 +74,7 @@ Deutschland, Schweiz, Liechtenstein, Italien, Tschechien, Slowakei, Ungarn und S
 
 👉 **[alexanderwendel8.github.io/bic-verzeichnis](https://alexanderwendel8.github.io/bic-verzeichnis/)**
 
-- **Land wählen:** oben das Land umschalten (AT, DE, CH, LI, IT, CZ, SK, HU, SI, BE, ES, FR, PL, LV, LT, EE).
+- **Land wählen:** oben das Land umschalten (AT, DE, CH, LI, IT, CZ, SK, HU, SI, BE, ES, FR, PL, LV, LT, EE, NL).
 - **Suchen:** Bankleitzahl, BIC, Banknamen oder Ort eintippen, die Treffer erscheinen sofort.
   Ein Klick auf eine Bank zeigt alle Details, BLZ und BIC lassen sich mit einem Klick kopieren.
   In Deutschland findet die Suche auch Filial-BICs und frühere Banknamen und zeigt, zu welcher
@@ -81,7 +87,7 @@ Deutschland, Schweiz, Liechtenstein, Italien, Tschechien, Slowakei, Ungarn und S
 - **Per API abfragen:** Für Programme gibt es eine einfache Schnittstelle, siehe [API](#api).
 
 Ein Projekt von Alexander Wendel. Die Daten stammen von OeNB, Deutscher Bundesbank, SIX, Banca d'Italia (BICs: GLEIF), ČNB, NBS, MNB,
-Banka Slovenije, NBB, Banco de España (BICs: GLEIF), ACPR (BICs: GLEIF), NBP, Latvijas Banka, Lietuvos bankas und Finantsinspektsioon (BICs: GLEIF) und werden ohne Gewähr weitergegeben.
+Banka Slovenije, NBB, Banco de España (BICs: GLEIF), ACPR (BICs: GLEIF), NBP, Latvijas Banka, Lietuvos bankas, Finantsinspektsioon (BICs: GLEIF) und EZB (NL, abgeleitet über GLEIF) und werden ohne Gewähr weitergegeben.
 
 ## API
 
@@ -148,7 +154,7 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
 | `/api/v1/{land}/alle.json` | Alle Banken eines Landes mit allen Daten in einer Datei (kompakt) |
 | `/api/v1/index.json` | Übersicht: unterstützte Länder und Anzahl der Banken |
 
-- **Land:** `AT`, `DE`, `CH`, `LI`, `IT`, `CZ`, `SK`, `HU`, `SI`, `BE`, `ES`, `FR`, `PL`, `LV`, `LT` oder `EE`, Kleinbuchstaben gehen auch.
+- **Land:** `AT`, `DE`, `CH`, `LI`, `IT`, `CZ`, `SK`, `HU`, `SI`, `BE`, `ES`, `FR`, `PL`, `LV`, `LT`, `EE` oder `NL`, Kleinbuchstaben gehen auch.
 - **Bankleitzahl Österreich:** wie in der IBAN fünfstellig (`00100`) oder ohne führende Nullen (`100`).
 - **Bankleitzahl Deutschland:** immer achtstellig (`10010010`).
 - **Bankleitzahl Schweiz/Liechtenstein:** die IID, fünfstellig (`00100`) oder ohne führende Nullen (`100`).
@@ -157,7 +163,7 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
 - **Bankleitzahl Belgien:** der dreistellige Bank-Identifikationscode (`310`). **Spanien:** vierstellig (`0049`).
 - **Bankleitzahl Frankreich:** der Code banque, fünfstellig (`30004`). **Polen:** die Abrechnungsnummer, achtstellig (`10501445`).
 - **Bankleitzahl Litauen:** fünfstellig (`73000`). **Lettland:** vier Buchstaben (`HABA`, auch `haba`).
-- **Bankleitzahl Estland:** zweistellig (`22`).
+- **Bankleitzahl Estland:** zweistellig (`22`). **Niederlande:** vier Buchstaben (`INGB`, auch `ingb`).
 - **Bankleitzahl Italien:** der ABI-Code, fünfstellig (`03069`) oder ohne führende Nullen (`3069`). Die CAB-Codes
   stehen in `filialen`.
 - **Felder je Land unterschiedlich:** Die Bundesbank liefert keine Straße, keine Kontaktdaten und keinen LEI,
@@ -201,6 +207,11 @@ Beispiel Deutschland: [`/api/v1/DE/12070000.json`](https://alexanderwendel8.gith
   ausländischer Banken aus einer kleinen, von Hand gepflegten Liste (`bic_quelle`: `manuell`). **Nur für nicht
   kommerzielle Zwecke:** eine kommerzielle Weiterverwendung der estnischen Codes braucht eine Erlaubnis der
   Finantsinspektsioon (siehe [Quellen und Lizenzen](#quellen-und-lizenzen)).
+- **Niederlande:** `abgeleitet: true` – Bankcode und BIC stammen nicht aus einer amtlichen Liste, sondern aus GLEIF
+  (Bankcode = erste vier Zeichen des BIC). Dazu `art`, `lei`, `ezb_kennung`, `ezb_liste` (MFI oder PSRI),
+  `muttergesellschaft` (bei Filialen) und `adresse`. **Unvollständig:** rund 90 Codes, die amtliche Liste hat rund
+  100; es fehlen Codes, für die GLEIF keinen BIC kennt (z. B. ASN `ASNB`, Knab), und einzelne abgeleitete Codes
+  werden nicht für niederländische IBANs vergeben.
 - **Italien:** `register` (Bank, Zahlungsinstitut, E-Geld-Institut), `rechtsform`, `steuernummer`, `registernummer`,
   `eingetragen_seit`, `filialen` (mit `cab`, Adresse, `eroeffnet`). Der `bic` stammt **nicht von der Banca d'Italia,
   sondern von GLEIF** (`bic_quelle`: `GLEIF`); weitere BICs desselben Instituts stehen in `weitere_bics`. Für etwa jedes
@@ -242,21 +253,21 @@ Jedes Land ist ein eigenes kleines Modul in `laender/`. Alles andere – Verglei
 | Pfad | Inhalt |
 |---|---|
 | `laender/__init__.py` | Liste der Länder und Beschreibung, was ein Land-Modul bereitstellen muss |
-| `laender/at.py`, `de.py`, `ch.py`, `li.py`, `it.py`, `cz.py`, `sk.py`, `hu.py`, `si.py`, `be.py`, `es.py`, `fr.py`, `pl.py`, `lv.py`, `lt.py`, `ee.py` | je Land: Download, Umwandlung, API-Felder, Einstellungen der Webseite |
+| `laender/at.py`, `de.py`, `ch.py`, `li.py`, `it.py`, `cz.py`, `sk.py`, `hu.py`, `si.py`, `be.py`, `es.py`, `fr.py`, `pl.py`, `lv.py`, `lt.py`, `ee.py`, `nl.py` | je Land: Download, Umwandlung, API-Felder, Einstellungen der Webseite |
 | `laender/_six.py` | gemeinsame SIX-Quelle für die Schweiz und Liechtenstein |
 | `laender/_xlsx.py` | liest Excel-Dateien (`.xlsx`) ohne Zusatzbibliothek (Ungarn, Belgien, Spanien) |
-| `laender/_gleif.py` | BICs aus der BIC/LEI-Zuordnung von GLEIF samt SWIFT-Hinweis (Italien, Spanien, Frankreich, Estland), je Lauf nur einmal geladen, und Korrekturlisten |
+| `laender/_gleif.py` | BICs aus der BIC/LEI-Zuordnung von GLEIF samt SWIFT-Hinweis (Italien, Spanien, Frankreich, Estland, Niederlande), je Lauf nur einmal geladen, und Korrekturlisten |
 | `kern.py` | gemeinsamer Teil: Vergleich, Änderungsprotokoll, Ablage, API-Einträge |
 | `update.py` | lädt alle (oder ausgewählte) Länder und protokolliert Änderungen |
 | `build_site.py` | stellt Webseite, `laender.json` und API für GitHub Pages zusammen (API nicht im Repo abgelegt) |
 | `web/` | Weboberfläche (statisch, ohne Build-Schritt; Länder kommen aus `laender.json`) |
 | `data/<land>/bankleitzahlen.csv` | aktueller Stand, eine Zeile je Bankleitzahl |
 | `data/<land>/filialen.csv` | weitere Orte je Bankleitzahl (Deutschland: Zusatzeinträge, Italien: Filialen mit CAB) |
-| `data/<land>/meta.json` | Angaben zur verwendeten Quelldatei (z. B. Gültigkeit in DE, CZ und HU, Version in BE, frühere Codes in ES, Stand in FR, Veröffentlichung in PL, verwendete Datei in LT und LV, Stand der Listen in EE, Überführungen in CH/LI, Fusionen in IT) |
+| `data/<land>/meta.json` | Angaben zur verwendeten Quelldatei (z. B. Gültigkeit in DE, CZ und HU, Version in BE, frühere Codes in ES, Stand in FR, Veröffentlichung in PL, verwendete Datei in LT und LV, Stand der Listen in EE, PSRI-Liste in NL, Überführungen in CH/LI, Fusionen in IT) |
 | `changes/<land>/JJJJ-MM-TT.csv` | Änderungen eines Tages (nur an Tagen mit Änderungen) |
 | `changes/<land>/index.json` | Liste der Tage mit Änderungen |
 
-`<land>` ist der Ländercode in Kleinbuchstaben (`at`, `de`, `ch`, `li`, `it`, `cz`, `sk`, `hu`, `si`, `be`, `es`, `fr`, `pl`, `lv`, `lt`, `ee`). Die frühere Adresse der österreichischen
+`<land>` ist der Ländercode in Kleinbuchstaben (`at`, `de`, `ch`, `li`, `it`, `cz`, `sk`, `hu`, `si`, `be`, `es`, `fr`, `pl`, `lv`, `lt`, `ee`, `nl`). Die frühere Adresse der österreichischen
 Gesamtliste, `data/sepa-zv-vz_gesamt.csv`, wird auf der Webseite weiter bedient.
 Ältere Gesamtstände sind über die Git-Historie der Dateien in `data/` abrufbar.
 
@@ -379,6 +390,19 @@ Danach folgt der Eintrag (bei `entfernt` der letzte bekannte Stand). Schlüssel 
   Namen (rechtlicher und weitere Namen bei GLEIF, ohne Rechtsformzusätze). Filialen ausländischer Institute führt GLEIF
   unter dem LEI der Mutter; für sie gibt es `laender/ee_bic_korrekturen.csv` (derzeit Citadele `12`, OP `51`, Banqup `72`).
 
+**Niederlande – abgeleitet aus EZB-Listen und GLEIF:**
+
+- Die vollständige Liste der niederländischen Bankcodes führt die Betaalvereniging Nederland. Ihre Bedingungen verbieten
+  die Weitergabe ohne schriftliche Erlaubnis; De Nederlandsche Bank und die EZB veröffentlichen keine Bankcodes oder BICs.
+- Da der Bankcode den ersten vier Zeichen des BIC entspricht, wird er abgeleitet:
+  1. Institute aus der täglichen **MFI-Liste** der EZB (Kreditinstitute und Zentralbank, CSV in UTF-16, gezippt; der
+     Dateiname wechselt täglich und wird von der Seite gelesen) und der halbjährlichen **PSRI-Liste** (Zahlungs- und
+     E-Geld-Institute, XLSX in einem ZIP; verwendet wird die neueste),
+  2. deren niederländische BICs aus der GLEIF-Zuordnung über den LEI, bei Filialen ausländischer Banken auch über den
+     LEI der Mutter,
+  3. Bankcode = BIC[0:4]; Haupt-BIC je Code wie in Italien (voll verbunden, bevorzugt `…XXX`).
+- In der API steht `abgeleitet: true`, auf der Webseite ein deutlicher Hinweis.
+
 **Italien – Besonderheiten der Quelle:**
 
 - Die Banca d'Italia bietet in ihrem Download-Bereich („Area download“ der Register) täglich aktualisierte Dateien als
@@ -444,7 +468,7 @@ der Fußzeile, direkt neben dem CSV-Download.
 
 **Bei Verwendung der API oder der CSV-Dateien sind die Quellenangaben sichtbar darzustellen** – mit dem Wortlaut aus
 der Tabelle für jedes Land, dessen Daten verwendet werden, und einem Link zu den Nutzungsbedingungen, z. B. in der
-Fußzeile, im Impressum oder direkt bei den angezeigten Daten. Für BICs aus Italien, Spanien, Frankreich und Estland ist zusätzlich der SWIFT-Hinweis
+Fußzeile, im Impressum oder direkt bei den angezeigten Daten. Für BICs aus Italien, Spanien, Frankreich, Estland und den Niederlanden (dort auch für die Bankcodes) ist zusätzlich der SWIFT-Hinweis
 (unten) Pflicht. Die Quellen übernehmen keine Haftung für Richtigkeit und Vollständigkeit; dasselbe gilt für dieses
 Verzeichnis.
 
@@ -454,7 +478,7 @@ Verzeichnis.
 | DE | Deutsche Bundesbank | Quelle: Deutsche Bundesbank | [Nutzungsbedingungen, Abschnitt 4](https://www.bundesbank.de/de/startseite/benutzerhinweise/nutzungsbedingungen-fuer-den-allgemeinen-gebrauch-der-website-763554): speichern, weitergeben und vervielfältigen frei, „Die Informationen dürfen nicht verändert oder verfälscht werden.“ |
 | CH, LI | SIX Interbank Clearing | Quelle: SIX Interbank Clearing, Bank Master. BICs sind Eigentum von S.W.I.F.T. SCRL. | [Record Description](https://www.six-group.com/dam/download/banking-services/interbank-clearing/bc-bank-master/bankmaster-v3.0-record-description-en.pdf): „Information in the Download Bank Master may be used freely.“ |
 | IT | Banca d'Italia (Open Data, CC BY 4.0) | Fonte: Banca d'Italia – Albi ed elenchi di vigilanza, Lizenz CC BY 4.0. Geändert: gefiltert, umformatiert, BICs von GLEIF ergänzt. | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de), Datensätze auf [dati.gov.it](https://www.dati.gov.it) |
-| IT, ES, FR, EE (BICs) | SWIFT / GLEIF, BIC/LEI-Zuordnung | SWIFT-Hinweis, siehe unten | [License Agreement](https://www.gleif.org/lei-data/lei-mapping/download-bic-to-lei-relationship-files/2017-12-21_annex-2_bic-to-lei-mapping-table-license-agreement_final.pdf) |
+| IT, ES, FR, EE, NL (BICs) | SWIFT / GLEIF, BIC/LEI-Zuordnung | SWIFT-Hinweis, siehe unten | [License Agreement](https://www.gleif.org/lei-data/lei-mapping/download-bic-to-lei-relationship-files/2017-12-21_annex-2_bic-to-lei-mapping-table-license-agreement_final.pdf) |
 | CZ | Česká národní banka | Source: the CNB (Zdroj: ČNB). | [Terms and conditions](https://www.cnb.cz/en/privacy-statement-and-disclaimer/disclaimer-copyright/) |
 | SK | Národná banka Slovenska | Zdroj: Národná banka Slovenska. | [Disclaimer](https://nbs.sk/disclaimer-sk/) |
 | HU | Magyar Nemzeti Bank | Forrás: Magyar Nemzeti Bank. | [Disclaimer](https://www.mnb.hu/en/the-central-bank/practical-issues/disclaimer) |
@@ -465,10 +489,11 @@ Verzeichnis.
 | LT | Lietuvos bankas | Šaltinis: Lietuvos bankas. | [Informacijos naudojimo sąlygos](https://www.lb.lt/lt/informacijos-naudojimo-salygos): „prašome kaip šaltinį nurodyti Lietuvos banką“ (bitte die Lietuvos bankas als Quelle nennen) |
 | LV | Latvijas Banka | Avots: Latvijas Banka. | Keine eigenen Bedingungen für die BIC-Liste. Angewandt werden die [Bedingungen für statistische Informationen](https://www.bank.lv/statistika/informacija-statistikas-lietotajiem/datu-izmantosana): Latvijas Banka als Quelle nennen, Daten nicht verfälschen |
 | EE | Finantsinspektsioon | Allikas: Finantsinspektsioon. Geändert: zwei Listen zusammengeführt, BICs von GLEIF ergänzt. | [Veebilehe info ja kasutustingimused](https://www.fi.ee/et/veebilehe-info-ja-kasutustingimused): Verbreiten nur mit vorheriger Erlaubnis; erlaubt ist die Nutzung „ajakirjanduses ja mittetulunduslikel eesmärkidel, kui märgitakse ära informatsiooni allikas“ (in der Presse und für nicht kommerzielle Zwecke mit Quellenangabe), Änderungen kenntlich machen. **Kommerzielle Weiterverwendung der estnischen Codes nur mit Erlaubnis der Finantsinspektsioon.** |
+| NL | Europäische Zentralbank (MFI- und PSRI-Liste) | Source: European Central Bank. Geändert: gefiltert; Bankcode und BIC abgeleitet über GLEIF, nicht amtlich. | [Disclaimer](https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html): „users of this website may make free use of the information obtained directly from it … it must appear accurately and the ECB must be cited as the source“; Änderungen ausdrücklich kennzeichnen |
 | ES | Banco de España | Fuente: Banco de España. Geändert: gefiltert, umformatiert, BICs von GLEIF ergänzt. | [Aviso legal](https://www.bde.es/wbe/es/pie/aviso-legal/): Wiedergabe erlaubt, wenn sie „fielmente, sin manipular ni alterar los contenidos“ erfolgt und der Banco de España als Quelle genannt wird |
 
-**SWIFT-Hinweis für die italienischen, spanischen, französischen und estnischen BICs** (Pflicht für jede Kopie, auch in Teilen; `[Monat Jahr]` = Stand der
-verwendeten Zuordnungstabelle, auf der Webseite und in `data/it/`, `data/es/`, `data/fr/` und `data/ee/HINWEIS-BIC.txt` jeweils eingesetzt):
+**SWIFT-Hinweis für die italienischen, spanischen, französischen, estnischen und niederländischen BICs** (Pflicht für jede Kopie, auch in Teilen; `[Monat Jahr]` = Stand der
+verwendeten Zuordnungstabelle, auf der Webseite und in `data/it/`, `data/es/`, `data/fr/`, `data/ee/` und `data/nl/HINWEIS-BIC.txt` jeweils eingesetzt):
 
 > SWIFT © and database rights [Monat Jahr]. All rights reserved. This Mapping Table has been developed by SWIFT. Any use
 > of the Mapping Table, in whole or in part, is subject to the BIC/LEI Mapping Table License Agreement as published with
