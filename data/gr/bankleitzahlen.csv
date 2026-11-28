@@ -1,0 +1,37 @@
+﻿Bankleitzahl;BIC;Weitere BICs;Bankenname;Art;LEI;EZB-Kennung;Straße;PLZ;Ort;Muttergesellschaft;EZB-Liste
+010;BNGRGRAAXXX;;Bank of Greece, S.A.;Zentralbank;529900SL3K21WAN6X611;GR010;21, E. Venizelou Str.;10250;Athens;;MFI
+011;ETHNGRAAXXX;;National Bank of Greece, S.A.;Kreditinstitut;5UMCZOEYKCVFAW8ZLO05;GR011;86, Aiolou Str.;10559;Athens;;MFI
+014;CRBAGRAAXXX;;Alpha Bank S.A.;Kreditinstitut;213800DBQIB6VBNU5C64;GR014N;Stadiou, 40;10252;Athens;;MFI
+016;ATTIGRAAXXX;;CREDIABANK S.A.;Kreditinstitut;213800FFWYE3BQ1CU978;GR016;23, Omirou Str.;10672;Athens;;MFI
+017;PIRBGRAAXXX;;PIRAEUS BANK SA;Kreditinstitut;213800OYHR1MPQ5VJL60;GR017N;Amerikis 4;10564;Athens;;MFI
+026;ERBKGRAAXXX;;EUROBANK S.A.;Kreditinstitut;213800KGF4EFNUQKAT69;GR026N;Othonos, 8;10557;Athens;;MFI
+034;IBOGGRAAXXX;;Optima bank S.A.;Kreditinstitut;2138008NSD1X1XFUK750;GR034;32, Aigialeias and Paradissou;15125;Athens;;MFI
+039;BNPAGRA1XXX;;BNP PARIBAS S.A. ATHENS BRANCH;Kreditinstitut;;GR039N;2 LAMPSAKOU STR.;11528;Athens;BNP Paribas;MFI
+040;FIATGRA1XXX;;CA Auto Bank S.p.A. Hellenic Branch;Kreditinstitut;213800Y9IHU7Q1XX4527;GR040N;580A, VOULIAGMENIS AV.;16452;ATHENS;CRÉDIT AGRICOLE AUTO BANK S.P.A.;MFI
+050;SDRRGRA1XXX;;Bank Saderat Iran;Kreditinstitut;213800IJGJFB3GND1T26;GR050;25, E. Venizelou Str.;10564;Athens;Bank Saderat Iran;MFI
+056;AEBAGRAAXXX;;Aegean Baltic Bank S.A.;Kreditinstitut;213800TWSHPHH7ZH2P97;GR056;91, Great Alexander and 25th March;15124;Athens;;MFI
+057;VPAYGRAAXXX;;VIVABANK BANKING S.A.;Kreditinstitut;213800A3YBCKWVF3DM64;GR057;AMAROYSIOY-CHALANDRIOY 18-20;15125;MAROYSI;;MFI
+069;;;Cooperative Bank of Chania Cooperative of Limited Liabilities;Kreditinstitut;213800ZLIZIF47DYZF66;GR069;28-32 El.Venizelou Str.;73132;Chania;;MFI
+073;;;Bank of Cyprus Public Company Limited;Kreditinstitut;;GR073;192, Alexandras avenue;11521;Athens;BANK OF CYPRUS PUBLIC COMPANY LTD;MFI
+075;STIOGR21XXX;;Bank of Epirus SA;Kreditinstitut;213800AXQUILVAQS3374;GR075;6, Patriarchou Ioakim and Karapanou Str.;45221;Ioannina;;MFI
+081;BOFAGR2XXXX;;Bank of America Europe Designated Activity Company, Athens Branch;Kreditinstitut;;GR081;68, Vas. Sofias Avenue;11528;Athens;Bank of America Europe Designated Activity Company;MFI
+084;CITIGRAAXXX;;Citibank Europe PLC (CEP);Kreditinstitut;;GR084;Othonos 8;10557;Athens;Citibank Europe plc;MFI
+089;STKAGRAXXXX;;Cooperative Bank of Karditsa Coop. L.L.;Kreditinstitut;213800WPA78FCDJEW825;GR089;Taliadourou and Kolokotroni Str.;43100;Karditsa;;MFI
+091;STTKGR22XXX;;Cooperative Bank of Thessaly Coop. L.L.;Kreditinstitut;213800NAAYOQNIIUIS66;GR091;3, Miaouli Str.;42100;Trikala;;MFI
+102;VOWAGRA1XXX;;Volkswagen Bank GmbH;Kreditinstitut;;GR102;409A Vouliagmenis Ave.;16674;Athens;Volkswagen Bank Gesellschaft mit beschränkter Haftung;MFI
+105;BMASGRA1XXX;;BMW Austria Bank GmbH;Kreditinstitut;;GR105;10, Senekka Str. & 33, Kymis Str;14564;Athens;BMW Austria Bank GmbH;MFI
+109;TCZBGRATXXX;;T.C. Ziraat Bankasi A.S.;Kreditinstitut;2138007EX5VCR4QPB730;GR109;2, Ermou Str.;10563;Athens;T.C. ZIRAAT BANKASI A.S.;MFI
+111;;;Deutsche Bank AG;Kreditinstitut;;GR111;23A, Vas. Sofias Avenue;10674;Athens;DEUTSCHE BANK AKTIENGESELLSCHAFT;MFI
+115;;;Hamburg Commercial Bank AG;Kreditinstitut;;GR115;2, Filellinon Str. & Akti Miaouli;18536;Piraeus;Hamburg Commercial Bank AG;MFI
+116;PRCBGRAAXXX;;ProCredit Bank (Bulgaria) EAD;Kreditinstitut;;GR116;54-56, 26th October & Pigasus str.;54627;Thessaloniki;ProCredit Bank (Bulgaria) EAD;MFI
+118;;;EFG Bank (Luxembourg) SA Athens branch;Kreditinstitut;;GR118;Kifisias 342B - Ethnikis Antistaseos;15451;Athens;EFG Bank (Luxembourg) S.A.;MFI
+119;;;ABN AMRO Bank N.V.;Kreditinstitut;;GR119;38, Patriarchou Ioakim St.;10675;Athens;ABN AMRO Bank N.V.;MFI
+121;BKCHGRAAXXX;;Bank of China (Europe) S.A. Athens branch;Kreditinstitut;;GR121;2 Mesogeion Av.;11527;Athens;Bank of China (Europe) S.A;MFI
+122;BFGRGRA2XXX;;BFF BANK S.p.A.-GREEK BRANCH;Kreditinstitut;;GR122;Gounari 78, Glyfada;16561;Athens;BFF BANK SPA;MFI
+123;;;OPEN BANK S.A. YPOKATASTIMA ELLADOS;Kreditinstitut;;GR123;Vissarionos, 1;10672;Athens;OPENBANK, S.A.;MFI
+124;;;J.P. Morgan SE-Athens Branch;Kreditinstitut;;GR124;3, Charitos Str;10675;Athens;J.P. Morgan SE;MFI
+125;TBIBGRAAXXX;;TBI BANK EAD-Branch Greece;Kreditinstitut;529900VMX7BC5SOAWX44;GR125;196, Kifisias Av., Chalandri;15231;Athens;TBI Bank EAD;MFI
+126;;;Goldman Sachs Bank Europe SE, Athens Branch;Kreditinstitut;;GR126;The Orbit - 115, Kifisias Av.;11524;Athens;Goldman Sachs Bank Europe SE;MFI
+127;;;Eurobank Private Bank Luxembourg S.A., Athens Branch;Kreditinstitut;;GR127;Xenias 5;14562;Athens, Kifisia;Eurobank Private Bank Luxembourg S.A.;MFI
+128;SNPIGR2AXXX;SNPIGR2AI01;SNAPPI TRAPEZA ANONYMI ETAIREIA;Kreditinstitut;213800FLZB75NI6NRO92;GR128;KRYSTALLI 7A;45444;IOANNINA;;MFI
+130;;;Banque J. Safra Sarasin (Luxembourg) SA, Greek branch;Kreditinstitut;6367009FAIVVKSZIXB15;GR130;Vasilissis Sofias Avenue 16;10674;Athens;Banque J. Safra Sarasin (Luxembourg) SA;MFI
