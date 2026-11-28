@@ -1,0 +1,20 @@
+﻿Bankleitzahl;BIC;Weitere BICs;BIC-Quelle;Bankenname;Art;Weitere Codes;LEI
+01;LPEUEE22XXX;;GLEIF;Lightspark Payments Europe AS;Zahlungs- oder E-Geld-Institut;;6488O0OC79779MZX1E44
+02;UHISEE21XXX;;GLEIF;Ühisarveldused AS;Zahlungs- oder E-Geld-Institut;;6488T59HFX0H790KT773
+10;EEUHEE2XXXX;;GLEIF;AS SEB Pank;Kreditinstitut;;549300ND1MQ8SNNYMJ22
+11;MOMNEE22XXX;;GLEIF;Monemon AS;Zahlungs- oder E-Geld-Institut;;984500I6CF3C8BC0C913
+12;PARXEE22XXX;;manuell;AS Citadele banka Eesti filiaal;Filiale eines ausländischen Kreditinstituts;;
+15;IHPYEE22XXX;;GLEIF;inHouse Pay AS;Zahlungs- oder E-Geld-Institut;;648825NKW56QTH575E23
+16;EPBEEE2XXXX;EPBEEE2XCCB;GLEIF;Eesti Pank;Kreditinstitut;;6YJ6OTG0PYO45FO7Q425
+17;RIKOEE22XXX;;GLEIF;Luminor Bank AS;Kreditinstitut;96;213800JD2L89GGG7LF07
+21;IPFDEE22XXX;;GLEIF;IPF Digital AS;Zahlungs- oder E-Geld-Institut;;984500650D127F436942
+22;HABAEE2XXXX;;GLEIF;Swedbank AS;Kreditinstitut;;549300PHQZ4HL15HH975
+42;EKRDEE22XXX;;GLEIF;Coop Pank aktsiaselts;Kreditinstitut;;549300EHNXQVOI120S55
+51;OKOYEE2XXXX;;manuell;OP Corporate Bank plc Eesti filiaal;Filiale eines ausländischen Kreditinstituts;;
+55;CRWDEE22XXX;;GLEIF;Crowdestate AS;Zahlungs- oder E-Geld-Institut;;254900ZZM79Z7FFKW251
+62;MAEHEE21XXX;;GLEIF;Maaelu Edendamise Hoiu-laenuühistu;Zahlungs- oder E-Geld-Institut;;64880I7I463DRZT83Y16
+72;;;;Unifidepost Payments Eesti;Filiale eines ausländischen Zahlungsinstituts;;
+75;BIGKEE2BXXX;;GLEIF;Bigbank AS;Kreditinstitut;;5493007SWCCN9S3J2748
+77;LHVBEE22XXX;;GLEIF;AS LHV Pank;Kreditinstitut;;529900GJOSVHI055QR67
+88;WALLEE22XXX;;GLEIF;Wallester AS;Zahlungs- oder E-Geld-Institut;;894500ZXDCT6CXD3SK63
+96;RIKOEE22XXX;;GLEIF;Luminor Bank AS;Kreditinstitut;17;213800JD2L89GGG7LF07
